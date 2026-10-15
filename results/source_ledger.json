@@ -1,5 +1,5 @@
 {
-  "policy": "Original archive read-only. JSON/text entries are clearly labeled sanitized extracts, not original byte copies. Original full-file hashes permit comparison to private originals. NPZs alone are byte copies. Omitted ledger payloads and path redactions mean this is a numerical evidence bundle, not the full execution archive.",
+  "policy": "Original archive read-only. JSON/text entries are clearly labeled sanitized extracts, not original byte copies. Original full-file hashes permit comparison to private originals. NPZs alone are byte copies. Omitted ledger payloads and path redactions mean this is a numerical evidence bundle, not the full execution archive. Historical Markdown reports and protocols are omitted from the current checkout and retained in Git history; numerical evidence is unchanged.",
   "entries": [
     {
       "source_relative": "nonlinear_qkv_20260925/operational_revision_20260927/reports/screen_results.json",
@@ -16,14 +16,6 @@
       "bundle_relative": "studies/A/audit.json",
       "bundle_sha256": "1e8230fc5e69ff97ea492488abe55ee1ee776437f4b76c0a5ed532879f4cb2f9",
       "representation": "sanitized_structured_extract"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/PROTOCOL.md",
-      "source_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "source_bytes": 7882,
-      "bundle_relative": "studies/A/protocol.md",
-      "bundle_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "representation": "sanitized_text_copy"
     },
     {
       "source_relative": "nonlinear_qkv_20260925/operational_revision_20260927/reports/screen_plan.json",
@@ -64,22 +56,6 @@
       "bundle_relative": "studies/B/audit.json",
       "bundle_sha256": "8984d45f4071e96f33832e1ac1585919db00a16c38a6fb5e6a86ecaabbe8474b",
       "representation": "sanitized_structured_extract"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/final_report.md",
-      "source_sha256": "d6295757c584e326a2d7ad2f6bc45f14be549fb1b1a6ef26fce9d4c98a52fec2",
-      "source_bytes": 9328,
-      "bundle_relative": "studies/B/historical_report.md",
-      "bundle_sha256": "d6295757c584e326a2d7ad2f6bc45f14be549fb1b1a6ef26fce9d4c98a52fec2",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/PROTOCOL.md",
-      "source_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "source_bytes": 7882,
-      "bundle_relative": "studies/B/protocol.md",
-      "bundle_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "representation": "sanitized_text_copy"
     },
     {
       "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/confirmation_plan.json",
@@ -138,22 +114,6 @@
       "representation": "sanitized_structured_extract"
     },
     {
-      "source_relative": "nonlinear_qkv_20260925/nonexpanding_cuda_20260927/reports/final_report.md",
-      "source_sha256": "08310e0a61f783d01ebd6f04d99fbff2592eadb2b010dde1603cea82aa0f9d7b",
-      "source_bytes": 1491,
-      "bundle_relative": "studies/C/historical_report.md",
-      "bundle_sha256": "08310e0a61f783d01ebd6f04d99fbff2592eadb2b010dde1603cea82aa0f9d7b",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/nonexpanding_cuda_20260927/PROTOCOL.md",
-      "source_sha256": "b6545dbaa4ab74ea651207da2788533bd07bfd3f2fa172c4b8bae961db018e74",
-      "source_bytes": 5756,
-      "bundle_relative": "studies/C/protocol.md",
-      "bundle_sha256": "b6545dbaa4ab74ea651207da2788533bd07bfd3f2fa172c4b8bae961db018e74",
-      "representation": "sanitized_text_copy"
-    },
-    {
       "source_relative": "nonlinear_qkv_20260925/nonexpanding_cuda_20260927/reports/lr_screen_plan.json",
       "source_sha256": "c995a4252f88c81254ba0c11aa9686787cede59f4d9e5a0e55319cc2cae0a58d",
       "source_bytes": 31844,
@@ -208,22 +168,6 @@
       "bundle_relative": "studies/D/audit.json",
       "bundle_sha256": "26863f8388c2a9bbf4c934ba3b4cd9f4976c4bebbae3e7976bd1cb846bdda6e2",
       "representation": "sanitized_structured_extract"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/final_report.md",
-      "source_sha256": "ff7620ce74b83ae9cd80f8bbc3ae7dd5990283166e78184216c1ad57503fe088",
-      "source_bytes": 1467,
-      "bundle_relative": "studies/D/historical_report.md",
-      "bundle_sha256": "ff7620ce74b83ae9cd80f8bbc3ae7dd5990283166e78184216c1ad57503fe088",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/PROTOCOL.md",
-      "source_sha256": "417f5782ade89f6b92553de0ad01744c209a6831bd4014ea838897916a452bcd",
-      "source_bytes": 7043,
-      "bundle_relative": "studies/D/protocol.md",
-      "bundle_sha256": "61a66112653d414f10b0213a76a32f57c75f59890606072b4ac521e502dff87d",
-      "representation": "sanitized_text_copy"
     },
     {
       "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/confirmation_plan.json",
@@ -282,22 +226,6 @@
       "representation": "sanitized_structured_extract"
     },
     {
-      "source_relative": "nonlinear_qkv_20260925/v_only_mechanism_20260928/reports/final_report.md",
-      "source_sha256": "efe03615c5bd76d6ed986b224623d986688d3094ba1bbb9b4b115562f15db4ff",
-      "source_bytes": 6007,
-      "bundle_relative": "studies/E/historical_report.md",
-      "bundle_sha256": "efe03615c5bd76d6ed986b224623d986688d3094ba1bbb9b4b115562f15db4ff",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_mechanism_20260928/PROTOCOL.md",
-      "source_sha256": "ab3acb1e189490bba3a1f45922359face1cf1d7c65e5e56de997c8a9840f41ba",
-      "source_bytes": 6878,
-      "bundle_relative": "studies/E/protocol.md",
-      "bundle_sha256": "ab3acb1e189490bba3a1f45922359face1cf1d7c65e5e56de997c8a9840f41ba",
-      "representation": "sanitized_text_copy"
-    },
-    {
       "source_relative": "nonlinear_qkv_20260925/v_only_mechanism_20260928/reports/mechanism_plan.json",
       "source_sha256": "671c44cd23296098acb85e16dd8bd3baa24a1a59be9a1e9109772e1d7e250803",
       "source_bytes": 64216,
@@ -338,22 +266,6 @@
       "representation": "sanitized_structured_extract"
     },
     {
-      "source_relative": "nonlinear_qkv_20260925/v_only_supplement_20260928/reports/final_report.md",
-      "source_sha256": "a9acaf803ae83ed6919f5fa32f9ba61aa69c303d3080eca4bf893a54d50aa301",
-      "source_bytes": 8953,
-      "bundle_relative": "studies/F/historical_report.md",
-      "bundle_sha256": "a9acaf803ae83ed6919f5fa32f9ba61aa69c303d3080eca4bf893a54d50aa301",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_supplement_20260928/PROTOCOL.md",
-      "source_sha256": "6500ca1a7492a23b50d784170a4bb601fe65f24c58d83c870c5abd576800effc",
-      "source_bytes": 6338,
-      "bundle_relative": "studies/F/protocol.md",
-      "bundle_sha256": "6500ca1a7492a23b50d784170a4bb601fe65f24c58d83c870c5abd576800effc",
-      "representation": "sanitized_text_copy"
-    },
-    {
       "source_relative": "nonlinear_qkv_20260925/v_only_supplement_20260928/reports/mechanism_plan.json",
       "source_sha256": "d7fef57046d5d8379970a911ceea6a16f7a80d28175627cfa7d6c45ecef2de2e",
       "source_bytes": 34751,
@@ -392,22 +304,6 @@
       "bundle_relative": "studies/M/audit.json",
       "bundle_sha256": "1f0daba7f898c36000a37af5c70602c494b8e304163cf9f6f47dab4bfd43f0b3",
       "representation": "sanitized_structured_extract"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/final_report.md",
-      "source_sha256": "765199b5e4cf6317277cc79d3f3048bc24d6382e1c1cc8015063e88710489104",
-      "source_bytes": 3880,
-      "bundle_relative": "studies/M/historical_report.md",
-      "bundle_sha256": "765199b5e4cf6317277cc79d3f3048bc24d6382e1c1cc8015063e88710489104",
-      "representation": "sanitized_text_copy_historical_not_current"
-    },
-    {
-      "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/PROTOCOL.md",
-      "source_sha256": "d8d07315059729eba3ca1d2f9513fa77d8a2746028f23fab40c90b480afc91a4",
-      "source_bytes": 8688,
-      "bundle_relative": "studies/M/protocol.md",
-      "bundle_sha256": "d8d07315059729eba3ca1d2f9513fa77d8a2746028f23fab40c90b480afc91a4",
-      "representation": "sanitized_text_copy"
     },
     {
       "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/research_spec.json",
@@ -905,5 +801,6 @@
       "bundle_sha256": "2bfd917f2b3f844910281aff4aabf4e531426ec0c4e5b24142074ff08eab5f57",
       "representation": "sanitized_structured_extract"
     }
-  ]
+  ],
+  "omitted_historical_texts_revision": "e79318ed8fac7fae5390e7700662d9b4c779c455"
 }

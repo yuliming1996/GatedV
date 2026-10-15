@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "scope": "Portable file integrity and saved-number reanalysis only; not a training rerun, new evaluation, or independent replication. Domain uniqueness relies on the retained data audit; raw text/domain ledgers are intentionally omitted. Small-study bootstrap is retained from audited originals, not recomputed here.",
-  "checked_source_records": 113,
+  "checked_source_records": 100,
   "byte_identical_numeric_array_files": 6,
   "endpoint_rows": 133,
   "summary_cells": 77,
@@ -168,5 +168,5 @@
     },
     "scope": "Arithmetic of extracted audit summaries only; original GLU checkpoint, logs, and per-document arrays are not bundled or re-audited."
   },
-  "packaged_files_checked": 124
+  "packaged_files_checked": 111
 }

@@ -2,7 +2,7 @@
   "schema": "gatedv_results_packaging_v1",
   "date": "2026-10-15",
   "source_bundle": "v_only_attention_paper_20261003/results",
-  "policy": "Files copied from the earlier portable evidence bundle retain their existing sanitization and original-source SHA ledger. Source-bundle hashes below refer to that portable bundle, not to unsanitized execution records. New GLU files are explicitly marked extracts. No numeric results were changed. Provenance-only historical path labels in datasets.json and studies/D/fresh_holdout_audit.json were clarified in this release; numerical values and original source hashes remain unchanged. See docs/path_portability.json.",
+  "policy": "Files copied from the earlier portable evidence bundle retain their existing sanitization and original-source SHA ledger. Source-bundle hashes below refer to that portable bundle, not to unsanitized execution records. New GLU files are explicitly marked extracts. No numeric results were changed. Provenance-only historical path labels in datasets.json and studies/D/fresh_holdout_audit.json were clarified in this release; numerical values and original source hashes remain unchanged. See docs/path_portability.json. Historical Markdown reports and protocols were removed during documentation consolidation; retained numerical files and original-source hashes are unchanged.",
   "files": [
     {
       "packaged_relative": "all_endpoints.csv",
@@ -401,10 +401,10 @@
     },
     {
       "packaged_relative": "source_ledger.json",
-      "packaged_sha256": "311f3f29fc75e987f95e847781e541b5252c9f3ab7cbc73ee4d0fb56074c7d89",
+      "packaged_sha256": "d0df7af48612a311a5ce276a4ead1bc13369d4a0495f1e7fe7c31048e7d558a7",
       "source_bundle_relative": "source_ledger.json",
       "source_bundle_sha256": "01a9e13b47fe97741600ea7a912134482c61bc65b0570231a80dcb8142ee69a0",
-      "representation": "provenance_path_labels_adapted_numeric_values_and_original_source_hashes_preserved"
+      "representation": "documentation_entries_removed_numeric_evidence_unchanged"
     },
     {
       "packaged_relative": "studies/A/audit.json",
@@ -418,13 +418,6 @@
       "packaged_sha256": "5f4d8a66cab2147e34fa38d14b9fb78081b91779aeedf79b29ba3f28dcf79384",
       "source_bundle_relative": "studies/A/candidate_selection.json",
       "source_bundle_sha256": "5f4d8a66cab2147e34fa38d14b9fb78081b91779aeedf79b29ba3f28dcf79384",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/A/protocol.md",
-      "packaged_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "source_bundle_relative": "studies/A/protocol.md",
-      "source_bundle_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
@@ -491,20 +484,6 @@
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
-      "packaged_relative": "studies/B/historical_report.md",
-      "packaged_sha256": "d6295757c584e326a2d7ad2f6bc45f14be549fb1b1a6ef26fce9d4c98a52fec2",
-      "source_bundle_relative": "studies/B/historical_report.md",
-      "source_bundle_sha256": "d6295757c584e326a2d7ad2f6bc45f14be549fb1b1a6ef26fce9d4c98a52fec2",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/B/protocol.md",
-      "packaged_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "source_bundle_relative": "studies/B/protocol.md",
-      "source_bundle_sha256": "27c9a293ba7a4785849ddaaffb0289548e890ed4b98cae11c5bf94eaf1b533b5",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
       "packaged_relative": "studies/B/results.json",
       "packaged_sha256": "d8a5e03998c283f7b93b74c2076b70e7b7a04abb94b372763d9e264a997f6ee9",
       "source_bundle_relative": "studies/B/results.json",
@@ -516,13 +495,6 @@
       "packaged_sha256": "d08a99935a580ab6db0481662b7d6a34a26654b5494d2dcf61f0a247b35a6668",
       "source_bundle_relative": "studies/C/audit.json",
       "source_bundle_sha256": "d08a99935a580ab6db0481662b7d6a34a26654b5494d2dcf61f0a247b35a6668",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/C/historical_report.md",
-      "packaged_sha256": "08310e0a61f783d01ebd6f04d99fbff2592eadb2b010dde1603cea82aa0f9d7b",
-      "source_bundle_relative": "studies/C/historical_report.md",
-      "source_bundle_sha256": "08310e0a61f783d01ebd6f04d99fbff2592eadb2b010dde1603cea82aa0f9d7b",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
@@ -551,13 +523,6 @@
       "packaged_sha256": "a7271e53fb1d67f6b444bd8b9d0bda341455823b5df2fca14f7e355289c9c634",
       "source_bundle_relative": "studies/C/lr_screen_plan.json",
       "source_bundle_sha256": "a7271e53fb1d67f6b444bd8b9d0bda341455823b5df2fca14f7e355289c9c634",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/C/protocol.md",
-      "packaged_sha256": "b6545dbaa4ab74ea651207da2788533bd07bfd3f2fa172c4b8bae961db018e74",
-      "source_bundle_relative": "studies/C/protocol.md",
-      "source_bundle_sha256": "b6545dbaa4ab74ea651207da2788533bd07bfd3f2fa172c4b8bae961db018e74",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
@@ -610,20 +575,6 @@
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
-      "packaged_relative": "studies/D/historical_report.md",
-      "packaged_sha256": "ff7620ce74b83ae9cd80f8bbc3ae7dd5990283166e78184216c1ad57503fe088",
-      "source_bundle_relative": "studies/D/historical_report.md",
-      "source_bundle_sha256": "ff7620ce74b83ae9cd80f8bbc3ae7dd5990283166e78184216c1ad57503fe088",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/D/protocol.md",
-      "packaged_sha256": "61a66112653d414f10b0213a76a32f57c75f59890606072b4ac521e502dff87d",
-      "source_bundle_relative": "studies/D/protocol.md",
-      "source_bundle_sha256": "61a66112653d414f10b0213a76a32f57c75f59890606072b4ac521e502dff87d",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
       "packaged_relative": "studies/D/research_control_freeze.json",
       "packaged_sha256": "b033f356c6b9624b0ea6752dc0d4c6944ec1edd3465a78f3da4a82012120981b",
       "source_bundle_relative": "studies/D/research_control_freeze.json",
@@ -645,13 +596,6 @@
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
-      "packaged_relative": "studies/E/historical_report.md",
-      "packaged_sha256": "efe03615c5bd76d6ed986b224623d986688d3094ba1bbb9b4b115562f15db4ff",
-      "source_bundle_relative": "studies/E/historical_report.md",
-      "source_bundle_sha256": "efe03615c5bd76d6ed986b224623d986688d3094ba1bbb9b4b115562f15db4ff",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
       "packaged_relative": "studies/E/mechanism_plan.freeze.json",
       "packaged_sha256": "dbd491413de109397b554f967c062ea3a70d4f5e110700e1c062e5e907c57547",
       "source_bundle_relative": "studies/E/mechanism_plan.freeze.json",
@@ -663,13 +607,6 @@
       "packaged_sha256": "8e926cf9a69c1c9c232e47a343f1e96b1156385ab6b6482690cc45995fbc6e16",
       "source_bundle_relative": "studies/E/mechanism_plan.json",
       "source_bundle_sha256": "8e926cf9a69c1c9c232e47a343f1e96b1156385ab6b6482690cc45995fbc6e16",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/E/protocol.md",
-      "packaged_sha256": "ab3acb1e189490bba3a1f45922359face1cf1d7c65e5e56de997c8a9840f41ba",
-      "source_bundle_relative": "studies/E/protocol.md",
-      "source_bundle_sha256": "ab3acb1e189490bba3a1f45922359face1cf1d7c65e5e56de997c8a9840f41ba",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
@@ -694,13 +631,6 @@
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
-      "packaged_relative": "studies/F/historical_report.md",
-      "packaged_sha256": "a9acaf803ae83ed6919f5fa32f9ba61aa69c303d3080eca4bf893a54d50aa301",
-      "source_bundle_relative": "studies/F/historical_report.md",
-      "source_bundle_sha256": "a9acaf803ae83ed6919f5fa32f9ba61aa69c303d3080eca4bf893a54d50aa301",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
       "packaged_relative": "studies/F/mechanism_plan.freeze.json",
       "packaged_sha256": "818affc6b708b4f355cbbc0f104134d6a0e435629f12609bcd81191c8afb62ef",
       "source_bundle_relative": "studies/F/mechanism_plan.freeze.json",
@@ -712,13 +642,6 @@
       "packaged_sha256": "f898dbf050ea132017453df5c6e046fcac0c64c35d2cabf83f27cd3b23f7f792",
       "source_bundle_relative": "studies/F/mechanism_plan.json",
       "source_bundle_sha256": "f898dbf050ea132017453df5c6e046fcac0c64c35d2cabf83f27cd3b23f7f792",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/F/protocol.md",
-      "packaged_sha256": "6500ca1a7492a23b50d784170a4bb601fe65f24c58d83c870c5abd576800effc",
-      "source_bundle_relative": "studies/F/protocol.md",
-      "source_bundle_sha256": "6500ca1a7492a23b50d784170a4bb601fe65f24c58d83c870c5abd576800effc",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
@@ -803,20 +726,6 @@
       "packaged_sha256": "2c2195145c2a20c67ce227c8d6c4c3e35c24e1cf23d4de134115b252c2be9dbd",
       "source_bundle_relative": "studies/M/fresh_holdout_seal.json",
       "source_bundle_sha256": "2c2195145c2a20c67ce227c8d6c4c3e35c24e1cf23d4de134115b252c2be9dbd",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/M/historical_report.md",
-      "packaged_sha256": "765199b5e4cf6317277cc79d3f3048bc24d6382e1c1cc8015063e88710489104",
-      "source_bundle_relative": "studies/M/historical_report.md",
-      "source_bundle_sha256": "765199b5e4cf6317277cc79d3f3048bc24d6382e1c1cc8015063e88710489104",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
-    },
-    {
-      "packaged_relative": "studies/M/protocol.md",
-      "packaged_sha256": "d8d07315059729eba3ca1d2f9513fa77d8a2746028f23fab40c90b480afc91a4",
-      "source_bundle_relative": "studies/M/protocol.md",
-      "source_bundle_sha256": "d8d07315059729eba3ca1d2f9513fa77d8a2746028f23fab40c90b480afc91a4",
       "representation": "byte_identical_copy_of_existing_portable_bundle"
     },
     {
