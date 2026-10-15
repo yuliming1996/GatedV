@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8043,
-      "sha256": "61291d97a3697fc350eed8ea07dc7ce9c5bfd3140de4e82077a27c8077aa3080"
+      "bytes": 8037,
+      "sha256": "8819f23ece0fe3e4db04d5786f4f33c77d6e82e7e172cf97e6a065d24e32317f"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -1114,7 +1114,7 @@
     "scope": "Frozen accepted-row replay for main small and medium confirmations; no historical exclusion re-audit",
     "plan": "reproduction/data_plan.json"
   },
-  "updated_at_utc": "2026-10-15T05:22:00.152629+00:00",
+  "updated_at_utc": "2026-10-15T05:28:24.629368+00:00",
   "portable_reproduction_addition": {
     "status": "PASS_PORTABLE_PUBLIC_ENTRYPOINT",
     "validation": "docs/portability_validation.json",

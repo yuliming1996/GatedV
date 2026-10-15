@@ -4,7 +4,7 @@ GatedV applies SiLU to projected values before attention aggregation:
 
 $$
 \widetilde V = V \odot \sigma(V), \qquad
-Y = \operatorname{softmax}(QK^\top/\sqrt{d_h}+M)\widetilde V W_O.
+Y = \mathrm{softmax}(QK^\top/\sqrt{d_h}+M)\widetilde V W_O.
 $$
 
 It preserves the query/key projection structure, attention-weighting rule, value width and
