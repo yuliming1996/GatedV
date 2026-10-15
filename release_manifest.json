@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1066,
-      "sha256": "ca5aebc8ac5d492a2867e5af154b4209b6af21075b37d7a92c112a1646d175d2"
+      "bytes": 2655,
+      "sha256": "9899fd4f378c8e4a65d5a10b796f049a4c0e6e73adef0991f6846d8fa187fbd2"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -122,11 +122,6 @@
       "path": "docs/release_validation.json",
       "bytes": 2830,
       "sha256": "b0c90be9e8cdce62dbb2f5f7c961c42fa28241fe82aaf0ab7ae91c0ca0af83ed"
-    },
-    {
-      "path": "docs/usage.md",
-      "bytes": 6854,
-      "sha256": "6a1f6149d2c93bfb5799a0cc5e1c8be3df01795ca828983b25633230ff2bb5c3"
     },
     {
       "path": "experiments/glu_attention/code/analyze.py",
@@ -997,6 +992,11 @@
       "path": "tools/verify_release.py",
       "bytes": 1410,
       "sha256": "79960d223006e2500f427a61331cedc100079a747d97fff89b2986897c4f0687"
+    },
+    {
+      "path": "verification/README.md",
+      "bytes": 761,
+      "sha256": "921d91c4e00a8724be0a5a57b05d0be4157c1d36df52644f7135b46997785c6d"
     }
   ],
   "tokenizer_addition": {
@@ -1009,7 +1009,7 @@
     "scope": "Frozen accepted-row replay for main small and medium confirmations; no historical exclusion re-audit",
     "plan": "reproduction/data_plan.json"
   },
-  "updated_at_utc": "2026-10-15T11:51:39.154536+00:00",
+  "updated_at_utc": "2026-10-15T12:41:18.957739+00:00",
   "portable_reproduction_addition": {
     "status": "PASS_PORTABLE_PUBLIC_ENTRYPOINT",
     "validation": "docs/portability_validation.json",
