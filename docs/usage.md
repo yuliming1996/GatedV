@@ -1,7 +1,29 @@
 # Detailed usage
 
-The [README](../README.md#quick-start) covers installation and complete
-reproduction. Commands below run from the repository root.
+## Quick start
+
+Python 3.10+ on Linux or macOS:
+
+```sh
+git clone https://github.com/yuliming1996/GatedV.git
+cd GatedV
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-reproduce.txt
+python -B tools/reproduce.py --study smoke
+```
+
+The last command runs a tiny synthetic CPU check. For a full study, install a
+CUDA-compatible PyTorch build and choose one of:
+
+```sh
+python -B tools/reproduce.py --study small --download
+python -B tools/reproduce.py --study medium --download
+```
+
+These commands prepare the data, train all paired seeds, evaluate the cohort,
+and compute statistics: 10 runs for small or 6 for medium. Downloads require
+`curl`. Add `--dry-run` to inspect the plan. Commands below run from the repository root.
 
 ## Recipes and outputs
 
@@ -118,3 +140,19 @@ PPL, not held-out PPL. Figure means average per-seed PPL; paired differences
 are GatedV minus baseline, so negative values favor GatedV. The paper contains
 the interpretation and uncertainty estimates. Timing uses synchronized elapsed
 measurements; training duration is not a separate forward-latency benchmark.
+
+## Paper and figures
+
+Compile the paper with the included figures (requires LaTeX):
+
+```sh
+cd paper
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
+
+To regenerate figures, run from the repository root:
+
+```sh
+python -m pip install -r requirements-figures.txt
+python -B paper/make_paper_figures.py
+```

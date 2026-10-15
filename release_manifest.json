@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3824,
-      "sha256": "08451a05eb8035818fcb3b6e4cb0513b891563f376fb632b71b2868ea8a0d2b5"
+      "bytes": 1066,
+      "sha256": "ca5aebc8ac5d492a2867e5af154b4209b6af21075b37d7a92c112a1646d175d2"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -125,8 +125,8 @@
     },
     {
       "path": "docs/usage.md",
-      "bytes": 5907,
-      "sha256": "755f0225f72c7df5431cf88faa2bd266d47c55e6b6280d97cc56b4ef0ceba0db"
+      "bytes": 6854,
+      "sha256": "6a1f6149d2c93bfb5799a0cc5e1c8be3df01795ca828983b25633230ff2bb5c3"
     },
     {
       "path": "experiments/glu_attention/code/analyze.py",
@@ -1009,7 +1009,7 @@
     "scope": "Frozen accepted-row replay for main small and medium confirmations; no historical exclusion re-audit",
     "plan": "reproduction/data_plan.json"
   },
-  "updated_at_utc": "2026-10-15T05:37:13.814058+00:00",
+  "updated_at_utc": "2026-10-15T11:51:39.154536+00:00",
   "portable_reproduction_addition": {
     "status": "PASS_PORTABLE_PUBLIC_ENTRYPOINT",
     "validation": "docs/portability_validation.json",
