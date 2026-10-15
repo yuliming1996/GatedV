@@ -1,0 +1,13 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/holdout_evaluation/training_gate.json",
+  "source_sha256": "176a4382a564fea8733c7a70b5394a080d7d50673f35d2eede48efe724b889bb",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "PASS",
+    "all_six_checkpoint_identities_verified": true,
+    "plan_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+    "training_audit_sha256": "cb1bf53a6f6edf2643f8a7633c2b047fbef6d6e97de3137ac859571e57cff999",
+    "unix": 1790937801.4013278
+  }
+}

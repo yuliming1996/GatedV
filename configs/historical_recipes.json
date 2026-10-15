@@ -1,0 +1,801 @@
+[
+  {
+    "original": "nonlinear_qkv_20260925/confirmation_20260927/reports/confirmation_plan.json",
+    "original_sha256": "3bb5c1b93322a4d3c1c8d3255680ac5e1c53e77f66957418ac619fd46719a601",
+    "stage": "bounded_confirmation",
+    "common": {
+      "width": 128,
+      "heads": 4,
+      "vocab": 8192,
+      "context": 256,
+      "batch": 8,
+      "steps": 8192,
+      "warmup": 128,
+      "eval_tokens": 131072,
+      "seed": 20261001
+    },
+    "jobs": [
+      {
+        "id": "confirm_deep6_s20261001",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_wide4_s20261001",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_qkv_mlp4_s20261001",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_q_mlp4_s20261001",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_qkv_linear4_s20261001",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_qkv_norm4_s20261001",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261001
+        }
+      },
+      {
+        "id": "confirm_qkv_mlp4_s20261002",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_q_mlp4_s20261002",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_qkv_linear4_s20261002",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_qkv_norm4_s20261002",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_deep6_s20261002",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_wide4_s20261002",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261002
+        }
+      },
+      {
+        "id": "confirm_qkv_linear4_s20261003",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      },
+      {
+        "id": "confirm_qkv_norm4_s20261003",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      },
+      {
+        "id": "confirm_deep6_s20261003",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      },
+      {
+        "id": "confirm_wide4_s20261003",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      },
+      {
+        "id": "confirm_qkv_mlp4_s20261003",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      },
+      {
+        "id": "confirm_q_mlp4_s20261003",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0024,
+          "seed": 20261003
+        }
+      }
+    ],
+    "budget": {
+      "runs": 18,
+      "steps_per_run": 8192,
+      "optimizer_updates": 147456,
+      "target_exposures": 301989888
+    },
+    "limits": "Historical recipe metadata, not a runnable portable checkpoint identity."
+  },
+  {
+    "original": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/selection_plan.json",
+    "original_sha256": "68e8efa118cfdc891cf5982ac6cd93c860c0bae87fca71279c723159b56ba1a2",
+    "stage": "medium_selection",
+    "common": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "warmup": 5120,
+      "eval_tokens": 524288,
+      "eval_every": 20480,
+      "save_every": 1024,
+      "log_every": 1,
+      "threads": 2,
+      "arm": "baseline",
+      "batch": 8,
+      "steps": 327680,
+      "seed": 20270201,
+      "lr": 0.0006,
+      "lr_schedule": "cosine"
+    },
+    "jobs": [
+      {
+        "id": "baseline_s20270201_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270201,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "v_silu_s20270201_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270201,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "v_silu_s20270201_lr1200",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270201,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "baseline_s20270201_lr1200",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270201,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "baseline_s20270201_lr2400",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270201,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "v_silu_s20270201_lr2400",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270201,
+          "lr": 0.0024
+        }
+      }
+    ],
+    "budget": {
+      "runs": 6,
+      "optimizer_updates": 1966080,
+      "target_exposures": 4026531840
+    },
+    "limits": "Historical recipe metadata, not a runnable portable checkpoint identity."
+  },
+  {
+    "original": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/confirmation_plan.json",
+    "original_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+    "stage": "medium_confirmation",
+    "common": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "warmup": 5120,
+      "eval_tokens": 524288,
+      "eval_every": 20480,
+      "save_every": 1024,
+      "log_every": 1,
+      "threads": 2,
+      "arm": "baseline",
+      "batch": 8,
+      "steps": 327680,
+      "seed": 20270211,
+      "lr": 0.0006,
+      "lr_schedule": "cosine"
+    },
+    "jobs": [
+      {
+        "id": "baseline_s20270211_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270211,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "v_silu_s20270211_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270211,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "v_silu_s20270212_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270212,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "baseline_s20270212_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270212,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "baseline_s20270213_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270213,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "v_silu_s20270213_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270213,
+          "lr": 0.0006
+        }
+      }
+    ],
+    "budget": {
+      "runs": 6,
+      "optimizer_updates": 1966080,
+      "target_exposures": 4026531840
+    },
+    "limits": "Historical recipe metadata, not a runnable portable checkpoint identity."
+  },
+  {
+    "original": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/confirmation_plan.json",
+    "original_sha256": "434fcf02b8048688203d02da1fcc2eb3299c0adffebe182243ae324f9d81525d",
+    "stage": "v_only_confirmation",
+    "common": {
+      "arm": "baseline",
+      "vocab": 8192,
+      "width": 128,
+      "layers": 6,
+      "heads": 4,
+      "hidden": 384,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "batch": 8,
+      "steps": 32768,
+      "seed": 20261201,
+      "lr": 0.0048,
+      "warmup": 512,
+      "lr_schedule": "cosine",
+      "eval_tokens": 131072,
+      "eval_every": 2048,
+      "save_every": 256,
+      "log_every": 1,
+      "threads": 2
+    },
+    "jobs": [
+      {
+        "id": "baseline_s20261201_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20261201,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "v_silu_s20261201_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20261201,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "v_silu_s20261202_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20261202,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "baseline_s20261202_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20261202,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "baseline_s20261203_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20261203,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "v_silu_s20261203_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20261203,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "v_silu_s20261204_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20261204,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "baseline_s20261204_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20261204,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "baseline_s20261205_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20261205,
+          "lr": 0.0048
+        }
+      },
+      {
+        "id": "v_silu_s20261205_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20261205,
+          "lr": 0.0048
+        }
+      }
+    ],
+    "budget": {
+      "runs": 10,
+      "optimizer_updates": 327680,
+      "target_exposures": 671088640
+    },
+    "limits": "Historical recipe metadata, not a runnable portable checkpoint identity."
+  },
+  {
+    "original": "nonlinear_qkv_20260925/v_only_mechanism_20260928/reports/mechanism_plan.json",
+    "original_sha256": "671c44cd23296098acb85e16dd8bd3baa24a1a59be9a1e9109772e1d7e250803",
+    "stage": "v_only_mechanism",
+    "common": {
+      "arm": "baseline",
+      "vocab": 8192,
+      "width": 128,
+      "layers": 6,
+      "heads": 4,
+      "hidden": 384,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "batch": 8,
+      "steps": 32768,
+      "seed": 20270111,
+      "lr": 0.0048,
+      "warmup": 512,
+      "lr_schedule": "cosine",
+      "eval_tokens": 131072,
+      "eval_every": 2048,
+      "save_every": 256,
+      "log_every": 1,
+      "threads": 2,
+      "calibration_seed": 20270111,
+      "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+    },
+    "jobs": [
+      {
+        "id": "baseline_s20270111_lr2400",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270111,
+          "lr": 0.0024,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_silu_s20270111_lr2400",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270111,
+          "lr": 0.0024,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_silu_s20270111_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270111,
+          "lr": 0.0048,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "baseline_s20270111_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270111,
+          "lr": 0.0048,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_affine_match_s20270111_lr4800",
+        "config": {
+          "arm": "v_affine_match",
+          "seed": 20270111,
+          "lr": 0.0048,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_silu_standardized_s20270111_lr4800",
+        "config": {
+          "arm": "v_silu_standardized",
+          "seed": 20270111,
+          "lr": 0.0048,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "baseline_s20270111_lr9600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270111,
+          "lr": 0.0096,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_silu_s20270111_lr9600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270111,
+          "lr": 0.0096,
+          "calibration_seed": 20270111,
+          "calibration_constants_sha256": "7180ff2d164ae3f02dbeedd2b475e15c448347ca50823064aa9785032728675c"
+        }
+      },
+      {
+        "id": "v_silu_s20270112_lr2400",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270112,
+          "lr": 0.0024,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "baseline_s20270112_lr2400",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270112,
+          "lr": 0.0024,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "baseline_s20270112_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270112,
+          "lr": 0.0048,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "v_silu_s20270112_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270112,
+          "lr": 0.0048,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "v_silu_standardized_s20270112_lr4800",
+        "config": {
+          "arm": "v_silu_standardized",
+          "seed": 20270112,
+          "lr": 0.0048,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "v_affine_match_s20270112_lr4800",
+        "config": {
+          "arm": "v_affine_match",
+          "seed": 20270112,
+          "lr": 0.0048,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "v_silu_s20270112_lr9600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270112,
+          "lr": 0.0096,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "baseline_s20270112_lr9600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270112,
+          "lr": 0.0096,
+          "calibration_seed": 20270112,
+          "calibration_constants_sha256": "cef8980576e240be5cbccabbe477455103aacc48da1e1574a7aaf589b21d8198"
+        }
+      },
+      {
+        "id": "baseline_s20270113_lr2400",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270113,
+          "lr": 0.0024,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "v_silu_s20270113_lr2400",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270113,
+          "lr": 0.0024,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "v_silu_s20270113_lr4800",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270113,
+          "lr": 0.0048,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "baseline_s20270113_lr4800",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270113,
+          "lr": 0.0048,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "v_affine_match_s20270113_lr4800",
+        "config": {
+          "arm": "v_affine_match",
+          "seed": 20270113,
+          "lr": 0.0048,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "v_silu_standardized_s20270113_lr4800",
+        "config": {
+          "arm": "v_silu_standardized",
+          "seed": 20270113,
+          "lr": 0.0048,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "baseline_s20270113_lr9600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270113,
+          "lr": 0.0096,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      },
+      {
+        "id": "v_silu_s20270113_lr9600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270113,
+          "lr": 0.0096,
+          "calibration_seed": 20270113,
+          "calibration_constants_sha256": "ee0407211e96ee9b9a898d70245ce96d60d9e388ce09c6d33905458e9033c92e"
+        }
+      }
+    ],
+    "budget": {
+      "runs": 24,
+      "optimizer_updates": 786432,
+      "target_exposures": 1610612736
+    },
+    "limits": "Historical recipe metadata, not a runnable portable checkpoint identity."
+  }
+]

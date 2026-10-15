@@ -1,0 +1,110 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/data_independent_audit.json",
+  "source_sha256": "d283c992e0ed9b953325febd388425493757aaafa643465d47b53c7607e7ca9a",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "PASS",
+    "manifest_sha256": "4ac2d036dfb5da2d5e3360f8a7d6793deb29bfb4334f0e9faf9fd8597eb4fa8d",
+    "corpus_manifest_sha256": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f",
+    "script_sha256": "2c399546fd946b954a21f17bdd7409cf0e5b1510595d5f96d3c4d0241010212b",
+    "policy_sha256": "18a0babb1e55b90969f835a0a6d5ffe4e070991b63a29005f0757feb923a2cef",
+    "model_evaluations": 0,
+    "checks": {
+      "training": {
+        "documents": 212052,
+        "tokens": 512000068,
+        "groups": 153145,
+        "full_ledger_checked": true,
+        "tokenizer_probes": 8,
+        "raw_source_probes": 8,
+        "bytes_identical": true
+      },
+      "history": {
+        "unique_texts": 458825,
+        "unique_document_texts": 293746,
+        "unique_extra_texts": 165079,
+        "repeated_text_occurrences": 596919,
+        "raw_text_hashes": 463359,
+        "normalized_text_hashes": 458832,
+        "casefolded_text_hashes": 458825,
+        "source_ids": 1430798,
+        "canonical_urls": 294008,
+        "domain_groups": 403541,
+        "source_identities": 1324160,
+        "long_span_hashes": 6301902,
+        "near_index_documents": 365472
+      },
+      "selection": {
+        "rows_independently_replayed": 19262,
+        "counts": {
+          "rows_scanned": 19262,
+          "historical_or_already_selected_domain": 14777,
+          "fewer_than_257_tokens_including_eos": 330,
+          "accepted_holdout": 2048,
+          "accepted_dev": 2048,
+          "long_span_64_words": 22,
+          "historical_or_selected_exact_text": 2,
+          "preassigned_split_quota_full": 35
+        },
+        "accepted_domains": 4096,
+        "all_rejection_reasons_recomputed": true
+      },
+      "full_eval_text_reencoded_documents": 4096,
+      "domain_disjoint": true,
+      "source004_unconsumed_in_inventoried_history": true,
+      "independent_of_producer_imports": true
+    },
+    "artifacts_sha256": {
+      "reports/data_preparation_policy.json": "18a0babb1e55b90969f835a0a6d5ffe4e070991b63a29005f0757feb923a2cef",
+      "reports/data_inventory_mac.json": "43a31b8fa1cf06c7300fb4c0a3c55c2114e4cd919d1eee3d98228a468bc096d7",
+      "reports/data_inventory_spark.json": "1783d9eb871fe18914cc6a577b46488678ed80935a006cf56c3aa3756cf4c52d",
+      "reports/data_prepare.py": "90ef0afcd78e4445503ece9309c7ac7b9c04d001edf8393a6e75f8daa5e54149",
+      "reports/data_history.py": "939c5e1a9896ddbeb8ca2210f6b3133223201d9d94c30681f88747075841f021",
+      "reports/data_rules.py": "46893a8a9c51541ca2b058fda9597cd33368d21b90efda8343a9a84b6916620a",
+      "reports/data_inventory.py": "2f0ded46e47bc634bf987755fe93b189d5755aca271c8c622cf71f3e1d42566c",
+      "data/medium_corpus/manifest.json": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f",
+      "data/medium_corpus/tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+      "data/medium_corpus/docs_train.jsonl": "6453d8c0d6507cc8056658c163a6429229f42de8a8e92f0accdb639f68d07c01",
+      "data/medium_corpus/docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e",
+      "data/medium_corpus/docs_dev.jsonl": "34f8f750b4fe17a354cd96ed35e72a56d76831228a94457a0c16a905516bb031",
+      "data/medium_corpus/eval_dev_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+      "data/medium_corpus/tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+      "data/medium_corpus/eval_dev_offsets.npy": "3bf7472e7ea785760c6001ecd1ee41473feffff814dd93ed28702c8c84b186eb",
+      "data/medium_corpus/docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+      "data/medium_corpus/tokenizer.json": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "data/fresh_holdout/manifest.json": "4ac2d036dfb5da2d5e3360f8a7d6793deb29bfb4334f0e9faf9fd8597eb4fa8d",
+      "data/fresh_holdout/tokens_holdout.npy": "5a3ccd49ca055e2860d7b35aa17bc79173029fe585285f1baf200602696f8a7a",
+      "data/fresh_holdout/eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+      "data/fresh_holdout/eval_offsets.npy": "733ad76fa344ad5e38853594ace694feef1facc45bd018cbc8304db771281c79",
+      "data/fresh_holdout/documents_holdout.jsonl": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1",
+      "data/fresh_holdout/docs_holdout.npy": "8bc9ee6f57f9a8e1e703e940a192032fe73042eb2f157e6ceab9be0c81908cf2",
+      "data/preparation_evidence/historical_exclusion_evidence.json": "d49da0fc0fa78a9acb3884325a4deafb8038144c6086605ab767556b8fdd7464",
+      "data/preparation_evidence/historical_signatures.npy": "230ae9aa98ce1d41e0cbcbd661989577917d4f2e55dc1542627e141741f06f5d",
+      "data/preparation_evidence/historical_shingles.bin": "0c0e87b4a4b6dbbcad6358e96baaf16cb35991e32ab4cc4652fad11b6215c14d",
+      "data/preparation_evidence/historical_near_index.jsonl": "0312301673cdb61ae9976278deba40fa0ceb86e2924d65f7651c4034407e7084",
+      "data/preparation_evidence/selection_log.jsonl": "2cc1f252a6232c28db6a79be548543defa07269a0af120042f2c8f375de48daa",
+      "data/preparation_evidence/train_reuse_validation.json": "25d121cbb9ae2a749bb309010884f1349c30d70a81b6fef6b59d64928e9f7c64"
+    },
+    "elapsed_seconds": 565.7378649929888,
+    "peak_rss_bytes": 5699608576,
+    "limits": {
+      "seconds": 3600,
+      "rss_gib": 16,
+      "threads": 1,
+      "no_gpu": true,
+      "no_model_losses": true
+    },
+    "limitations": [
+      "Train is byte-for-byte reuse of a previously prepared 512,000,068-token corpus from another study; it is not newly collected data or globally unique linguistic content.",
+      "Fresh dev/holdout are source- and domain-excluded from inventoried historical accepted/selection materials and reused train; all remain the same FineWeb-Edu family and frozen tokenizer.",
+      "Historical discovery covers recorded Mac and Spark data directories, excluding runs/reports/code/env; it cannot establish absence from unrelated external corpora or unrecorded text.",
+      "Conservative last-two-hostname-label grouping may merge unrelated registered domains such as co.uk; invalid/IP URLs are excluded.",
+      "32-component MinHash/8 bands of four with exact retrieved-candidate hashed-shingle Jaccard >=0.85 is an approximate filter, not exhaustive semantic deduplication.",
+      "Historical/accepted 64-normalized-word blocks are indexed at stride64 and candidate blocks queried at every offset; >=127-word contiguous overlap is detected apart from hash collisions, but arbitrary 64-word/short/semantic overlap need not be.",
+      "One document per new domain globally makes document and domain bootstrap share the same information; they are not independent evidence.",
+      "New evaluation uses only each document's first256 targets; data arrays record document order, while training/evaluation plans must freeze their actual (possibly permuted) schedule."
+    ],
+    "completed_unix": 1790625268.01043
+  }
+}

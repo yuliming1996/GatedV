@@ -1,0 +1,552 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/final_results.json",
+  "source_sha256": "6c9ed703745901d0858f4089c3b8837a783880fb12903e32dce27ccfe4af692c",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "cost_slots",
+    "artifacts_sha256"
+  ],
+  "data": {
+    "status": "complete",
+    "plan_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+    "analysis_script_sha256": "ca335d71594182d4655992040f63ac08749db26ee8d3fe7383ec6071ca2a60fe",
+    "selection": {
+      "status": "frozen",
+      "rule": "minimum_final_dev_nll_exact_tie_lower_lr",
+      "selection_plan_sha256": "68e8efa118cfdc891cf5982ac6cd93c860c0bae87fca71279c723159b56ba1a2",
+      "selection_audit_relative": "reports/audit_medium_selection.json",
+      "selection_audit_sha256": "5ac55b62c7428a077236beb121e435b7c267ea0d9dfdda761b4b233164fe8209",
+      "endpoint_result_sha256": {
+        "baseline_s20270201_lr600": "abd8f8889a1143aff045a1b90aa5500bb86b084fb9a2e9d896ce88cba69fa401",
+        "v_silu_s20270201_lr600": "610b74fc94d3c0e6b656000c149695991d35e086042467a3506e82f049b1157b",
+        "v_silu_s20270201_lr1200": "7939ee0bd232d909a64e2c3e1e67a9c3312195b8f7a58338108b5a67013ec169",
+        "baseline_s20270201_lr1200": "f3b4c6ea931c6f7e3ac104207c6cb1dc9519113f5326dad676c1bb80d481c0b8",
+        "baseline_s20270201_lr2400": "71644a48c43b45908a31601fc9cd7530ee71c8c2d1a705f42ad9109d0b1ac589",
+        "v_silu_s20270201_lr2400": "2141118e680e50ca2139ee62ff87a17b56c0f17c4e42b278bf1365aad4e71ce0"
+      },
+      "selected_lr_by_arm": {
+        "baseline": 0.0006,
+        "v_silu": 0.0006
+      }
+    },
+    "selection_endpoints": [
+      {
+        "job_id": "baseline_s20270201_lr600",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0006,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.070762575545814,
+        "dev_nll": 3.070762575545814,
+        "ppl": 21.558336268324503,
+        "checkpoint_sha256": "9d7dac0550548b4d12501b3f835cbcdc1228f3418638aed2d949403128d8fb39",
+        "result_sha256": "abd8f8889a1143aff045a1b90aa5500bb86b084fb9a2e9d896ce88cba69fa401",
+        "memory_observed_max": {
+          "process_rss": 3117277184,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22634.255758639323
+      },
+      {
+        "job_id": "v_silu_s20270201_lr600",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0006,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.0447481728624552,
+        "dev_nll": 3.0447481728624552,
+        "ppl": 21.004740973001645,
+        "checkpoint_sha256": "b8e43ca9ff90b8e9b8e6e064aa698ffb2c9700d0e670f37066c384d26ecf134d",
+        "result_sha256": "610b74fc94d3c0e6b656000c149695991d35e086042467a3506e82f049b1157b",
+        "memory_observed_max": {
+          "process_rss": 3116441600,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22837.758119026315
+      },
+      {
+        "job_id": "v_silu_s20270201_lr1200",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0012,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.1424691816209815,
+        "dev_nll": 3.1424691816209815,
+        "ppl": 23.160984990644035,
+        "checkpoint_sha256": "00ceabd169ebe0c2bd3965af08242e0ff698229aa90066a428d788e87f994bcb",
+        "result_sha256": "7939ee0bd232d909a64e2c3e1e67a9c3312195b8f7a58338108b5a67013ec169",
+        "memory_observed_max": {
+          "process_rss": 3115679744,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22864.817827299994
+      },
+      {
+        "job_id": "baseline_s20270201_lr1200",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0012,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.1657749554142356,
+        "dev_nll": 3.1657749554142356,
+        "ppl": 23.70710886832103,
+        "checkpoint_sha256": "5b5347a3a3e1b7d1f7c1b983678d35d95fd30ce476c6484180393d861013791d",
+        "result_sha256": "f3b4c6ea931c6f7e3ac104207c6cb1dc9519113f5326dad676c1bb80d481c0b8",
+        "memory_observed_max": {
+          "process_rss": 3117236224,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22603.653041409038
+      },
+      {
+        "job_id": "baseline_s20270201_lr2400",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0024,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.321117365558166,
+        "dev_nll": 3.321117365558166,
+        "ppl": 27.691274555044558,
+        "checkpoint_sha256": "89c61266d97bc85f278c5c7a0cb575b235bd0157bc4436710e956816f83add20",
+        "result_sha256": "71644a48c43b45908a31601fc9cd7530ee71c8c2d1a705f42ad9109d0b1ac589",
+        "memory_observed_max": {
+          "process_rss": 3118624768,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22644.8016671128
+      },
+      {
+        "job_id": "v_silu_s20270201_lr2400",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0024,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.4082843990181573,
+        "dev_nll": 3.4082843990181573,
+        "ppl": 30.213365690819,
+        "checkpoint_sha256": "e52c52d02baa5249a82100685c286597f9f4e6e71b6f39078298661cb9d46c88",
+        "result_sha256": "2141118e680e50ca2139ee62ff87a17b56c0f17c4e42b278bf1365aad4e71ce0",
+        "memory_observed_max": {
+          "process_rss": 3117060096,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22880.95002447479
+      }
+    ],
+    "selection_boundary": {
+      "baseline": true,
+      "v_silu": true
+    },
+    "budget": {
+      "runs": 12,
+      "optimizer_updates": 3932160,
+      "target_exposures": 8053063680
+    },
+    "rows": [
+      {
+        "arm": "baseline",
+        "seed": 20270211,
+        "lr": 0.0006,
+        "job_id": "baseline_s20270211_lr600",
+        "nll": 3.068839344836306,
+        "ppl": 21.516914458583265,
+        "dev_nll": 3.090290349908173,
+        "dev_ppl": 21.983459944792823,
+        "training_seconds": 22707.146719603916,
+        "memory": {
+          "process_rss": 3054874624,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072,
+          "cuda_free": 1170243584,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "346dfd5ccd46b49c8f306caa94b04a636105d837c409c42e321e513167491245"
+      },
+      {
+        "arm": "v_silu",
+        "seed": 20270211,
+        "lr": 0.0006,
+        "job_id": "v_silu_s20270211_lr600",
+        "nll": 3.025691750110127,
+        "ppl": 20.60825554466249,
+        "dev_nll": 3.048578943766188,
+        "dev_ppl": 21.08535964079632,
+        "training_seconds": 22842.256357619888,
+        "memory": {
+          "process_rss": 3055656960,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800,
+          "cuda_free": 1480122368,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "5065f8c3b5cedbbf4157f16e618f9cd4e47f96c8e7503019a98193226a0979b2"
+      },
+      {
+        "arm": "v_silu",
+        "seed": 20270212,
+        "lr": 0.0006,
+        "job_id": "v_silu_s20270212_lr600",
+        "nll": 3.024260624719318,
+        "ppl": 20.578783640917294,
+        "dev_nll": 3.0442744056344964,
+        "dev_ppl": 20.994791972038268,
+        "training_seconds": 22894.779646428942,
+        "memory": {
+          "process_rss": 3055362048,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800,
+          "cuda_free": 1321533440,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "222e01bc3e8085e0f6b480d79c2c5a4420daf27067d881da94402dd59f2b2a26"
+      },
+      {
+        "arm": "baseline",
+        "seed": 20270212,
+        "lr": 0.0006,
+        "job_id": "baseline_s20270212_lr600",
+        "nll": 3.0539026703918353,
+        "ppl": 21.197911663598052,
+        "dev_nll": 3.073621360526886,
+        "dev_ppl": 21.620055094658305,
+        "training_seconds": 22640.883287655422,
+        "memory": {
+          "process_rss": 3055063040,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072,
+          "cuda_free": 1035665408,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "fc387665a1ed3d0e511d6ba7cbe3f50760054ee00b680fababef3a871f3301f4"
+      },
+      {
+        "arm": "baseline",
+        "seed": 20270213,
+        "lr": 0.0006,
+        "job_id": "baseline_s20270213_lr600",
+        "nll": 3.0650693975621834,
+        "ppl": 21.435949538205865,
+        "dev_nll": 3.082305424963124,
+        "dev_ppl": 21.80862262748309,
+        "training_seconds": 22676.32758134289,
+        "memory": {
+          "process_rss": 3054854144,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072,
+          "cuda_free": 1118171136,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "ac48cd8ae6e56ef61d7931e0ae703845487a2c7ec9b8c1781357160f1d4c0003"
+      },
+      {
+        "arm": "v_silu",
+        "seed": 20270213,
+        "lr": 0.0006,
+        "job_id": "v_silu_s20270213_lr600",
+        "nll": 3.0259086456499062,
+        "ppl": 20.61272586815185,
+        "dev_nll": 3.0462437825044617,
+        "dev_ppl": 21.03617937005335,
+        "training_seconds": 22875.510183586855,
+        "memory": {
+          "process_rss": 3053735936,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800,
+          "cuda_free": 1519603712,
+          "cuda_total": 130660909056,
+          "note": "CUDA and host counters can overlap on unified memory; do not add them."
+        },
+        "eval_arrays_sha256": "be1c4736ba69604d654e78938e91ad1b16e3c8aa503470011edd23ef7d231325"
+      }
+    ],
+    "summaries": {
+      "baseline": {
+        "seeds": [
+          20270211,
+          20270212,
+          20270213
+        ],
+        "selected_lr": 0.0006,
+        "nll": [
+          3.068839344836306,
+          3.0539026703918353,
+          3.0650693975621834
+        ],
+        "ppl": [
+          21.516914458583265,
+          21.197911663598052,
+          21.435949538205865
+        ],
+        "mean_nll": 3.0626038042634414,
+        "sd_nll": 0.007767588016953896,
+        "mean_ppl": 21.383591886795728,
+        "sd_ppl": 0.16582125481368043
+      },
+      "v_silu": {
+        "seeds": [
+          20270211,
+          20270212,
+          20270213
+        ],
+        "selected_lr": 0.0006,
+        "nll": [
+          3.025691750110127,
+          3.024260624719318,
+          3.0259086456499062
+        ],
+        "ppl": [
+          20.60825554466249,
+          20.578783640917294,
+          20.61272586815185
+        ],
+        "mean_nll": 3.0252870068264506,
+        "sd_nll": 0.0008954641763773841,
+        "mean_ppl": 20.59992168457721,
+        "sd_ppl": 0.018442033926638814
+      }
+    },
+    "comparison": {
+      "paired_nll_differences": [
+        -0.043147594726178795,
+        -0.02964204567251727,
+        -0.03916075191227719
+      ],
+      "paired_ppl_change_pct": [
+        -4.222998216913498,
+        -2.920702909352868,
+        -3.840388169354303
+      ],
+      "mean_ppl_change_pct": -3.6648202339777614,
+      "practical_signal_only": true,
+      "improved_seed_count": 3,
+      "seed_uncertainty": {
+        "mean": -0.03731679743699109,
+        "sample_sd": 0.006939026580898086,
+        "standard_error": 0.004006248864395478,
+        "df": 2,
+        "t_critical": 4.302652729911275,
+        "t_ci95": [
+          -0.054554295050086236,
+          -0.02007929982389594
+        ]
+      },
+      "domain_cluster": {
+        "groups": 2048,
+        "seed": 2026092901,
+        "replicates": 2000,
+        "nll_difference_ci95": [
+          -0.03858312934607966,
+          -0.03601062788705652
+        ],
+        "pooled_nll_exponential_change_pct_ci95": [
+          -3.7848281627921323,
+          -3.5369958550487453
+        ],
+        "scope": "Conditional on these three seed pairs; not a CI for arithmetic mean PPL ratio."
+      },
+      "document_cluster": {
+        "groups": 2048,
+        "seed": 2026092901,
+        "replicates": 2000,
+        "nll_difference_ci95": [
+          -0.03858312934607966,
+          -0.03601062788705652
+        ],
+        "pooled_nll_exponential_change_pct_ci95": [
+          -3.7848281627921323,
+          -3.5369958550487453
+        ],
+        "scope": "Conditional on these three seed pairs; not a CI for arithmetic mean PPL ratio."
+      },
+      "same_partition_not_independent": true
+    },
+    "cost": {
+      "forward": {
+        "per_seed": [
+          {
+            "seed": 20270211,
+            "paired_round_ratios": [
+              1.0136768832966931,
+              1.01209591924178,
+              0.99452738993997,
+              0.9885339057377165,
+              0.9991619156943531,
+              1.0127218927360213,
+              1.0059776960366618
+            ],
+            "median_round_ratio": 1.0059776960366618
+          },
+          {
+            "seed": 20270212,
+            "paired_round_ratios": [
+              1.0183367539489174,
+              1.0256736694773974,
+              0.99387629125548,
+              0.9938493599859046,
+              0.9982594525413396,
+              1.017789040819303,
+              1.007199140864159
+            ],
+            "median_round_ratio": 1.007199140864159
+          },
+          {
+            "seed": 20270213,
+            "paired_round_ratios": [
+              1.0055999704900607,
+              1.0143566049083421,
+              1.0220809834741336,
+              0.9964740542960558,
+              0.9998815287142688,
+              1.0099887839458703,
+              1.007832885886341
+            ],
+            "median_round_ratio": 1.007832885886341
+          }
+        ],
+        "mean_of_seed_medians": 1.007003240929054
+      },
+      "train_step": {
+        "per_seed": [
+          {
+            "seed": 20270211,
+            "paired_round_ratios": [
+              1.011542383171264,
+              1.008844760858101,
+              1.0147556062832745,
+              1.003863470709797,
+              1.0112055309022625,
+              1.0049641981349522,
+              1.0081925883755332
+            ],
+            "median_round_ratio": 1.008844760858101
+          },
+          {
+            "seed": 20270212,
+            "paired_round_ratios": [
+              1.0047998722146616,
+              1.0131740414801544,
+              1.0063147816949598,
+              1.004519569637215,
+              1.0174789376161348,
+              1.0185069425372777,
+              1.016085944764661
+            ],
+            "median_round_ratio": 1.0131740414801544
+          },
+          {
+            "seed": 20270213,
+            "paired_round_ratios": [
+              1.0189271724041762,
+              1.0122810021210351,
+              1.0085405968330554,
+              1.0044350028393776,
+              1.0129779819355536,
+              1.0184149053061526,
+              1.0061051404175654
+            ],
+            "median_round_ratio": 1.0122810021210351
+          }
+        ],
+        "mean_of_seed_medians": 1.0114332681530969
+      },
+      "memory": {
+        "baseline": {
+          "process_rss": {
+            "median": 2167664640,
+            "max": 2178449408
+          },
+          "cuda_allocated": {
+            "median": 801038848,
+            "max": 807330304
+          },
+          "cuda_reserved": {
+            "median": 2004877312,
+            "max": 2042626048
+          },
+          "cuda_peak_allocated": {
+            "median": 1881763328,
+            "max": 1888054784
+          },
+          "cuda_peak_reserved": {
+            "median": 2004877312,
+            "max": 2042626048
+          }
+        },
+        "v_silu": {
+          "process_rss": {
+            "median": 2166775808,
+            "max": 2184757248
+          },
+          "cuda_allocated": {
+            "median": 800776704,
+            "max": 808444416
+          },
+          "cuda_reserved": {
+            "median": 2143289344,
+            "max": 2164260864
+          },
+          "cuda_peak_allocated": {
+            "median": 1993829888,
+            "max": 2003136000
+          },
+          "cuda_peak_reserved": {
+            "median": 2143289344,
+            "max": 2164260864
+          }
+        }
+      }
+    },
+    "limitations": [
+      "Only one scale, one corpus family, three paired confirmation seeds; not general ability or fewer-layer evidence.",
+      "Single-seed LR selection with equal finite grid; boundary winners are not known global optima.",
+      "Data/source/length/domain exclusions shift evaluation distribution; approximate duplicate filters do not guarantee semantic nonoverlap.",
+      "Domain bootstrap conditions on three seed pairs; t interval assumes near-normal paired effects with df2.",
+      "One document per domain means bootstrap partitions coincide; not independent uncertainty evidence.",
+      "Mean-PPL ratio differs from exponentiated pooled NLL; neither practical threshold is a significance test.",
+      "Shared-host costs, sampled RSS and overlapping CUDA/host counters; not isolated latency or autoregressive decoding.",
+      "Nonlinear V has prior art; this study cannot establish a unique mechanism or originality."
+    ],
+    "automatic_next_round": false
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/research_spec.json",
+  "source_sha256": "6afa7d35b6ece67630a86c5e2ac77cd44b664143146cad971e448f6ea4a8c2e8",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "study_id": "v_only_medium_20260929",
+    "model": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0
+    },
+    "batch": 8,
+    "steps": 327680,
+    "context": 256,
+    "tokens_per_run": 671088640,
+    "total_runs": 12,
+    "total_target_exposures": 8053063680,
+    "selection": {
+      "seed": 20270201,
+      "lrs": [
+        0.0006,
+        0.0012,
+        0.0024
+      ]
+    },
+    "confirmation": {
+      "seeds": [
+        20270211,
+        20270212,
+        20270213
+      ]
+    },
+    "training": {
+      "warmup": 5120,
+      "eval_tokens": 524288,
+      "eval_every": 20480,
+      "save_every": 1024,
+      "log_every": 1,
+      "threads": 2
+    },
+    "data_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/data/medium_corpus",
+    "started_unix": 1790623267.669,
+    "hard_deadline": 1792437667.669,
+    "holdout": {
+      "relative": "data/fresh_holdout",
+      "seal_relative": "reports/fresh_holdout_seal.json",
+      "seal_sha256": "f4e9adee767f95e66ef0ce7bed8a770a317dfb8480549ba88d50ed0892d3d87e",
+      "manifest_sha256": "4ac2d036dfb5da2d5e3360f8a7d6793deb29bfb4334f0e9faf9fd8597eb4fa8d",
+      "files_sha256": {
+        "tokens_holdout.npy": "5a3ccd49ca055e2860d7b35aa17bc79173029fe585285f1baf200602696f8a7a",
+        "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+        "eval_offsets.npy": "733ad76fa344ad5e38853594ace694feef1facc45bd018cbc8304db771281c79",
+        "documents_holdout.jsonl": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1",
+        "docs_holdout.npy": "8bc9ee6f57f9a8e1e703e940a192032fe73042eb2f157e6ceab9be0c81908cf2"
+      },
+      "eval_tokens": 524288,
+      "documents": 2048,
+      "context": 256
+    }
+  }
+}

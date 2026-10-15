@@ -1,0 +1,12 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_supplement_20260928/reports/mechanism_plan.freeze.json",
+  "source_sha256": "6ed8a6eb7a76344d5e971e4c47966c988afe7bbdb45a3bbf3a87e20b3674fc7b",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "plan_sha256": "d7fef57046d5d8379970a911ceea6a16f7a80d28175627cfa7d6c45ecef2de2e",
+    "study_kind": "scientific_experiment",
+    "frozen_unix": 1790611918.0623426
+  }
+}

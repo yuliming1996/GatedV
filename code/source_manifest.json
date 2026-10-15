@@ -1,0 +1,413 @@
+{
+  "schema": "gatedv_release_sources_v1",
+  "scope": "Packaged runtime and recipes only. Source paths identify the research checkout; they are provenance identifiers, not required files in this release. Historical hashes describe upstream source bytes, not necessarily adapted package bytes. Public reproduction tools and bounded regression checks are added separately from the unchanged scientific runtimes.",
+  "files": [
+    {
+      "path": "code/benchmark.py",
+      "source": "v_only_attention_paper_20261003/code/benchmark.py",
+      "source_sha256": "1f57fcea0228004f2676b8f63247664cac60532f19a1d137e3a4bde4c73275f5",
+      "packaged_sha256": "1f57fcea0228004f2676b8f63247664cac60532f19a1d137e3a4bde4c73275f5",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/benchmark.py",
+          "source_sha256": "741a015eb586c5c2323e003b9c17a3cfd4422f3bf3cc2d467949e9d902ba44d2",
+          "mode": "adapted",
+          "changes": "Portable cohort/config/device paths; seven-round interleaving and timing defaults retained."
+        }
+      ]
+    },
+    {
+      "path": "code/model.py",
+      "source": "v_only_attention_paper_20261003/code/model.py",
+      "source_sha256": "114923fbd5ca4dea247548095f13c78be041602521b617fface3100075b1a56f",
+      "packaged_sha256": "114923fbd5ca4dea247548095f13c78be041602521b617fface3100075b1a56f",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/src/model.py",
+          "source_sha256": "114923fbd5ca4dea247548095f13c78be041602521b617fface3100075b1a56f",
+          "mode": "byte-for-byte"
+        }
+      ]
+    },
+    {
+      "path": "code/common.py",
+      "source": "v_only_attention_paper_20261003/code/common.py",
+      "source_sha256": "51bc2fe5837948d462fdb44f417895d8bbf8ef0e36987b6d4be42d194c6d8c49",
+      "packaged_sha256": "51bc2fe5837948d462fdb44f417895d8bbf8ef0e36987b6d4be42d194c6d8c49",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/src/helpers.py",
+          "source_sha256": "fb440a7af545c6014c241d9a6a28645b693bb0059f3a3765d1793a70d225b4cc",
+          "mode": "adapted",
+          "changes": "Portable numerical policy and identity utilities; removed host ownership/resource guards."
+        }
+      ]
+    },
+    {
+      "path": "code/train.py",
+      "source": "v_only_attention_paper_20261003/code/train.py",
+      "source_sha256": "47923b268d238f3464256f2a36b260450d399adc7acbda58b6115608c5242221",
+      "packaged_sha256": "47923b268d238f3464256f2a36b260450d399adc7acbda58b6115608c5242221",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/src/train.py",
+          "source_sha256": "a37215dcd11b9ea340c9c1dc5e838f0ab429127bbabe518d3fd7ebdbeb89f6ec",
+          "mode": "adapted",
+          "changes": "Portable CLI and checkpoint identity; optimization math/order retained."
+        }
+      ]
+    },
+    {
+      "path": "code/evaluate.py",
+      "source": "v_only_attention_paper_20261003/code/evaluate.py",
+      "source_sha256": "e3b562549a32085ef55d73120ee1071491527de44bcbaddfce25689ca2a6110c",
+      "packaged_sha256": "e3b562549a32085ef55d73120ee1071491527de44bcbaddfce25689ca2a6110c",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/evaluate_holdout.py",
+          "source_sha256": "312c29cfbf24d2e22b45bbe996cbeb0ff329585e570e001c7aa854e041f62289",
+          "mode": "adapted",
+          "changes": "Portable cohort gate and explicit holdout arguments; historical audit is not replaced."
+        }
+      ]
+    },
+    {
+      "path": "code/statistics_core.py",
+      "source": "v_only_attention_paper_20261003/code/statistics_core.py",
+      "source_sha256": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+      "packaged_sha256": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/final_statistics.py",
+          "source_sha256": "ca335d71594182d4655992040f63ac08749db26ee8d3fe7383ec6071ca2a60fe",
+          "mode": "adapted",
+          "changes": "Exact medium conditional-bootstrap function, renamed only."
+        },
+        {
+          "source": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/final_statistics.py",
+          "source_sha256": "3b0611d861f89c469d9829fb22a2c801fe280e340e594d4c2e24673d74ecf94f",
+          "mode": "adapted",
+          "changes": "Exact small conditional-bootstrap and seed-interval functions, renamed where needed."
+        }
+      ]
+    },
+    {
+      "path": "code/data.py",
+      "source": "v_only_attention_paper_20261003/code/data.py",
+      "source_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "packaged_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/src/helpers.py",
+          "source_sha256": "fb440a7af545c6014c241d9a6a28645b693bb0059f3a3765d1793a70d225b4cc",
+          "mode": "adapted",
+          "changes": "Corpus/evaluate/save_eval/learning_rate ASTs unchanged; portable imports."
+        }
+      ]
+    },
+    {
+      "path": "code/analyze.py",
+      "source": "v_only_attention_paper_20261003/code/analyze.py",
+      "source_sha256": "f4ee295223a11ed35e0e32dd5e3fab9d58b627c83fbc99ea9eb2c6684da5ebca",
+      "packaged_sha256": "f4ee295223a11ed35e0e32dd5e3fab9d58b627c83fbc99ea9eb2c6684da5ebca",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/final_statistics.py",
+          "source_sha256": "ca335d71594182d4655992040f63ac08749db26ee8d3fe7383ec6071ca2a60fe",
+          "mode": "adapted",
+          "changes": "Portable raw-loss validation and paired statistics; delegates original study kernels."
+        }
+      ]
+    },
+    {
+      "path": "configs/historical_recipes.json",
+      "source": "v_only_attention_paper_20261003/configs/historical_recipes.json",
+      "source_sha256": "c816c6fa2e186bd5ad2f67966515d1a058a7360fc77780e75dde1d9aaca37325",
+      "packaged_sha256": "c816c6fa2e186bd5ad2f67966515d1a058a7360fc77780e75dde1d9aaca37325",
+      "mode": "byte-for-byte",
+      "historical_origins": []
+    },
+    {
+      "path": "configs/small.json",
+      "source": "v_only_attention_paper_20261003/configs/small.json",
+      "source_sha256": "71cc2defea5f2e4fa7582b536c514e537316fa467525fb25173048a90e27a2d0",
+      "packaged_sha256": "71cc2defea5f2e4fa7582b536c514e537316fa467525fb25173048a90e27a2d0",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/confirmation_plan.json",
+          "source_sha256": "434fcf02b8048688203d02da1fcc2eb3299c0adffebe182243ae324f9d81525d",
+          "mode": "common recipe adapted"
+        }
+      ]
+    },
+    {
+      "path": "configs/small_cohort.json",
+      "source": "v_only_attention_paper_20261003/configs/small_cohort.json",
+      "source_sha256": "2d21020c8f7c2b14b8e2b290c6a5cddf2151f84467c9c209ed946000f0724af9",
+      "packaged_sha256": "2d21020c8f7c2b14b8e2b290c6a5cddf2151f84467c9c209ed946000f0724af9",
+      "mode": "byte-for-byte",
+      "historical_origins": []
+    },
+    {
+      "path": "configs/medium.json",
+      "source": "v_only_attention_paper_20261003/configs/medium.json",
+      "source_sha256": "4876948cf5280053c793f9a9fe29f07e391fceed4e4b80b3fcfa25870af92ddf",
+      "packaged_sha256": "4876948cf5280053c793f9a9fe29f07e391fceed4e4b80b3fcfa25870af92ddf",
+      "mode": "byte-for-byte",
+      "historical_origins": [
+        {
+          "source": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/confirmation_plan.json",
+          "source_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+          "mode": "common recipe adapted"
+        }
+      ]
+    },
+    {
+      "path": "configs/medium_cohort.json",
+      "source": "v_only_attention_paper_20261003/configs/medium_cohort.json",
+      "source_sha256": "40a49186471cee5dbd7cfcb18f7ad2ab31bfafe1e21af02f1da8b24ed99ed3c2",
+      "packaged_sha256": "40a49186471cee5dbd7cfcb18f7ad2ab31bfafe1e21af02f1da8b24ed99ed3c2",
+      "mode": "byte-for-byte",
+      "historical_origins": []
+    },
+    {
+      "path": "configs/medium_holdout.json",
+      "source": "v_only_attention_paper_20261003/configs/medium_holdout.json",
+      "source_sha256": "f6d1f726632e86ec563880dbf7e06a8d95691db125f6afb11709b05725176d5b",
+      "packaged_sha256": "f6d1f726632e86ec563880dbf7e06a8d95691db125f6afb11709b05725176d5b",
+      "mode": "byte-for-byte",
+      "historical_origins": []
+    },
+    {
+      "path": "configs/small_holdout.json",
+      "source": "v_only_attention_paper_20261003/configs/small_holdout.json",
+      "source_sha256": "68809bbf68dc5ef77e2afeab7f4ccba614c808719926d793c5ea9dc7f6e1be44",
+      "packaged_sha256": "68809bbf68dc5ef77e2afeab7f4ccba614c808719926d793c5ea9dc7f6e1be44",
+      "mode": "byte-for-byte",
+      "historical_origins": []
+    },
+    {
+      "path": "experiments/glu_attention/code/benchmark.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/benchmark.py",
+      "source_sha256": "3a02083396bb0384e8ce8aab05f708cd9f38c9df90cb9b634a7f2a38fa065229",
+      "packaged_sha256": "3a02083396bb0384e8ce8aab05f708cd9f38c9df90cb9b634a7f2a38fa065229",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/model.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/model.py",
+      "source_sha256": "6366e88ab34c21830b090e61222d1390ce68d6e0e8a57238b1d987fb753e2bbf",
+      "packaged_sha256": "6366e88ab34c21830b090e61222d1390ce68d6e0e8a57238b1d987fb753e2bbf",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/common.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/common.py",
+      "source_sha256": "37d5776c835aba83a5a204c1deaf0f62b965bd713418f7673c46bd4460fa1dad",
+      "packaged_sha256": "37d5776c835aba83a5a204c1deaf0f62b965bd713418f7673c46bd4460fa1dad",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/train.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/train.py",
+      "source_sha256": "5f2f584c2b6eebfc66b20336ab0890f58138b189cbf5c7b110e82ac18f6fddd6",
+      "packaged_sha256": "5f2f584c2b6eebfc66b20336ab0890f58138b189cbf5c7b110e82ac18f6fddd6",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/resources.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/resources.py",
+      "source_sha256": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+      "packaged_sha256": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/evaluate.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/evaluate.py",
+      "source_sha256": "745986f3f43a8edfbf738f1cf8caeb85f7582ebf492f9f1b6718fd3772d02208",
+      "packaged_sha256": "745986f3f43a8edfbf738f1cf8caeb85f7582ebf492f9f1b6718fd3772d02208",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/statistics_core.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/statistics_core.py",
+      "source_sha256": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+      "packaged_sha256": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/data.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/data.py",
+      "source_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "packaged_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/code/analyze.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/code/analyze.py",
+      "source_sha256": "5119b3864af20292b6e40de0b535d827822f64f250787e985611f9e72d26123d",
+      "packaged_sha256": "5119b3864af20292b6e40de0b535d827822f64f250787e985611f9e72d26123d",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr1e-5.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr1e-5.json",
+      "source_sha256": "9d49ff6d67677f24d1cd6d1afd2a21c102363dd5c120aed0d6a51387b156d40f",
+      "packaged_sha256": "9d49ff6d67677f24d1cd6d1afd2a21c102363dd5c120aed0d6a51387b156d40f",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr1e-5.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr1e-5.json",
+      "source_sha256": "2436f2566fb2bcec8259ecfe3520d1e83614906125c3a8b3fb4166a899ac03ce",
+      "packaged_sha256": "2436f2566fb2bcec8259ecfe3520d1e83614906125c3a8b3fb4166a899ac03ce",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr3e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr3e-4.json",
+      "source_sha256": "3f6bdc7d16093c6ac35e304d4cdcff5f9016f2488c0b5840d0357b0bdf02d0d1",
+      "packaged_sha256": "3f6bdc7d16093c6ac35e304d4cdcff5f9016f2488c0b5840d0357b0bdf02d0d1",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr1e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr1e-4.json",
+      "source_sha256": "a5ee049ff34b4e1f1fe0b63ffe60160cb8ed6d5a40726449d51e58a56db06bd9",
+      "packaged_sha256": "a5ee049ff34b4e1f1fe0b63ffe60160cb8ed6d5a40726449d51e58a56db06bd9",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr1e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr1e-4.json",
+      "source_sha256": "44c973aee98a524c7584c0c40ff13d91bfdd86100cefe01a8af5d2ae7b874420",
+      "packaged_sha256": "44c973aee98a524c7584c0c40ff13d91bfdd86100cefe01a8af5d2ae7b874420",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr1e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr1e-4.json",
+      "source_sha256": "cf9b0a7c6c1a9419694ffd8ef06400348b87a70ad0fbd50528fe977e4038a5b8",
+      "packaged_sha256": "cf9b0a7c6c1a9419694ffd8ef06400348b87a70ad0fbd50528fe977e4038a5b8",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr3e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr3e-4.json",
+      "source_sha256": "37e404c4f1f337ab142128606bddf29d52e74a0231fe02a4b01d8450bd2c8486",
+      "packaged_sha256": "37e404c4f1f337ab142128606bddf29d52e74a0231fe02a4b01d8450bd2c8486",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr3e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr3e-4.json",
+      "source_sha256": "dc07567a4da69dd0fe7a1ce569ca2cea321000a17d2a817abb9c9e781590b351",
+      "packaged_sha256": "dc07567a4da69dd0fe7a1ce569ca2cea321000a17d2a817abb9c9e781590b351",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr6e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr6e-4.json",
+      "source_sha256": "4cb0f3820c90f47597f6888e777d1a011e6a8cc961a1b93953fe1a0fca747d30",
+      "packaged_sha256": "4cb0f3820c90f47597f6888e777d1a011e6a8cc961a1b93953fe1a0fca747d30",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr1e-5.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr1e-5.json",
+      "source_sha256": "e5d567dd3b10124e3dc9c749bd5c894ce92a66ff4ed7a10ba9276b0955fa63c6",
+      "packaged_sha256": "e5d567dd3b10124e3dc9c749bd5c894ce92a66ff4ed7a10ba9276b0955fa63c6",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr3e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr3e-4.json",
+      "source_sha256": "67c6f9db6015a534e4e26d8dbd9105753ebe72fb7bbe68a682e0d7e0f974973a",
+      "packaged_sha256": "67c6f9db6015a534e4e26d8dbd9105753ebe72fb7bbe68a682e0d7e0f974973a",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr6e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_baseline_lr6e-4.json",
+      "source_sha256": "a7de5b7eeb628715595daa6cf6e2c05fd4b7d8e0b6811e3aa6f053a977b02954",
+      "packaged_sha256": "a7de5b7eeb628715595daa6cf6e2c05fd4b7d8e0b6811e3aa6f053a977b02954",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr6e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr6e-4.json",
+      "source_sha256": "be657f6e8366a9a634dc74ebd68a7f580eb56ba783321c8702f211886873f5df",
+      "packaged_sha256": "be657f6e8366a9a634dc74ebd68a7f580eb56ba783321c8702f211886873f5df",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-5.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-5.json",
+      "source_sha256": "fd3e0533ae44151ae80b44a7f8707df3167860b5dce4709789013b40356806a4",
+      "packaged_sha256": "fd3e0533ae44151ae80b44a7f8707df3167860b5dce4709789013b40356806a4",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr6e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_full_lr6e-4.json",
+      "source_sha256": "cd52a336b93104fddffb0a3ea8b4cf102127f1de49485948a1d3af9162a1169b",
+      "packaged_sha256": "cd52a336b93104fddffb0a3ea8b4cf102127f1de49485948a1d3af9162a1169b",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-4.json",
+      "source_sha256": "dfdae6e31a149c6c72248a548b1728e08d65cdb44529749d462312b4fc535e81",
+      "packaged_sha256": "dfdae6e31a149c6c72248a548b1728e08d65cdb44529749d462312b4fc535e81",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/glu_attention/inspect_controls.py",
+      "source": "v_only_attention_paper_20261003/experiments/glu_attention/inspect_controls.py",
+      "source_sha256": "c21b85e62bf7ab4295cedd933e1a33ff8c1bf2dc3eb20dcb92c7d82394373875",
+      "packaged_sha256": "431628641c2c9c4f0d00f465fae3ebfc01aaef66ac70cc6c26b8f4e2aa8c2194",
+      "mode": "adapted",
+      "changes": "Read the actual selection-seed 6e-4 recipes; label output as parameter inspection rather than training status. No numerical model changes."
+    },
+    {
+      "path": "tools/reproduce.py",
+      "packaged_sha256": "9f8547cdf77de56f3ec1bc814e3aa1b0e96e019169d51a6045081b9cb02e9070",
+      "mode": "new-public-coordinator",
+      "changes": "Complete published confirmation cohorts; portable data/training/evaluation/statistics entrypoint with synthetic smoke, explicit resume, endpoint gating and owned-process interruption."
+    },
+    {
+      "path": "tools/prepare_data.py",
+      "packaged_sha256": "288dc202f0e1ca438c208db1c5806618db4b5705164dd62038690f54ef4058be",
+      "mode": "adapted-public-data-tool",
+      "changes": "Lazy dependencies, actionable errors, verified resumable downloads, exclusive output/cache locks; accepted-row reconstruction and expected payload hashes unchanged.",
+      "previous_packaged_sha256": "10ffc1ca0ba306387ef0dde411b232b5ed8d54edcef683696b56ba6bdd741471"
+    },
+    {
+      "path": "tests/test_reproduce.py",
+      "packaged_sha256": "4d2a820220a4e86986016d597f08149953d3d535d42f6af039342957060c252a",
+      "mode": "new-public-regression-checks",
+      "changes": "18 bounded orchestration checks, including real owned-process-group termination."
+    },
+    {
+      "path": "tests/test_prepare_data.py",
+      "packaged_sha256": "589768e644ed1c2ef0e3e036084898a1a6a1a71f5ae0a4e1361490b3e264266e",
+      "mode": "new-public-regression-checks",
+      "changes": "18 bounded data/preparation integrity and concurrency checks with tiny real parquet fixtures and simulated network responses."
+    },
+    {
+      "path": "requirements-reproduce.txt",
+      "packaged_sha256": "b0a78ae4431ce9d4fccb0619217bf3549690b93eb91f1a79292c8e3bf323f1e3",
+      "mode": "new-public-environment-file",
+      "changes": "Includes training and data reconstruction requirements for one installation command."
+    }
+  ]
+}

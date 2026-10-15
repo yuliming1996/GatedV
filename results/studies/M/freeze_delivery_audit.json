@@ -1,0 +1,53 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/freeze_delivery_audit.json",
+  "source_sha256": "26553436c259740885417d739eb3fa093d17c995e25047e23dca71442fd514da",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "verified_artifact_sha256",
+    "check_names"
+  ],
+  "data": {
+    "status": "PASS",
+    "reviewer": "independent subagent /root/fresh_holdout_plan",
+    "scope": "Read-only local and Spark control-freeze small-file delivery and metadata-chain audit. No model import, GPU work, training, real data preparation or held-out payload/loss loading. Separate independent data audit is SHA-bound; not rerun here.",
+    "control_sha256": "ec0406ce0c2abd05040e6c4ae9c4f1cb4cfc8336ea7f0dbd68ff4ec63a2f7bb8",
+    "control_relative": "reports/research_control_freeze.json",
+    "spec_sha256": "6afa7d35b6ece67630a86c5e2ac77cd44b664143146cad971e448f6ea4a8c2e8",
+    "verified_artifact_count": 63,
+    "total_small_file_bytes": 1548256,
+    "checks_passed": 411,
+    "remote_verification": {
+      "status": "PASS",
+      "control_sha256": "ec0406ce0c2abd05040e6c4ae9c4f1cb4cfc8336ea7f0dbd68ff4ec63a2f7bb8",
+      "verified_artifacts": 63,
+      "total_small_file_bytes": 1548256,
+      "holdout_payloads_opened": false,
+      "gpu_calls": 0
+    },
+    "budget": {
+      "runs": 12,
+      "steps_per_run": 327680,
+      "batch": 8,
+      "context": 256,
+      "optimizer_updates": 3932160,
+      "target_exposures": 8053063680
+    },
+    "time_budget_independently_recomputed": {
+      "observed_train_days": 3.4364031874967944,
+      "p90_train_days": 3.471855292916298,
+      "p90_with_30percent_plus_one_day": 5.513411880791187,
+      "planning_days": 9,
+      "hard_deadline": 1792437667.669
+    },
+    "pending_before_formal_training": [
+      "Canonical selection plan materialization/freeze and its deterministic schedules/initial parameter SHA.",
+      "Final-code actual CUDA finite-gradient and real pause/resume acceptance bound to frozen selection plan."
+    ],
+    "limits": [
+      "This PASS closes deployment of the 63 frozen small files and reviewed metadata; it does not claim any of the twelve scientific trajectories have executed.",
+      "Data payload bytes are certified by the separately produced independent data audit and manifests, not reopened in this delivery audit.",
+      "The profile supports bounded resource planning only; shared-host 20-update samples cannot guarantee completion time."
+    ],
+    "completed_utc": "2026-09-28T20:01:12.790629+00:00"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "status": "PASS_PACKAGING_VALIDATION",
+  "recorded_at_utc": "2026-10-15T00:50:03.838941+00:00",
+  "scope": "Standalone publication package; bounded synthetic CPU checks and saved-number verification, not a scientific training rerun.",
+  "runtime": {
+    "python": "3.13.7",
+    "torch": "2.14.0",
+    "numpy": "2.5.2",
+    "psutil": "7.2.2",
+    "device": "cpu",
+    "platform": "macOS"
+  },
+  "runtime_checks": {
+    "cli_help_commands": 8,
+    "runtime_python_files": 17,
+    "source_manifest_entries": 41,
+    "byte_preserved_entries": 40,
+    "glu_recipe_hashes": 16,
+    "model_parameter_counts": [
+      26158464,
+      26158464,
+      27927936,
+      26186112
+    ],
+    "synthetic_runs": 6,
+    "updates_per_run": 2,
+    "total_technical_updates": 12,
+    "checks": [
+      "Completed result and checkpoint artifact hashes",
+      "Finite model and Adam states with two optimizer updates",
+      "Paired baseline/GatedV initialization",
+      "Idempotent resume of an already completed endpoint",
+      "Synthetic holdout endpoint gates and evaluation in both runtimes",
+      "One round with zero warmups and one timed repetition in each benchmark runtime; interface validation only"
+    ],
+    "status": "PASS"
+  },
+  "result_checks": {
+    "status": "PASS",
+    "details": "results/verification.json",
+    "historical_endpoints": 133,
+    "summary_cells": 77,
+    "heldout_array_files": 6,
+    "raw_timing_slots": 42,
+    "learning_curve_points": 374,
+    "followup_endpoints": 5,
+    "followup_development_summaries": 85,
+    "followup_scope": "Partial development-set selection only, 5 of 16 endpoints."
+  },
+  "paper_checks": {
+    "status": "PASS",
+    "latex": "TeX Live 2025",
+    "latexmk": "4.86a",
+    "pages": 13,
+    "referenced_figures": 3,
+    "cited_keys": 25,
+    "bibliography_entries": 41,
+    "missing_citations": 0,
+    "missing_cross_references": 0,
+    "overfull_boxes": 0,
+    "underfull_bibliography_lines": 1,
+    "source_changes": "None; manuscript and bibliography copied byte for byte."
+  },
+  "figure_checks": {
+    "status": "PASS",
+    "regeneration_runtime": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3"
+    },
+    "numerical_exports_byte_identical": 3,
+    "png_images_pixel_identical": 3,
+    "pdf_comparison": "Only Matplotlib Creator/Producer version metadata changed in temporary regeneration. Original figures retained.",
+    "reads": "Packaged results/learning_curves.csv"
+  },
+  "not_tested": [
+    "GPU execution in the new package",
+    "Interrupted checkpoint recovery in this packaging check",
+    "Full-budget training",
+    "Reconstruction of the historical raw corpus",
+    "Unfinished GLU learning-rate endpoints"
+  ],
+  "preservation": "Original workspace and active remote queue were not modified. Temporary synthetic data and checkpoints were removed."
+}

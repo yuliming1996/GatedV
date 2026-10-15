@@ -1,0 +1,5 @@
+# Reference runtimes; install a PyTorch build suitable for your platform.
+# Actual verification environment is recorded in docs/release_validation.json.
+numpy>=1.26
+torch>=2.5
+psutil>=5.9

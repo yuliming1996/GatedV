@@ -1,0 +1,122 @@
+{
+  "schema": "gatedv_path_portability_v1",
+  "scope": "Provenance-label cleanup in the public repository. No training, model, data payload, split, seed, learning-rate or result changes.",
+  "historical_scheme": "historical:// identifiers describe original provenance objects. They are not local paths, downloadable URLs, or dependencies for running this repository.",
+  "audit_findings": {
+    "original_legacy_archive_occurrences": 29,
+    "affected_original_json_files": 3,
+    "runtime_reads_of_legacy_archive_paths": 0,
+    "runtime_evidence": "No training, evaluation, model, tokenizer-loading or data-preparation Python code references the legacy archive name or reads these provenance-only location fields. results/verify_results.py validates the packaged files and retains an explicitly optional --archive-root audit for owners of the original evidence.",
+    "bundled_tokenizer": "tokenizer/tokenizer.json",
+    "runtime_data_plan": "reproduction/data_plan.json"
+  },
+  "files": [
+    {
+      "path": "tokenizer/provenance.json",
+      "before_sha256": "b6b529a2a320e8b45f476e36a4214a3e246f60fb85ad4c192047810968b76697",
+      "after_sha256": "7eb9a27d8cd3330d929a82258967e1b4e687b444c970774a413a4b0cdd83b162",
+      "path_fields_changed": 2,
+      "numeric_and_sha256_fields_unchanged": true,
+      "changes": [
+        {
+          "old_pointer": "/source_relative_path",
+          "old_value_sha256": "1d9994fcdd5b8b3593910fcd60193068853cdd9d4c08ca45083561bb6b96d662",
+          "new_pointer": "/historical_source_uri",
+          "new_value": "historical://qcmr-20260906/data/tokenizer/tokenizer.json"
+        },
+        {
+          "old_pointer": "/training_inputs",
+          "old_value_sha256": "c7e03cd24f388afb72f54111cdedb03ed68e289b791ee407c32e4c0fe6486b58",
+          "new_pointer": "/historical_training_inputs",
+          "new_value": [
+            "historical://qcmr-20260906/data/processed/train.txt"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "results/datasets.json",
+      "before_sha256": "1b8dbf94fdac8e15ee9daf0303e1226b586e569f52ae0e254245301030297407",
+      "after_sha256": "6cf36399a990a1b05cd4750edfd751d5b74410f46cc9bb932c0b9fae125dc2e8",
+      "path_fields_changed": 9,
+      "numeric_and_sha256_fields_unchanged": true,
+      "changes": [
+        {
+          "old_pointer": "/small_v_holdout/source/relative",
+          "old_value_sha256": "265276b6fc119de153e8af736105ef3fa6679b298a7ac365405df33ddb5f9327",
+          "new_pointer": "/small_v_holdout/source/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet"
+        },
+        {
+          "old_pointer": "/small_v_holdout/tokenizer/relative",
+          "old_value_sha256": "1d9994fcdd5b8b3593910fcd60193068853cdd9d4c08ca45083561bb6b96d662",
+          "new_pointer": "/small_v_holdout/tokenizer/historical_source_uri",
+          "new_value": "historical://qcmr-20260906/data/tokenizer/tokenizer.json"
+        },
+        {
+          "old_pointer": "/medium_holdout/tokenizer/relative",
+          "old_value_sha256": "1d9994fcdd5b8b3593910fcd60193068853cdd9d4c08ca45083561bb6b96d662",
+          "new_pointer": "/medium_holdout/tokenizer/historical_source_uri",
+          "new_value": "historical://qcmr-20260906/data/tokenizer/tokenizer.json"
+        },
+        {
+          "old_pointer": "/medium_holdout/source/relative",
+          "old_value_sha256": "6d19201b88206c8f33ffde5c7fa816953eaf30c68bcd34ab9fbe72f0f013f438",
+          "new_pointer": "/medium_holdout/source/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet"
+        },
+        {
+          "old_pointer": "/medium_train_dev/source/relative",
+          "old_value_sha256": "6d19201b88206c8f33ffde5c7fa816953eaf30c68bcd34ab9fbe72f0f013f438",
+          "new_pointer": "/medium_train_dev/source/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet"
+        },
+        {
+          "old_pointer": "/medium_train_dev/training_reuse/relative",
+          "old_value_sha256": "25b39dde9891aa5ceee2fe31c38eed09f33005d96e453f4152efb648437956d0",
+          "new_pointer": "/medium_train_dev/training_reuse/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1"
+        },
+        {
+          "old_pointer": "/medium_train_dev/training_reuse/consumed_sources/0/local_file",
+          "old_value_sha256": "e5813ec977d527038e8ee78faa0165e0d77d66a5bddbb50ecddd74ac9941a497",
+          "new_pointer": "/medium_train_dev/training_reuse/consumed_sources/0/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet"
+        },
+        {
+          "old_pointer": "/medium_train_dev/training_reuse/consumed_sources/1/local_file",
+          "old_value_sha256": "01173da9d5901d557c11938bc434afd3bc439021c8ecc35524cc3f74acf8f17e",
+          "new_pointer": "/medium_train_dev/training_reuse/consumed_sources/1/historical_source_uri",
+          "new_value": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet"
+        },
+        {
+          "old_pointer": "/medium_train_dev/tokenizer/relative",
+          "old_value_sha256": "1d9994fcdd5b8b3593910fcd60193068853cdd9d4c08ca45083561bb6b96d662",
+          "new_pointer": "/medium_train_dev/tokenizer/historical_source_uri",
+          "new_value": "historical://qcmr-20260906/data/tokenizer/tokenizer.json"
+        }
+      ]
+    },
+    {
+      "path": "results/studies/D/fresh_holdout_audit.json",
+      "before_sha256": "e8a3f3a8e05871c768144464b21a96805b406bca7742eebec1e471d39d4466c2",
+      "after_sha256": "351bbca6e7b3c117d0c5913b38aafce0e63a5a1a80542828a04bc812abc51351",
+      "path_fields_changed": 744,
+      "numeric_and_sha256_fields_unchanged": true,
+      "bulk_path_change": {
+        "old_pointer": "/data/history_inputs_sha256/*/relative",
+        "new_pointer": "/data/history_inputs_sha256/*/historical_source_uri",
+        "records": 744,
+        "mapping_sha256": "26b984450dae50537f21a1332e3f9c3db78d27630df084adcd5ebb447f109829",
+        "mapping_rule": "Locations become historical://workspace/<original relative identifier>, except the historical QCMR root is represented by historical://qcmr-20260906/. These are labels only; each accompanying original payload SHA-256 is unchanged."
+      }
+    }
+  ],
+  "validation": {
+    "all_original_numeric_fields_preserved": true,
+    "all_original_sha256_values_preserved": true,
+    "historical_inventory_entries_relabelled": 744,
+    "tokenizer_bytes_unchanged": true
+  },
+  "limits": "This label audit does not assert successful end-to-end training reproduction. Public data reconstruction and training commands are validated separately."
+}

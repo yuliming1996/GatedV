@@ -1,0 +1,532 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/fresh_holdout_audit.json",
+  "source_sha256": "6b5b932c4cb59395bce81b4b1a4f1103fcb7745799c9804a54bc4e84eda8fd8b",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "PASS",
+    "auditor": "independent_subagent_audit_screen_results",
+    "audit_unix": 1790444889.599641,
+    "elapsed_seconds": 15.05426050000824,
+    "checks": 264386,
+    "failures": [],
+    "script_sha256": "2cb8f5fc2cf45bec2b31e1f05c89e45df95db81ac399cdf3d237fbb2c8898ed2",
+    "manifest_sha256": "515a9ccf4a00ae755232ffd9ef5db457489e1507cbfb508b48696f71d223159f",
+    "seal_sha256": "5c7937646e410995623448d52c76c02a81de22a2cdeb74aafb66c3f5ce1321ef",
+    "preparation_policy_sha256": "e4d3da2f83db7c1a99d332fef7959195691c6ccad44c4a93ced80d3f7f6fd6f3",
+    "preparer_sha256": "0fdbd49786ba0b2ce9cc802750c5049a0e6aed728d77c0dae571c9920d7d8821",
+    "legacy_helper_sha256": "91b95e0ec6e714f478deb0d00061be0e139efe1fe679190028d1f99c3a190c58",
+    "deviation_report_sha256": "404c2909307bdbcf563c11672ed3bada4238ccff482a5ed7b1b65bd83141634d",
+    "artifacts": {
+      "dedup_shingles.bin": {
+        "sha256": "c21d5884cb53d81cd9efd21f8ebfd5c3479b7e18f1f2df21502ad9c19ee7ee22",
+        "bytes": 685406840
+      },
+      "docs_holdout.npy": {
+        "sha256": "359dd09191fc1489014e229e20c0c1551aa34000f9ed7f754fe7adc16c7c90be",
+        "bytes": 16512
+      },
+      "documents_holdout.jsonl": {
+        "sha256": "3bc3ebedfb9ab0389d605a639dfa6aaeb686693a7560fec8e91256bf3224e414",
+        "bytes": 6786513
+      },
+      "eval_document_ids.npy": {
+        "sha256": "27e2935cb98e5eb3fb0264594106564a3e83ce74e1ed36de78fe986cbd63fb9c",
+        "bytes": 8320
+      },
+      "eval_offsets.npy": {
+        "sha256": "bbef7261183da3ea632a12a076e26c1f5f52ea65128575cf2bc1061c8ddc9bec",
+        "bytes": 8320
+      },
+      "exclusion_rejections.jsonl": {
+        "sha256": "520a8c9f6da4af0e2c45ed32e7ee9450f36cc25e17ca9c60799b3811fbeffcc1",
+        "bytes": 1912
+      },
+      "historical_exclusion_index.json": {
+        "sha256": "428d9a97905f045be39f72eda816e1cf066ce53615e05154c675df4d19fe8ba8",
+        "bytes": 29601
+      },
+      "preparation_policy.json": {
+        "sha256": "e4d3da2f83db7c1a99d332fef7959195691c6ccad44c4a93ced80d3f7f6fd6f3",
+        "bytes": 28280
+      },
+      "tokens_holdout.npy": {
+        "sha256": "057a5b57fe95f3cdaeb0609bc190dbe01f1a4dce9ebfa11265466e6a42044bd5",
+        "bytes": 2942614
+      }
+    },
+    "documents": 1024,
+    "domain_groups": 916,
+    "tokens_with_eos": 1471243,
+    "full_document_retokenizations": 1024,
+    "source_parquet_records_recovered": 1024,
+    "evaluation": {
+      "documents": 1024,
+      "targets_per_document": 256,
+      "targets": 262144,
+      "sealed_order": "source acceptance order",
+      "helpers_order": "seed20260921 permutation; identical first-block cohort, different order"
+    },
+    "historical_inputs": [
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 27830
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 352
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 275
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 46605
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 520
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 509
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 46605
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 520
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 559
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 46605
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 520
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "fineweb_accepted",
+        "text_records_read": 604
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1024
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1024
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 4096
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 4096
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 512
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 8
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 9000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 2560
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 9000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 2560
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 2048
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 2048
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 24576
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 32
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 64
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1950
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 15334
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 2000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1792
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1792
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1792
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 1792
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 3584
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "jsonl_text_fields",
+        "text_records_read": 896
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "wikitext_all_rows_and_article_groups",
+        "text_records_read": 2953
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "wikitext_all_rows_and_article_groups",
+        "text_records_read": 24396
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "wikitext_all_rows_and_article_groups",
+        "text_records_read": 2521
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "babi_story",
+        "text_records_read": 200
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "babi_story",
+        "text_records_read": 2000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "babi_numbered_stories",
+        "text_records_read": 2000
+      },
+      {
+        "path": "[REDACTED_LOCAL_PATH]",
+        "kind": "babi_numbered_stories",
+        "text_records_read": 2000
+      }
+    ],
+    "historical_recomputed_counts": {
+      "source_documents": 77254,
+      "source_ids": 77254,
+      "urls": 77253,
+      "domain_groups": 58887,
+      "raw_hashes": 160570,
+      "normalized_hashes": 160570,
+      "casefolded_hashes": 160570
+    },
+    "exact_overlap_counts": {
+      "raw": 0,
+      "normalized": 0,
+      "casefolded": 0,
+      "source_id": 0,
+      "url": 0,
+      "group": 0,
+      "source_identity": 0
+    },
+    "operational_deviation": {
+      "kind": "operational_deviation",
+      "description": "Python importlib wrote or refreshed the historical helper bytecode cache while loading the helper. This was not intended; source/data/models/progress were not mutated by the preparer. No cleanup was attempted because whether an older cache previously existed is unknown.",
+      "historical_path": "[REDACTED_LOCAL_PATH]",
+      "cache_sha256": "e0e582e2edb14b6039459eb5f4a556ef7351fb090dec4dbf48333c5beceeb7c0",
+      "cache_mtime_ns": 1790444169839118730,
+      "historical_source_sha256": "91b95e0ec6e714f478deb0d00061be0e139efe1fe679190028d1f99c3a190c58",
+      "historical_source_matches_frozen_import": true,
+      "future_import_rule": "Use PYTHONDONTWRITEBYTECODE=1 or sys.dont_write_bytecode=True before importing historical modules; do not modify the currently executing preparer.",
+      "historical_dataset_manifest": "[REDACTED_LOCAL_PATH]",
+      "historical_dataset_frozen_preparer_sha256": "91b95e0ec6e714f478deb0d00061be0e139efe1fe679190028d1f99c3a190c58",
+      "historical_source_matches_existing_dataset_freeze": true
+    },
+    "independence": {
+      "exact_checks": "Independently implemented SHA/NFKC/casefold/URL/domain grouping, source identities, historical text extraction, source-row recovery, tokenization and array checks. No project source imported.",
+      "near_checks": "Read-only review of SHA-bound preparer and legacy MinHash/Jaccard code and rejection logs. Approximate near-duplicate search and long-span index were not rerun by this audit."
+    },
+    "limitations": [
+      "Fresh documents/domain groups at a fixed unused tail of the same shard/family; not a new independent corpus family. Row-order stopping, domain exclusion and minimum length condition the distribution.",
+      "All four FineWeb rounds and all discovered stored text data ledgers plus raw WikiText/bAbI are covered; no assertion about arbitrary text outside this workspace or latent pretraining of unrelated external models.",
+      "Historical abstract numeric/token simulations without document text have no natural document identity. Stored text examples are excluded, but this is not a regeneration/enumeration of every possible synthetic sequence.",
+      "MinHash LSH can miss high-Jaccard near duplicates; long-span matches use128-bit hashes and exclude aligned64-word blocks, guaranteeing detection of normalized contiguous127-word reuse within an indexed text, not paraphrases or shorter misaligned spans.",
+      "WikiText article reconstruction is a conservative supplementary unit; original rows are also indexed. Same-topic texts and brief boilerplate may remain.",
+      "Exactly the first256 prediction targets per accepted document are planned, rather than uniform token sampling across whole documents. All designs/seeds must use identical offsets.",
+      "Data audit is not a model evaluation and does not establish a new corpus-family distribution, semantic independence, or exhaustive absence of all paraphrases/near duplicates. Historical holdout text was read solely as exclusion data, never scored."
+    ],
+    "model_evaluations": 0,
+    "training_updates": 0,
+    "mps_used": false,
+    "legacy_modules_imported": false,
+    "bytecode_writes_disabled": true
+  }
+}

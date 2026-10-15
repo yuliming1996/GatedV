@@ -1,0 +1,12 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/nonexpanding_cuda_20260927/reports/long_recheck_plan.freeze.json",
+  "source_sha256": "11582a128183fc8f47091f8ae69c89588ad74a1f3270651fc816d0f0dd9d53bf",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "plan_sha256": "30f5a145126610b68d7ffa0427b6d3440cfe4fde810a13fa90c084a90efa17cc",
+    "study_kind": "scientific_experiment",
+    "frozen_unix": 1790524202.5507784
+  }
+}

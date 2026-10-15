@@ -1,0 +1,25 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/candidate_selection.json",
+  "source_sha256": "c66696debecbee1108399a3ae467aa809d97307572a743fc5388690e0fb9fc9e",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "rule": "minimum_final_dev_nll_exact_tie_lower_lr",
+    "selection_plan_sha256": "68e8efa118cfdc891cf5982ac6cd93c860c0bae87fca71279c723159b56ba1a2",
+    "selection_audit_relative": "reports/audit_medium_selection.json",
+    "selection_audit_sha256": "5ac55b62c7428a077236beb121e435b7c267ea0d9dfdda761b4b233164fe8209",
+    "endpoint_result_sha256": {
+      "baseline_s20270201_lr600": "abd8f8889a1143aff045a1b90aa5500bb86b084fb9a2e9d896ce88cba69fa401",
+      "v_silu_s20270201_lr600": "610b74fc94d3c0e6b656000c149695991d35e086042467a3506e82f049b1157b",
+      "v_silu_s20270201_lr1200": "7939ee0bd232d909a64e2c3e1e67a9c3312195b8f7a58338108b5a67013ec169",
+      "baseline_s20270201_lr1200": "f3b4c6ea931c6f7e3ac104207c6cb1dc9519113f5326dad676c1bb80d481c0b8",
+      "baseline_s20270201_lr2400": "71644a48c43b45908a31601fc9cd7530ee71c8c2d1a705f42ad9109d0b1ac589",
+      "v_silu_s20270201_lr2400": "2141118e680e50ca2139ee62ff87a17b56c0f17c4e42b278bf1365aad4e71ce0"
+    },
+    "selected_lr_by_arm": {
+      "baseline": 0.0006,
+      "v_silu": 0.0006
+    }
+  }
+}

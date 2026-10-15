@@ -1,0 +1,47 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# Local data, checkpoints and generated training outputs
+data/
+datasets/
+runs/
+outputs/
+checkpoints/
+executions/
+technical/
+monitoring/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Local machine metadata and secrets
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+
+# Temporary files and LaTeX build artifacts (keep figure PDFs)
+*.tmp
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+/paper/main.pdf
+/build/
+/dist/

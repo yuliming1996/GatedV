@@ -1,0 +1,12 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/confirmation_plan.freeze.json",
+  "source_sha256": "28adb0984d3a98cfb572634a63f5d980df4c48e5b80d7b36a7d6cc33f05a1e0b",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "plan_sha256": "434fcf02b8048688203d02da1fcc2eb3299c0adffebe182243ae324f9d81525d",
+    "study_kind": "scientific_experiment",
+    "frozen_unix": 1790556044.3738298
+  }
+}

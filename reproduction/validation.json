@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "date": "2026-10-15",
+  "scope": "Actual full reconstruction of frozen accepted small/medium datasets from previously downloaded verified public parquet shards; no model training and no independent historical exclusion re-audit.",
+  "payload_files_verified": 18,
+  "files": [
+    {
+      "component": "small_train",
+      "file": "tokens_train.npy",
+      "bytes": 80002748,
+      "sha256": "fd64a4583bdd02e4a8cf6cdf73d6923755bc30db23a0c0964ee8a5f2eb8aa9ea"
+    },
+    {
+      "component": "small_train",
+      "file": "docs_train.npy",
+      "bytes": 445408,
+      "sha256": "bb8feb76a5c9b96c5cd5c66eb5b44262ec0673ee7897992a1d5b0e13dc807cf8"
+    },
+    {
+      "component": "small_dev",
+      "file": "tokens_dev.npy",
+      "bytes": 1002416,
+      "sha256": "93ccde44dafd82d9be2b94c2aea1fe02d41c1e7381e929a19e142e191f4c15a7"
+    },
+    {
+      "component": "small_dev",
+      "file": "docs_dev.npy",
+      "bytes": 5760,
+      "sha256": "5c167931496a8a150b4a54db1cbe93515d6569353c8c804eb999337e3b2421d5"
+    },
+    {
+      "component": "small_holdout",
+      "file": "tokens_holdout.npy",
+      "bytes": 5376856,
+      "sha256": "d094ec5fab2e832426c856ec80211dcc33c17d545d2edccec548c8cbb66b5a93"
+    },
+    {
+      "component": "small_holdout",
+      "file": "docs_holdout.npy",
+      "bytes": 32896,
+      "sha256": "efe802e790b877dcd7e3984af291f3fb0376ee0e6b9c2e13a988c091ee0da947"
+    },
+    {
+      "component": "small_holdout",
+      "file": "documents_holdout.jsonl",
+      "bytes": 12624453,
+      "sha256": "f9115280d1edad91c3dab9ce905aeb2c61e935fb15d668aae8c9e0350411e081"
+    },
+    {
+      "component": "small_holdout",
+      "file": "eval_offsets.npy",
+      "bytes": 16512,
+      "sha256": "3b9d2b803fee6b3b194de1b70a06464f72c83fba70cc31f8fc28b0b0f0c0fc78"
+    },
+    {
+      "component": "small_holdout",
+      "file": "eval_document_ids.npy",
+      "bytes": 16512,
+      "sha256": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7"
+    },
+    {
+      "component": "medium_train",
+      "file": "tokens_train.npy",
+      "bytes": 1024000264,
+      "sha256": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932"
+    },
+    {
+      "component": "medium_train",
+      "file": "docs_train.npy",
+      "bytes": 3392960,
+      "sha256": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682"
+    },
+    {
+      "component": "medium_dev",
+      "file": "tokens_dev.npy",
+      "bytes": 5722148,
+      "sha256": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8"
+    },
+    {
+      "component": "medium_dev",
+      "file": "docs_dev.npy",
+      "bytes": 32896,
+      "sha256": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e"
+    },
+    {
+      "component": "medium_holdout",
+      "file": "tokens_holdout.npy",
+      "bytes": 5838708,
+      "sha256": "5a3ccd49ca055e2860d7b35aa17bc79173029fe585285f1baf200602696f8a7a"
+    },
+    {
+      "component": "medium_holdout",
+      "file": "eval_document_ids.npy",
+      "bytes": 16512,
+      "sha256": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7"
+    },
+    {
+      "component": "medium_holdout",
+      "file": "eval_offsets.npy",
+      "bytes": 16512,
+      "sha256": "733ad76fa344ad5e38853594ace694feef1facc45bd018cbc8304db771281c79"
+    },
+    {
+      "component": "medium_holdout",
+      "file": "documents_holdout.jsonl",
+      "bytes": 13737117,
+      "sha256": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1"
+    },
+    {
+      "component": "medium_holdout",
+      "file": "docs_holdout.npy",
+      "bytes": 32896,
+      "sha256": "8bc9ee6f57f9a8e1e703e940a192032fe73042eb2f157e6ceab9be0c81908cf2"
+    }
+  ],
+  "source_shards_verified": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "013"
+  ],
+  "source_authority": "Fixed-revision official Hugging Face tree; sizes and LFS hashes match historical records and local files.",
+  "source_download_note": "Official tree fetched over HTTPS during validation. Multi-GB downloads were not repeated; download success/failure commit behavior tested with fixtures.",
+  "selection_ledger_bindings_verified": true,
+  "input_integrity_tests": 5,
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.0",
+    "tokenizers": "0.23.2"
+  },
+  "plan_sha256": "5c733a1e51459e35eb3bd6dcf1e245d3874db0957d1a83c1fcf466c2dd489779",
+  "prepare_script_sha256": "10ffc1ca0ba306387ef0dde411b232b5ed8d54edcef683696b56ba6bdd741471"
+}

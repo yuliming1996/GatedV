@@ -1,0 +1,4 @@
+# Complete environment for data reconstruction, paired training and evaluation.
+# Install a CUDA-compatible PyTorch build first if your platform requires one.
+-r requirements.txt
+-r reproduction/requirements.txt

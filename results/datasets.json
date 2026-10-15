@@ -1,0 +1,461 @@
+{
+  "small_train_dev": {
+    "source": {
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "config": "sample/10BT",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "upstream_file": "sample/10BT/013_00000.parquet",
+      "local_file": "[REDACTED_LOCAL_PATH]",
+      "sha256": "b393f51fefab26cd6f4c8f65707c1924f6666c4961a0ebebe04bb57f7ec832de",
+      "parquet_rows": 182101,
+      "tokenizer_file": "[REDACTED_LOCAL_PATH]",
+      "tokenizer_sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "tokenizer_provenance": "Existing ByteLevel BPE trained only on historical WikiText train; no new fitting",
+      "download_manifest": {
+        "dataset": "HuggingFaceFW/fineweb-edu",
+        "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+        "file": "sample/10BT/013_00000.parquet",
+        "sha256": "b393f51fefab26cd6f4c8f65707c1924f6666c4961a0ebebe04bb57f7ec832de",
+        "bytes": 540632672
+      },
+      "download_manifest_sha256": "227a55d1859af9248c802386f48a76e6b01d936b33a30628d6e413914b2f6b4a"
+    },
+    "split_policy": {
+      "group_method": "last_two_hostname_labels_conservative",
+      "hash": "sha256(fineweb-domain-v1:seed:group), first64bits mod10000",
+      "buckets": {
+        "train": [
+          0,
+          9600
+        ],
+        "dev": [
+          9600,
+          9800
+        ],
+        "holdout": [
+          9800,
+          10000
+        ]
+      },
+      "selection_order": "parquet row order, retain full documents until each quota met",
+      "domain_group_overlap": 0
+    },
+    "token_contract": {
+      "dtype": "uint16",
+      "vocab_size": 8192,
+      "eos_id": 3,
+      "eos_per_document": "one appended EOS",
+      "document_offsets": "int64 [start,end), includes EOS",
+      "sampling": "single-document contiguous context+1 windows only; require end-start >= context+1",
+      "no_cross_document_packing": true
+    },
+    "deduplication": {
+      "exact": "global accepted-document normalized NFKC+whitespace sha256, case preserved; first accepted wins",
+      "near": "5-word casefolded NFKC shingles, blake2b64 hashes, 32 affine uint64 MinHash components / 8 bands of4; candidate Jaccard >= threshold; first accepted wins",
+      "near_threshold": 0.85,
+      "approximate_limitations": "LSH candidate retrieval can miss near duplicates; shingle hashes have finite collision probability; no exhaustive all-pairs audit or semantic deduplication. Entire data preparation sees held-out text only to enforce grouping/dedup; no model fitting or evaluation on holdout.",
+      "lsh_candidates": 16,
+      "jaccard_pairs_checked": 10,
+      "length_bound_skips": 6,
+      "near_duplicates_removed": 1
+    },
+    "limitations": [
+      "Single fixed FineWeb-Edu shard, file-order truncation; not a representative sample of all FineWeb-Edu.",
+      "Without a local PSL, last-two-label domain grouping is intentionally coarse (e.g. all co.uk); split token proportions need not be96/2/2.",
+      "Documents shorter than min_doc_tokens including EOS are removed; no cross-document packing.",
+      "Tokenizer was fitted on historical WikiText training data, so this is a transferred tokenizer, not a newly trained FineWeb tokenizer."
+    ],
+    "source_manifest_sha256": "30c455cb529a024e82db403cec5240c00e6c05472fe67b50e81b928d13ea3c6b",
+    "splits": {
+      "train": {
+        "documents": 27830,
+        "tokens_with_eos": 40001310,
+        "domain_groups": 17699
+      },
+      "dev": {
+        "documents": 352,
+        "tokens_with_eos": 501144,
+        "domain_groups": 254
+      },
+      "holdout": {
+        "documents": 275,
+        "tokens_with_eos": 501254,
+        "domain_groups": 242
+      }
+    },
+    "dev_evaluated_targets": 131072
+  },
+  "depth_holdout": {
+    "source": {
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "upstream_file": "sample/10BT/000_00000.parquet",
+      "local_file": "[REDACTED_LOCAL_PATH]",
+      "sha256": "b1ba7b2ce4cb5ea6ef42dca40263eabb85f37700d01693a68e9b30a31d78e871",
+      "bytes": 2152819114,
+      "source_manifest": "[REDACTED_LOCAL_PATH]",
+      "source_manifest_sha256": "131aa770233ab9d999dec3350d4a2c9c35fb1135b14774e36adef1dc332ab3dc",
+      "parquet_rows": 726000,
+      "row_start_inclusive": 308915,
+      "row_end_exclusive": 456856
+    },
+    "tokenizer": {
+      "file": "[REDACTED_LOCAL_PATH]",
+      "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "vocab_size": 8192,
+      "eos_id": 3,
+      "fitting": "unchanged historical WikiText train-only tokenizer; no fit on fresh holdout"
+    },
+    "documents": 1024,
+    "tokens_with_eos": 1471243,
+    "domain_groups": 916,
+    "historical_exclusion": {
+      "source_documents": 77254,
+      "source_ids": 77254,
+      "urls": 77253,
+      "domain_groups": 58887,
+      "raw_hashes": 160570,
+      "normalized_hashes": 160570,
+      "casefolded_hashes": 160570,
+      "long_span_hashes": 1314381,
+      "near_index_documents": 148864
+    },
+    "limitations": [
+      "Fresh documents/domain groups at a fixed unused tail of the same shard/family; not a new independent corpus family. Row-order stopping, domain exclusion and minimum length condition the distribution.",
+      "All four FineWeb rounds and all discovered stored text data ledgers plus raw WikiText/bAbI are covered; no assertion about arbitrary text outside this workspace or latent pretraining of unrelated external models.",
+      "Historical abstract numeric/token simulations without document text have no natural document identity. Stored text examples are excluded, but this is not a regeneration/enumeration of every possible synthetic sequence.",
+      "MinHash LSH can miss high-Jaccard near duplicates; long-span matches use128-bit hashes and exclude aligned64-word blocks, guaranteeing detection of normalized contiguous127-word reuse within an indexed text, not paraphrases or shorter misaligned spans.",
+      "WikiText article reconstruction is a conservative supplementary unit; original rows are also indexed. Same-topic texts and brief boilerplate may remain.",
+      "Exactly the first256 prediction targets per accepted document are planned, rather than uniform token sampling across whole documents. All designs/seeds must use identical offsets."
+    ],
+    "source_manifest_sha256": "515a9ccf4a00ae755232ffd9ef5db457489e1507cbfb508b48696f71d223159f",
+    "eval_tokens": 262144
+  },
+  "small_v_holdout": {
+    "documents": 2048,
+    "domain_groups": 2048,
+    "eval_tokens": 524288,
+    "tokens_with_eos": 2688364,
+    "source": {
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "upstream_file": "sample/10BT/003_00000.parquet",
+      "sha256": "22184e6eb25759ddd97783751ffc73e1705dfa2542e630dae1f2a8bac8ee6ddb",
+      "bytes": 2152437524,
+      "rows": 734000,
+      "candidate_start_row": 0,
+      "maximum_candidate_rows": 734000,
+      "official_tree_entry": {
+        "type": "file",
+        "oid": "2c9b4a5357740163228979d4887b6639977b650f",
+        "size": 2152437524,
+        "lfs": {
+          "oid": "22184e6eb25759ddd97783751ffc73e1705dfa2542e630dae1f2a8bac8ee6ddb",
+          "size": 2152437524,
+          "pointerSize": 135
+        },
+        "xetHash": "ca982a0f681ea39281d11e4a6014c2fafcf4fd7c88286a8177037ce2dc3807ee",
+        "path": "sample/10BT/003_00000.parquet"
+      },
+      "row_start_inclusive": 0,
+      "row_end_exclusive": 13919,
+      "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet"
+    },
+    "tokenizer": {
+      "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "vocab": 8192,
+      "eos": 3,
+      "fit_policy": "Fixed prior WikiText training tokenizer; no fit/adaptation on this holdout",
+      "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/tokenizer.json",
+      "repository_path": "tokenizer/tokenizer.json"
+    },
+    "historical_exclusion": {
+      "unique_texts": 456776,
+      "unique_document_texts": 291698,
+      "unique_extra_texts": 165078,
+      "repeated_text_occurrences": 596919,
+      "raw_text_hashes": 461310,
+      "normalized_text_hashes": 456783,
+      "casefolded_text_hashes": 456776,
+      "source_ids": 1428750,
+      "canonical_urls": 291960,
+      "domain_groups": 401493,
+      "source_identities": 1322112,
+      "long_span_hashes": 6277520,
+      "near_index_documents": 363423
+    },
+    "selection_counts": {
+      "rows_scanned": 13919,
+      "historical_or_already_selected_domain": 11659,
+      "accepted": 2048,
+      "fewer_than_257_tokens_including_eos": 203,
+      "long_span_64_words": 9
+    },
+    "limitations": [
+      "Fresh documents and conservative domains from the same FineWeb-Edu family, not an independent corpus or language.",
+      "Workspace discovery covers the two recorded machines and files under data directories; it cannot establish absence from unrelated external corpora.",
+      "Domain groups use last two hostname labels without PSL; e.g. co.uk can conservatively merge unrelated registered domains.",
+      "Approximate LSH candidates followed by exact Jaccard can miss near duplicates; no semantic decontamination proof.",
+      "Historical 64-word blocks use stride64 and candidates every offset: arbitrary 64-word overlap is not guaranteed detected; a matching contiguous span of >=127 normalized word tokens necessarily contains one complete historical block (apart from hash collision assumptions).",
+      "One document per domain makes document and domain bootstrap use the same information; these are not independent robustness checks.",
+      "Fixed source row order and first256targets are prespecified sampling choices; historical short strings under unrecognized keys may not be extracted."
+    ],
+    "source_manifest_sha256": "6040a7098db050369967b6fdc62ca424761538ae70b5caa1d4a4bff8b22c2c6b"
+  },
+  "medium_holdout": {
+    "tokenizer": {
+      "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "vocab": 8192,
+      "eos": 3,
+      "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/tokenizer.json",
+      "repository_path": "tokenizer/tokenizer.json"
+    },
+    "source": {
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "upstream_file": "sample/10BT/004_00000.parquet",
+      "sha256": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+      "bytes": 2152338550,
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/004_00000.parquet",
+      "official_tree_entry": {
+        "type": "file",
+        "oid": "29f28906fd7457a4bad8e8181c9432ac90aac030",
+        "size": 2152338550,
+        "lfs": {
+          "oid": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+          "size": 2152338550,
+          "pointerSize": 135
+        },
+        "xetHash": "000b7608f83f7562f3c1bf1ed969ec09c88d95ce3e707043d18ff398b5b8a3ca",
+        "path": "sample/10BT/004_00000.parquet"
+      },
+      "rows": 745000,
+      "candidate_start_row": 0,
+      "maximum_candidate_rows": 745000,
+      "row_start_inclusive": 0,
+      "row_end_exclusive": 19262,
+      "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet"
+    },
+    "historical_exclusion": {
+      "unique_texts": 458825,
+      "unique_document_texts": 293746,
+      "unique_extra_texts": 165079,
+      "repeated_text_occurrences": 596919,
+      "raw_text_hashes": 463359,
+      "normalized_text_hashes": 458832,
+      "casefolded_text_hashes": 458825,
+      "source_ids": 1430798,
+      "canonical_urls": 294008,
+      "domain_groups": 403541,
+      "source_identities": 1324160,
+      "long_span_hashes": 6301902,
+      "near_index_documents": 365472
+    },
+    "selection_counts": {
+      "rows_scanned": 19262,
+      "historical_or_already_selected_domain": 14777,
+      "fewer_than_257_tokens_including_eos": 330,
+      "accepted_holdout": 2048,
+      "accepted_dev": 2048,
+      "long_span_64_words": 22,
+      "historical_or_selected_exact_text": 2,
+      "preassigned_split_quota_full": 35
+    },
+    "evaluation_window": "first256targets per doc, data evidence order=doc order; downstream actual schedule frozen separately",
+    "limitations": [
+      "Train is byte-for-byte reuse of a previously prepared 512,000,068-token corpus from another study; it is not newly collected data or globally unique linguistic content.",
+      "Fresh dev/holdout are source- and domain-excluded from inventoried historical accepted/selection materials and reused train; all remain the same FineWeb-Edu family and frozen tokenizer.",
+      "Historical discovery covers recorded Mac and Spark data directories, excluding runs/reports/code/env; it cannot establish absence from unrelated external corpora or unrecorded text.",
+      "Conservative last-two-hostname-label grouping may merge unrelated registered domains such as co.uk; invalid/IP URLs are excluded.",
+      "32-component MinHash/8 bands of four with exact retrieved-candidate hashed-shingle Jaccard >=0.85 is an approximate filter, not exhaustive semantic deduplication.",
+      "Historical/accepted 64-normalized-word blocks are indexed at stride64 and candidate blocks queried at every offset; >=127-word contiguous overlap is detected apart from hash collisions, but arbitrary 64-word/short/semantic overlap need not be.",
+      "One document per new domain globally makes document and domain bootstrap share the same information; they are not independent evidence.",
+      "New evaluation uses only each document's first256 targets; data arrays record document order, while training/evaluation plans must freeze their actual (possibly permuted) schedule."
+    ],
+    "documents": 2048,
+    "domain_groups": 2048,
+    "eval_tokens": 524288,
+    "tokens_with_eos": 2919290,
+    "source_manifest_sha256": "4ac2d036dfb5da2d5e3360f8a7d6793deb29bfb4334f0e9faf9fd8597eb4fa8d"
+  },
+  "medium_train_dev": {
+    "source": {
+      "dataset": "HuggingFaceFW/fineweb-edu",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "upstream_file": "sample/10BT/004_00000.parquet",
+      "sha256": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+      "bytes": 2152338550,
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/004_00000.parquet",
+      "official_tree_entry": {
+        "type": "file",
+        "oid": "29f28906fd7457a4bad8e8181c9432ac90aac030",
+        "size": 2152338550,
+        "lfs": {
+          "oid": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+          "size": 2152338550,
+          "pointerSize": 135
+        },
+        "xetHash": "000b7608f83f7562f3c1bf1ed969ec09c88d95ce3e707043d18ff398b5b8a3ca",
+        "path": "sample/10BT/004_00000.parquet"
+      },
+      "rows": 745000,
+      "candidate_start_row": 0,
+      "maximum_candidate_rows": 745000,
+      "row_start_inclusive": 0,
+      "row_end_exclusive": 19262,
+      "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet"
+    },
+    "training_reuse": {
+      "manifest_sha256": "bedfc190471a4e7031150ebfbe8094f147b84849b0382b29e4d0b66079a0e95d",
+      "split": {
+        "documents": 212052,
+        "tokens_with_eos": 512000068,
+        "domain_groups": 153145,
+        "quota": 512000000,
+        "quota_met": true
+      },
+      "copied_file_names": {
+        "tokens_train.npy": "tokens_train.npy",
+        "docs_train.npy": "docs_train.npy",
+        "documents_train.jsonl": "docs_train.jsonl"
+      },
+      "artifacts": {
+        "tokens_train.npy": {
+          "sha256": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+          "bytes": 1024000264
+        },
+        "docs_train.npy": {
+          "sha256": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+          "bytes": 3392960
+        },
+        "documents_train.jsonl": {
+          "sha256": "6453d8c0d6507cc8056658c163a6429229f42de8a8e92f0accdb639f68d07c01",
+          "bytes": 2107143135
+        }
+      },
+      "consumed_sources": [
+        {
+          "path": "[REDACTED_LOCAL_PATH]",
+          "dataset": "HuggingFaceFW/fineweb-edu",
+          "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+          "upstream_file": "sample/10BT/001_00000.parquet",
+          "sha256": "3fcf2dc69cd52503986276d3d2d26a8c356d0f2ea28a0de4fdbda8cf87755693",
+          "bytes": 2152222432,
+          "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/001_00000.parquet",
+          "official_tree_entry": {
+            "type": "file",
+            "oid": "c2021c8c564a8a3fca7ba114afc9069bd0bcd2d2",
+            "size": 2152222432,
+            "lfs": {
+              "oid": "3fcf2dc69cd52503986276d3d2d26a8c356d0f2ea28a0de4fdbda8cf87755693",
+              "size": 2152222432,
+              "pointerSize": 135
+            },
+            "xetHash": "e9960557cb2dc32fbb60dcd731f26a567939acf5400da272a02e0a2129372c0b",
+            "path": "sample/10BT/001_00000.parquet"
+          },
+          "parquet_rows": 729000,
+          "rows_scanned": 729000,
+          "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet"
+        },
+        {
+          "path": "[REDACTED_LOCAL_PATH]",
+          "dataset": "HuggingFaceFW/fineweb-edu",
+          "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+          "upstream_file": "sample/10BT/002_00000.parquet",
+          "sha256": "547ae182d132c9f06b6ce63149567208ea9f57630bfd9b1a2938e504f0c9ebd7",
+          "bytes": 2151796315,
+          "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/002_00000.parquet",
+          "official_tree_entry": {
+            "type": "file",
+            "oid": "e42928ee6a755554d7f348456ca62a66a9abc08c",
+            "size": 2151796315,
+            "lfs": {
+              "oid": "547ae182d132c9f06b6ce63149567208ea9f57630bfd9b1a2938e504f0c9ebd7",
+              "size": 2151796315,
+              "pointerSize": 135
+            },
+            "xetHash": "b56d6a2de6a9a15410ecc04eaad89793f13cf6afc45f443b8038eaf55abfcd98",
+            "path": "sample/10BT/002_00000.parquet"
+          },
+          "parquet_rows": 727000,
+          "rows_scanned": 534338,
+          "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet"
+        }
+      ],
+      "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1"
+    },
+    "splits": {
+      "train": {
+        "documents": 212052,
+        "tokens_with_eos": 512000068,
+        "domain_groups": 153145,
+        "quota": 512000000,
+        "quota_met": true
+      },
+      "dev": {
+        "documents": 2048,
+        "tokens_with_eos": 2861010,
+        "domain_groups": 2048,
+        "eval_tokens": 524288
+      }
+    },
+    "tokenizer": {
+      "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "vocab": 8192,
+      "eos": 3,
+      "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/tokenizer.json",
+      "repository_path": "tokenizer/tokenizer.json"
+    },
+    "token_contract": {
+      "dtype": "uint16",
+      "vocab_size": 8192,
+      "eos_id": 3,
+      "document_offsets": "int64[start,end)",
+      "no_cross_document_packing": true
+    },
+    "evaluation_window": "first256targets per doc, data evidence order=doc order; downstream actual schedule frozen separately",
+    "historical_exclusion": {
+      "unique_texts": 458825,
+      "unique_document_texts": 293746,
+      "unique_extra_texts": 165079,
+      "repeated_text_occurrences": 596919,
+      "raw_text_hashes": 463359,
+      "normalized_text_hashes": 458832,
+      "casefolded_text_hashes": 458825,
+      "source_ids": 1430798,
+      "canonical_urls": 294008,
+      "domain_groups": 403541,
+      "source_identities": 1324160,
+      "long_span_hashes": 6301902,
+      "near_index_documents": 365472
+    },
+    "selection_counts": {
+      "rows_scanned": 19262,
+      "historical_or_already_selected_domain": 14777,
+      "fewer_than_257_tokens_including_eos": 330,
+      "accepted_holdout": 2048,
+      "accepted_dev": 2048,
+      "long_span_64_words": 22,
+      "historical_or_selected_exact_text": 2,
+      "preassigned_split_quota_full": 35
+    },
+    "limitations": [
+      "Train is byte-for-byte reuse of a previously prepared 512,000,068-token corpus from another study; it is not newly collected data or globally unique linguistic content.",
+      "Fresh dev/holdout are source- and domain-excluded from inventoried historical accepted/selection materials and reused train; all remain the same FineWeb-Edu family and frozen tokenizer.",
+      "Historical discovery covers recorded Mac and Spark data directories, excluding runs/reports/code/env; it cannot establish absence from unrelated external corpora or unrecorded text.",
+      "Conservative last-two-hostname-label grouping may merge unrelated registered domains such as co.uk; invalid/IP URLs are excluded.",
+      "32-component MinHash/8 bands of four with exact retrieved-candidate hashed-shingle Jaccard >=0.85 is an approximate filter, not exhaustive semantic deduplication.",
+      "Historical/accepted 64-normalized-word blocks are indexed at stride64 and candidate blocks queried at every offset; >=127-word contiguous overlap is detected apart from hash collisions, but arbitrary 64-word/short/semantic overlap need not be.",
+      "One document per new domain globally makes document and domain bootstrap share the same information; they are not independent evidence.",
+      "New evaluation uses only each document's first256 targets; data arrays record document order, while training/evaluation plans must freeze their actual (possibly permuted) schedule."
+    ],
+    "source_manifest_sha256": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f"
+  },
+  "_path_semantics": {
+    "repository_path": "Relative to the repository root; these files are included.",
+    "historical_source_uri": "Provenance-only identifier. It is never opened by training or data preparation.",
+    "redacted_fields": "Previously redacted local_file/file/source_manifest fields are retained as historical metadata, not runtime inputs.",
+    "runtime_data_plan": "reproduction/data_plan.json"
+  }
+}

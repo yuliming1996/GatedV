@@ -1,0 +1,151 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/audit_medium_selection.json",
+  "source_sha256": "5ac55b62c7428a077236beb121e435b7c267ea0d9dfdda761b4b233164fe8209",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "evidence_sha256"
+  ],
+  "data": {
+    "status": "PASS",
+    "stage": "medium_selection",
+    "aggregate_budget": {
+      "runs": 6,
+      "optimizer_updates": 1966080,
+      "target_exposures": 4026531840
+    },
+    "binding": {
+      "plan_sha256": "68e8efa118cfdc891cf5982ac6cd93c860c0bae87fca71279c723159b56ba1a2",
+      "audit_source_sha256": "7921f2839a0bc5b02f30537da4100e6ba2e661b529d22de8aa657a075ae561eb"
+    },
+    "rows": [
+      {
+        "job_id": "baseline_s20270201_lr600",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0006,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.070762575545814,
+        "dev_nll": 3.070762575545814,
+        "ppl": 21.558336268324503,
+        "checkpoint_sha256": "9d7dac0550548b4d12501b3f835cbcdc1228f3418638aed2d949403128d8fb39",
+        "result_sha256": "abd8f8889a1143aff045a1b90aa5500bb86b084fb9a2e9d896ce88cba69fa401",
+        "memory_observed_max": {
+          "process_rss": 3117277184,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22634.255758639323
+      },
+      {
+        "job_id": "v_silu_s20270201_lr600",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0006,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.0447481728624552,
+        "dev_nll": 3.0447481728624552,
+        "ppl": 21.004740973001645,
+        "checkpoint_sha256": "b8e43ca9ff90b8e9b8e6e064aa698ffb2c9700d0e670f37066c384d26ecf134d",
+        "result_sha256": "610b74fc94d3c0e6b656000c149695991d35e086042467a3506e82f049b1157b",
+        "memory_observed_max": {
+          "process_rss": 3116441600,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22837.758119026315
+      },
+      {
+        "job_id": "v_silu_s20270201_lr1200",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0012,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.1424691816209815,
+        "dev_nll": 3.1424691816209815,
+        "ppl": 23.160984990644035,
+        "checkpoint_sha256": "00ceabd169ebe0c2bd3965af08242e0ff698229aa90066a428d788e87f994bcb",
+        "result_sha256": "7939ee0bd232d909a64e2c3e1e67a9c3312195b8f7a58338108b5a67013ec169",
+        "memory_observed_max": {
+          "process_rss": 3115679744,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22864.817827299994
+      },
+      {
+        "job_id": "baseline_s20270201_lr1200",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0012,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.1657749554142356,
+        "dev_nll": 3.1657749554142356,
+        "ppl": 23.70710886832103,
+        "checkpoint_sha256": "5b5347a3a3e1b7d1f7c1b983678d35d95fd30ce476c6484180393d861013791d",
+        "result_sha256": "f3b4c6ea931c6f7e3ac104207c6cb1dc9519113f5326dad676c1bb80d481c0b8",
+        "memory_observed_max": {
+          "process_rss": 3117236224,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22603.653041409038
+      },
+      {
+        "job_id": "baseline_s20270201_lr2400",
+        "arm": "baseline",
+        "seed": 20270201,
+        "lr": 0.0024,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.321117365558166,
+        "dev_nll": 3.321117365558166,
+        "ppl": 27.691274555044558,
+        "checkpoint_sha256": "89c61266d97bc85f278c5c7a0cb575b235bd0157bc4436710e956816f83add20",
+        "result_sha256": "71644a48c43b45908a31601fc9cd7530ee71c8c2d1a705f42ad9109d0b1ac589",
+        "memory_observed_max": {
+          "process_rss": 3118624768,
+          "cuda_allocated": 574535168,
+          "cuda_reserved": 1753219072,
+          "cuda_peak_allocated": 1653490176,
+          "cuda_peak_reserved": 1753219072
+        },
+        "training_seconds": 22644.8016671128
+      },
+      {
+        "job_id": "v_silu_s20270201_lr2400",
+        "arm": "v_silu",
+        "seed": 20270201,
+        "lr": 0.0024,
+        "steps": 327680,
+        "targets": 671088640,
+        "nll": 3.4082843990181573,
+        "dev_nll": 3.4082843990181573,
+        "ppl": 30.213365690819,
+        "checkpoint_sha256": "e52c52d02baa5249a82100685c286597f9f4e6e71b6f39078298661cb9d46c88",
+        "result_sha256": "2141118e680e50ca2139ee62ff87a17b56c0f17c4e42b278bf1365aad4e71ce0",
+        "memory_observed_max": {
+          "process_rss": 3117060096,
+          "cuda_allocated": 569947648,
+          "cuda_reserved": 1887436800,
+          "cuda_peak_allocated": 1763918336,
+          "cuda_peak_reserved": 1887436800
+        },
+        "training_seconds": 22880.95002447479
+      }
+    ],
+    "scope": "Read-only independent raw-array/update/optimizer/checkpoint audit; no GPU or holdout access.",
+    "completed_unix": 1790781423.7111106
+  }
+}

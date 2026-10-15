@@ -1,0 +1,475 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/operational_revision_20260927/reports/screen_results.json",
+  "source_sha256": "c7a6e0316f938faf9131de9f78753a8f9e0c7ef8870d67597212b1436c6b6b5d",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "screen_complete",
+    "completed_unix": 1790443300.159573,
+    "rows": [
+      {
+        "id": "screen_deep6_lr0.0006",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.640065997838974,
+        "parameters": 2328192,
+        "training_seconds": 41.19999114028178,
+        "median_step_ms": 39.57889543380588
+      },
+      {
+        "id": "screen_shallow4_lr0.0006",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.721050206571817,
+        "parameters": 1901696,
+        "training_seconds": 31.767310515977442,
+        "median_step_ms": 30.347020481713116
+      },
+      {
+        "id": "screen_wide4_lr0.0006",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.6100174291059375,
+        "parameters": 2327168,
+        "training_seconds": 33.98080882895738,
+        "median_step_ms": 32.977083465084434
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0006",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.671920887194574,
+        "parameters": 2327680,
+        "training_seconds": 35.12488428805955,
+        "median_step_ms": 33.72883296106011
+      },
+      {
+        "id": "screen_q_gated4_lr0.0006",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.683023143559694,
+        "parameters": 2327680,
+        "training_seconds": 36.13920824462548,
+        "median_step_ms": 34.90329103078693
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0006",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.581873222254217,
+        "parameters": 2328704,
+        "training_seconds": 37.27009565709159,
+        "median_step_ms": 35.731645999476314
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0006",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.6047135181725025,
+        "parameters": 2327168,
+        "training_seconds": 39.21192940114997,
+        "median_step_ms": 37.7243539551273
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0006",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.668771535158157,
+        "parameters": 2328704,
+        "training_seconds": 36.42137494822964,
+        "median_step_ms": 35.212271148338914
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0006",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.681986298412085,
+        "parameters": 2331140,
+        "training_seconds": 43.52375343767926,
+        "median_step_ms": 42.33156202826649
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0006",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.701523474417627,
+        "parameters": 2327680,
+        "training_seconds": 35.12994623580016,
+        "median_step_ms": 34.01179157663137
+      },
+      {
+        "id": "screen_output_gate4_lr0.0006",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        },
+        "dev_nll": 5.618684834800661,
+        "parameters": 2328192,
+        "training_seconds": 35.25859623635188,
+        "median_step_ms": 34.089416498318315
+      },
+      {
+        "id": "screen_deep6_lr0.0012",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.357824749313295,
+        "parameters": 2328192,
+        "training_seconds": 41.01596945594065,
+        "median_step_ms": 39.80162495281547
+      },
+      {
+        "id": "screen_shallow4_lr0.0012",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.3994039706885815,
+        "parameters": 1901696,
+        "training_seconds": 31.424626908497885,
+        "median_step_ms": 30.417833477258682
+      },
+      {
+        "id": "screen_wide4_lr0.0012",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.333526995964348,
+        "parameters": 2327168,
+        "training_seconds": 34.065643585985526,
+        "median_step_ms": 33.08085456956178
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0012",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.369231411255896,
+        "parameters": 2327680,
+        "training_seconds": 34.92346510034986,
+        "median_step_ms": 33.766437554731965
+      },
+      {
+        "id": "screen_q_gated4_lr0.0012",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.382880165241659,
+        "parameters": 2327680,
+        "training_seconds": 35.862717802869156,
+        "median_step_ms": 34.823249909095466
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0012",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.3200813215225935,
+        "parameters": 2328704,
+        "training_seconds": 37.07547438587062,
+        "median_step_ms": 35.770979011431336
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0012",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.360506230965257,
+        "parameters": 2327168,
+        "training_seconds": 38.92642605281435,
+        "median_step_ms": 37.60904201772064
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0012",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.368345681577921,
+        "parameters": 2328704,
+        "training_seconds": 36.1507767806761,
+        "median_step_ms": 35.05281242541969
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0012",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.3846883568912745,
+        "parameters": 2331140,
+        "training_seconds": 43.454783817287534,
+        "median_step_ms": 42.23731241654605
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0012",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.386923253536224,
+        "parameters": 2327680,
+        "training_seconds": 35.06951358052902,
+        "median_step_ms": 34.010999952442944
+      },
+      {
+        "id": "screen_output_gate4_lr0.0012",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        },
+        "dev_nll": 5.327104699797928,
+        "parameters": 2328192,
+        "training_seconds": 35.20037687360309,
+        "median_step_ms": 34.16450007352978
+      },
+      {
+        "id": "screen_deep6_lr0.0024",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.174342067912221,
+        "parameters": 2328192,
+        "training_seconds": 41.23674410954118,
+        "median_step_ms": 39.817479089833796
+      },
+      {
+        "id": "screen_shallow4_lr0.0024",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.203084443695843,
+        "parameters": 1901696,
+        "training_seconds": 31.538866952294484,
+        "median_step_ms": 30.508562340401113
+      },
+      {
+        "id": "screen_wide4_lr0.0024",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.162104086950421,
+        "parameters": 2327168,
+        "training_seconds": 34.092170112533495,
+        "median_step_ms": 33.11452048365027
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0024",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.178583671338856,
+        "parameters": 2327680,
+        "training_seconds": 34.92117655160837,
+        "median_step_ms": 33.78868696745485
+      },
+      {
+        "id": "screen_q_gated4_lr0.0024",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.192405574023724,
+        "parameters": 2327680,
+        "training_seconds": 35.91404343303293,
+        "median_step_ms": 34.857666469179094
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0024",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.123067022301257,
+        "parameters": 2328704,
+        "training_seconds": 38.12647436372936,
+        "median_step_ms": 37.80510451178998
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0024",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.18974937312305,
+        "parameters": 2327168,
+        "training_seconds": 38.887263767188415,
+        "median_step_ms": 37.55443752743304
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0024",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.288697219453752,
+        "parameters": 2328704,
+        "training_seconds": 36.388847975060344,
+        "median_step_ms": 35.1518124807626
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0024",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.233295698650181,
+        "parameters": 2331140,
+        "training_seconds": 43.4022398495581,
+        "median_step_ms": 42.1886871336028
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0024",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.183830521069467,
+        "parameters": 2327680,
+        "training_seconds": 35.12111064535566,
+        "median_step_ms": 33.99872896261513
+      },
+      {
+        "id": "screen_output_gate4_lr0.0024",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        },
+        "dev_nll": 5.133338024839759,
+        "parameters": 2328192,
+        "training_seconds": 35.171331700868905,
+        "median_step_ms": 34.12312490399927
+      }
+    ],
+    "note": "Exploratory development screen; independent multi-seed confirmation remains."
+  }
+}

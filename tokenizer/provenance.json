@@ -1,0 +1,31 @@
+{
+  "copied_byte_for_byte": true,
+  "bytes": 550412,
+  "library": "Hugging Face tokenizers",
+  "version": "0.23.2",
+  "algorithm": "ByteLevel BPE",
+  "vocab_size": 8192,
+  "min_frequency": 2,
+  "training_input_hash": "50270172dac7a112434fbd846acd586af15a3cc31406c75aef9e8379c30fed00",
+  "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+  "special_ids": {
+    "<pad>": 0,
+    "<unk>": 1,
+    "<bos>": 2,
+    "<eos>": 3
+  },
+  "dataset": "Salesforce/wikitext",
+  "subset": "wikitext-2-raw-v1",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "upstream_license_metadata": [
+    "cc-by-sa-3.0",
+    "gfdl"
+  ],
+  "license_note": "Historical source notes record CC BY-SA 3.0/GFDL metadata and a CC BY-SA 4.0 link in the dataset card. Retain source attribution; this provenance record does not resolve that discrepancy or relicense upstream material under MIT.",
+  "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/tokenizer.json",
+  "historical_training_inputs": [
+    "historical://qcmr-20260906/data/processed/train.txt"
+  ],
+  "bundled_path": "tokenizer/tokenizer.json",
+  "path_semantics": "bundled_path is relative to this repository; historical:// values identify provenance records and are not filesystem locations or runtime inputs."
+}

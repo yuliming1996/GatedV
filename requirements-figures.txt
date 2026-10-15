@@ -1,0 +1,3 @@
+# Numerical verification and figure generation do not require PyTorch.
+numpy>=1.26
+matplotlib>=3.7

@@ -1,0 +1,310 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/cost_benchmark/binding.json",
+  "source_sha256": "2b7bb721fb7fe837d0025d92a563c281ecf7731c71422ebab5e5750196d66b05",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "plan_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+    "script_sha256": "741a015eb586c5c2323e003b9c17a3cfd4422f3bf3cc2d467949e9d902ba44d2",
+    "training_audit_sha256": "cb1bf53a6f6edf2643f8a7633c2b047fbef6d6e97de3137ac859571e57cff999",
+    "schedule": [
+      {
+        "slot": 0,
+        "round": 0,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 1,
+        "round": 0,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 2,
+        "round": 0,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 3,
+        "round": 0,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 4,
+        "round": 0,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 5,
+        "round": 0,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 6,
+        "round": 1,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 7,
+        "round": 1,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 8,
+        "round": 1,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 9,
+        "round": 1,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 10,
+        "round": 1,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 11,
+        "round": 1,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 12,
+        "round": 2,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 13,
+        "round": 2,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 14,
+        "round": 2,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 15,
+        "round": 2,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 16,
+        "round": 2,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 17,
+        "round": 2,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 18,
+        "round": 3,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 19,
+        "round": 3,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 20,
+        "round": 3,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 21,
+        "round": 3,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 22,
+        "round": 3,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 23,
+        "round": 3,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 24,
+        "round": 4,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 25,
+        "round": 4,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 26,
+        "round": 4,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 27,
+        "round": 4,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 28,
+        "round": 4,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 29,
+        "round": 4,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 30,
+        "round": 5,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      },
+      {
+        "slot": 31,
+        "round": 5,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 32,
+        "round": 5,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 33,
+        "round": 5,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 34,
+        "round": 5,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 35,
+        "round": 5,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 36,
+        "round": 6,
+        "seed": 20270211,
+        "arm": "baseline",
+        "job_id": "baseline_s20270211_lr600"
+      },
+      {
+        "slot": 37,
+        "round": 6,
+        "seed": 20270211,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270211_lr600"
+      },
+      {
+        "slot": 38,
+        "round": 6,
+        "seed": 20270212,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270212_lr600"
+      },
+      {
+        "slot": 39,
+        "round": 6,
+        "seed": 20270212,
+        "arm": "baseline",
+        "job_id": "baseline_s20270212_lr600"
+      },
+      {
+        "slot": 40,
+        "round": 6,
+        "seed": 20270213,
+        "arm": "baseline",
+        "job_id": "baseline_s20270213_lr600"
+      },
+      {
+        "slot": 41,
+        "round": 6,
+        "seed": 20270213,
+        "arm": "v_silu",
+        "job_id": "v_silu_s20270213_lr600"
+      }
+    ],
+    "warmup": 3,
+    "timed_repetitions": 10,
+    "synthetic_seed": 2026092902
+  }
+}

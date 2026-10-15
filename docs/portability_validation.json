@@ -1,0 +1,141 @@
+{
+  "status": "PASS_PORTABLE_PUBLIC_ENTRYPOINT",
+  "date": "2026-10-15",
+  "scope": "Clean isolated installation and bounded synthetic pipeline checks; no formal scientific training, new holdout experiment or CUDA certification.",
+  "environment": {
+    "python": "3.13.7",
+    "platform": "Darwin",
+    "machine": "arm64",
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "tokenizers": "0.23.2",
+    "pyarrow": "26.0.0",
+    "psutil": "7.2.2"
+  },
+  "installation": {
+    "new_virtual_environment": true,
+    "system_site_packages": false,
+    "requirements": "requirements-reproduce.txt",
+    "pip_exit_code": 0,
+    "relocated_checkout": true,
+    "invoked_from_outside_checkout": true,
+    "historical_workspace_environment_used": false
+  },
+  "checks": [
+    {
+      "name": "combined_public_tool_tests",
+      "tests": 36,
+      "passed": 36,
+      "scope": "18 data reconstruction/integrity/concurrency plus 18 coordinator/completeness/interruption checks; synthetic data and mocked network."
+    },
+    {
+      "name": "synthetic_train_evaluate_summary",
+      "status": "COMPLETE_SYNTHETIC_SMOKE",
+      "arms": [
+        "baseline",
+        "v_silu"
+      ],
+      "paired_seeds": [
+        17
+      ],
+      "updates_per_model": 4,
+      "evaluated_documents": 4,
+      "device": "cpu",
+      "seconds_observed": 4.745,
+      "timing_scope": "Single end-to-end technical check; not a model latency benchmark."
+    },
+    {
+      "name": "completed_smoke_explicit_resume",
+      "status": "PASS",
+      "retrained": false
+    },
+    {
+      "name": "completed_smoke_resume_after_moving_entire_checkout",
+      "status": "PASS",
+      "retrained": false
+    },
+    {
+      "name": "small_formal_dry_plan",
+      "status": "PASS",
+      "runs": 10,
+      "updates_per_run": 32768,
+      "total_updates": 327680,
+      "total_training_targets": 671088640
+    },
+    {
+      "name": "medium_formal_dry_plan",
+      "status": "PASS",
+      "runs": 6,
+      "updates_per_run": 327680,
+      "total_updates": 1966080,
+      "total_training_targets": 4026531840
+    },
+    {
+      "name": "CUDA_unavailable_before_data_download",
+      "status": "PASS",
+      "expected_exit_code": 1,
+      "prepared_or_raw_data_created": false
+    },
+    {
+      "name": "packaged_results_reanalysis",
+      "status": "PASS",
+      "original_endpoint_rows": 133,
+      "partial_glu_endpoint_rows": 5,
+      "new_training_performed": false
+    },
+    {
+      "name": "scientific_runtimes_unchanged",
+      "status": "PASS",
+      "files": 17
+    },
+    {
+      "name": "machine_workspace_paths_in_executable_files",
+      "status": "PASS",
+      "matches": 0
+    }
+  ],
+  "tested_tools_sha256": {
+    "tools/reproduce.py": "9f8547cdf77de56f3ec1bc814e3aa1b0e96e019169d51a6045081b9cb02e9070",
+    "tools/prepare_data.py": "288dc202f0e1ca438c208db1c5806618db4b5705164dd62038690f54ef4058be",
+    "tests/test_reproduce.py": "4d2a820220a4e86986016d597f08149953d3d535d42f6af039342957060c252a",
+    "tests/test_prepare_data.py": "589768e644ed1c2ef0e3e036084898a1a6a1a71f5ae0a4e1361490b3e264266e",
+    "requirements-reproduce.txt": "b0a78ae4431ce9d4fccb0619217bf3549690b93eb91f1a79292c8e3bf323f1e3"
+  },
+  "scientific_runtime_sha256": {
+    "code/benchmark.py": "1f57fcea0228004f2676b8f63247664cac60532f19a1d137e3a4bde4c73275f5",
+    "code/model.py": "114923fbd5ca4dea247548095f13c78be041602521b617fface3100075b1a56f",
+    "code/common.py": "51bc2fe5837948d462fdb44f417895d8bbf8ef0e36987b6d4be42d194c6d8c49",
+    "code/train.py": "47923b268d238f3464256f2a36b260450d399adc7acbda58b6115608c5242221",
+    "code/evaluate.py": "e3b562549a32085ef55d73120ee1071491527de44bcbaddfce25689ca2a6110c",
+    "code/statistics_core.py": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+    "code/data.py": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+    "code/analyze.py": "f4ee295223a11ed35e0e32dd5e3fab9d58b627c83fbc99ea9eb2c6684da5ebca",
+    "experiments/glu_attention/code/benchmark.py": "3a02083396bb0384e8ce8aab05f708cd9f38c9df90cb9b634a7f2a38fa065229",
+    "experiments/glu_attention/code/model.py": "6366e88ab34c21830b090e61222d1390ce68d6e0e8a57238b1d987fb753e2bbf",
+    "experiments/glu_attention/code/common.py": "37d5776c835aba83a5a204c1deaf0f62b965bd713418f7673c46bd4460fa1dad",
+    "experiments/glu_attention/code/train.py": "5f2f584c2b6eebfc66b20336ab0890f58138b189cbf5c7b110e82ac18f6fddd6",
+    "experiments/glu_attention/code/resources.py": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+    "experiments/glu_attention/code/evaluate.py": "745986f3f43a8edfbf738f1cf8caeb85f7582ebf492f9f1b6718fd3772d02208",
+    "experiments/glu_attention/code/statistics_core.py": "271ef6d34a5999f1a4e422b94fd558f174c23687477fb65fd030c9929049b38f",
+    "experiments/glu_attention/code/data.py": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+    "experiments/glu_attention/code/analyze.py": "5119b3864af20292b6e40de0b535d827822f64f250787e985611f9e72d26123d"
+  },
+  "historical_payload_validation": {
+    "path": "reproduction/validation.json",
+    "sha256": "ce792666321c290a070fb112251ceded173db0f025d248bcd78e4367a257da8d",
+    "payloads": 18,
+    "scope": "Earlier actual small/medium accepted-row reconstruction. Not repeated in this portability pass; updated data-tool behavior tested with real tiny fixtures."
+  },
+  "provenance_path_adaptation": {
+    "path": "docs/path_portability.json",
+    "sha256": "d84b5d8fe961ddb1c44f22023dd2428ab3402451680819bf63b5dd3b8af8251a",
+    "scientific_numeric_fields_changed": false
+  },
+  "limitations": [
+    "Full paper confirmation jobs were not rerun during packaging.",
+    "Multi-GB network downloads were not repeated; transfer failures/resume/integrity were tested with fixtures.",
+    "Published improvements are empirical, not guaranteed across software and hardware.",
+    "The default full entrypoint does not repeat LR selection, GLU controls, missing historical calibration controls or timing measurements.",
+    "Data reconstruction replays frozen accepted rows rather than independently repeating the historical data-exclusion audit."
+  ]
+}

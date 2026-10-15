@@ -1,0 +1,50 @@
+{
+  "scope": "All newly executed scientific trajectories; not independent statistical replicates. No technical preflight, migration, calibration, evaluation, cost, or audit added to run count. E/F shared three seeds.",
+  "stages": [
+    {
+      "stage": "A",
+      "runs": 33,
+      "updates": 33792,
+      "target_exposures": 69206016
+    },
+    {
+      "stage": "B",
+      "runs": 18,
+      "updates": 147456,
+      "target_exposures": 301989888
+    },
+    {
+      "stage": "C",
+      "runs": 24,
+      "updates": 442368,
+      "target_exposures": 905969664
+    },
+    {
+      "stage": "D",
+      "runs": 10,
+      "updates": 327680,
+      "target_exposures": 671088640
+    },
+    {
+      "stage": "E",
+      "runs": 24,
+      "updates": 786432,
+      "target_exposures": 1610612736
+    },
+    {
+      "stage": "F",
+      "runs": 12,
+      "updates": 393216,
+      "target_exposures": 805306368
+    },
+    {
+      "stage": "M",
+      "runs": 12,
+      "updates": 3932160,
+      "target_exposures": 8053063680
+    }
+  ],
+  "total_runs": 133,
+  "total_updates": 6063104,
+  "total_target_exposures": 12417236992
+}

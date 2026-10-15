@@ -1,0 +1,53 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/nonexpanding_cuda_20260927/reports/research_control_freeze.json",
+  "source_sha256": "47000e75d6c5b044e245f05f53f1d7c66977964804ca1f1b879d95b0b33f561c",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "created_utc": "2026-09-27T15:21:24.993146+00:00",
+    "study_id": "nonexpanding_cuda_20260927",
+    "scope": "Fixed 24-run adaptive-development study: 12 x 4096 steps plus all four arms x three new seeds x 32768 steps; no holdout access; capacity coexistence permitted.",
+    "expected_total": {
+      "runs": 24,
+      "optimizer_updates": 442368,
+      "target_exposures": 905969664
+    },
+    "artifacts": {
+      "PROTOCOL.md": "b6545dbaa4ab74ea651207da2788533bd07bfd3f2fa172c4b8bae961db018e74",
+      "README.md": "ae1423c80787b5a64be3dafc369de74172f0651a66d258e34ba838c5efbc2da1",
+      "data/dev_groups.json": "06b5e7b373dd78a50adc325638c659eb580f8e4b596ba8cc1a57f19e34b44add",
+      "reports/acceptance_remote_hashes.txt": "08b63ebb0a81a5a123ed5956cf610a154fbb0f53abd368f49d0275a630716fbf",
+      "reports/analyze_results.py": "92d5591d2c709712d3944743151ebb1b6ed771f6edcb3dad04a6fe1d2f01ce1b",
+      "reports/audit_stage.py": "8dcf8ec5cb1c8b36d5f0a9ef7e9bb31474293de4144e50e8d25b1a001118416c",
+      "reports/audit_stage_review.md": "7e1385b3fe175bf8bc02a00b51947269cc1313839749e9ab051da76a39f67776",
+      "reports/control_review.json": "0f8a675b00753d7261bbf746e532a09932d271b19ba7bf37939039610c458e9a",
+      "reports/control_review.md": "480ef7887b7079dfe88d1c02b930848a6bf45c8404d88fdfe3ca42bcaa7868fb",
+      "reports/cuda_preflight.py": "e45a1bf9c78b81350ca40a75887d5fdaca69cc3c4a9edbcdeeba1363cd799dbb",
+      "reports/cuda_preflight_attempt001/result.json": "e0216c5b4e4e031edb31a450c9cacdf4af7a3371fc9a189fc44b0806432f7bc9",
+      "reports/migration_smoke_plan.freeze.json": "93873a33fb17101816788be865e8db02bac34373d301c257b756b8a396dd8dc3",
+      "reports/migration_smoke_plan.json": "140d7767608e31779c549ddfcc568cb9eb9e9b45d7eab4f9f4eb5ee8c99a23e3",
+      "reports/model_review.md": "54245ef22c1a3bd3e3cdcd568c986261228fd268cc21888a630dc3115857195c",
+      "reports/pipeline_review.json": "54a355dad622854ccd5c60e728646600298fed2b5f05cd4ed618acb72314e6f6",
+      "reports/pipeline_review.md": "6b80a44f50b2eff5ed3ef3eb1205d8b185c92bba2b8fbcecb26cf8d295b5c9c4",
+      "reports/preflight_config.json": "13e2a506f3d72d5548ff4fb81a6e683c825e84c480214288116ca70a70c0fac7",
+      "reports/preflight_review.md": "6b03727afd8dad60f25c15aabab23264cf566828fb3903a7fd70aedb4e258371",
+      "reports/prelaunch_acceptance.json": "3971627509fe52c0776039049c8c1a4b6c114d4980147040ba1066c496f85e94",
+      "reports/research_pipeline.py": "22205b414ffd68da99cab71d9baa928e9e7982372f2fe37e6268751a494139ad",
+      "reports/runner_validation_attempt001/result.json": "0cc975e74caff386d949b8a48de82071325cb79b270dd1063dc8e24494eea020",
+      "reports/scientific_design_review.md": "fc58d8773166db0998f73ad3676efb266e5457d81fa0ea06485c036448db05a6",
+      "reports/test_audit_stage.py": "90a8bc2bff735771a1c123edff968f3246d8ffdec8c63d73ffbd76b353955f34",
+      "reports/test_control_plane.py": "54e5162ef21825a1be4e8794274a8f28443fa4ce2b44ca10cb598f9cb4e67ffb",
+      "reports/test_model.py": "0a4d67de894fc11b95ad9014c8db3db6f4ab97fc008fc2feb63dccbe3fd283ea",
+      "reports/test_pipeline_control.py": "298ad662fb4895164ad88fd828389ff7307631ecbfeed94923488e9393962baf",
+      "reports/validate_cuda_runner.py": "69850c30ee333e95c250b90eab7cebe67dec83e68f35bfc6c6e76027503760e7",
+      "src/build_plan.py": "9d9f7885fa2eae28bd9699ee09c7054f42f2624e24e9e17efeb201b1f4c6dc4b",
+      "src/helpers.py": "9fbcdf2e892487d25c1afaa7bcbcc93904dc87266faec129abf1166705e48a05",
+      "src/launcher.py": "803c306715d0f3dd59625922a8a9b9e9e45aa715cbc0408b1d0f8584cfcef734",
+      "src/model.py": "34aae34b0d7402571898783b7e998bf65e4923eae48de77ee1926b5741e0ed9d",
+      "src/runtime.py": "650af82eaf3efcca770410a2335a441c77a525af19f4e38febc10cae4c1dbf99",
+      "src/supervisor.py": "84789cb01bf2f172d4e089f7ecdc2dac79638e6dd31d656070d0e4d0b32ca262",
+      "src/train.py": "29aa0959f84aa83c8ca76bd27cdba0e574de59a53d90f5e01d384f4a506cb823"
+    }
+  }
+}

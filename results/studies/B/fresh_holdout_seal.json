@@ -1,0 +1,15 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/fresh_holdout_seal.json",
+  "source_sha256": "5c7937646e410995623448d52c76c02a81de22a2cdeb74aafb66c3f5ce1321ef",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "sealed_not_evaluated",
+    "manifest": "[REDACTED_LOCAL_PATH]",
+    "manifest_sha256": "515a9ccf4a00ae755232ffd9ef5db457489e1507cbfb508b48696f71d223159f",
+    "script_sha256": "0fdbd49786ba0b2ce9cc802750c5049a0e6aed728d77c0dae571c9920d7d8821",
+    "documents": 1024,
+    "eval_targets": 262144,
+    "model_evaluation_performed": false
+  }
+}

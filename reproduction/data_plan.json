@@ -1,0 +1,163 @@
+{
+  "schema": "gatedv_selected_rows_v1",
+  "dataset": "HuggingFaceFW/fineweb-edu",
+  "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+  "tokenizer_sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+  "scope": "Reconstruct accepted data exactly; does not regenerate historical exclusion registries or independently re-audit selection.",
+  "sources": {
+    "001": {
+      "filename": "001_00000.parquet",
+      "upstream_file": "sample/10BT/001_00000.parquet",
+      "bytes": 2152222432,
+      "sha256": "3fcf2dc69cd52503986276d3d2d26a8c356d0f2ea28a0de4fdbda8cf87755693",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/001_00000.parquet"
+    },
+    "002": {
+      "filename": "002_00000.parquet",
+      "upstream_file": "sample/10BT/002_00000.parquet",
+      "bytes": 2151796315,
+      "sha256": "547ae182d132c9f06b6ce63149567208ea9f57630bfd9b1a2938e504f0c9ebd7",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/002_00000.parquet"
+    },
+    "003": {
+      "filename": "003_00000.parquet",
+      "upstream_file": "sample/10BT/003_00000.parquet",
+      "bytes": 2152437524,
+      "sha256": "22184e6eb25759ddd97783751ffc73e1705dfa2542e630dae1f2a8bac8ee6ddb",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/003_00000.parquet"
+    },
+    "004": {
+      "filename": "004_00000.parquet",
+      "upstream_file": "sample/10BT/004_00000.parquet",
+      "bytes": 2152338550,
+      "sha256": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/004_00000.parquet"
+    },
+    "013": {
+      "filename": "013_00000.parquet",
+      "upstream_file": "sample/10BT/013_00000.parquet",
+      "bytes": 540632672,
+      "sha256": "b393f51fefab26cd6f4c8f65707c1924f6666c4961a0ebebe04bb57f7ec832de",
+      "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/resolve/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/sample/10BT/013_00000.parquet"
+    }
+  },
+  "components": [
+    {
+      "name": "small_train",
+      "study": "small",
+      "split": "train",
+      "folder": "small_corpus",
+      "documents": 27830,
+      "tokens": 40001310,
+      "sources": [
+        "013"
+      ],
+      "selection": "reproduction/selections/small_train.json.gz",
+      "selection_sha256": "cbcaf00769cce78615b1c0d7685eff023e73ce9df10659a1ad39a181a374ee8e",
+      "source_ledger_sha256": "90ce4afa601082df49168d2bc87d1e8ea0963161a5cd32bbe5baa254cb1c1953",
+      "files_sha256": {
+        "tokens_train.npy": "fd64a4583bdd02e4a8cf6cdf73d6923755bc30db23a0c0964ee8a5f2eb8aa9ea",
+        "docs_train.npy": "bb8feb76a5c9b96c5cd5c66eb5b44262ec0673ee7897992a1d5b0e13dc807cf8"
+      }
+    },
+    {
+      "name": "small_dev",
+      "study": "small",
+      "split": "dev",
+      "folder": "small_corpus",
+      "documents": 352,
+      "tokens": 501144,
+      "sources": [
+        "013"
+      ],
+      "selection": "reproduction/selections/small_dev.json.gz",
+      "selection_sha256": "d4efe676e08349281928884fb0345c4f03e962a1fce85d5c0de9f06861a9c137",
+      "source_ledger_sha256": "aae1a9daaa7046dbe73c1f1a3828f2a8097f599aabbab86d3209175f2d2475c3",
+      "files_sha256": {
+        "tokens_dev.npy": "93ccde44dafd82d9be2b94c2aea1fe02d41c1e7381e929a19e142e191f4c15a7",
+        "docs_dev.npy": "5c167931496a8a150b4a54db1cbe93515d6569353c8c804eb999337e3b2421d5"
+      }
+    },
+    {
+      "name": "small_holdout",
+      "study": "small",
+      "split": "holdout",
+      "folder": "small_holdout",
+      "documents": 2048,
+      "tokens": 2688364,
+      "sources": [
+        "003"
+      ],
+      "selection": "reproduction/selections/small_holdout.json.gz",
+      "selection_sha256": "a242bc443719aab48288d4be46d273cfdadb5e17c9f892f55021caa774599d2b",
+      "source_ledger_sha256": "f9115280d1edad91c3dab9ce905aeb2c61e935fb15d668aae8c9e0350411e081",
+      "files_sha256": {
+        "tokens_holdout.npy": "d094ec5fab2e832426c856ec80211dcc33c17d545d2edccec548c8cbb66b5a93",
+        "docs_holdout.npy": "efe802e790b877dcd7e3984af291f3fb0376ee0e6b9c2e13a988c091ee0da947",
+        "documents_holdout.jsonl": "f9115280d1edad91c3dab9ce905aeb2c61e935fb15d668aae8c9e0350411e081",
+        "eval_offsets.npy": "3b9d2b803fee6b3b194de1b70a06464f72c83fba70cc31f8fc28b0b0f0c0fc78",
+        "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7"
+      },
+      "metadata": "documents_holdout.jsonl"
+    },
+    {
+      "name": "medium_train",
+      "study": "medium",
+      "split": "train",
+      "folder": "medium_corpus",
+      "documents": 212052,
+      "tokens": 512000068,
+      "sources": [
+        "001",
+        "002"
+      ],
+      "selection": "reproduction/selections/medium_train.json.gz",
+      "selection_sha256": "595608b9e156239e37e70257ddc1b881cd7f7e6bbf49e91242b16ad14d228a27",
+      "source_ledger_sha256": "6453d8c0d6507cc8056658c163a6429229f42de8a8e92f0accdb639f68d07c01",
+      "files_sha256": {
+        "tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+        "docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682"
+      }
+    },
+    {
+      "name": "medium_dev",
+      "study": "medium",
+      "split": "dev",
+      "folder": "medium_corpus",
+      "documents": 2048,
+      "tokens": 2861010,
+      "sources": [
+        "004"
+      ],
+      "selection": "reproduction/selections/medium_dev.json.gz",
+      "selection_sha256": "40b1e8f894a4c0ea4eed74bf3d2195792061a07fd55c124c8a1fc9fad18acda4",
+      "source_ledger_sha256": "34f8f750b4fe17a354cd96ed35e72a56d76831228a94457a0c16a905516bb031",
+      "files_sha256": {
+        "tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+        "docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e"
+      }
+    },
+    {
+      "name": "medium_holdout",
+      "study": "medium",
+      "split": "holdout",
+      "folder": "medium_holdout",
+      "documents": 2048,
+      "tokens": 2919290,
+      "sources": [
+        "004"
+      ],
+      "selection": "reproduction/selections/medium_holdout.json.gz",
+      "selection_sha256": "c2505b0188a542ccf56a053e75a2c5e1d2c19a44f543b3c572b1073edcfe32bb",
+      "source_ledger_sha256": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1",
+      "files_sha256": {
+        "tokens_holdout.npy": "5a3ccd49ca055e2860d7b35aa17bc79173029fe585285f1baf200602696f8a7a",
+        "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+        "eval_offsets.npy": "733ad76fa344ad5e38853594ace694feef1facc45bd018cbc8304db771281c79",
+        "documents_holdout.jsonl": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1",
+        "docs_holdout.npy": "8bc9ee6f57f9a8e1e703e940a192032fe73042eb2f157e6ceab9be0c81908cf2"
+      },
+      "metadata": "documents_holdout.jsonl"
+    }
+  ]
+}

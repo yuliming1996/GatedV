@@ -1,0 +1,992 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/operational_revision_20260927/reports/screen_plan.json",
+  "source_sha256": "ccc70369f6b8cd6b53ddeb71ecffd9229102d96f715a1095adb1f340f5c6a7dd",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "version": 1,
+    "data": "[REDACTED_LOCAL_PATH]",
+    "common": {
+      "width": 128,
+      "heads": 4,
+      "vocab": 8192,
+      "context": 256,
+      "batch": 8,
+      "steps": 1024,
+      "warmup": 128,
+      "eval_tokens": 131072,
+      "seed": 20260925
+    },
+    "environment": {
+      "python": "3.13.7",
+      "torch": "2.14.0",
+      "numpy": "2.5.2",
+      "machine": "arm64"
+    },
+    "schedule_sha256": "6b42a6465edbe55ff767a0a459a570f59839dad659c762e64c3ef3c7622565a2",
+    "jobs": [
+      {
+        "id": "screen_deep6_lr0.0006",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_shallow4_lr0.0006",
+        "design": "shallow4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_wide4_lr0.0006",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0006",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_q_gated4_lr0.0006",
+        "design": "q_gated4",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0006",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0006",
+        "design": "qkv_gated4",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0006",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0006",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0006",
+        "design": "shared_mlp4",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_output_gate4_lr0.0006",
+        "design": "output_gate4",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0006
+        }
+      },
+      {
+        "id": "screen_deep6_lr0.0012",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_shallow4_lr0.0012",
+        "design": "shallow4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_wide4_lr0.0012",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0012",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_q_gated4_lr0.0012",
+        "design": "q_gated4",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0012",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0012",
+        "design": "qkv_gated4",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0012",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0012",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0012",
+        "design": "shared_mlp4",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_output_gate4_lr0.0012",
+        "design": "output_gate4",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0012
+        }
+      },
+      {
+        "id": "screen_deep6_lr0.0024",
+        "design": "deep6",
+        "config": {
+          "arm": "baseline",
+          "layers": 6,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_shallow4_lr0.0024",
+        "design": "shallow4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_wide4_lr0.0024",
+        "design": "wide4",
+        "config": {
+          "arm": "baseline",
+          "layers": 4,
+          "hidden": 661,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_q_mlp4_lr0.0024",
+        "design": "q_mlp4",
+        "config": {
+          "arm": "q_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 480,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_q_gated4_lr0.0024",
+        "design": "q_gated4",
+        "config": {
+          "arm": "q_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 320,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_qkv_mlp4_lr0.0024",
+        "design": "qkv_mlp4",
+        "config": {
+          "arm": "qkv_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_qkv_gated4_lr0.0024",
+        "design": "qkv_gated4",
+        "config": {
+          "arm": "qkv_gated",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 135,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_qkv_linear4_lr0.0024",
+        "design": "qkv_linear4",
+        "config": {
+          "arm": "qkv_linear",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_qkv_norm4_lr0.0024",
+        "design": "qkv_norm4",
+        "config": {
+          "arm": "qkv_norm",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 203,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_shared_mlp4_lr0.0024",
+        "design": "shared_mlp4",
+        "config": {
+          "arm": "shared_mlp",
+          "layers": 4,
+          "hidden": 384,
+          "projection_hidden": 416,
+          "lr": 0.0024
+        }
+      },
+      {
+        "id": "screen_output_gate4_lr0.0024",
+        "design": "output_gate4",
+        "config": {
+          "arm": "output_gate",
+          "layers": 4,
+          "hidden": 619,
+          "projection_hidden": 0,
+          "lr": 0.0024
+        }
+      }
+    ],
+    "models": {
+      "deep6": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 6,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 2328192,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1279616,
+        "resolved_projection_hidden": 256,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 1277952,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.2886751345948129,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "shallow4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 1901696,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 853120,
+        "resolved_projection_hidden": 256,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 851968,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "wide4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 661,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 2327168,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1278592,
+        "resolved_projection_hidden": 256,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 1277440,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "q_mlp4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "q_mlp",
+          "qk_norm": false,
+          "projection_hidden": 480
+        },
+        "parameters": 2327680,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1279104,
+        "resolved_projection_hidden": 480,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 61440,
+          "blocks.0.attn.q_proj.down.weight": 61440,
+          "blocks.1.attn.q_proj.up.weight": 61440,
+          "blocks.1.attn.q_proj.down.weight": 61440,
+          "blocks.2.attn.q_proj.up.weight": 61440,
+          "blocks.2.attn.q_proj.down.weight": 61440,
+          "blocks.3.attn.q_proj.up.weight": 61440,
+          "blocks.3.attn.q_proj.down.weight": 61440
+        },
+        "backbone_matrix_macs_per_token": 1277952,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "q_gated4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "q_gated",
+          "qk_norm": false,
+          "projection_hidden": 320
+        },
+        "parameters": 2327680,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1279104,
+        "resolved_projection_hidden": 320,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 40960,
+          "blocks.0.attn.q_proj.down.weight": 40960,
+          "blocks.0.attn.q_proj.gate.weight": 40960,
+          "blocks.1.attn.q_proj.up.weight": 40960,
+          "blocks.1.attn.q_proj.down.weight": 40960,
+          "blocks.1.attn.q_proj.gate.weight": 40960,
+          "blocks.2.attn.q_proj.up.weight": 40960,
+          "blocks.2.attn.q_proj.down.weight": 40960,
+          "blocks.2.attn.q_proj.gate.weight": 40960,
+          "blocks.3.attn.q_proj.up.weight": 40960,
+          "blocks.3.attn.q_proj.down.weight": 40960,
+          "blocks.3.attn.q_proj.gate.weight": 40960
+        },
+        "backbone_matrix_macs_per_token": 1277952,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "qkv_mlp4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "qkv_mlp",
+          "qk_norm": false,
+          "projection_hidden": 203
+        },
+        "parameters": 2328704,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1280128,
+        "resolved_projection_hidden": 203,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 25984,
+          "blocks.0.attn.q_proj.down.weight": 25984,
+          "blocks.0.attn.k_proj.up.weight": 25984,
+          "blocks.0.attn.k_proj.down.weight": 25984,
+          "blocks.0.attn.v_proj.up.weight": 25984,
+          "blocks.0.attn.v_proj.down.weight": 25984,
+          "blocks.1.attn.q_proj.up.weight": 25984,
+          "blocks.1.attn.q_proj.down.weight": 25984,
+          "blocks.1.attn.k_proj.up.weight": 25984,
+          "blocks.1.attn.k_proj.down.weight": 25984,
+          "blocks.1.attn.v_proj.up.weight": 25984,
+          "blocks.1.attn.v_proj.down.weight": 25984,
+          "blocks.2.attn.q_proj.up.weight": 25984,
+          "blocks.2.attn.q_proj.down.weight": 25984,
+          "blocks.2.attn.k_proj.up.weight": 25984,
+          "blocks.2.attn.k_proj.down.weight": 25984,
+          "blocks.2.attn.v_proj.up.weight": 25984,
+          "blocks.2.attn.v_proj.down.weight": 25984,
+          "blocks.3.attn.q_proj.up.weight": 25984,
+          "blocks.3.attn.q_proj.down.weight": 25984,
+          "blocks.3.attn.k_proj.up.weight": 25984,
+          "blocks.3.attn.k_proj.down.weight": 25984,
+          "blocks.3.attn.v_proj.up.weight": 25984,
+          "blocks.3.attn.v_proj.down.weight": 25984
+        },
+        "backbone_matrix_macs_per_token": 1278976,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "qkv_gated4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "qkv_gated",
+          "qk_norm": false,
+          "projection_hidden": 135
+        },
+        "parameters": 2327168,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1278592,
+        "resolved_projection_hidden": 135,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 17280,
+          "blocks.0.attn.q_proj.down.weight": 17280,
+          "blocks.0.attn.q_proj.gate.weight": 17280,
+          "blocks.0.attn.k_proj.up.weight": 17280,
+          "blocks.0.attn.k_proj.down.weight": 17280,
+          "blocks.0.attn.k_proj.gate.weight": 17280,
+          "blocks.0.attn.v_proj.up.weight": 17280,
+          "blocks.0.attn.v_proj.down.weight": 17280,
+          "blocks.0.attn.v_proj.gate.weight": 17280,
+          "blocks.1.attn.q_proj.up.weight": 17280,
+          "blocks.1.attn.q_proj.down.weight": 17280,
+          "blocks.1.attn.q_proj.gate.weight": 17280,
+          "blocks.1.attn.k_proj.up.weight": 17280,
+          "blocks.1.attn.k_proj.down.weight": 17280,
+          "blocks.1.attn.k_proj.gate.weight": 17280,
+          "blocks.1.attn.v_proj.up.weight": 17280,
+          "blocks.1.attn.v_proj.down.weight": 17280,
+          "blocks.1.attn.v_proj.gate.weight": 17280,
+          "blocks.2.attn.q_proj.up.weight": 17280,
+          "blocks.2.attn.q_proj.down.weight": 17280,
+          "blocks.2.attn.q_proj.gate.weight": 17280,
+          "blocks.2.attn.k_proj.up.weight": 17280,
+          "blocks.2.attn.k_proj.down.weight": 17280,
+          "blocks.2.attn.k_proj.gate.weight": 17280,
+          "blocks.2.attn.v_proj.up.weight": 17280,
+          "blocks.2.attn.v_proj.down.weight": 17280,
+          "blocks.2.attn.v_proj.gate.weight": 17280,
+          "blocks.3.attn.q_proj.up.weight": 17280,
+          "blocks.3.attn.q_proj.down.weight": 17280,
+          "blocks.3.attn.q_proj.gate.weight": 17280,
+          "blocks.3.attn.k_proj.up.weight": 17280,
+          "blocks.3.attn.k_proj.down.weight": 17280,
+          "blocks.3.attn.k_proj.gate.weight": 17280,
+          "blocks.3.attn.v_proj.up.weight": 17280,
+          "blocks.3.attn.v_proj.down.weight": 17280,
+          "blocks.3.attn.v_proj.gate.weight": 17280
+        },
+        "backbone_matrix_macs_per_token": 1277440,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "qkv_linear4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "qkv_linear",
+          "qk_norm": false,
+          "projection_hidden": 203
+        },
+        "parameters": 2328704,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1280128,
+        "resolved_projection_hidden": 203,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 25984,
+          "blocks.0.attn.q_proj.down.weight": 25984,
+          "blocks.0.attn.k_proj.up.weight": 25984,
+          "blocks.0.attn.k_proj.down.weight": 25984,
+          "blocks.0.attn.v_proj.up.weight": 25984,
+          "blocks.0.attn.v_proj.down.weight": 25984,
+          "blocks.1.attn.q_proj.up.weight": 25984,
+          "blocks.1.attn.q_proj.down.weight": 25984,
+          "blocks.1.attn.k_proj.up.weight": 25984,
+          "blocks.1.attn.k_proj.down.weight": 25984,
+          "blocks.1.attn.v_proj.up.weight": 25984,
+          "blocks.1.attn.v_proj.down.weight": 25984,
+          "blocks.2.attn.q_proj.up.weight": 25984,
+          "blocks.2.attn.q_proj.down.weight": 25984,
+          "blocks.2.attn.k_proj.up.weight": 25984,
+          "blocks.2.attn.k_proj.down.weight": 25984,
+          "blocks.2.attn.v_proj.up.weight": 25984,
+          "blocks.2.attn.v_proj.down.weight": 25984,
+          "blocks.3.attn.q_proj.up.weight": 25984,
+          "blocks.3.attn.q_proj.down.weight": 25984,
+          "blocks.3.attn.k_proj.up.weight": 25984,
+          "blocks.3.attn.k_proj.down.weight": 25984,
+          "blocks.3.attn.v_proj.up.weight": 25984,
+          "blocks.3.attn.v_proj.down.weight": 25984
+        },
+        "backbone_matrix_macs_per_token": 1278976,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "qkv_norm4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "qkv_norm",
+          "qk_norm": false,
+          "projection_hidden": 203
+        },
+        "parameters": 2331140,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1282564,
+        "resolved_projection_hidden": 203,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.q_proj.up.weight": 25984,
+          "blocks.0.attn.q_proj.down.weight": 25984,
+          "blocks.0.attn.q_proj.norm.weight": 203,
+          "blocks.0.attn.k_proj.up.weight": 25984,
+          "blocks.0.attn.k_proj.down.weight": 25984,
+          "blocks.0.attn.k_proj.norm.weight": 203,
+          "blocks.0.attn.v_proj.up.weight": 25984,
+          "blocks.0.attn.v_proj.down.weight": 25984,
+          "blocks.0.attn.v_proj.norm.weight": 203,
+          "blocks.1.attn.q_proj.up.weight": 25984,
+          "blocks.1.attn.q_proj.down.weight": 25984,
+          "blocks.1.attn.q_proj.norm.weight": 203,
+          "blocks.1.attn.k_proj.up.weight": 25984,
+          "blocks.1.attn.k_proj.down.weight": 25984,
+          "blocks.1.attn.k_proj.norm.weight": 203,
+          "blocks.1.attn.v_proj.up.weight": 25984,
+          "blocks.1.attn.v_proj.down.weight": 25984,
+          "blocks.1.attn.v_proj.norm.weight": 203,
+          "blocks.2.attn.q_proj.up.weight": 25984,
+          "blocks.2.attn.q_proj.down.weight": 25984,
+          "blocks.2.attn.q_proj.norm.weight": 203,
+          "blocks.2.attn.k_proj.up.weight": 25984,
+          "blocks.2.attn.k_proj.down.weight": 25984,
+          "blocks.2.attn.k_proj.norm.weight": 203,
+          "blocks.2.attn.v_proj.up.weight": 25984,
+          "blocks.2.attn.v_proj.down.weight": 25984,
+          "blocks.2.attn.v_proj.norm.weight": 203,
+          "blocks.3.attn.q_proj.up.weight": 25984,
+          "blocks.3.attn.q_proj.down.weight": 25984,
+          "blocks.3.attn.q_proj.norm.weight": 203,
+          "blocks.3.attn.k_proj.up.weight": 25984,
+          "blocks.3.attn.k_proj.down.weight": 25984,
+          "blocks.3.attn.k_proj.norm.weight": 203,
+          "blocks.3.attn.v_proj.up.weight": 25984,
+          "blocks.3.attn.v_proj.down.weight": 25984,
+          "blocks.3.attn.v_proj.norm.weight": 203
+        },
+        "backbone_matrix_macs_per_token": 1278976,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "shared_mlp4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 384,
+          "context": 256,
+          "arm": "shared_mlp",
+          "qk_norm": false,
+          "projection_hidden": 416
+        },
+        "parameters": 2327680,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1279104,
+        "resolved_projection_hidden": 416,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.shared_up.weight": 53248,
+          "blocks.0.attn.shared_down.weight": 53248,
+          "blocks.1.attn.shared_up.weight": 53248,
+          "blocks.1.attn.shared_down.weight": 53248,
+          "blocks.2.attn.shared_up.weight": 53248,
+          "blocks.2.attn.shared_down.weight": 53248,
+          "blocks.3.attn.shared_up.weight": 53248,
+          "blocks.3.attn.shared_down.weight": 53248
+        },
+        "backbone_matrix_macs_per_token": 1277952,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "output_gate4": {
+        "config": {
+          "vocab": 8192,
+          "width": 128,
+          "layers": 4,
+          "heads": 4,
+          "hidden": 619,
+          "context": 256,
+          "arm": "output_gate",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 2328192,
+        "embedding_parameters": 1048576,
+        "nonembedding_parameters": 1279616,
+        "resolved_projection_hidden": 256,
+        "tied_embedding": true,
+        "mechanism_parameters": {
+          "blocks.0.attn.output_gate.weight": 16384,
+          "blocks.1.attn.output_gate.weight": 16384,
+          "blocks.2.attn.output_gate.weight": 16384,
+          "blocks.3.attn.output_gate.weight": 16384
+        },
+        "backbone_matrix_macs_per_token": 1278464,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.35355339059327373,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "SiLU/SwigLU second moments are not gain-corrected; initial Q/K/V scales may differ across arms. No output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      }
+    },
+    "source_sha256": {
+      "build_plan.py": "11ced9d1407c6d4d02e25f10411d3802ddcdc7e47a0303c8a7d5b9308a80e6ec",
+      "helpers.py": "cc249cb2e764890fd07711d1a95805c9c9a4a9c777d880db3de21b17fef36726",
+      "launcher.py": "f6cc4c8f4d126fa748d881d5f90ee85d5a08d7d5d406fc9695483d8113de6847",
+      "model.py": "d9fe7bd94df2b5fe394912b9240dcd695e2cada9f5e548bccbc3b995d58e5077",
+      "runtime.py": "9cbe480be496fee2257da5c656af6ad588e2bad760798e981f84216f81e4ea10",
+      "train.py": "e0d9b1d3367d65eac71e17bedbf9187549ea7f5faaff1be57bc4929661157579"
+    },
+    "data_sha256": {
+      "manifest.json": "30c455cb529a024e82db403cec5240c00e6c05472fe67b50e81b928d13ea3c6b",
+      "tokens_train.npy": "fd64a4583bdd02e4a8cf6cdf73d6923755bc30db23a0c0964ee8a5f2eb8aa9ea",
+      "docs_train.npy": "bb8feb76a5c9b96c5cd5c66eb5b44262ec0673ee7897992a1d5b0e13dc807cf8",
+      "tokens_dev.npy": "93ccde44dafd82d9be2b94c2aea1fe02d41c1e7381e929a19e142e191f4c15a7",
+      "docs_dev.npy": "5c167931496a8a150b4a54db1cbe93515d6569353c8c804eb999337e3b2421d5"
+    },
+    "budget": {
+      "runs": 33,
+      "optimizer_updates": 33792,
+      "target_exposures": 69206016
+    },
+    "selection": "Each design selects minimum terminal dev NLL over the same three LRs. The two best nonlinear designs are exploratory candidates, not confirmatory discoveries.",
+    "limits": [
+      "Short single-seed development screen only; no universal or large-model conclusion.",
+      "FLOPs and wall time are not exactly matched by parameter matching.",
+      "No historical holdout access. A fresh holdout is needed before final confirmation.",
+      "Initialization and small-width changes are part of the tested recipes; mechanism attribution requires follow-up controls."
+    ],
+    "followup": {
+      "new_seeds": [
+        20261001,
+        20261002,
+        20261003
+      ],
+      "max_designs": 6,
+      "max_steps_each": 8192,
+      "must_include": [
+        "deep6",
+        "wide4"
+      ],
+      "requires": "CPU audit of screen; new frozen plan and fresh held-out documents before any confirmation holdout is evaluated."
+    },
+    "operational_revision": {
+      "id": "operational_revision_20260927",
+      "original_plan_sha256": "56ed30393d167daf6e23ab8e8c2666cc9c9bf7be3e62c808b410f54be7a7f357",
+      "changes": [
+        "audited predecessor recovery completion recognition",
+        "CPU start threshold 70 percent per user 2026-09-27",
+        "isolated runtime and result paths; original workspace MPS lock"
+      ],
+      "scientific_fields_unchanged": true
+    }
+  }
+}

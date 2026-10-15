@@ -1,0 +1,5 @@
+# Versions used for the repository packaging regeneration check.
+# The preserved figures were originally generated with Matplotlib 3.11.1
+# and NumPy 2.5.2; see README.md for the byte/pixel comparison.
+matplotlib==3.11.2
+numpy==2.5.3

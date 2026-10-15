@@ -1,0 +1,50 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/final_results_audit.json",
+  "source_sha256": "fedb360944f4b15e90c6e6bc2488c337d685c4aa9ade25a693da8f01c155b2cf",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "evidence_sha256_relative_to_workspace"
+  ],
+  "data": {
+    "status": "PASS",
+    "plan_sha256": "434fcf02b8048688203d02da1fcc2eb3299c0adffebe182243ae324f9d81525d",
+    "final_results_sha256": "8b737f500b8a6952d9cfe35b427c848879d5d3220df8c6c1a0f553976b9f7c86",
+    "final_report_sha256": "ff7620ce74b83ae9cd80f8bbc3ae7dd5990283166e78184216c1ad57503fe088",
+    "analysis_source_sha256": "3b0611d861f89c469d9829fb22a2c801fe280e340e594d4c2e24673d74ecf94f",
+    "audit_source_sha256": "52bd43090a1dd29b0140be58a94d5f43b780004fb405c2ac4383bf0c124441ff",
+    "jobs_verified": 10,
+    "paired_training_seeds": [
+      20261201,
+      20261202,
+      20261203,
+      20261204,
+      20261205
+    ],
+    "training_budget": {
+      "runs": 10,
+      "optimizer_updates": 327680,
+      "target_exposures": 671088640
+    },
+    "holdout_targets_per_model": 524288,
+    "recomputed_mean_ppl_change_pct": -2.0340946894356615,
+    "recomputed_seed_t_ci95": [
+      -0.036406249896659845,
+      -0.0047763461069768726
+    ],
+    "recomputed_conditional_cluster_nll_ci95": [
+      -0.021868646904476916,
+      -0.01935558701050468
+    ],
+    "checks": [
+      "All ten final checkpoint and evaluation identities and hashes",
+      "Independent per-document NLL/PPL, five-seed means and sample SD",
+      "Five paired differences, standard error and Student-t df4 interval",
+      "Independent PCG64 paired domain/document bootstrap, 2000 replicates",
+      "Arithmetic mean PPL ratio distinguished from pooled NLL exponential interval",
+      "Practical-signal rule, all negative results, final prose numeric consistency",
+      "Complete producer evidence set and before/after file stability"
+    ],
+    "scope": "Independent CPU arithmetic/artifact audit; no imports from statistics/evaluation/model code, no GPU inference, no new tuning.",
+    "completed_utc": "2026-09-28T02:52:20.771246+00:00"
+  }
+}

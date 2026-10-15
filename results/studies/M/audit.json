@@ -1,0 +1,276 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/final_results_audit.json",
+  "source_sha256": "20f6adbfd9c327a815ad0a329bbf85a72df671a295027c1f42d1e5f18e11716e",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "evidence_sha256"
+  ],
+  "data": {
+    "status": "PASS",
+    "plan_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+    "final_results_sha256": "6c9ed703745901d0858f4089c3b8837a783880fb12903e32dce27ccfe4af692c",
+    "final_report_sha256": "765199b5e4cf6317277cc79d3f3048bc24d6382e1c1cc8015063e88710489104",
+    "script_sha256": "6ba88184c97714a99b2525b8c95373a9b3a6462c8a41f5de1f7ab28687fb19d6",
+    "independent_recomputed": {
+      "selection_six_raw_dev_endpoints": true,
+      "confirmation_six_raw_holdout_endpoints": true,
+      "means_sample_sd_paired_percent_and_mean_ppl_ratio": true,
+      "three_pair_student_t_df2": true,
+      "bootstrap_replicates": 2000,
+      "bootstrap_seed": 2026092901,
+      "bootstrap_domain_document_same_partition": true,
+      "cost_slots": 42,
+      "paired_round_medians_then_seed_mean": true,
+      "observed_memory": true,
+      "report_numbers": true,
+      "budget": {
+        "runs": 12,
+        "optimizer_updates": 3932160,
+        "target_exposures": 8053063680
+      }
+    },
+    "comparison": {
+      "paired_nll_differences": [
+        -0.043147594726178795,
+        -0.02964204567251727,
+        -0.03916075191227719
+      ],
+      "paired_ppl_change_pct": [
+        -4.222998216913498,
+        -2.920702909352868,
+        -3.840388169354303
+      ],
+      "mean_ppl_change_pct": -3.6648202339777614,
+      "practical_signal_only": true,
+      "improved_seed_count": 3,
+      "seed_uncertainty": {
+        "mean": -0.03731679743699109,
+        "sample_sd": 0.006939026580898085,
+        "standard_error": 0.004006248864395478,
+        "df": 2,
+        "t_critical": 4.302652729911275,
+        "t_ci95": [
+          -0.054554295050086236,
+          -0.02007929982389594
+        ]
+      },
+      "domain_cluster": {
+        "groups": 2048,
+        "seed": 2026092901,
+        "replicates": 2000,
+        "nll_difference_ci95": [
+          -0.03858312934607966,
+          -0.03601062788705652
+        ],
+        "pooled_nll_exponential_change_pct_ci95": [
+          -3.7848281627921323,
+          -3.5369958550487453
+        ],
+        "scope": "Conditional on these three seed pairs; not a CI for arithmetic mean PPL ratio."
+      },
+      "document_cluster": {
+        "groups": 2048,
+        "seed": 2026092901,
+        "replicates": 2000,
+        "nll_difference_ci95": [
+          -0.03858312934607966,
+          -0.03601062788705652
+        ],
+        "pooled_nll_exponential_change_pct_ci95": [
+          -3.7848281627921323,
+          -3.5369958550487453
+        ],
+        "scope": "Conditional on these three seed pairs; not a CI for arithmetic mean PPL ratio."
+      },
+      "same_partition_not_independent": true
+    },
+    "summaries": {
+      "baseline": {
+        "seeds": [
+          20270211,
+          20270212,
+          20270213
+        ],
+        "selected_lr": 0.0006,
+        "nll": [
+          3.068839344836306,
+          3.0539026703918353,
+          3.0650693975621834
+        ],
+        "ppl": [
+          21.516914458583265,
+          21.197911663598052,
+          21.435949538205865
+        ],
+        "mean_nll": 3.0626038042634414,
+        "sd_nll": 0.007767588016953896,
+        "mean_ppl": 21.383591886795728,
+        "sd_ppl": 0.16582125481368043
+      },
+      "v_silu": {
+        "seeds": [
+          20270211,
+          20270212,
+          20270213
+        ],
+        "selected_lr": 0.0006,
+        "nll": [
+          3.025691750110127,
+          3.024260624719318,
+          3.0259086456499062
+        ],
+        "ppl": [
+          20.60825554466249,
+          20.578783640917294,
+          20.61272586815185
+        ],
+        "mean_nll": 3.0252870068264506,
+        "sd_nll": 0.0008954641763773841,
+        "mean_ppl": 20.59992168457721,
+        "sd_ppl": 0.018442033926638814
+      }
+    },
+    "cost": {
+      "forward": {
+        "per_seed": [
+          {
+            "seed": 20270211,
+            "paired_round_ratios": [
+              1.0136768832966931,
+              1.01209591924178,
+              0.99452738993997,
+              0.9885339057377165,
+              0.9991619156943531,
+              1.0127218927360213,
+              1.0059776960366618
+            ],
+            "median_round_ratio": 1.0059776960366618
+          },
+          {
+            "seed": 20270212,
+            "paired_round_ratios": [
+              1.0183367539489174,
+              1.0256736694773974,
+              0.99387629125548,
+              0.9938493599859046,
+              0.9982594525413396,
+              1.017789040819303,
+              1.007199140864159
+            ],
+            "median_round_ratio": 1.007199140864159
+          },
+          {
+            "seed": 20270213,
+            "paired_round_ratios": [
+              1.0055999704900607,
+              1.0143566049083421,
+              1.0220809834741336,
+              0.9964740542960558,
+              0.9998815287142688,
+              1.0099887839458703,
+              1.007832885886341
+            ],
+            "median_round_ratio": 1.007832885886341
+          }
+        ],
+        "mean_of_seed_medians": 1.007003240929054
+      },
+      "train_step": {
+        "per_seed": [
+          {
+            "seed": 20270211,
+            "paired_round_ratios": [
+              1.011542383171264,
+              1.008844760858101,
+              1.0147556062832745,
+              1.003863470709797,
+              1.0112055309022625,
+              1.0049641981349522,
+              1.0081925883755332
+            ],
+            "median_round_ratio": 1.008844760858101
+          },
+          {
+            "seed": 20270212,
+            "paired_round_ratios": [
+              1.0047998722146616,
+              1.0131740414801544,
+              1.0063147816949598,
+              1.004519569637215,
+              1.0174789376161348,
+              1.0185069425372777,
+              1.016085944764661
+            ],
+            "median_round_ratio": 1.0131740414801544
+          },
+          {
+            "seed": 20270213,
+            "paired_round_ratios": [
+              1.0189271724041762,
+              1.0122810021210351,
+              1.0085405968330554,
+              1.0044350028393776,
+              1.0129779819355536,
+              1.0184149053061526,
+              1.0061051404175654
+            ],
+            "median_round_ratio": 1.0122810021210351
+          }
+        ],
+        "mean_of_seed_medians": 1.0114332681530969
+      },
+      "memory": {
+        "baseline": {
+          "process_rss": {
+            "median": 2167664640.0,
+            "max": 2178449408
+          },
+          "cuda_allocated": {
+            "median": 801038848.0,
+            "max": 807330304
+          },
+          "cuda_reserved": {
+            "median": 2004877312.0,
+            "max": 2042626048
+          },
+          "cuda_peak_allocated": {
+            "median": 1881763328.0,
+            "max": 1888054784
+          },
+          "cuda_peak_reserved": {
+            "median": 2004877312.0,
+            "max": 2042626048
+          }
+        },
+        "v_silu": {
+          "process_rss": {
+            "median": 2166775808.0,
+            "max": 2184757248
+          },
+          "cuda_allocated": {
+            "median": 800776704.0,
+            "max": 808444416
+          },
+          "cuda_reserved": {
+            "median": 2143289344.0,
+            "max": 2164260864
+          },
+          "cuda_peak_allocated": {
+            "median": 1993829888.0,
+            "max": 2003136000
+          },
+          "cuda_peak_reserved": {
+            "median": 2143289344.0,
+            "max": 2164260864
+          }
+        }
+      }
+    },
+    "limits": [
+      "No producer/source imports, model evaluation, training or GPU work.",
+      "All checkpoint bytes and bound stage event evidence rehashed; internal Adam/RNG/model semantics rely on the bound stage audit.",
+      "Data isolation certification is bound and rehashed; historical corpus exclusion is not independently repeated here.",
+      "This audit implements the predeclared arithmetic independently; it does not make the three seeds or domain/document bootstrap independent evidence."
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/fresh_holdout_seal.json",
+  "source_sha256": "4747f8a8f135b5bcf4942b47a6f9570b490a391eb59a06a75809d697fffcd3e5",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "sealed_after_independent_data_audit",
+    "model_evaluations": 0,
+    "documents": 2048,
+    "context": 256,
+    "eval_tokens": 524288,
+    "manifest_sha256": "6040a7098db050369967b6fdc62ca424761538ae70b5caa1d4a4bff8b22c2c6b",
+    "policy_sha256": "54e3b996a61f34c80d6ec1d87d9a373ec1e1c13ab5017c4a724693e140c0bca9",
+    "files_sha256": {
+      "tokens_holdout.npy": "d094ec5fab2e832426c856ec80211dcc33c17d545d2edccec548c8cbb66b5a93",
+      "docs_holdout.npy": "efe802e790b877dcd7e3984af291f3fb0376ee0e6b9c2e13a988c091ee0da947",
+      "documents_holdout.jsonl": "f9115280d1edad91c3dab9ce905aeb2c61e935fb15d668aae8c9e0350411e081",
+      "eval_offsets.npy": "3b9d2b803fee6b3b194de1b70a06464f72c83fba70cc31f8fc28b0b0f0c0fc78",
+      "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7"
+    },
+    "audit_sha256": "a7d607961e642f3fef5a177e3c5c610d5aeb83305d615b37cfc6d0b452b1dc68",
+    "audit_script_sha256": "245661bd1a6fd44afa0f033ce80b563ba8b8b5eff97934b61abd5bf37a8fb370",
+    "hypothesis_selection_sha256": "ab37d2e4a515606e6d6fb7798b6619bfdc56a977c9df134653a65d5d7c1925f8"
+  }
+}

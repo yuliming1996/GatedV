@@ -1,0 +1,306 @@
+{
+  "status": "complete",
+  "memory_samples": [
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560968704,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560837632,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38560362496,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38559903744,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38559608832,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38559608832,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38559354880,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 689850880,
+      "cuda_reserved": 1168113664,
+      "cuda_peak_allocated": 809388544,
+      "cuda_peak_reserved": 1168113664,
+      "cuda_free": 38559354880,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 800383488,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37696032768,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37695574016,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37695574016,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37695328256,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37695197184,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697392640,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697392640,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697392640,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697392640,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697392640,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697400832,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697400832,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    },
+    {
+      "process_rss": 2167664640,
+      "cuda_allocated": 802611712,
+      "cuda_reserved": 2017460224,
+      "cuda_peak_allocated": 1883860480,
+      "cuda_peak_reserved": 2017460224,
+      "cuda_free": 37697155072,
+      "cuda_total": 130660909056,
+      "note": "CUDA and host counters can overlap on unified memory; do not add them."
+    }
+  ],
+  "forward": {
+    "seconds": [
+      0.021551690995693207,
+      0.021465704950969666,
+      0.021500091010238975,
+      0.021394120005425066,
+      0.021489481965545565,
+      0.021463434037286788,
+      0.02151671500178054,
+      0.021435225033201277,
+      0.02146512904437259,
+      0.02147028100444004
+    ]
+  },
+  "train_step": {
+    "seconds": [
+      0.0691300270264037,
+      0.06969783001113683,
+      0.06901477597421035,
+      0.06940817600116134,
+      0.06898331898264587,
+      0.06913189799524844,
+      0.06990129000041634,
+      0.07014578999951482,
+      0.06880112399812788,
+      0.06981843995163217
+    ]
+  },
+  "completed_unix": 1790937918.9578347,
+  "checkpoint_sha256_after": "dbf5b0e662723c59c1106bc5d1563bf2058dbc625a1069ff906dead24bd0ae8a",
+  "identity": {
+    "slot": 28,
+    "round": 4,
+    "seed": 20270211,
+    "arm": "baseline",
+    "job_id": "baseline_s20270211_lr600",
+    "checkpoint_sha256": "dbf5b0e662723c59c1106bc5d1563bf2058dbc625a1069ff906dead24bd0ae8a",
+    "binding_sha256": "2b7bb721fb7fe837d0025d92a563c281ecf7731c71422ebab5e5750196d66b05"
+  },
+  "source_sha256": "4acfad5039a2c7ebd6050eced735db37a20982a21a4ac703bf8502b0d81ab668",
+  "representation": "sanitized_raw_measurements_exact_numeric_values"
+}

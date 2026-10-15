@@ -1,0 +1,94 @@
+[
+  {
+    "id": "C1",
+    "claim": "At the 26.16M fixed endpoint V-only reduces fresh-holdout arithmetic mean PPL by 3.66482023398%, three of three seed pairs.",
+    "evidence": [
+      "studies/M/results.json",
+      "medium_holdout/",
+      "verification.json"
+    ],
+    "kind": "primary fresh-holdout confirmation",
+    "limits": "Three seeds; same FineWeb-Edu family; finite single-seed LR selection at lower boundary; no general capability or isolated scaling claim."
+  },
+  {
+    "id": "C2",
+    "claim": "At 2.33M with frozen LR .0048, V-only reduces fresh-holdout mean PPL by 2.03409468944%, five of five seed pairs.",
+    "evidence": [
+      "studies/D/results.json",
+      "studies/D/audit.json"
+    ],
+    "kind": "supporting fresh-holdout confirmation",
+    "limits": "A fixed recipe selected using prior dev work; not an optimally tuned comparison; no cross-study pooling."
+  },
+  {
+    "id": "C3",
+    "claim": "Two selected four-layer nonlinear-projection candidates fail to match the six-layer baseline; mean PPL worsens 7.043054% and 6.820978%.",
+    "evidence": [
+      "studies/B/results.json",
+      "studies/B/audit.json"
+    ],
+    "kind": "fresh-holdout negative confirmation",
+    "limits": "This parameter allocation and initialization recipe only; same-depth V-only success does not reverse this result."
+  },
+  {
+    "id": "C4",
+    "claim": "Q-only SiLU worsens reused-dev mean PPL by 1.607848%; all-QKV SiLU improves 0.208029% with mixed directions and conditional interval crossing zero.",
+    "evidence": [
+      "studies/C/results.json",
+      "studies/C/audit.json"
+    ],
+    "kind": "exploratory reused-dev branch localization",
+    "limits": "No K-only arm; no equivalence test; no universal ranking of nonlinear Q/K/V."
+  },
+  {
+    "id": "C5",
+    "claim": "The combined small-model four-LR grid selects .0024 for both core arms; V-only mean dev PPL is 3.079144% lower at that LR.",
+    "evidence": [
+      "studies/F/results.json",
+      "studies/E/results.json"
+    ],
+    "kind": "adaptive reused-dev exploration",
+    "limits": "Same three seeds; supplement reuses 24 earlier trajectories; this is not a second independent replication."
+  },
+  {
+    "id": "C6",
+    "claim": "The two initial-moment controls underperform raw V-only at both tested LRs on all three paired seeds.",
+    "evidence": [
+      "studies/F/results.json"
+    ],
+    "kind": "mechanism-oriented exploratory control",
+    "limits": "Controls tested two LRs versus four for core arms; per-layer scalar moments matched only at initialization reference inputs; does not identify a unique causal mechanism."
+  },
+  {
+    "id": "C7",
+    "claim": "Medium raw full-context forward and training-step time ratios are 1.00700324093 and 1.01143326815.",
+    "evidence": [
+      "medium_cost/",
+      "studies/M/results.json",
+      "verification.json"
+    ],
+    "kind": "short interleaved shared-host timing observation",
+    "limits": "No controlled temperature, clock-frequency, or power trajectory; no claim about intrinsic latency, energy, isolated efficiency, or autoregressive decoding."
+  },
+  {
+    "id": "C8",
+    "claim": "The complete series contains 133 scientific trajectories, 6063104 optimizer updates and 12417236992 sampled target exposures.",
+    "evidence": [
+      "all_endpoints.csv",
+      "budget.json"
+    ],
+    "kind": "administrative accounting",
+    "limits": "Not 133 independent seed replicates; adaptive phases cannot be pooled into one inferential analysis."
+  },
+  {
+    "id": "C9",
+    "claim": "Raw medium NLLs, seed intervals, conditional bootstrap, and cost aggregates are portable and recheckable without a GPU.",
+    "evidence": [
+      "verify_results.py",
+      "source_ledger.json",
+      "verification.json"
+    ],
+    "kind": "arithmetic and file-integrity verification",
+    "limits": "Does not reproduce original model training, verify the full private execution archive, or independently establish contamination absence."
+  }
+]

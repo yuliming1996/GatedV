@@ -1,0 +1,3028 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_confirmation_20260928/reports/fresh_holdout_audit.json",
+  "source_sha256": "a7d607961e642f3fef5a177e3c5c610d5aeb83305d615b37cfc6d0b452b1dc68",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "PASS",
+    "model_evaluations": 0,
+    "checks": 15223301,
+    "documents": 2048,
+    "domain_groups": 2048,
+    "eval_tokens": 524288,
+    "manifest_sha256": "6040a7098db050369967b6fdc62ca424761538ae70b5caa1d4a4bff8b22c2c6b",
+    "policy_sha256": "54e3b996a61f34c80d6ec1d87d9a373ec1e1c13ab5017c4a724693e140c0bca9",
+    "script_sha256": "245661bd1a6fd44afa0f033ce80b563ba8b8b5eff97934b61abd5bf37a8fb370",
+    "bindings_sha256": {
+      "reports/holdout_preparation_policy.json": "54e3b996a61f34c80d6ec1d87d9a373ec1e1c13ab5017c4a724693e140c0bca9",
+      "data/fresh_holdout/manifest.json": "6040a7098db050369967b6fdc62ca424761538ae70b5caa1d4a4bff8b22c2c6b",
+      "reports/audit_fresh_holdout.py": "245661bd1a6fd44afa0f033ce80b563ba8b8b5eff97934b61abd5bf37a8fb370",
+      "reports/inventory_history.py": "89e5dc9a5185c2813c03dd6a78d02e0ea9c627231d3478898755c3d1c54f8c98",
+      "reports/data_rules.py": "46893a8a9c51541ca2b058fda9597cd33368d21b90efda8343a9a84b6916620a",
+      "reports/prepare_holdout.py": "6add15f019a1d804eb49c08673022bae27eec0cd63dd5e101c895ca179ecdab3",
+      "reports/history_inventory_mac.json": "858b93f196e8ac5c8a51474ffa84211b61bf9db3aaa296c2ae7e9baa512c7fab",
+      "reports/history_inventory_spark.json": "73237e0796f8978ed753aaa8bd69aa3264e536eb678f35d0c06abf0c070eb81f"
+    },
+    "history_inputs_sha256": [
+      {
+        "sha256": "bab4eaa6cb81bae4a1b76ff30b74065846a660480b6f94ecf2cb12e93e32f541",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/literature/sources.json"
+      },
+      {
+        "sha256": "55c5acde08acece6305a82572b4667ebe48195af53f58143845316b26b988e15",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/probe/manifest.json"
+      },
+      {
+        "sha256": "10b1ee03f4ada589d23afda68919a9b205e8e8d1daefcb364a04894d6917d48b",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/probe/schedule_s11.json"
+      },
+      {
+        "sha256": "7974511764e0a214f3173d41869c57a91531d2c68417ebe7b9f75141d91bde53",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/probe/schedule_s22.json"
+      },
+      {
+        "sha256": "f59fc50e380f293b8b2ec11d019f5ebc002ce39499ad764c5f4976805ae2f5fb",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/probe/schedule_s33.json"
+      },
+      {
+        "sha256": "17d109316479a95d9b084d5948fdde26a4f284404a025da936fc8f0cbd7a65f2",
+        "historical_source_uri": "historical://workspace/adaptive_reread/data/probe/status.json"
+      },
+      {
+        "sha256": "d9fe3ec3635b1fee0fc1845b603af7ae4bc8120961949c127d2f25c795aea860",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/fineweb_edu_new_domains_v1/documents_dev.jsonl"
+      },
+      {
+        "sha256": "03238d5c02261b4c6e71d0be3aaee98566ca4933428900c599ba31c2365a5a8e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/fineweb_edu_new_domains_v1/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "28726ebd34ed779332bc645f550171dd3161e7ac2be0c32640c4e6ad6ffcd84b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/fineweb_edu_new_domains_v1/documents_train.jsonl"
+      },
+      {
+        "sha256": "acb8ecc71fc7dcab7d0e12d1ecd7e51ca430cce18dcff9e6e9b236e76e43d82d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/fineweb_edu_new_domains_v1/duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "d74906b1df7574d1b2c6c195963094731ddfe0449aa6dbf2abf8e43a1888d111",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/fineweb_edu_new_domains_v1/manifest.json"
+      },
+      {
+        "sha256": "3d7ad54df3902927c1e243ed79e33bf7116e3085b8bc8ebd9bcb95521b5d6179",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/raw/download_finalize_log.jsonl"
+      },
+      {
+        "sha256": "618ebbe92b81361813ff12f44810d7e00238747d1a050ef12636dfe230253892",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/raw/download_log.jsonl"
+      },
+      {
+        "sha256": "2822faa0607d3823c93a3398481d7622183820fac96b9ac7494f85559c9ed6b2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/raw/hf_tree_snapshot.json"
+      },
+      {
+        "sha256": "131aa770233ab9d999dec3350d4a2c9c35fb1135b14774e36adef1dc332ab3dc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_001/data/raw/source.json"
+      },
+      {
+        "sha256": "4bcfd5b711e676af2fb91904f66b3c1b137fbad15c2df819351b844d400ed3e0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/accepted_lineage.json"
+      },
+      {
+        "sha256": "d9fe3ec3635b1fee0fc1845b603af7ae4bc8120961949c127d2f25c795aea860",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/documents_dev.jsonl"
+      },
+      {
+        "sha256": "3c71c0b09bd3613f5e769c44cfe51cbb31fc53daa757ada8aaba91c0601599a9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "28726ebd34ed779332bc645f550171dd3161e7ac2be0c32640c4e6ad6ffcd84b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/documents_train.jsonl"
+      },
+      {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "f494e80ac0e140fcacb215afbcc676403b09f6e7b5bfab6be939ca4034da47fc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/exclusion_rejections.jsonl"
+      },
+      {
+        "sha256": "acb8ecc71fc7dcab7d0e12d1ecd7e51ca430cce18dcff9e6e9b236e76e43d82d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/inherited_duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "575794a1b0ae5b7653e587343b69caf5dfb79dcd73020fd8d428f95664881312",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_002/data/reused_train_dev_fresh_holdout_v1/manifest.json"
+      },
+      {
+        "sha256": "7792e3ef1f02ad627ae4c09464d0f15eb6a9b67fa473589314e36f437bed091d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/accepted_lineage.json"
+      },
+      {
+        "sha256": "d9fe3ec3635b1fee0fc1845b603af7ae4bc8120961949c127d2f25c795aea860",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/documents_dev.jsonl"
+      },
+      {
+        "sha256": "5e19a21eec1e212ff8e04c57a7f4795db0e6c0c87e57c94be9d16d404fede0e7",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "28726ebd34ed779332bc645f550171dd3161e7ac2be0c32640c4e6ad6ffcd84b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/documents_train.jsonl"
+      },
+      {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "d0ca1a99f8ac945003b7be5836a078ce243d7389ed4f8973f6ffa23e02153efe",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/exclusion_rejections.jsonl"
+      },
+      {
+        "sha256": "2ce6a7110466462d0bd44adc0de0bf0ff603fcfc92cf1c4316c08f8cb8775bd2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/historical_unique_sources.jsonl"
+      },
+      {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/inherited_duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "6a653a5c9b0d1a92868ae244bfaa3db776eb7fd294d0708672b2ea887e7c452e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/manifest.json"
+      },
+      {
+        "sha256": "beff42c2f2231f6716edaa6163501ada2192a10654b1f57ec1f8ce6c32fb29df",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_003/data/reused_train_dev_fresh_holdout_v2/source_provenance.json"
+      },
+      {
+        "sha256": "08e15e069cd3acde9324b9f35941f564bba4797aff36acac1458ba7389179cc1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/documents_dev.jsonl"
+      },
+      {
+        "sha256": "0b94a081108cc2a1588b2801a0387a65ed7c21779f5a7ae9a13baac23306d9a4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "6453d8c0d6507cc8056658c163a6429229f42de8a8e92f0accdb639f68d07c01",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/documents_train.jsonl"
+      },
+      {
+        "sha256": "e763e78431fa6a51c722ac05458eef13064a2efda63168e9ca352820b58bc5fa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/historical_unique_sources.jsonl"
+      },
+      {
+        "sha256": "bedfc190471a4e7031150ebfbe8094f147b84849b0382b29e4d0b66079a0e95d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/manifest.json"
+      },
+      {
+        "sha256": "774b97f13c22d68948d1fcedf1684db62f8af3575f83edecd763bd5e67ac8880",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/fineweb_new_domains_v1/rejections.jsonl"
+      },
+      {
+        "sha256": "7d1e5d771a430c3109e49d0cf771ac9a5bb93836a6daae786504810f598eef89",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/pg19_blind_transfer_v1/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "bb9d1883109dde08cbe047c264424eb1c6d3d0e13940e6e2c86733f628097e67",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/pg19_blind_transfer_v1/manifest.json"
+      },
+      {
+        "sha256": "b6e442f25b6c029302460ed01871f49c929457ca512621bfaca928b0f69d1185",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/pg19_blind_transfer_v1/rejections.jsonl"
+      },
+      {
+        "sha256": "e7ee47e7b028bff6b386517e5b3d3af36755b5fa8b4e336fd2a376d5f4cb828e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.download.json"
+      },
+      {
+        "sha256": "2c33410b7a02ad1b8509ae1adb3ce58ad86c976e5cf75508c6deb15be9e33ceb",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.download_state.json"
+      },
+      {
+        "sha256": "431d8b2c061f937abd1b4768e3236560e356a50a5583a9dcc226bc7168cbeb91",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.download.json"
+      },
+      {
+        "sha256": "785a9673d2c5d1ff1a4178fe33a35ee4661e2fa7158ab9fbf4200f30e8bbfcab",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.download_state.json"
+      },
+      {
+        "sha256": "73e7cbd8b6fe0db828a878d2b19d718aab22f92ae2e3877efc9ee7030e467be4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet.download.json"
+      },
+      {
+        "sha256": "79698155486a342eeeeaa470721df551c65f202744fcd1da18be44ad0a7fa861",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet.download_state.json"
+      },
+      {
+        "sha256": "7bc965ede8f88c5c3054de17c76958b772b30eed5af6e4f4da9622d2d7e50b06",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet.download.json"
+      },
+      {
+        "sha256": "be45e5eca2e95e8e09fef9ac46451e0520aef48398708f2b4038666255cec72f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet.download_state.json"
+      },
+      {
+        "sha256": "95f6f0d1828220be6706cbac1fa4fbc0c6cf8641ea309162377bd10692ed4903",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/fineweb_downloads.json"
+      },
+      {
+        "sha256": "0b489723f629e4dc02a3d8d8abdc95a78383a5977260f6c347866155a04ce985",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19_downloads.json"
+      },
+      {
+        "sha256": "fb995f6becc7e42bba93236bec497d5164d042baffe6235a98b2e015dd63a260",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.attempts/05ec32ec36be4d0f9e4ecfea8c0c4dcb.error.json"
+      },
+      {
+        "sha256": "52c8ce85e7d5f23ef10076ca8efa132126a5b7bdbda35057f45b0856ab03db5e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.attempts/2d33c555892648889bd6fd19e6e57bc5.error.json"
+      },
+      {
+        "sha256": "ef27cee603561442a8c5b4acd3dea0947fa60375a4535efa4d36ab7554f0d950",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.attempts/6971f3eef5b34ad68f389c9101915658.error.json"
+      },
+      {
+        "sha256": "ceae3dc6d4ef68257881b733b4de4e605480374cc2b84c9cacccb2893c4c9878",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.attempts/719309d1a63c4ab28b6c164f365a2aed.error.json"
+      },
+      {
+        "sha256": "cac7aa136de9f806771b141c6f3fc1d1cd90dd6bae6990d0b4bc8dbb43be337f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/001_00000.parquet.attempts/8f68f444360b4769ad6fc0d4040a9ebf.json"
+      },
+      {
+        "sha256": "11f6c87164f34cf5287dbb2401491bb441627e9ae0adc8686dc9ada2f0477864",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.attempts/3377e47dad8c40b9add4c3d363384ff2.json"
+      },
+      {
+        "sha256": "ceae3dc6d4ef68257881b733b4de4e605480374cc2b84c9cacccb2893c4c9878",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.attempts/3918a39ee5994f3ca83f32bcd9474d8a.error.json"
+      },
+      {
+        "sha256": "52c8ce85e7d5f23ef10076ca8efa132126a5b7bdbda35057f45b0856ab03db5e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.attempts/a69ffb2e635f486b962200dd87a09250.error.json"
+      },
+      {
+        "sha256": "fb995f6becc7e42bba93236bec497d5164d042baffe6235a98b2e015dd63a260",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.attempts/afc51d30a9d94477963adf04e83d22ba.error.json"
+      },
+      {
+        "sha256": "ef27cee603561442a8c5b4acd3dea0947fa60375a4535efa4d36ab7554f0d950",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/002_00000.parquet.attempts/c03d77f7017a4a6c9979b037ad5493e1.error.json"
+      },
+      {
+        "sha256": "5f00d8e8e7782720133df45e6fe6300ab5dc53babc041b89fc7212f41761e4f6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet.attempts/4cb0b98d031e43998aae80f5ad4add91.json"
+      },
+      {
+        "sha256": "ef27cee603561442a8c5b4acd3dea0947fa60375a4535efa4d36ab7554f0d950",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/003_00000.parquet.attempts/dfa4968401d24d6db519771469ce7106.error.json"
+      },
+      {
+        "sha256": "ef27cee603561442a8c5b4acd3dea0947fa60375a4535efa4d36ab7554f0d950",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet.attempts/13ff95c025184c53a543b32e6ed775f3.error.json"
+      },
+      {
+        "sha256": "f314a36eb3a7118cc6da12369eceab25a7ee2a4a6b19e52814747774ca406240",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/004_00000.parquet.attempts/90ba7453e5b24830bf9b517be86ae83e.json"
+      },
+      {
+        "sha256": "f8dd4334fd8d422cd2f9153ffbff9b097611569592d7ca09fc6fe7881336d331",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10146.txt"
+      },
+      {
+        "sha256": "2203eae315085533e43907a5dc297f1543ab8d9cdd69f70310ca9407f62a9414",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10146.txt.download.json"
+      },
+      {
+        "sha256": "5285e4775788409e2fe1b8f0f31af4377ac15c92e68dd47ebe476d1c0f947c3f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10146.txt.download_state.json"
+      },
+      {
+        "sha256": "fedcb2723c2ad091f76d45eb98efd810977e7b906f6fd8cbd815734d1e90c456",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10321.txt"
+      },
+      {
+        "sha256": "0e1d4edf00ef5588067c64f8ef065b7c233dddbac8b3b3073724a444541d3315",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10321.txt.download.json"
+      },
+      {
+        "sha256": "06d49aef375b218efec9e6e3babef8fe8a5dff62810527494a9bc853e461a161",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10321.txt.download_state.json"
+      },
+      {
+        "sha256": "af4b57d358448588adbc6da962cad655bf586ae746dba21f62e956d36d97c88e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10356.txt"
+      },
+      {
+        "sha256": "8b6f468f75128f0bdd8d84509fc04e612ae3b51e766f580afe1313ddd95cad77",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10356.txt.download.json"
+      },
+      {
+        "sha256": "61bc6372982fc9d4f0057682cd9b0ab7bce7cae4f3c38bde38d300e5bdcc596d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10356.txt.download_state.json"
+      },
+      {
+        "sha256": "fcc71b161311d4854a078f8cdda6e4381542536167145f6dfdda84bcad256d5f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10762.txt"
+      },
+      {
+        "sha256": "69352aa720bcc4e59f2171d692aff5bd4399df65f943c81e59ec21487aba61e3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10762.txt.download.json"
+      },
+      {
+        "sha256": "812f578276824207b5f9f6ce722523b3fb835e2f4c04c2fb7a140e574d554146",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10762.txt.download_state.json"
+      },
+      {
+        "sha256": "e1c79655be744bc89fd291f84b77ddb1819d117f2bba142373f94d5ab309d0d0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/12204.txt"
+      },
+      {
+        "sha256": "8fcbd0e92816535d82e947c05051784a60781a69be4d2eebc35e267a46e72b4d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/12204.txt.download.json"
+      },
+      {
+        "sha256": "86196f59c191e8d8645c4e53a29f91bc7af01d875a12237a305128a3a8177f58",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/12204.txt.download_state.json"
+      },
+      {
+        "sha256": "90eae481a404688312d407918b07e649643ce6c934a16ad31040614221673ca1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/15562.txt"
+      },
+      {
+        "sha256": "55a3e9f2cfe8efd2dcd90db220a905a6fdd01f6fcd503b4fa5b4ed4f789eb545",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/15562.txt.download.json"
+      },
+      {
+        "sha256": "cb3fbde8a9fa6cec9479699e9ce990b686d3912f5c9c816745f62fe88b271baa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/15562.txt.download_state.json"
+      },
+      {
+        "sha256": "a3475140ed4763614c11c4f2e486e468ae5620bf539877bf769e16710d808a0d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/22424.txt"
+      },
+      {
+        "sha256": "e9191feb19772e794b224cc02899e9cd0fe4ba38465c72ec645b55d9a70b9c71",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/22424.txt.download.json"
+      },
+      {
+        "sha256": "1696fb29595aea6bf5babc89bd212efdd444c4f0d6323fe9ae1be2e8c4a6b130",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/22424.txt.download_state.json"
+      },
+      {
+        "sha256": "b188fef90522bd12a523906162d9c3df9987e662025183e3a14e731d866a831a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/24553.txt"
+      },
+      {
+        "sha256": "434fc77ae00e1ee5e267abc749c29d6c204c984860f63856ca20d5bc62d88616",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/24553.txt.download.json"
+      },
+      {
+        "sha256": "6897ce771d17909ed2a1bceeea52f3069227893b0ebe0848fe3f285075a53f5b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/24553.txt.download_state.json"
+      },
+      {
+        "sha256": "0c79ceaf5bcc208b8c924037613c2c7fb1606de21ec8d99d5c446a516c4af787",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/2544.txt"
+      },
+      {
+        "sha256": "c9c5b5014d5dfd9b8163127f5cf7c3342759e045f27e92f0067f0c6a61e4f153",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/2544.txt.download.json"
+      },
+      {
+        "sha256": "dd805da2cd958fad757f12dd3b6bb1ea52f843392eb30b21c86cee8e3d1a423a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/2544.txt.download_state.json"
+      },
+      {
+        "sha256": "04af5d410857dab7b4ef5a90d43bff622450b4bc9ee9abfc578487203f423d64",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25646.txt"
+      },
+      {
+        "sha256": "8b3dca6b2bd3f98018230b83a18b23a7542534bd255081084a8bffcdc4023f63",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25646.txt.download.json"
+      },
+      {
+        "sha256": "a0d0968342e72cfca7f74b8f1b946d4cf17cceffcbe7a09fca3848326c1d0974",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25646.txt.download_state.json"
+      },
+      {
+        "sha256": "02dedc58fe901826fe05a6864f377ec2d38993bd8c4e27429152e5e047dd52c4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25773.txt"
+      },
+      {
+        "sha256": "838de0034675138bc1c0539fa1b78ce11c757c06205ccfc8b9b8ed5edd93d375",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25773.txt.download.json"
+      },
+      {
+        "sha256": "fe39f7620b9f09a7e11695ec2619718e358b7da435a0249529e36566399ffd40",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25773.txt.download_state.json"
+      },
+      {
+        "sha256": "63a0e5ee09349c28a33fea6a19c88d741307731b2f1a68da9b3982aeda91694f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25830.txt"
+      },
+      {
+        "sha256": "ccc2bf1a4815b6474df8c82104b1f81500a74e36c9b4ba6827085507ba824b98",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25830.txt.download.json"
+      },
+      {
+        "sha256": "d702ed94e772b43c2a6de1535efa4b7bbe27df37cfedad3823fd902b5b03a919",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25830.txt.download_state.json"
+      },
+      {
+        "sha256": "b73ddfcfe10430b96635b021312cbe21eaa6227bf1614b39846d4234d9e12a66",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26183.txt"
+      },
+      {
+        "sha256": "ebfc15e8ed83522ceadddec217d418bff854f33e449c06642cef557903ddcb0f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26183.txt.download.json"
+      },
+      {
+        "sha256": "bcb3f86a1f99a9d3a59a2104724050040ba7b0711e16cdc38704f4c9712a6dac",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26183.txt.download_state.json"
+      },
+      {
+        "sha256": "550798583dc17a1b7f7300591a6531d1f0a3440b6d530c331186814225a36344",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26239.txt"
+      },
+      {
+        "sha256": "00eca6c80fcbbcf5514899af14198c503261d80778f2492db90d39df90c82dc4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26239.txt.download.json"
+      },
+      {
+        "sha256": "7cf1cbd19cf77a2c4084538501fafe8c5faeaf4ea654d1de056eb337590c5227",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26239.txt.download_state.json"
+      },
+      {
+        "sha256": "f2088dc639475a627a830a819d2b4ade98e347a840a08980e0fdf35a7f836275",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26493.txt"
+      },
+      {
+        "sha256": "30d86a8cafe1a4fae9b2d7aafd0204806dd3ef1293c0748e850d77c8da0efe5b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26493.txt.download.json"
+      },
+      {
+        "sha256": "6b25c01eb1f00a869dfe4c4f11cb565f6512863a22c7a4a2fbb4af8ab8282cee",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26493.txt.download_state.json"
+      },
+      {
+        "sha256": "9352d2211b37f9e32ca13ea68027fbec101acf13718ff96c606e766f9144b677",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26618.txt"
+      },
+      {
+        "sha256": "2784616d0133ecb244f5a68599b24ff3dc0cd92b2ca2a2e513d82f4a66b72aa2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26618.txt.download.json"
+      },
+      {
+        "sha256": "7161c13762e5893ae9afb7c973cc4237000c640e7658e766da1852deed3c436b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26618.txt.download_state.json"
+      },
+      {
+        "sha256": "0f5a3efba148e8435ae9acc4a34e570369d493d635413d56a3044b08d70f6d9a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/27454.txt"
+      },
+      {
+        "sha256": "7b73606ecce84cc50dd9d78b53fb46015b35e004d6db7cc9c41e14aa2f90fe96",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/27454.txt.download.json"
+      },
+      {
+        "sha256": "601bf96a0332e678aef5b024a21fcd5aaf12252d25ecb7d9a4c795d88c847ec6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/27454.txt.download_state.json"
+      },
+      {
+        "sha256": "f7bd54971caf53bc3ca651cacbaaefae402812b56918f6c4b5dcaeb6a279864f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28444.txt"
+      },
+      {
+        "sha256": "053cf548cfb0048ace5a4387b4abb725ffe2e5fa50f38b864b424a1c1ea8097e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28444.txt.download.json"
+      },
+      {
+        "sha256": "f5f611ebf7de6148224e00fcf588b5c38b0bfabc7ab39320f54e560e344c15e6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28444.txt.download_state.json"
+      },
+      {
+        "sha256": "5ba1eb22b96320155afd942871f76b1f040d4918d9871a1d4b854176c7015567",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28988.txt"
+      },
+      {
+        "sha256": "0ccd983a99912df3503a503e19bb02a9bc7bd949c63fd352ebf7861ecf9a9fe2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28988.txt.download.json"
+      },
+      {
+        "sha256": "ce913be6d30a291918d9a7239e6107a609f3be57bea44dcee7cc9dd5ec5c3c7f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28988.txt.download_state.json"
+      },
+      {
+        "sha256": "f4590fbca52dedf54ce45d1ef6ad6d01875d8cde22796213c40dd01dc971696a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29594.txt"
+      },
+      {
+        "sha256": "5e78c72d4d72da869e1686d80c514247e5a3dadb81017d34845d0e63e5e3db69",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29594.txt.download.json"
+      },
+      {
+        "sha256": "a3918d57ccd52ea30df34454499e3e58dcd7e81588c660d5dfc61bbb42daf5d2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29594.txt.download_state.json"
+      },
+      {
+        "sha256": "349ac4532773414f8da1723d38f09ffad5911018fb380365022e6e76e48abf46",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29973.txt"
+      },
+      {
+        "sha256": "38d34e0b7a5e703d155ccdcf7451b5e8291e1de0e8cdcd76d3f3c1733b74d385",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29973.txt.download.json"
+      },
+      {
+        "sha256": "38ddadfa2a4f44d9380751cee1eafcc617cabf4f0fb3e67541af000765049ff8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29973.txt.download_state.json"
+      },
+      {
+        "sha256": "4d9c0b401a9fd85b169a744d76c9e88e1d2a4b5d9a690c40fa2bf98164823032",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30312.txt"
+      },
+      {
+        "sha256": "364fe70cb4672869eb2f31c248cf1d229a5ffbafcc9cc4761930cc9deff652a0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30312.txt.download.json"
+      },
+      {
+        "sha256": "d1baa2b3448e5a744e737d7266d4014b083d319a40ab0d13a7168dcaf976ddc7",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30312.txt.download_state.json"
+      },
+      {
+        "sha256": "14f951b46330ff912bf29fe4888d668fc4693cd05b9d87f0c2fd0d985f3c29de",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30752.txt"
+      },
+      {
+        "sha256": "0a78d40c1dc9989010707de138be68ff44894d15f740ad4cdb8190990708f5ae",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30752.txt.download.json"
+      },
+      {
+        "sha256": "2afd4193a6e88c063b2f10bd10e36fd3e2e04fbf42b7cf572bf8e4c3beacbbf9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30752.txt.download_state.json"
+      },
+      {
+        "sha256": "f01af5df32ed5c8c4f5e99121f85d25667d45579da31856e9d572fd09810dd50",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30754.txt"
+      },
+      {
+        "sha256": "92cf432ca87d8ae2e21bf2e754458535cf6d5e7863b50bfe401684a74c46fd3f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30754.txt.download.json"
+      },
+      {
+        "sha256": "73c1c8014dab1815a64dca373919c593f010a244ac8ba22c134019f90af8b8dc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30754.txt.download_state.json"
+      },
+      {
+        "sha256": "1eebeea3739f55afd5d47e989fca2657022e72829abcab070af599cefa62dc92",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30909.txt"
+      },
+      {
+        "sha256": "007d3b6c4ba75e322fe65b0920e8ae2f96d7f80773ad297f87e9bce4e068de0d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30909.txt.download.json"
+      },
+      {
+        "sha256": "8eb9dcf6deada36767994f114a0bef34b18836b7f2618ae6e31af4d07a89d938",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30909.txt.download_state.json"
+      },
+      {
+        "sha256": "c77512286586b2c9367f8ad0e493e947c42f03fb5cb4d20f84db78c1eaac4dfe",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30981.txt"
+      },
+      {
+        "sha256": "cc9a516f7005043441092a2140e4a8d6bf1ff19eb6e82b0307a2b00771014398",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30981.txt.download.json"
+      },
+      {
+        "sha256": "ff4f7eb6acfc9c44f98b7b6e3f5c01aa0ba7ae22c98248a13a50f95f0d173415",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30981.txt.download_state.json"
+      },
+      {
+        "sha256": "9d8228e48a41bef67408a097a3598588325bc70d5e2f6b00c96372783029d05f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31065.txt"
+      },
+      {
+        "sha256": "a7e37351d69047d35cb3b1c12f6b272d4eb69c11dd553100d3ce55c8a0de207f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31065.txt.download.json"
+      },
+      {
+        "sha256": "43aa77ff257c79aa567c4b75003731a211973798938872b37df15fdb5064fdcf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31065.txt.download_state.json"
+      },
+      {
+        "sha256": "7e561c6b6d4fa20f508b9484f56a9703a88d469e7c2d7a47d91e74431e4c6ff0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3129.txt"
+      },
+      {
+        "sha256": "bab8843340a9840f9077c37da1aa4d2d021adf9c7743519a20545e5dd4ae022e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3129.txt.download.json"
+      },
+      {
+        "sha256": "007ce6a708ab41ea7362c056d77d0ecf561d897a2b662fe49a379350dcc6bfd1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3129.txt.download_state.json"
+      },
+      {
+        "sha256": "9b4f3142b8512a98e0e245140f6aaad36bd50eac5d1684d04513ead2a7fc1df0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31974.txt"
+      },
+      {
+        "sha256": "5e74afb0ccb1b74c07c59fd45c973d3e34c12c397f8046a2d871835c89fbbc29",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31974.txt.download.json"
+      },
+      {
+        "sha256": "bb73647ca475733123bd420d41f499bf7be848e5c3c2868dbfd5650771c6e3f2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31974.txt.download_state.json"
+      },
+      {
+        "sha256": "aa97806b530ffb25b5678e4c562e49055715eb5734c533c0b244537734b6a59c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3247.txt"
+      },
+      {
+        "sha256": "1f6f7509f1e7dac5c7127a4bd57a46b104b15fc6d544be0c5c7bf21eaa4f5b22",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3247.txt.download.json"
+      },
+      {
+        "sha256": "1b32932fc041216da5cefbb8ea3a2dcd5bdf93b6b0a4c8402e421d203ba7fe24",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3247.txt.download_state.json"
+      },
+      {
+        "sha256": "cd0c0c4cb9508cbabd73f90673c63363bf03e2d72aa87de2e86ed895689c3c13",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/32761.txt"
+      },
+      {
+        "sha256": "6d642d7a79c4b8fccf2c8dd26a8fb287f938d8849e176c6a9d4379c63027aace",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/32761.txt.download.json"
+      },
+      {
+        "sha256": "c8cde78fae731e86c8e46dc4db1262e2911c2e5626cb8871b277117e5da71cd6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/32761.txt.download_state.json"
+      },
+      {
+        "sha256": "0d3bea08577a6bde3265827ddf5e688d8aa8ce1ab4ff4243075358c19709d788",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3340.txt"
+      },
+      {
+        "sha256": "6b77e3bb61ddd669dd5ea3dabe8d3ae9ffe881adb424d08c210ec458cbbaceb4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3340.txt.download.json"
+      },
+      {
+        "sha256": "7841d7785e56537041e9a76a40954e9fc8ebad2e70ccc135fd182b743c8d07f8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3340.txt.download_state.json"
+      },
+      {
+        "sha256": "5f241da148e653140f9cafab7c93a0ff0f3e1d214077137b85fe8668a0bd522f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33426.txt"
+      },
+      {
+        "sha256": "bb97b5fb901298a1ab07f32ece6ed4a2675b90cf70e6e2bad1c0304e43f0d07e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33426.txt.download.json"
+      },
+      {
+        "sha256": "5ca897bc1f71eeeff39ab9821d4d545144e5fefdb972ffebf663db9d5a70d4b0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33426.txt.download_state.json"
+      },
+      {
+        "sha256": "636bea04db47134816380f2d03d735d46970fe214a0e11bd87d97f270d237cf4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33756.txt"
+      },
+      {
+        "sha256": "d48df7df1e56a9a09c40d1578a853dc724fe9e12ca9277105826d02a4547076f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33756.txt.download.json"
+      },
+      {
+        "sha256": "022c4c92438c4e53e6f5721cd3c89099355132752864db07b48303237b522c62",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33756.txt.download_state.json"
+      },
+      {
+        "sha256": "32d9cc33391e172ebaf885e574b365ee9738fa0041537a5c8a9859e7d84b6181",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/34467.txt"
+      },
+      {
+        "sha256": "5b6c5bb93f89e46311cf0635f635fe6597254fea34fa62ab6763bcdbbf32a54f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/34467.txt.download.json"
+      },
+      {
+        "sha256": "871388910c8ad7680e10f654d9a5b9bc5a9378f781587822b885f7bb38be341e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/34467.txt.download_state.json"
+      },
+      {
+        "sha256": "05440b6f4c77d4204facc7c8ec5ebea3df8fef5782f03cb041f2accd184265f9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35205.txt"
+      },
+      {
+        "sha256": "c589bc50dcd8ae37bdbcaa2968fe0ddfd3dea34898e63eda1f359356e8d70433",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35205.txt.download.json"
+      },
+      {
+        "sha256": "1b5cc284e5a44b7c11a80c71c7271e7306ff8e0128949d0febca0fe92e7a8f19",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35205.txt.download_state.json"
+      },
+      {
+        "sha256": "4362445794452e6df50919837f9aa851539a11eaed673b8eb3ed613ac0b1a84b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35246.txt"
+      },
+      {
+        "sha256": "ce705345ad1974dd7415886419032b9efcc418f81abece65509d3541152bfd69",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35246.txt.download.json"
+      },
+      {
+        "sha256": "8a341b730254ef7a78dac771b431ab1303fbc619553d4bb9a31b9c41b97bd6ee",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35246.txt.download_state.json"
+      },
+      {
+        "sha256": "acfd0b06c2fea46583b113cf10df45d83f24f3b85bf2d8ccd22d2f0a1127dc9a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3608.txt"
+      },
+      {
+        "sha256": "77d092c810017cf5439612d0550242cf5c68c2207b7dbf471a3b342a1b58d9d8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3608.txt.download.json"
+      },
+      {
+        "sha256": "2f4d5aba3a05e602c5eae548e6f7879358275fe03e24bf26e9ea2ece57927884",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3608.txt.download_state.json"
+      },
+      {
+        "sha256": "84ec4641bc67f1c91c19be710e42f6009dec808e5f174fede2ef65d00e5d2a92",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/36256.txt"
+      },
+      {
+        "sha256": "f3bfc6e9b0b8ea64e7586d02fcab9cac13e8e7bd68dc40cf36c858d827be7c29",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/36256.txt.download.json"
+      },
+      {
+        "sha256": "1c06651fb0fc8b442f9ba7162cea40bb600a308853dccab470afa404864f157e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/36256.txt.download_state.json"
+      },
+      {
+        "sha256": "1680b3efa53c5f1267a6fb0bebd30c4f224093e1ccaa8af2f7c179b5f95c4bb2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37006.txt"
+      },
+      {
+        "sha256": "84fb6dc553cc3562c326d65be3cadf8606394d4d46e4d777b32b3a0444d73b1d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37006.txt.download.json"
+      },
+      {
+        "sha256": "fa41b7a2dfac3f57cb7286fb92710e1aed6c4cec62acabac1748a281428b1e75",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37006.txt.download_state.json"
+      },
+      {
+        "sha256": "5adf5e9ded08c343b60cb66b553a696a27e3724d9f4410839333d37699063ffe",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37328.txt"
+      },
+      {
+        "sha256": "166404117044870935d36fb884ac70a9f266597550745d1b36606a6458c8e989",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37328.txt.download.json"
+      },
+      {
+        "sha256": "f498daebc2d1adac065a8193d3b301207ddec705f2c1000f4a51987d7d6bee71",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37328.txt.download_state.json"
+      },
+      {
+        "sha256": "071262841d7a577585a182101d028fa7bd79683c99bf27c2db3b570e6d24d101",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37403.txt"
+      },
+      {
+        "sha256": "eee2e3e2329ebb5e7c20959cdd8a5824ddce8ea5543a72b54816725aa0244624",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37403.txt.download.json"
+      },
+      {
+        "sha256": "e8449bf94e7143a2b3db70765cc4054ee32b214b1f340a02118007be0db31afd",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37403.txt.download_state.json"
+      },
+      {
+        "sha256": "398fec2e5baf93fb4614b7a8ae5f425a59f5b6fc1182f47336e641520826c4a5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37443.txt"
+      },
+      {
+        "sha256": "8c689019cf31ebd95b8bec1c29c6a6968941fc09166ff65a465de65c750f0b9b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37443.txt.download.json"
+      },
+      {
+        "sha256": "73bc1096e60d17f46b6cd04ec3496bef427cf1aa4ba24160c7ef28106a2f8e5e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37443.txt.download_state.json"
+      },
+      {
+        "sha256": "05c3b16201f534fd6ab8643feb9b1c59e482a913c9a47fd513255791d9e67f60",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3754.txt"
+      },
+      {
+        "sha256": "b682bc12ad053bc80003966e0a9bec6530d93981f4cfec913752f6e57c5c050c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3754.txt.download.json"
+      },
+      {
+        "sha256": "85315042a81a4d64710745855ca2ec57017a14d44e0a7f79dab24469481d6517",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3754.txt.download_state.json"
+      },
+      {
+        "sha256": "30bd8b5ca13be6439e231389f94f4d2d7fdf3b15cf0b0202842cee38c5f17260",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37702.txt"
+      },
+      {
+        "sha256": "e9a50091524f2d31cc7850e751205b00620f74a3684f8f4fc24d541a32887cbf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37702.txt.download.json"
+      },
+      {
+        "sha256": "b0dcdc3bd03d8b90ce1772bb159b8a24671751b022605e4311cef0cc55bbc5b2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37702.txt.download_state.json"
+      },
+      {
+        "sha256": "c30406db957f15aecdbafc1d9a2a4c2186f1e9762ccb0042ea1011cbc66c814c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38106.txt"
+      },
+      {
+        "sha256": "cdb58e914398420e332c228b015cfb9c1fa6af9343a95be3b0e75dd924f58009",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38106.txt.download.json"
+      },
+      {
+        "sha256": "d8f5f5f03ccaf417107b894a1134ec751533ed4045816619beee480ce043312f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38106.txt.download_state.json"
+      },
+      {
+        "sha256": "3163b5e7a5ee8ca3eb44e7e647872b433cefc10877ad1299478acdf074a581fa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3890.txt"
+      },
+      {
+        "sha256": "c1cbb8a209f46dbf65742a9920483e98b5f525cf609428e43d3978ec111a13d8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3890.txt.download.json"
+      },
+      {
+        "sha256": "b28ef7214981ec92a100190e9027775d2b85c7dd331bfc58933724ba81881ff6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3890.txt.download_state.json"
+      },
+      {
+        "sha256": "ad532648088c15a70d19ff3d66482e9c3a401c8cf399c44e6b2e7694c835f1d3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38929.txt"
+      },
+      {
+        "sha256": "036a373617433f76e97e1eb7c55c8b35aecaf18cc9d1395c544c29d5bfa8b094",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38929.txt.download.json"
+      },
+      {
+        "sha256": "00ce7a02c8ed5e48604c26f258cda9717bde54a5dc3d349a1ba04e90922cf49e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38929.txt.download_state.json"
+      },
+      {
+        "sha256": "540fa42d430263cc4662caa95b33e5e5c8babbdedda671f800a2db65ff25a485",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38955.txt"
+      },
+      {
+        "sha256": "e59f2ef6c419ccf313bb64abb00dbfa93b82957bdd016d8e253449f74ca793db",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38955.txt.download.json"
+      },
+      {
+        "sha256": "ad73621c8a327f68d6270d7d7ed54aef7d45ff00c6f2bd4fc8a3b507bc795950",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38955.txt.download_state.json"
+      },
+      {
+        "sha256": "a1126b6bec29256f9e92fb120c71520623694813d3a9772853c09ad1c5f75f8a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4047.txt"
+      },
+      {
+        "sha256": "1f12493b50f95badb0dd83a223c9f8844e2984523aa5ffa6854ee07741593889",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4047.txt.download.json"
+      },
+      {
+        "sha256": "f9dd92592ad78f0c8fa7de1fa9ec97123df8c2672c6692cc1574c911ed0aa33f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4047.txt.download_state.json"
+      },
+      {
+        "sha256": "6564c4b893231d7b39a195e10d734a53506350fb6c2af16105a67365eded11cc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40579.txt"
+      },
+      {
+        "sha256": "eafa00bc89f8e08d44920bf95ebef582f951ee50ace5864e200511d970f71083",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40579.txt.download.json"
+      },
+      {
+        "sha256": "ef6d87ce9cc721575044929237de97ec6c13f41ba6ba668fa4eb766c596dbe25",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40579.txt.download_state.json"
+      },
+      {
+        "sha256": "c8dbe3563ca688278bcfa09b673bd177e2500ecb243cfb34a00690823b113c9c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40700.txt"
+      },
+      {
+        "sha256": "08a102353578722f5b7f585bd0ae873d8489cb94d57f8e42aaa6f19182404f1e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40700.txt.download.json"
+      },
+      {
+        "sha256": "66f9aa825233eee0cc122850de417035d9ff937f5f65f5fe26ffa65f99bf0673",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40700.txt.download_state.json"
+      },
+      {
+        "sha256": "23a359e1c8734cf74372442fbedc6ec6bf9ecaf47e6936628cb6dba90fb6409b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4128.txt"
+      },
+      {
+        "sha256": "525494370f4f6a0cd284f3b9aab9ba2f130ee2633a19432ab3ea06f55f40b7dd",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4128.txt.download.json"
+      },
+      {
+        "sha256": "80cc1bb147b9866d8d07f558a0fe3dbfee6fb7d192e2a69ed3bab8e28d610050",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4128.txt.download_state.json"
+      },
+      {
+        "sha256": "f24c812cb32ad195a0a5d779d43579179a4e8e5add019d49de3536d9163ae3c6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41603.txt"
+      },
+      {
+        "sha256": "f310df2ad47f753a82bf120ae43ddee77f2168d8e3a00056677d6bbe4eeb8d9b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41603.txt.download.json"
+      },
+      {
+        "sha256": "fea72ecf3063ca1945eb8c6638c83a1f8648e9eec393e8933c19bc7902f620f7",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41603.txt.download_state.json"
+      },
+      {
+        "sha256": "d630ebc88f0a16f42c770d581e05cee96ae444d84039eeb46c025f7da51fc09e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41607.txt"
+      },
+      {
+        "sha256": "1e622062501e8d4487e444cf987e5fee9db0858c5b25107264823709506eda1d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41607.txt.download.json"
+      },
+      {
+        "sha256": "de9b960c5ee63e1996b2ef03b2c824d4578827066eaa15cc0b523231793a8f56",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41607.txt.download_state.json"
+      },
+      {
+        "sha256": "70f8bdb8a20026f5651b800e58b5210d501852cdd99ee637084ebc85dd99584a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42081.txt"
+      },
+      {
+        "sha256": "5b75bd336bd8809a6577b3bee3499d34a3427478bb03db03367cba7bc535fa1c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42081.txt.download.json"
+      },
+      {
+        "sha256": "c039a9c416c9b808cc82c78c66b13495b6a7021b2aba9c353503157f3dca67a3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42081.txt.download_state.json"
+      },
+      {
+        "sha256": "06b9d5036c9191b9ab7008931096f40ddcf467f98b1dd03accea1617aca495e6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42655.txt"
+      },
+      {
+        "sha256": "9135f0d46db7156ee46b68eb7948ee5d489036ca38b0960208dd657ef169410a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42655.txt.download.json"
+      },
+      {
+        "sha256": "5fa5a48005abbef2d3ec792658464f8614d0cfaf59581d946c74610d399ddc28",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42655.txt.download_state.json"
+      },
+      {
+        "sha256": "2d3b016b1ad7e5d81a96d1094800996fb1c97e32ad34e2f344bdca760cea3b65",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43536.txt"
+      },
+      {
+        "sha256": "1beb3b9805f523b872def0ab15c8b3e089e6aa06a7382b1ba04874fdf7997d3c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43536.txt.download.json"
+      },
+      {
+        "sha256": "5f70602a0702419eba2943287df10a188b45cf977cf2b35bada6621b007778bf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43536.txt.download_state.json"
+      },
+      {
+        "sha256": "a02e28569346e8e561b4574ab60a6f4dd01dd9f9ddccca2241fe961f9c186537",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43845.txt"
+      },
+      {
+        "sha256": "81944a2617ae3e186d8b85644251b94eca9329fabd0eb1a6ea44792a2e0adea8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43845.txt.download.json"
+      },
+      {
+        "sha256": "a040f5c060a161656899fd8b76c2db8a99bcf56028b65dddf363740667a1d06e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43845.txt.download_state.json"
+      },
+      {
+        "sha256": "496ccf8a9235dc7f820271404a48d00e5cb4a1faf9842fa86160df56261281cc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44099.txt"
+      },
+      {
+        "sha256": "e7a71b84c0924cf091deff16beba72ba97226a371101c67f5420e3cfe2546df4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44099.txt.download.json"
+      },
+      {
+        "sha256": "f66d11a78a3e1d4de449a135db1dc1b85be5d5060bed9d2945395a18c58e653d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44099.txt.download_state.json"
+      },
+      {
+        "sha256": "35a78d3b4dcdd964ba3e36d1ce662941a2d9410f4bb7a7b04880a9379468e217",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44557.txt"
+      },
+      {
+        "sha256": "355e146e797a565919f1287582b1ced223508b05e8beddd5223cf583d76b521f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44557.txt.download.json"
+      },
+      {
+        "sha256": "5ed05a00a4105e35dc5529f9fe01d231087da4f12488bdc51deb14e3084f5f37",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44557.txt.download_state.json"
+      },
+      {
+        "sha256": "f91cd91b6af593ffa0cbe969bf220350bcafd613e3f982f415e7ffe5f45e45bf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45313.txt"
+      },
+      {
+        "sha256": "13e3d0b2c7391631a3bb5288d5a244bbf73214f081657474ac025c1ecccd0ff0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45313.txt.download.json"
+      },
+      {
+        "sha256": "b0ec18d7cc0953ac25f04a0585dd0e3193bd6af22b0bffc45a0d092bd08dd73c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45313.txt.download_state.json"
+      },
+      {
+        "sha256": "0679c4e2815a953073365d556046421bad38c561d9389375b2d874eab195fa33",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45881.txt"
+      },
+      {
+        "sha256": "281870fe1db1534fee66e40e02c86c04ae3c817ec147ec8308468f5d5d74b051",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45881.txt.download.json"
+      },
+      {
+        "sha256": "3d471d5d00e4e84654b037b13360c1544b16a7f964226be0ed0bf524dffdea73",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45881.txt.download_state.json"
+      },
+      {
+        "sha256": "86385daf220051742b03c4835c426b3fdb6fc4493fec31f390725ad80212439f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45888.txt"
+      },
+      {
+        "sha256": "91cd25b32dabbceca618750181ac981b1b046f6e123210a5671e8019eb08ca78",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45888.txt.download.json"
+      },
+      {
+        "sha256": "a2b2423adc705f845647cad6ab9d22d42d3d0f617aabb0153e2ccd6fab437d06",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45888.txt.download_state.json"
+      },
+      {
+        "sha256": "4786e48c791bb791957b629eee30de504a8e03fb35fa0092bef278c8ed10ee83",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/46915.txt"
+      },
+      {
+        "sha256": "7cddf2c70b76c9b81a7f8b55f4a2c602ed8ff57b808ab53a941f9f3df05146e0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/46915.txt.download.json"
+      },
+      {
+        "sha256": "d653512cc66f366b4bbfdafd3e264d5e0aa5ca84e23073d9f80aab1d6b8e5336",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/46915.txt.download_state.json"
+      },
+      {
+        "sha256": "5b3ac02939097187672f624d0c440388292e70bdb4a721001cb5991db4d65de4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47068.txt"
+      },
+      {
+        "sha256": "4d379c47f91bae74a00f99146b051d5a25f67a07d2310674e59ad1dbcaa5c587",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47068.txt.download.json"
+      },
+      {
+        "sha256": "1c1b5c62594181bba8b632dde6dac4349df9b82d42d5b127d3f055af24d207a2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47068.txt.download_state.json"
+      },
+      {
+        "sha256": "1233554c460bac754d1483649bb26c02ecccc5293bea2748b97c156e7b18f316",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47558.txt"
+      },
+      {
+        "sha256": "5b9d56dde36f9f65b164112bca5cc09a330c43b1b168474b8bf9292e8759eec3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47558.txt.download.json"
+      },
+      {
+        "sha256": "4afbe07927729347ea1152cf84b485b06c2e68883b756c7720eba0f14e8b4db1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47558.txt.download_state.json"
+      },
+      {
+        "sha256": "6c5056dc6c3b1f04ff44c4e7ed081c699fdce974bde23443c9a67902b7710757",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47581.txt"
+      },
+      {
+        "sha256": "4f9ed9c960099795fa97d0f67b7c86324aa48c4c8e5f63983af6feeefb7d583b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47581.txt.download.json"
+      },
+      {
+        "sha256": "3a7461c8c990c21684be72fbae61cf50f3f2c8397a114e1c92c34e63ad09f5ac",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47581.txt.download_state.json"
+      },
+      {
+        "sha256": "f343ccc3e34d5cc819fb4eb11b59f2ec7d4a8c2a67ec59eef2e9f614f5e680fd",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47676.txt"
+      },
+      {
+        "sha256": "e2f262eb447d406446db88ce557f5b8a921a5a6be900f54927aa7c7ae96b91c6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47676.txt.download.json"
+      },
+      {
+        "sha256": "6948f26599119579f4448b3de4be43211e4825e1b12d0971a32e2840e4c70c8a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47676.txt.download_state.json"
+      },
+      {
+        "sha256": "68fa97ed43ba3245cfb9329d9875d6d40b5e776aeb47eba94bef976baf4008ab",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/48693.txt"
+      },
+      {
+        "sha256": "160e1e53301cca6dfde8ea56a4d5877db58e7078ff744e4c8056012a24692ede",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/48693.txt.download.json"
+      },
+      {
+        "sha256": "deb809c2dd978500eaa892ff8b43e291d76f6d6cd2ed8f0bcc82bfae25e6ca70",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/48693.txt.download_state.json"
+      },
+      {
+        "sha256": "84a2b672270646dd6f517d4331853256dd80b68d317e5574eb04cec9efd3b5e5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49078.txt"
+      },
+      {
+        "sha256": "e3b39d9bee27179f45cf8a1bdb3f37b04b6f52941e743205b0a139e670696f60",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49078.txt.download.json"
+      },
+      {
+        "sha256": "38ed5b876a50ad7d850a460d1d614e8aa06ea91ca91284789ccab7cfa803fcce",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49078.txt.download_state.json"
+      },
+      {
+        "sha256": "d7887877fe2e794196b741c6c122c605df89818d9a7c37e7406ae234acc8d329",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49529.txt"
+      },
+      {
+        "sha256": "72633ecafa2a1e15e28b93a0e3d8fa7b1779e0a4fa6ee818b3cafec10d70bd5b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49529.txt.download.json"
+      },
+      {
+        "sha256": "0bff6220532f89413c80f834e4135871dc3a90ac6ac0dc8e33aa6c47ea372db2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49529.txt.download_state.json"
+      },
+      {
+        "sha256": "514b46b3b4b6b98886ad099f8876c518fd9210de49c1ac7e7cf6914b2c8170bc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49596.txt"
+      },
+      {
+        "sha256": "be42769794ad89216db84ac80124c40fe19392953bf8045dca38381f6885a2fe",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49596.txt.download.json"
+      },
+      {
+        "sha256": "44038c6ccceed31a25192dfa57c0f5f8adb7f4ecc3dc89ec5699cc7bce97266e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49596.txt.download_state.json"
+      },
+      {
+        "sha256": "30dd0fd8115a489b316e7e4585b3ba3ef54a80590d5ee0b20dea3cad8adbd6c6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/50287.txt"
+      },
+      {
+        "sha256": "2a60e1ab56b2fe34733d9be171e0e1b75cf76bc15acf9852c2d0f4f627acc798",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/50287.txt.download.json"
+      },
+      {
+        "sha256": "de37e21d5dd5a80157e7115d5315175a4f8a3f6c3e4227240550d5b0438b34d3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/50287.txt.download_state.json"
+      },
+      {
+        "sha256": "b6a0f83faf217077d871f4607ec6edf2c0da7d4e61692edfe4a6bdd3f4ebe39c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/51410.txt"
+      },
+      {
+        "sha256": "de17cfdf0150dc01f65c54341091c2518e4ee80dafb6ed586a2c21e07de0e01a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/51410.txt.download.json"
+      },
+      {
+        "sha256": "cdb12834bc65185018cee2664aaa20353a405ae27c2c9da2f2afc4e2d4bf4eee",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/51410.txt.download_state.json"
+      },
+      {
+        "sha256": "bfb2a98da02fbb42f1f8394ee09119cdffe75ab98fbfcd383a4b1fe86efc3382",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/53345.txt"
+      },
+      {
+        "sha256": "f54e93b6b63eb618498cfbeadbe3b5f1de404263c1dfa10bcd9e9edef4fdbdc1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/53345.txt.download.json"
+      },
+      {
+        "sha256": "0d61e7207e8fa055c40d046ca7eab624d979e3ff8b3a762b2f742066dda52c86",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/53345.txt.download_state.json"
+      },
+      {
+        "sha256": "ff10a13b1a0007d7c1a06ebc5c5e85990063c43bbc44af62059455631f62dc42",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5396.txt"
+      },
+      {
+        "sha256": "5781fbf11ce73728659d345cb7c0ad8ac5a8fc2d77e01c2d685d52add1ee183b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5396.txt.download.json"
+      },
+      {
+        "sha256": "5ecf382d3096d7334d9850b666262c06733f5c3bd5cd742e6a3827e694a6c7c2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5396.txt.download_state.json"
+      },
+      {
+        "sha256": "0d117fc278fee172617e45f38b1c60b45dde0af22bd11837c18a94412c0ce345",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54537.txt"
+      },
+      {
+        "sha256": "3e665671866419184e501cc224771cf5d5c4f384e00815d370fea2f86bc4d541",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54537.txt.download.json"
+      },
+      {
+        "sha256": "95bb96525684d3bbb3fee4db2a85a54e3718c62f05bfb906e7e0eb2e9cca3ad8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54537.txt.download_state.json"
+      },
+      {
+        "sha256": "8c7c0d63e4253003d93727e5d9dfe1245ecfef2ac71fc4b48969f685d150e6e8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54624.txt"
+      },
+      {
+        "sha256": "4ab84473e627ce9dffce6f3f1578b5c9573d3024647835de628c771aeffaa75e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54624.txt.download.json"
+      },
+      {
+        "sha256": "d9850fdbdbdfd00206502fbd2defa71d129838b20c7a85d9b4785af41b34aa5e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54624.txt.download_state.json"
+      },
+      {
+        "sha256": "016fc415740042c97a07ef87779facf1ac5f73adbd87f5f733a92767aa7c9e59",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55339.txt"
+      },
+      {
+        "sha256": "a252be0a6a34b8f9de0c72e328bdc4fc342e8992a6394f696749e36bf7766083",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55339.txt.download.json"
+      },
+      {
+        "sha256": "d672b918f293d9114254aea0c964e46ee45930fe06c0785349f183fd0197e3da",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55339.txt.download_state.json"
+      },
+      {
+        "sha256": "f2f9d8771c2d07a2f669daf07311340413b93c3340feeaaf1457d00c7cbe28c1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55871.txt"
+      },
+      {
+        "sha256": "ec54151e199dd907a8026168dc535fca505f780a40cee9a4c8123e6687713fd4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55871.txt.download.json"
+      },
+      {
+        "sha256": "0f2169178d582d188f40aae9a918cb78d616a56ec1dfd0bc5ae498e5252a72e8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55871.txt.download_state.json"
+      },
+      {
+        "sha256": "5a0dfe99fad39f1b18ab1cc051527ccfdef12e214a22cc27264f25b21bd8c154",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/56410.txt"
+      },
+      {
+        "sha256": "e65b8dbf27f933fa688f490613e04c4587d30b0e82ae89ce61777d41ba7379d1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/56410.txt.download.json"
+      },
+      {
+        "sha256": "36a9ebc51f0ab5d5ac7ab99d87781a682d51ec5320ec3b81ddb846276cd9079c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/56410.txt.download_state.json"
+      },
+      {
+        "sha256": "ebec4c08c5dd799ce02f3ff91e380242f50d79e8700310ec5f57d66fd38bdd09",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5734.txt"
+      },
+      {
+        "sha256": "202183306e311409056a29c2be022fd01320a48da24df18fa5292ef3866b746a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5734.txt.download.json"
+      },
+      {
+        "sha256": "553cb553305b0d01209da7fdae9b9264c13e9692d72634f2a202f80d76d26d55",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5734.txt.download_state.json"
+      },
+      {
+        "sha256": "1f04507f01f6d19e871095037ff4742745bda5a1583ee792f6a386d1228b32ff",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5770.txt"
+      },
+      {
+        "sha256": "cdc078ff18437f49db4f5f5b7064677ddcf3fb2ad4017fa552e060845a79516f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5770.txt.download.json"
+      },
+      {
+        "sha256": "806ccb3eaef4568f3427b85e7517e3687511e72706d393e34e5389d8b443aa41",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5770.txt.download_state.json"
+      },
+      {
+        "sha256": "f8117b124fc2da28f823a9add2a69a4d528a8b7a649573f864df442740dd537d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/57791.txt"
+      },
+      {
+        "sha256": "ce0c5cfcfd760ffbe9bc8270bc69b5f6999d1bd03025c3da4297ca0701fa5254",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/57791.txt.download.json"
+      },
+      {
+        "sha256": "a46061fb55f66a9d5dd9597a2bd92d7f9f30e15866b6dcce86797d8e37ad541a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/57791.txt.download_state.json"
+      },
+      {
+        "sha256": "adbe37933adf00031d0fa3a243556b9d7ff12e7de9933b67883e1eb64b3e1ae2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58473.txt"
+      },
+      {
+        "sha256": "9e52dbc81191e40d25f9b42b821001de84cae17a47a952d7ad3b47d2943cf4e8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58473.txt.download.json"
+      },
+      {
+        "sha256": "cbc4eb2ea6fbf5db00836ab9aac5481e94665ff73ab719122e304510a893405b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58473.txt.download_state.json"
+      },
+      {
+        "sha256": "6ee7e3af2b427cdb48132e8debd6d0013927b31d0980aa505832b0f85666f489",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58553.txt"
+      },
+      {
+        "sha256": "492468faaa07b54e6c29cfaed04b0f64f1bb2558b67499cc116d3d7c3616b380",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58553.txt.download.json"
+      },
+      {
+        "sha256": "bcc547dce669d996d5d0c9df0aef4c67b2d902aaf5221cb773b8e1c854648751",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58553.txt.download_state.json"
+      },
+      {
+        "sha256": "e6b356ae9cd31ec1d719b4e2f5ce7c74e35a367668974407fd8e7d735455fb20",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58598.txt"
+      },
+      {
+        "sha256": "0b8aa5c8d97450ca0459545f092cd51165b0114fc99cbd19aa27e454ffc7e45a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58598.txt.download.json"
+      },
+      {
+        "sha256": "c567fe95b6a7b46d4e1201a3bf847456c462d6391b813792f09aa18d69f59182",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58598.txt.download_state.json"
+      },
+      {
+        "sha256": "c1c1981b187036d4a00f0ba9c2fd65c06c43663a4593a1ce7bd01bbe8125bd19",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5956.txt"
+      },
+      {
+        "sha256": "a01730291d8badaa49d50776a6c6e03b0826f7a5a7fa15891bfcf1b80324d2d5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5956.txt.download.json"
+      },
+      {
+        "sha256": "343d44ec7e3636a783772207b730eea47a8804256996ee8c53dc7c8b19a1c1c9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5956.txt.download_state.json"
+      },
+      {
+        "sha256": "c19a6febe9781833f02598cf157fc1c45b65d8994f2674e88410cd00eea7ad6d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5962.txt"
+      },
+      {
+        "sha256": "ab64b978075ef980b986554136bd132a4af8c57e06f9f47dbf246bc17f7bd139",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5962.txt.download.json"
+      },
+      {
+        "sha256": "379760a2cca5986edc6311da968894103ba8a2cc80477b62d3fdd0465eb20577",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5962.txt.download_state.json"
+      },
+      {
+        "sha256": "11c74dd875e9e5659b587ce8705acea74227ca19ed0afa184ab9f450d9dd3a95",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6412.txt"
+      },
+      {
+        "sha256": "ca2db42a96d219bcad111677f4a279a60c752bc64889465296e651ea59fa0dd9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6412.txt.download.json"
+      },
+      {
+        "sha256": "53f27c517ef04474778c1b3d40b4356383ad049e582293e05bf92192cf7cd736",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6412.txt.download_state.json"
+      },
+      {
+        "sha256": "1f7197a758f44b85bd0b279387c74753fe8c5afdcd9531ec9247c4fd5cedd0ca",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6941.txt"
+      },
+      {
+        "sha256": "1f8938361cafb217b543c7e14c555ecff687e05b6c3a37b9cfdd08a9bce5332d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6941.txt.download.json"
+      },
+      {
+        "sha256": "b6f42b4aaa3601971fc5008d042f3d11c1bc61a6435d44eb5b47e6e2e685a47f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6941.txt.download_state.json"
+      },
+      {
+        "sha256": "2dd3367161538f4a6546ea30c18e772160c84927710bebba3e7f5ea8a6ffd42b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7412.txt"
+      },
+      {
+        "sha256": "11efe3d7cce01709b2189991530a0149b30dfce061e512ec719c37b306447cca",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7412.txt.download.json"
+      },
+      {
+        "sha256": "b1bbfcb34bc4a0fe163d8ad392fe074007ee5b67908bd713bcc18bdc64b01903",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7412.txt.download_state.json"
+      },
+      {
+        "sha256": "cae86a95f8467d55800af340ee360c83a97f0ee35536ad9ff4d9a0132617fd2a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7987.txt"
+      },
+      {
+        "sha256": "69aa2d0a0b5c3c0fc8a2181416f4bddcfd5cc78692352cf967adca2e8844a699",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7987.txt.download.json"
+      },
+      {
+        "sha256": "77ae156f0a9f30a51f9934ed6bfa5b54b176e5573e8666533d086aaca4c47649",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7987.txt.download_state.json"
+      },
+      {
+        "sha256": "68d02bd36db0180bf70c7f95afc54541f588618b25c59a39cc60018f51070ca3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8197.txt"
+      },
+      {
+        "sha256": "c4a9df8ae64b1fc04d81b0d260729e041f6bc62312961997dda1c53659d30001",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8197.txt.download.json"
+      },
+      {
+        "sha256": "3a088d43191d0b3a2ecf62c4115c326d5e00533247517696756bc76bec6437ea",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8197.txt.download_state.json"
+      },
+      {
+        "sha256": "eed15b11e09b418eee4e8b38bd324b805934abbb22c340c7561514a89be4b981",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8559.txt"
+      },
+      {
+        "sha256": "b8fbdedf05ac6248496d5e757129febca603f35f42f2c9793cbe0045b86af3ed",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8559.txt.download.json"
+      },
+      {
+        "sha256": "098ad4beb9319a49fa85928a57fcf78b7f207b80efbc3f03ab890fecc7c5e1ce",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8559.txt.download_state.json"
+      },
+      {
+        "sha256": "4b52c996d63bfeb3c942fff20b6b2298d3455be8954d44a3350022c3187dd584",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/860.txt"
+      },
+      {
+        "sha256": "8f2ceb092d878b5354e24632b43da04a20300fd0ca09391856cae6f573984505",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/860.txt.download.json"
+      },
+      {
+        "sha256": "0e5552ece4f3e29d21cae1fd2ade179bf40dd7f9f6a9f76a976311948dfe3801",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/860.txt.download_state.json"
+      },
+      {
+        "sha256": "5e76554a61fcfb22932070305961f737c573134363f96ae18971b2428e2f7874",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8788.txt"
+      },
+      {
+        "sha256": "9d4698c4fcd6eeae9779ab0fb94fb8ffbe23c65caae1f9131d8996c2106c6f93",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8788.txt.download.json"
+      },
+      {
+        "sha256": "b92aaef78407d590158e98231f334506ccdf8acb89578313216031c950460bba",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8788.txt.download_state.json"
+      },
+      {
+        "sha256": "0be37609fae1df19c234b8e5c54ea41f538d6963554fad9bc55ae073b3dec79b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9315.txt"
+      },
+      {
+        "sha256": "3af8d22563bbd5a771585c6d84dd83974da4f17678c6f754a014322a56b1c2ce",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9315.txt.download.json"
+      },
+      {
+        "sha256": "00b9c05b1d2cef3da37b9c6418e57a6a3dab271f1023c85a78fcdfcaa0d48fb3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9315.txt.download_state.json"
+      },
+      {
+        "sha256": "23935eb122717a05d7153e7c6ab95a9000c116139fa5af4b403513ead6f0c61a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9931.txt"
+      },
+      {
+        "sha256": "9e8d6f7348978333ccd8ba031c84098b90944cc501efec0f05ecc49c019f1c08",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9931.txt.download.json"
+      },
+      {
+        "sha256": "4dce2b99eb0a3010337155d654d29b1c531165b338636c72dfc56cfdd267418c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9931.txt.download_state.json"
+      },
+      {
+        "sha256": "a9b3b0a3930815d786a61c4348bd43aacc53824abc64898caadd2c9067382ef4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10146.txt.attempts/5ca21bb2f9744a6882e771fa0be21585.json"
+      },
+      {
+        "sha256": "974dde6ce343280b7247e85b371a650b1e2b827cb746059393c38ef9511c1290",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10321.txt.attempts/f48153ac3fc94205b271e807783b535a.json"
+      },
+      {
+        "sha256": "a8ddfef3a7fcaf49273195dc3e30966ecbc6192af6a9d380906e92069f65b47f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10356.txt.attempts/eea087e6e3b24c5badde751dd0baa331.json"
+      },
+      {
+        "sha256": "1e17568b02528a5a00694a9bf150793efac74ac2ac83811ecd6bfadefa5a6c0b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/10762.txt.attempts/39ad3ad17afb4b31b7855b7a45b850bf.json"
+      },
+      {
+        "sha256": "6eec83724f91548b8b5177e6ac7fff474960a59c84efeb904d952a787ede4e4e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/12204.txt.attempts/207980e0f853408591654a02bfd8720f.json"
+      },
+      {
+        "sha256": "655a1c79144b5c8c27309fdd090870c94b1d5ac37e3b8223866e7d6c4649816d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/15562.txt.attempts/e40e6d9caeff49f3a62f127f7a1a0fc6.json"
+      },
+      {
+        "sha256": "200819e8cc9747cd3c6187905b2995fc2db1fbc8e00182b66e15866963d16538",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/22424.txt.attempts/0ad1f3c84c0f4132ad43526ffb329b86.json"
+      },
+      {
+        "sha256": "f4f044bafabc2053e1d7199db59040cf50a7b2f2ee31a07bf00998c514f68724",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/24553.txt.attempts/d66cb87bc0384aebad81a2c9de895b14.json"
+      },
+      {
+        "sha256": "5135ebc733f7b9b92fd02e8998867057c9df4c04e8944c3c82d30b63e9bd90e1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/2544.txt.attempts/141288d81a734fd5908c48b37582c7ad.json"
+      },
+      {
+        "sha256": "f15ebff817c78cb08064900bab37413d914da8237c1b902d62a338d0c68729ce",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25646.txt.attempts/f5cd64a8fbe44432bcc10d7c1e949b54.json"
+      },
+      {
+        "sha256": "a871ec9c4aa754f6878d5ce0f555a0a8b7115bc3c37607a899bd6b1c72f67306",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25773.txt.attempts/ba6c13cd4cbf4b808eb3a90e8a1ba8ec.json"
+      },
+      {
+        "sha256": "dc21f4116723268a150eaaf31d66d8d5369a7e55e941bd5be137dca440cf9c92",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/25830.txt.attempts/1c269bd6ca464e0caf92c5e93228492f.json"
+      },
+      {
+        "sha256": "4fa71ba7922027867b5658693e603b86d1cc79543ec18ff7e3d253c8c49e005b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26183.txt.attempts/6826a417dda942b98960ed1ced7dbbe6.json"
+      },
+      {
+        "sha256": "363a57d588ce4f4071e70fa4af10b45afb2b07a3416ef2553ede21b208bd0e6d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26239.txt.attempts/16aa257831ee4bd0b4718f14c81a65ae.json"
+      },
+      {
+        "sha256": "c3b72c96195e633fda110c3783851c1de8139c6ca2d418608003573262dd660c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26493.txt.attempts/94e0996204fe4e8bb7736fbb629132be.json"
+      },
+      {
+        "sha256": "b04ca206481073fcaaa31db4abdd7b0e3d6351f9b351df8c1307c80b73b1bfc3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/26618.txt.attempts/bdae424e989348ae80c831f965e46c77.json"
+      },
+      {
+        "sha256": "c048142308d55c3c1727ad97d04d49e5024866b72ed2cd8955130bb34f5edfdf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/27454.txt.attempts/b934c9189ba84d98989c43cafa905416.json"
+      },
+      {
+        "sha256": "8f72ca146be5a1507c872f338db18fee69deab3fd87476039fb1ebd918ad0596",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28444.txt.attempts/e6244ce6614c45a48bb0fada7324cda6.json"
+      },
+      {
+        "sha256": "bc6fe3f823c9ba3196e35c8943b559361c4010504c731add167a5ad52128224e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/28988.txt.attempts/171d5c78a0074e24b164a3057078c81e.json"
+      },
+      {
+        "sha256": "fe358952cb78b85dc005cfa428e65a40a1f2235c4edb798b4f1f47fd52dc95d4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29594.txt.attempts/6a60214ba5e047a48d217132b3eb8d94.json"
+      },
+      {
+        "sha256": "d9ff28b686c54e2c6ce08219328733ca4787c91e0eaadaada6f4374ed2989e57",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/29973.txt.attempts/1147ed68041f46ddb04ae742a8b94c0c.json"
+      },
+      {
+        "sha256": "f3bea8cc67f9fc06d5dfd0bf332eda88aa5519ad717ea348b022206621a5ef67",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30312.txt.attempts/5d1bb42e6287410387a97d850e58e9d6.json"
+      },
+      {
+        "sha256": "cc721a246087d7a7987464678488d691d0bedf73e51c24131c844f51d2e2fcf8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30752.txt.attempts/7a3ade24cb8946ae804af6b2540eb114.json"
+      },
+      {
+        "sha256": "c5fb86b8fcf55e981c42c2cd67ecde39ee8cdbc00005a7864ccfad75bff6c149",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30754.txt.attempts/e1c5822f8e304971ba72a776eb7d1cc5.json"
+      },
+      {
+        "sha256": "d8f019486724d396f3190eeacd167cf4737a0b4229379008349cf397cc4db2cc",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30909.txt.attempts/dc1464a105d64c348933d02ec15d22df.json"
+      },
+      {
+        "sha256": "8885071470e657ea47944ec311728ffe76ed6c242a615ed9a69bf7da8af14e38",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/30981.txt.attempts/fb8e1850355e4d1e806d5698c097725d.json"
+      },
+      {
+        "sha256": "ef6fb2765a667b5b35899a632ef59bc04cd1f4a33bd3b00a037973dd84a55342",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31065.txt.attempts/de4bb8e4e7d448c3a4a7c1d70f91af91.json"
+      },
+      {
+        "sha256": "f7e071eb96ec71e7f2c98af36a4547808a0a786bbdc468566fe78484799de753",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3129.txt.attempts/b3c713e801794aaf8bbe358f925ee1aa.json"
+      },
+      {
+        "sha256": "a0b0df481dfd3537a15369769db89d93b99c7fc7d6c16b22307ffdeb5b3b5d77",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/31974.txt.attempts/bfa13d00fcf140648a0f35ca40d2a594.json"
+      },
+      {
+        "sha256": "7aa5a27341b829218be6646f818d88104333e291d72d94d3bce34ac491a5273a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3247.txt.attempts/e502fa64d16c4b26aace6eb6cd026025.json"
+      },
+      {
+        "sha256": "04c6dc5be90c38119a02fa9e965a61b3fa81b6a4a9b19dea8f46609a15b9431d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/32761.txt.attempts/3bc77734a12d456f87377e0c184e8afc.json"
+      },
+      {
+        "sha256": "9ddf08b80cf3768374c8e6071b735ec27d5aa921e664f6fffe80c9cfeb27f017",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3340.txt.attempts/9acb71bbe78e47eaada15a4a43e42c47.json"
+      },
+      {
+        "sha256": "ac99e6a301399edaa25ffa81fd13f157b3ebffa9c47d6303386c2050c85dc8ae",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33426.txt.attempts/49c43c4f035b4653ae02fa6aa5ce37f4.json"
+      },
+      {
+        "sha256": "f85380992c871aa0ffb7e7ef512afb132caec34d6cf4505a756d1a5afeb6359f",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/33756.txt.attempts/8d2e1157340e4d2c9472c2f3915cd41d.json"
+      },
+      {
+        "sha256": "332dd3a248309bd8d19f271c1bd92b67a0d13ba89e71046181db86387f41fff8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/34467.txt.attempts/52b55832c9f04e44a671e711053e0a1b.json"
+      },
+      {
+        "sha256": "f623792f4a528e7fc24d7bad29391cbb73da9a62378327353f78205e998dcce7",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35205.txt.attempts/9b916bbd97144b509d204092a08d77f3.json"
+      },
+      {
+        "sha256": "8224579fe8ea4dff2a4dd7340876a761fedc0d193bbe64410b2d8271a24886a0",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/35246.txt.attempts/8cb3e91be7dd4952b991a06fb3192d42.json"
+      },
+      {
+        "sha256": "ff465d9b96f8c6a3506d0a3372fc4c258f8622705a75f2e3fddda62e46e3f937",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3608.txt.attempts/84b1fd677fd64199b38f54b8bcb5301f.json"
+      },
+      {
+        "sha256": "287297fd4bb0a5c26afd11930729555ec67f075f3290fed1f4fb0d3cf0cdefaa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/36256.txt.attempts/50787aecd6e446e38c9a9da980589f7f.json"
+      },
+      {
+        "sha256": "37a5ad4755405bab4e2a88c73076de86e731eb44845aceee8ac6c00dcd3b0f0c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37006.txt.attempts/eed157275c01432fabb8036ffee964b4.json"
+      },
+      {
+        "sha256": "6bf0f4ae93850d96800cfeee9cf1e061973b1829039e19132ecdd6e9c5771d80",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37328.txt.attempts/34a18af2a3f84acebd7dfa0724cd79d6.json"
+      },
+      {
+        "sha256": "4b3d83cbeca22e889c6429110f4eee758d7c0f84038ab2b400bea29bb02d0534",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37403.txt.attempts/553ddbe4a6be452592a9f93903abc9aa.json"
+      },
+      {
+        "sha256": "ae2ec82a4bf14dac0cafcebafa2dc0c488bce87cf051cb7914d119e1bcbb69b5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37443.txt.attempts/93b45ee585864fb4b0fa66e9722f9b5e.json"
+      },
+      {
+        "sha256": "fdae775aeeaa196cf4a2ee561b3e0a0798880de65f37430147776acfd8313503",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3754.txt.attempts/397886afce2d4554bdd376139bc95570.json"
+      },
+      {
+        "sha256": "29890a5046cffa5bef5e45a2b2636f6f87dd424fb2401c54b675c77070375690",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/37702.txt.attempts/818dff4bad424923baa18e3b77bdba8f.json"
+      },
+      {
+        "sha256": "8d5d9cdbac3c8e25186110fefa0b228c92ec98849a17cf0ccb129ad065569c52",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38106.txt.attempts/052b3fb05b1745018e456b9c551e7d89.json"
+      },
+      {
+        "sha256": "6e2a33941e56daac5ae26da7118dd11f46f2309f9f0367233700ba3b4431c794",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/3890.txt.attempts/e606bd4a250541b98a69ff7fe6df63a9.json"
+      },
+      {
+        "sha256": "e0937abf140515883e42dd57ea74b22f7a356339a751c16d7ce2274808c6d4fa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38929.txt.attempts/660999f60c9a408987d0d5be5f742c3a.json"
+      },
+      {
+        "sha256": "0507ae90fdf2bec3fbb565afdfcdfe512e2c1cbea5b59d3482aad282acb667cd",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/38955.txt.attempts/7cca8d52944f4146b9cabcf0ee34b793.json"
+      },
+      {
+        "sha256": "456681109ff4a17d84276dbca7826edd07f5f56731bee2b27f1d3c5c9971ee59",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4047.txt.attempts/7da5a2ee02794e21b8c1b67d17f337b8.json"
+      },
+      {
+        "sha256": "12d5f0484b83aea508a15470cd0a9ce910e8af2e4182ef296e7520e2a6ddc2ec",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40579.txt.attempts/9d1a786b84d44f0b960b3b6b5313d52e.json"
+      },
+      {
+        "sha256": "463dde7d9ae54edc9a1aa294464b4cd7c39e7d7542e45c8d1ca265fd2f05205b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/40700.txt.attempts/8c6d7b531e274cd7a02910fea9b09d9c.json"
+      },
+      {
+        "sha256": "d50f72e6ae766ef847c0fc34ef8f8598bb7a9e7cbba8117b68d05a8cf3168a58",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/4128.txt.attempts/1a93ff95358a4e0b99ef4402107fad57.json"
+      },
+      {
+        "sha256": "547ff9bc74aae9a96c967c974ed9efb4712fb72211a31fe4bf689a30c970c681",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41603.txt.attempts/24747f06f6f243cda5df411a641e70ac.json"
+      },
+      {
+        "sha256": "0056d826aca1e3c88eba7caf3773178aafe210de37c62d7fbd6239901d66e1d5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/41607.txt.attempts/1955143ac0c34286ba7c75ea2b9b9deb.json"
+      },
+      {
+        "sha256": "51c1092cc1e2441541b015e17dbe11401098e40b0b39832c54205b90cf0f6ca8",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42081.txt.attempts/8483de1424a14b1d8e65b6528857ee5c.json"
+      },
+      {
+        "sha256": "28c1f0411dee01f5974f69e4b186517126651b8d83efa6b31a3c52f36058e008",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/42655.txt.attempts/030168a46933417885c29d703b522b63.json"
+      },
+      {
+        "sha256": "8cf191eea9af4781fe5a48fd296a24003657eec54a7db78a679da19fdaf63802",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43536.txt.attempts/3faa15cf0f62457aa08312e4dcd80df7.json"
+      },
+      {
+        "sha256": "005c890385a4fcff08c75b0019c82dbf6f507dabc27ee7471367439676aed5f3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/43845.txt.attempts/08b8996c7ae04600814248a739f3f2fa.json"
+      },
+      {
+        "sha256": "050a8537df2cc5c5c7c8e9009f7605335452dd51bf7f1753f94b9a4d7e135c55",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44099.txt.attempts/2a58dd96fd4c4987b4cac6a35b801cc6.json"
+      },
+      {
+        "sha256": "7c6f40fd887cf3cc960b976016483f5b28a83b034ed3fd925c514b895facf496",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/44557.txt.attempts/70eb6368e6874e8793ca89a65e177f37.json"
+      },
+      {
+        "sha256": "8376ca6faa73d84f9d1384937ef4e08cf0dcbe7a7f5c581dcdd6732824646df7",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45313.txt.attempts/10aa816a05d94a6ba807cdc1bc240345.json"
+      },
+      {
+        "sha256": "d7a0695309a40755dd2f89f4f120e6e09a164490ba52e104c555544408f039d9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45881.txt.attempts/4f023216766e497fb30c2988b396c6eb.json"
+      },
+      {
+        "sha256": "ae756f5fb8a11044821714bd36e7dabe81ad85dbfdbe54d90936c62f880a6a51",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/45888.txt.attempts/cdaac0ae419e4ae6a00e68d9efaa553a.json"
+      },
+      {
+        "sha256": "405065d0d3419a4fee7e3ef3fe124b5051c61e85159af112922e900314cd9cf3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/46915.txt.attempts/b187a7ddf7cb4ac2bbb375e90acc55bb.json"
+      },
+      {
+        "sha256": "912ad55245f2b237262fe495eec03127d16d0955e3d5478c733b04a557b41048",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47068.txt.attempts/f31b6f33e40a4ac29be07daee0aab199.json"
+      },
+      {
+        "sha256": "5fd3f94ced3c7632ac6be2b7548cfa5d3cf2987d0a36fbebcf800b9bf58f60f5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47558.txt.attempts/90b1fcbaaa2a40b4a65ead7c675fbadd.json"
+      },
+      {
+        "sha256": "aef2f0cb91c9303652fb307b2cc7e4ce102c9d9d70547b25882bd88d7b1d864b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47581.txt.attempts/a8cb4b42b8ef471eb8148580a485d94c.json"
+      },
+      {
+        "sha256": "0441e89b228c53b6dab9037acf52cf7351061d94b0c27615f624a490a35b740c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/47676.txt.attempts/62f93cb5cab04363923130eff168981a.json"
+      },
+      {
+        "sha256": "6ade68aba0de8fd31664aa228bb56250d9061f73899f7e3b8bc970b22d3c711a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/48693.txt.attempts/e76cdc7c8e2c48049be815ef134da059.json"
+      },
+      {
+        "sha256": "f9fd3dc633040c7317b8c23b9d261f5ae2f1fa144447c3f7026e842256f2a90d",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49078.txt.attempts/27f5b779f6064a6c9e4adcbcb888e2df.json"
+      },
+      {
+        "sha256": "99ef1eed45b8f0584125ca7cbefac9d27d21168a8d6a1ee56ab1b95811b9a770",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49529.txt.attempts/4a1ff8e4dcfe4dd09dc8ba9d44230cb0.json"
+      },
+      {
+        "sha256": "2b60df3e5ea849b0f155bbbc98200bc01cff7324d3a83508168c27f1c3cfbca4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/49596.txt.attempts/5ad16f52b3194604a42b3edd6b2aa628.json"
+      },
+      {
+        "sha256": "3107d29346787405582d3136a5df9254dbb2bdf19d1c94f1cae0314a4ff89613",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/50287.txt.attempts/c391f614f0b34768b1ba39e768cebc33.json"
+      },
+      {
+        "sha256": "dc0a24ece7941e7530711fd68fd26f472c62bad3a2afe6a3d50ada72e7ed8ce4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/51410.txt.attempts/b4caa12538b74559afb826304c30a192.json"
+      },
+      {
+        "sha256": "d11b90a42d957ac9e4bca55c24a370f738f6cfa4eea551137901038c2049cee4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/53345.txt.attempts/575444051d2948e8b84d08322e49a6e7.json"
+      },
+      {
+        "sha256": "892b3dfe911567ef653d720793e91d440f8bd84b461ae24e673e298c4b7b4033",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5396.txt.attempts/59fe935d684a48269662bb93497f685b.json"
+      },
+      {
+        "sha256": "d08ec7a0ba05ca6d49996c07cb64c886d2d8182183ab7e053b66c858a7fca296",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54537.txt.attempts/434ace3d8ccb48348f8248a2165c43f9.json"
+      },
+      {
+        "sha256": "a56f259adb348d527006d567dfff82cd4be17f193a394089ca4ff3126b6173f5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/54624.txt.attempts/21c48ad6ef764d2fb18cb8e26cf926d2.json"
+      },
+      {
+        "sha256": "f2bb3997365106f6565436845208df84c4bd7ecacf0e2cc64c397eaf848f3d6a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55339.txt.attempts/d62569adaa124671b33d3d8a62f6dab9.json"
+      },
+      {
+        "sha256": "4de696294bcc1c232056ed165a1c681e7b2cf6e8d10239efc85a6570b1e6d88e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/55871.txt.attempts/e79f882f476242f1a6cf65e18ee22eb3.json"
+      },
+      {
+        "sha256": "71fbc1728ddb41b60624bb64a676b5c21d06f62d8963f17a0d59b7b13b57d9d2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/56410.txt.attempts/d634a3ade382416abdfaa00189f66dc8.json"
+      },
+      {
+        "sha256": "36b1e916ac1bdf0f522ef3783436ecec3b7c6c2df25cfd678eeea90c64f93583",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5734.txt.attempts/cab4af0c5b904d55a39a6889a46a3b57.json"
+      },
+      {
+        "sha256": "099fe73c810e6a4880961f35d2198323ca0d7c26028e6daeb8da43d108a9ba78",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5770.txt.attempts/11e45f82bb4b44b6842a4aff0e43cf93.json"
+      },
+      {
+        "sha256": "3d9606b92efcac952e1b91232581c7b8e26ad73ed230edeed1e847252fbcb1b6",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/57791.txt.attempts/d81710ebfe814d429d590b8fb5c729a6.json"
+      },
+      {
+        "sha256": "d1586252cf15a20d54b20a9e8dd7725ab9871c1d22a24664a6daacfac60ee79e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58473.txt.attempts/fda8fcb914964fee933d16849d73431e.json"
+      },
+      {
+        "sha256": "0a1a08f79c3ffe6119377e84be107312ec19e25f734e795105ec214f217d6117",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58553.txt.attempts/582653dc11654f38915b07ef445c7679.json"
+      },
+      {
+        "sha256": "fba0bc82b457a9ea04402fa5bccc2d208cced06d0b48871292fbaa43d91102d5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/58598.txt.attempts/1edfa90e21a74c118181c73650d7f157.json"
+      },
+      {
+        "sha256": "5f8305901923eeb52e6e3708016d9a511c409984ef48ed207d3aa03399c220b5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5956.txt.attempts/e5ab1ae6bfde43e38d3b19357114c59a.json"
+      },
+      {
+        "sha256": "8f764cd89d36be01e3aefb232497672191327c00cff70b8c0fe9f8f07e28db6a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/5962.txt.attempts/b91cdefdcd714c26bf9ec1c36f6ad27f.json"
+      },
+      {
+        "sha256": "2f14d54acca697a9877cb483320530c1a39bcd85ac50f6a7ffd51a7e8d87a2de",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6412.txt.attempts/1d060be4ee004720b778edb77fae1862.json"
+      },
+      {
+        "sha256": "b6d283e2ab26ace70a39725f04313534508e3725a8c31a5d2aa92e920199b7b5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/6941.txt.attempts/844916af63ea4a6c9b9340dcfd4c7f7f.json"
+      },
+      {
+        "sha256": "0d8552e5e8e690c563153a80c69df4e96b7cc8ed5b513e5fc6758c9b183ddfdf",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7412.txt.attempts/b0b4f1b9923a4903b5ee77bf1f31196b.json"
+      },
+      {
+        "sha256": "6239d02d0858c8cd6082019fa281895c0ddd13cbcbb8d8e45dbcb0e85108270e",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/7987.txt.attempts/18ff4237c51e4750836ac8be439efd8a.json"
+      },
+      {
+        "sha256": "7e2cae1a3d4a08ee2e2aad0fb3ed4bb8c90ec26430c61ba8696acea3a7d0ebe5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8197.txt.attempts/7b78deb59ff94b57806ee34ed47b7bfe.json"
+      },
+      {
+        "sha256": "53a703e002f88e6da4c47b226aa5f93a1a8be3e86758857f335c57dc6913050b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8559.txt.attempts/8de2e5bcfcfa4366a35275c09674ede6.json"
+      },
+      {
+        "sha256": "3c9cc4046f8310c4fede8863f61febe2d5c6c6c68852c68e6f4852f4e2ff70ac",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/860.txt.attempts/478f29b19f8d4425970bc0b544b3c401.json"
+      },
+      {
+        "sha256": "570245f0d9102d04a7c90d9fefc68a547a07448dda2cf1988b438336b8c44483",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/8788.txt.attempts/f7ceed6ac1e04211942747b52d5ac30a.json"
+      },
+      {
+        "sha256": "2d19722e2def4715650757de354afedede6d1415dc18c91eb778b438d63071b1",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9315.txt.attempts/92ee826cbac644b39d23ead111b9a3a5.json"
+      },
+      {
+        "sha256": "1d8e3122b44ce24dd259d3cb96a6e979ccb6824083f76339c33e7c3a59e054a5",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/raw/pg19/test/9931.txt.attempts/19e2e43228c241fd845b717fa54504f1.json"
+      },
+      {
+        "sha256": "b4613e294ba366ea35cb64e59403ea7e02cbed1620a0551c556fa93ca3dddeb4",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/fineweb_sources.json"
+      },
+      {
+        "sha256": "2822faa0607d3823c93a3398481d7622183820fac96b9ac7494f85559c9ed6b2",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/fineweb_tree.json"
+      },
+      {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_LICENSE.txt"
+      },
+      {
+        "sha256": "a591233a5dbc18743cbe532a24ed20e41f4cfb3dc8a602b773957d9a03b9f24b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_index.json"
+      },
+      {
+        "sha256": "fbb2fdb48522927b2e16aa52950f2afeb83c6fa8fed45f0c3dd834e9bc9b43b9",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_metadata.csv"
+      },
+      {
+        "sha256": "c84c08139695f3312df83239a1a41e7b9cde1baf7c08bfcf230ae09eaaf18d8c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_test_files.txt"
+      },
+      {
+        "sha256": "145b5f0896cc2fff3231222874a0f324ee04559144ecf25a873d294eb161719c",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_train_files.txt"
+      },
+      {
+        "sha256": "e66d9f76a39a7a73a62270e98395c9532d306ecd2b7a10ae4098dcdd133d179b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/continuation_004_spark/data/source_index/pg19_validation_files.txt"
+      },
+      {
+        "sha256": "aae1a9daaa7046dbe73c1f1a3828f2a8097f599aabbab86d3209175f2d2475c3",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/fineweb_edu_v1/documents_dev.jsonl"
+      },
+      {
+        "sha256": "e08a23d3b61a788eca82bb42be887820ff78d90dee5d21ae9e272f8acdf91a95",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/fineweb_edu_v1/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "90ce4afa601082df49168d2bc87d1e8ea0963161a5cd32bbe5baa254cb1c1953",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/fineweb_edu_v1/documents_train.jsonl"
+      },
+      {
+        "sha256": "6449db3f4ec38165bef50256a95b5119f142fcbc8023922befd52228a3ac9dfa",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/fineweb_edu_v1/duplicate_rejections.jsonl"
+      },
+      {
+        "sha256": "30c455cb529a024e82db403cec5240c00e6c05472fe67b50e81b928d13ea3c6b",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/fineweb_edu_v1/manifest.json"
+      },
+      {
+        "sha256": "227a55d1859af9248c802386f48a76e6b01d936b33a30628d6e413914b2f6b4a",
+        "historical_source_uri": "historical://workspace/architecture_exploration_20260921/data/raw/source.json"
+      },
+      {
+        "sha256": "83a483ef3905691b1a8a20655e7d83ac85ab7a0c6d164c7fbcba7544936d738b",
+        "historical_source_uri": "historical://qcmr-20260906/data/provenance.json"
+      },
+      {
+        "sha256": "862c524310fdb3d2013a68defedc22ebc40c7fc0ba6aaf3a6ee5da2540fb96f7",
+        "historical_source_uri": "historical://qcmr-20260906/data/processed/test.txt"
+      },
+      {
+        "sha256": "50270172dac7a112434fbd846acd586af15a3cc31406c75aef9e8379c30fed00",
+        "historical_source_uri": "historical://qcmr-20260906/data/processed/train.txt"
+      },
+      {
+        "sha256": "4408eb8737bc8e8a8e77fdbec13f02c074acad67567818cd52ab43e9148eb9a4",
+        "historical_source_uri": "historical://qcmr-20260906/data/processed/validation.txt"
+      },
+      {
+        "sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+        "historical_source_uri": "historical://qcmr-20260906/data/raw/wikitext2/test.parquet"
+      },
+      {
+        "sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+        "historical_source_uri": "historical://qcmr-20260906/data/raw/wikitext2/train.parquet"
+      },
+      {
+        "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+        "historical_source_uri": "historical://qcmr-20260906/data/raw/wikitext2/validation.parquet"
+      },
+      {
+        "sha256": "dead0174da8a12f3162d81bcb239de8cb94b42d3d6911fc597b7b14ba8ad3605",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/manifest.json"
+      },
+      {
+        "sha256": "c62e14a2ce00c38ed878b27d3549a241fbcd8e738c6200a6df6ccbd19d7fd107",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/ood_amplitude.jsonl"
+      },
+      {
+        "sha256": "25a73b625c5ca3fe28ba8ae15ae398315a950a8b12fe74671f90b1d8af13ccf0",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/ood_length.jsonl"
+      },
+      {
+        "sha256": "633876ad64ada83f3ff85e0c21d3e8a30617d7d18a6fec340b77f157d1042136",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/test.jsonl"
+      },
+      {
+        "sha256": "41edd8b2fcb7f9422f26d32acc048bd7bf87b39cfdf7a827854ab5cabd6ca1a9",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/test_high_distractor.jsonl"
+      },
+      {
+        "sha256": "59b316f3a605220bc2fcb8e0838ac55137e80e05bb9409676faa79c3da6321e5",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/train.jsonl"
+      },
+      {
+        "sha256": "07db958e2723ae635cc1314c8c3560b74f6d61b9c76bf940b273352484d3c6e1",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/validation.jsonl"
+      },
+      {
+        "sha256": "56fbb4f90970f307365555a3fff3e04be23654875fbb3dde76bb6768f93fd992",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/development_audit.json"
+      },
+      {
+        "sha256": "a0c62bf0679f5530a118ffb86276b989e3a4e8f70fcc0965c148fd4ef72c9d1f",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/manifest.json"
+      },
+      {
+        "sha256": "89bb0ed4ecb5961cccfcdb611661a41371ace0d5d3dd4cb860018e8b35cb38d4",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/ood_amplitude.jsonl"
+      },
+      {
+        "sha256": "91bebb5e797661a372a5a75cc16d75b09b63fd3544f63066911b1a4a1dccae8e",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/ood_length.jsonl"
+      },
+      {
+        "sha256": "974b018405310d643443027974f776c0e90cbe5a1ff5b87eb2476a336bc2af0f",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/test.jsonl"
+      },
+      {
+        "sha256": "99c533e4dcc9d581dc07f85e784318c7d95e87654c9ee15162ef537308897d3f",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/test_high_distractor.jsonl"
+      },
+      {
+        "sha256": "b4ec5fd45ff1b7c09cc60e9dc1230a1e5ab94cacef15b793e4bcbe12ac16d238",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/train.jsonl"
+      },
+      {
+        "sha256": "5d3dc790714b7bdc5813cfa9fd8f808fac6efbc601156f6a3a70e9c2e77a6b29",
+        "historical_source_uri": "historical://qcmr-20260906/data/synthetic/followup/validation.jsonl"
+      },
+      {
+        "sha256": "59b340b4e3ed4a6f0b04c947e3bc24829c8916005e769cb242882513767b4d93",
+        "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/merges.txt"
+      },
+      {
+        "sha256": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+        "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/tokenizer.json"
+      },
+      {
+        "sha256": "a2018c24ba3c3df3ee6d995fa5279541404c3cac962b7685ce4627e2c2df7f2e",
+        "historical_source_uri": "historical://qcmr-20260906/data/tokenizer/vocab.json"
+      },
+      {
+        "sha256": "b7895aa779d143faac3ab0f91cb966c85f8e177774c507cc2f3f307aa561b7dd",
+        "historical_source_uri": "historical://workspace/balanced_coverage/data/factorial/manifest.json"
+      },
+      {
+        "sha256": "dafba37ba950fc79a5cff6e7e266937073d424a550daaa01bea15074105a730c",
+        "historical_source_uri": "historical://workspace/balanced_coverage/data/factorial/schedule_s11.json"
+      },
+      {
+        "sha256": "c304f72e1fedb8ac51f5dc53538851b0daf8967b1dc09e39b2946e0273bf2968",
+        "historical_source_uri": "historical://workspace/balanced_coverage/data/factorial/schedule_s22.json"
+      },
+      {
+        "sha256": "dc1aff53a13a1fdf034f4ee3839e0d284421a466c757a5b77dcda3e21f811c60",
+        "historical_source_uri": "historical://workspace/balanced_coverage/data/factorial/schedule_s33.json"
+      },
+      {
+        "sha256": "9e157b74d1e32f66961f93bc890cec5a2c52866aebc4afaec877df429c6a4e33",
+        "historical_source_uri": "historical://workspace/balanced_coverage/data/factorial/status.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/source_manifest.json"
+      },
+      {
+        "sha256": "2efb7da4f98b4bc6bcfde925e6b75cb84008e290be61e4917f344f520d0c5096",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/extended_query_schedules/manifest.json"
+      },
+      {
+        "sha256": "7a5e080906e34925d35aff6b561bc549cd86d2b971c87c36a34106705ea84873",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/extended_query_schedules/prefix_verification.json"
+      },
+      {
+        "sha256": "ec0aadd49a849a286f78e334373f9fd3aced925cc72ecd2a2a1498b6cb7948b9",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/extended_query_schedules/seed22.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/binding_budget_calibration/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "60f4526b8bfaa7102549569a4c2dc430a2e666107ce8faa0c605eb9b5c9cfd41",
+        "historical_source_uri": "historical://workspace/binding_layout_coverage/data/layout_examples.jsonl"
+      },
+      {
+        "sha256": "b5e78492a0aa37880c2f867c88c83c75e94857e5f6b28a7ad6399bb541c09850",
+        "historical_source_uri": "historical://workspace/binding_layout_coverage/data/layout_schedule.json"
+      },
+      {
+        "sha256": "bbeca221f1c65eebfead8b8fe3cdbfdc0de2e751e25e80b58ddacc9f56fa1505",
+        "historical_source_uri": "historical://workspace/binding_layout_diagnosis/data/cases.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/binding_replication_diagnosis/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/binding_seed_cross/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "4a217950412ae720c61ec41048b1de8a7a2269d1019f021e788f649553c41af2",
+        "historical_source_uri": "historical://workspace/causal_density_screen/data/synthetic_cases.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/composite_binding_diagnosis/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "2e7e690a30d939f5b6ddc8f3a83f07eefd77b5317696d88759feff979f4ab3d6",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/pytorch_source/installed_evidence.json"
+      },
+      {
+        "sha256": "0548076720f259b7b073a56991bdd99b2097d5f17f934b8f028ef8c1cbaccc0c",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/pytorch_source/manifest.json"
+      },
+      {
+        "sha256": "ef944a208aa382da3b04e5b6d61f6a517eea20d298f31328e46a8a8d33f9f940",
+        "historical_source_uri": "historical://workspace/embedding_backward_diagnosis/data/pytorch_source/verification.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/embedding_dense_calibration/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "3505d185f641e7569de7a5a68854c4762e425db423be4152d03d0c633ac8bd4f",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/coverage/manifest.json"
+      },
+      {
+        "sha256": "67e2cf6a9aa4c273c2580b234812d9aa1128b4dcfcbbef18cb98314850fd144e",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/coverage/schedule_s11.json"
+      },
+      {
+        "sha256": "1d92842d94f744b5985e3ac922a600cebe1564580971c4793f88c72fefad0cd7",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/coverage/schedule_s22.json"
+      },
+      {
+        "sha256": "9ff47b35ea27da7fa3485d4cea49db9a23e188b199af00307842a221a2fd05a6",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/coverage/schedule_s33.json"
+      },
+      {
+        "sha256": "128770ba44f4bf6ca2f70c1df62b01c0974b30e3e0c77a124eafd07b9d41140e",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/coverage/status.json"
+      },
+      {
+        "sha256": "6225550b4cdc396e7171f5ac02ed9f9b8f90b301e85a8d2391ab5e7342f3ddd7",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/paired_prefix/manifest.json"
+      },
+      {
+        "sha256": "e0a5bc99d286c30a23e6edb244c49675ed17b3aaed6c02420ed096498942d07a",
+        "historical_source_uri": "historical://workspace/failure_diagnosis/data/paired_prefix/status.json"
+      },
+      {
+        "sha256": "aa6de9bc269f827bd6f78331b9829f59ec810d780b9b6e5416a902ecb2777859",
+        "historical_source_uri": "historical://workspace/joint_kv_cubature/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "cd2d83a2bcdb1067a3764cce19a7e5edf7b186902909a0392e7460a5b5413ad6",
+        "historical_source_uri": "historical://workspace/joint_kv_cubature/data/synthetic/fixtures.json"
+      },
+      {
+        "sha256": "b5cbcbc3ecfd9973fc136ffd23e5756a4a62512a427f935224341d2b4ae7ffa9",
+        "historical_source_uri": "historical://workspace/key_channel_coupling/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "e8e11662842e4bdeeeaa8622790a067dc2d7dedc3813636ea1a0874dba1bd238",
+        "historical_source_uri": "historical://workspace/key_drift_transfer/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "57c7fa7a9615ceb1821c0554437c396e4d36346fc792045cb8f0037b3b920822",
+        "historical_source_uri": "historical://workspace/key_drift_transfer/data/synthetic/fixtures.json"
+      },
+      {
+        "sha256": "e15941b8e29d3cbd141da9fdf5278b2a17438a9652bb810fa1e241f64d2afada",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/continuation_003/boundary/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "2c30944e1ca9ad13e6af50f2298aaca681205065ca3e5b038b033f3b9f2b98ac",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/continuation_003/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "bc15a9cb1870c30f149c24c5b655167e0f1ff4dacc4248241d35000602fb4224",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/continuation_003/stream_completion/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "6b2afc7f7119b8ceb4b66895221053fd6353711bc9500881c75193cda94cf8ae",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/continuation_003/stream_evaluation/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "a177a617e8c0eef5e0c513fa3acbe11c43e65ae7b08d773a3910d19207c7f515",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "8690fb9f66f09ef6341b0c0d9cb18acce7e94787607aa46ecc9fa62fbb217dbe",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/data/synthetic/fixtures.json"
+      },
+      {
+        "sha256": "5aa57c9019a419fdaa209e64c5d8d45e816ed7f03f3d98873219577f6614786b",
+        "historical_source_uri": "historical://workspace/key_local_error_diffusion/full_model/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "46c1572cf386b2793155f3b1e522be25319967e0ad43b77f43fe678265617377",
+        "historical_source_uri": "historical://workspace/kv_error_transfer/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "93f2afcc75b569c075d42f0e5c400e5671345b92500c2576617430f99a789010",
+        "historical_source_uri": "historical://workspace/kv_error_transfer/data/synthetic/count_fixtures.json"
+      },
+      {
+        "sha256": "b0a1a2fd083c4b26073f01d41122b2bfcada69ccbb3e8cb65ecc07ffe42dc7ac",
+        "historical_source_uri": "historical://workspace/length_calibrated_sink/data/literature_evidence.json"
+      },
+      {
+        "sha256": "7d2e7c86c48f727a615679688bc747387010ec6aaf8116d291bd8fcfd1e860a3",
+        "historical_source_uri": "historical://workspace/length_calibrated_sink/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "3b8d829d29cde0855197f5ba5a36087124101f415653c6acd3a00fc68a55d831",
+        "historical_source_uri": "historical://workspace/length_calibrated_sink/data/synthetic/fixtures.json"
+      },
+      {
+        "sha256": "d266e4dc4031773d79656618dd20483317c8e516340514046ae6040ed7d6835e",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/babi_dev.jsonl"
+      },
+      {
+        "sha256": "86629420210670dc3be8c191bb06f34cebfe7d83a86bfaf96d4a7a1c2c6230cf",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/babi_train.jsonl"
+      },
+      {
+        "sha256": "c48cc180f16c73b2dbab62b06fee86e55fffb4fe40588c16b21da7041025a265",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/data_manifest.json"
+      },
+      {
+        "sha256": "b37a538bd79c7fa7604b127f2c0be191e2f0b3a9a55a73910274135295a69e74",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/eval.jsonl"
+      },
+      {
+        "sha256": "a7b86ce16683c8511665fb6e35e45acfdc965c80d2bff52be90566dd06f9b489",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/module1_selftest.txt"
+      },
+      {
+        "sha256": "89ab3c2771133dcdeb3116d784e8e7125a78fba9b7fdc1a69e044f926f9175f9",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/tokenizer.json"
+      },
+      {
+        "sha256": "4c4c6db96fb593720fccc86633e19dd3d55cbbe70dc7ffe5417148d424b76de6",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/tokenizer_train_synthetic.jsonl"
+      },
+      {
+        "sha256": "f284eccdf0a27e536ae0995e9af84f68de2bfa6a1e2e0bd0558f0e17a8911689",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/training_replay_seed11.jsonl"
+      },
+      {
+        "sha256": "d266e4dc4031773d79656618dd20483317c8e516340514046ae6040ed7d6835e",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/babi_dev.jsonl"
+      },
+      {
+        "sha256": "86629420210670dc3be8c191bb06f34cebfe7d83a86bfaf96d4a7a1c2c6230cf",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/babi_train.jsonl"
+      },
+      {
+        "sha256": "579bc77e6c47efa74ef2ba8290ea449a1a8e5ccc12aa5f2ed49bc236854f49c4",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/data_manifest.json"
+      },
+      {
+        "sha256": "b37a538bd79c7fa7604b127f2c0be191e2f0b3a9a55a73910274135295a69e74",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/eval.jsonl"
+      },
+      {
+        "sha256": "f464be0a57dae4e9d4c81ffcbc26337545c7d0b98b29858c7e249ab459356e5c",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/tokenizer.json"
+      },
+      {
+        "sha256": "4c4c6db96fb593720fccc86633e19dd3d55cbbe70dc7ffe5417148d424b76de6",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/invalid_tokenizer_v1/tokenizer_train_synthetic.jsonl"
+      },
+      {
+        "sha256": "675084be9c9be7c0ad78b5841d247157a90cae8060fb88de4882cacdfcecbbe2",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/upstream/download_probe.json"
+      },
+      {
+        "sha256": "749ea9f7c99070feb2d88c975a254417a0dcc8274add4435ae5ae24c7afc7e9d",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/upstream/en-10k_qa1_single-supporting-fact_train.txt"
+      },
+      {
+        "sha256": "d4074c0c5d54f70ce2f538056ce2b6ef6a313da336da4245f1a24f1298e37ef3",
+        "historical_source_uri": "historical://workspace/loop_state_retention/data/upstream/en-10k_qa2_two-supporting-facts_train.txt"
+      },
+      {
+        "sha256": "a21873aa5fbc91dfc36ef416acca2b03b49b27aac7b82fc6219602b76f0ab565",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "1df41163516e918fcf66d5da36773de3526851f5df4a29c72980a89106fd3db6",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_baseline_seed_11.json"
+      },
+      {
+        "sha256": "1b516baa42148c5e8d1c2cd18bd804f0b6a5f190796ad55d0767cc42da3f9ac2",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_baseline_seed_22.json"
+      },
+      {
+        "sha256": "bf8d7ab8aaed5987e088f79a25d0824b5a7bce2814484ee6f741b3876e6ffb84",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_baseline_seed_33.json"
+      },
+      {
+        "sha256": "481f006020ca9a54a10328e086ebfec7d3dfb6df9813acbb65fca1835eea8146",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_boundary_seed_11.json"
+      },
+      {
+        "sha256": "ad68c78138141bfa250431df185f15748788c9e209b7309eb1c518bb88fc446c",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_boundary_seed_22.json"
+      },
+      {
+        "sha256": "042aba217bd90d1a8cf1ccdd78202186a0c678176d43f3f4330ed9a34814c44b",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_boundary_seed_33.json"
+      },
+      {
+        "sha256": "f446f32958c7aed4535ab5e4cf1e24d091e05711397e58a7dad3cf5659f731bb",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_directed_seed_11.json"
+      },
+      {
+        "sha256": "6b4c8612ec837a7adfcb0e59b9c7dba562b8d6ccfc56033a580e100424ce8fb6",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_directed_seed_22.json"
+      },
+      {
+        "sha256": "0961bb55a093ef770b452fe04c873fbfba7dbae4191967eda9cda0c7342b9712",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_directed_seed_33.json"
+      },
+      {
+        "sha256": "d90e8028e7e8671a799ea85a97f6f4db6669f54c26a075b063c3aafcaf6bc2ee",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_random_seed_11.json"
+      },
+      {
+        "sha256": "acb4db51a50531beb87c087be4e01b1ad01420f3bfa3d2b65a50aa73e2c40c2e",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_random_seed_22.json"
+      },
+      {
+        "sha256": "8eac7df3625f5e308dd74f2841d6b224dd895b83ea1c26f23c64445cfbe30132",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/substitution_random_seed_33.json"
+      },
+      {
+        "sha256": "b4f0aaa8e2071c15a1d9c6539f18b7d4c7e3ed398df0e80e2be2a72ba0625db9",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/trace_seed_11.json"
+      },
+      {
+        "sha256": "32a53235c1076055315448b491140f3977d76e70157a75d4bb62e297e8c3f7f8",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/trace_seed_22.json"
+      },
+      {
+        "sha256": "75dc5c6cca34c328f11494d5ef398e4ea5d0591e0d9deaaa2736c87faa3a9d43",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase1/data/trace_seed_33.json"
+      },
+      {
+        "sha256": "76c12b9d0a397ac5fadae88cb75e3369cfdfa8139c84b3f02d560efa14beaadf",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/dependency_install.json"
+      },
+      {
+        "sha256": "748e3eba030f546161abd45888d24907959b3bd8d54694b7fbcde769b41811ee",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/oracle_seed_11.json"
+      },
+      {
+        "sha256": "6648147066c61279788dfb4ffcb181964652551ddf6f1b9ac80826d4edb8b023",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/oracle_seed_22.json"
+      },
+      {
+        "sha256": "80da1950bf0bcf85e664bc79026be8894fc1a5068ad710e547babf14c240b4b5",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/oracle_seed_33.json"
+      },
+      {
+        "sha256": "70963169d6d1fbc484a33ab7a0ce87422fae6ac11be4a07d8e729007c8b776e5",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/switch_model_api.json"
+      },
+      {
+        "sha256": "b230dfba80825d95d96eddf8b59b58bbad60c460fa29fc55264d7fb44d1731c4",
+        "historical_source_uri": "historical://workspace/moe_balance_research/phase2/data/switch_weight_lfs.txt"
+      },
+      {
+        "sha256": "3bc3ebedfb9ab0389d605a639dfa6aaeb686693a7560fec8e91256bf3224e414",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/confirmation_20260927/data/fresh_holdout/documents_holdout.jsonl"
+      },
+      {
+        "sha256": "520a8c9f6da4af0e2c45ed32e7ee9450f36cc25e17ca9c60799b3811fbeffcc1",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/confirmation_20260927/data/fresh_holdout/exclusion_rejections.jsonl"
+      },
+      {
+        "sha256": "428d9a97905f045be39f72eda816e1cf066ce53615e05154c675df4d19fe8ba8",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/confirmation_20260927/data/fresh_holdout/historical_exclusion_index.json"
+      },
+      {
+        "sha256": "515a9ccf4a00ae755232ffd9ef5db457489e1507cbfb508b48696f71d223159f",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/confirmation_20260927/data/fresh_holdout/manifest.json"
+      },
+      {
+        "sha256": "e4d3da2f83db7c1a99d332fef7959195691c6ccad44c4a93ced80d3f7f6fd6f3",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/confirmation_20260927/data/fresh_holdout/preparation_policy.json"
+      },
+      {
+        "sha256": "06b5e7b373dd78a50adc325638c659eb580f8e4b596ba8cc1a57f19e34b44add",
+        "historical_source_uri": "historical://workspace/nonlinear_qkv_20260925/nonexpanding_cuda_20260927/data/dev_groups.json"
+      },
+      {
+        "sha256": "4c7860c56521784fdb4157ab237ee021e4f335f9fe131720d2d55904c425d0f4",
+        "historical_source_uri": "historical://workspace/prefix_metric/data/literature/initial_download_attempt.json"
+      },
+      {
+        "sha256": "00106356f049345b6f78aecb074720c89eec6f46b1a71c50372ae0f3ad451701",
+        "historical_source_uri": "historical://workspace/prefix_metric/data/literature/manifest.json"
+      },
+      {
+        "sha256": "63f5dbb7e8c4fa61d40e3e0c3dfa0617f4be501a6561d84906f187184fc2f73e",
+        "historical_source_uri": "historical://workspace/prefix_metric/data/probes/hand_constructed.json"
+      },
+      {
+        "sha256": "8844f3c72e8ac92feb2e6133fac32ce20845423dcc2265768730e0ecab9136fe",
+        "historical_source_uri": "historical://workspace/qk_only_validation/data/validation/manifest.json"
+      },
+      {
+        "sha256": "e64d0d7754660f1a0f87d80f91018a8c4798f7ed4f873d59a087ed3b7636d8e1",
+        "historical_source_uri": "historical://workspace/qk_only_validation/data/validation/schedule_s11.json"
+      },
+      {
+        "sha256": "1a8058ac0554a0f997af3684641036442f166b3785a09fd8539b76b2c109afbb",
+        "historical_source_uri": "historical://workspace/qk_only_validation/data/validation/schedule_s22.json"
+      },
+      {
+        "sha256": "07d91db7e8f143fa9c8208490cfd6b0a531b5c78e3a794e23b3c8aea1d5ef011",
+        "historical_source_uri": "historical://workspace/qk_only_validation/data/validation/schedule_s33.json"
+      },
+      {
+        "sha256": "21aaaee72d6a0bec383f00f4b29de0037cde3482adb457066cc8aba52e9aa596",
+        "historical_source_uri": "historical://workspace/qk_only_validation/data/validation/status.json"
+      },
+      {
+        "sha256": "8a096d06c0dd46a44fc6dade2c837e76d6147d0e1ddaed3888ceb09dc1dfed91",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/source_manifest.json"
+      },
+      {
+        "sha256": "27cb8def1f3d52830f8b72c09c65c21611f36a821bafcb53f4b43acab7de0d47",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/dev_examples.jsonl"
+      },
+      {
+        "sha256": "635f4e2ca961339f805ed09af3a96723a1405b76a7ec39296e1739761fc04066",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/manifest.json"
+      },
+      {
+        "sha256": "81719c90fbe6e59d83bcc019add0b9371d194052cfecddfad8b7021982393090",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/tokenizer.json"
+      },
+      {
+        "sha256": "f13496dea088a7c9d906a940171f6590c8cc4b977b9b2ac33af5fe3740649b05",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/tokenizer_train.txt"
+      },
+      {
+        "sha256": "b043dfa40418727d490054169e6248d03a6b58687e8fec12d3f4278a16588d06",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/train_examples.jsonl"
+      },
+      {
+        "sha256": "8951467255b015b4ff293f6a4d06e973b01383f9ae26c10b304fe4249d5db711",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/prepared/vocabulary.json"
+      },
+      {
+        "sha256": "e289e97ef2e29b93a89f2f39526b57c47747f0ffedc6fb4923618acc0e129245",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/manifest.json"
+      },
+      {
+        "sha256": "c1981516ca5164ff3ece77836e5e400abd4bc5ca418b8041d760420c2f2c97f9",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed11.json"
+      },
+      {
+        "sha256": "d144802999f3689a8be8952e0474e0869f96e20468496eb9de2ed0070d76e28d",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed11_examples.jsonl"
+      },
+      {
+        "sha256": "a8469cbe60ab08b559935f707db56a0628cb34f9618b5d50f48d4b3af09f5c79",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed22.json"
+      },
+      {
+        "sha256": "2c36fc80ac5e694cbede39fd3fd77033c2211503da0e87c6c985739c44eb10de",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed22_examples.jsonl"
+      },
+      {
+        "sha256": "ebcdf53a326482be0f3761e75c263a346b015a54cca0701339592ff03e28013b",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed33.json"
+      },
+      {
+        "sha256": "7d4fd0ea91194f2f720fd8fc483fc0ce98fcec2014abbf53da1da31efc194c96",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/seed33_examples.jsonl"
+      },
+      {
+        "sha256": "e6aba10fe214eb15429d3c958772dab710be6aea46d5415fc9d10047554bd970",
+        "historical_source_uri": "historical://workspace/query_resampling_calibration/data/corpus/query_schedules/table_identity.json"
+      },
+      {
+        "sha256": "fd37c28b6a4e60d75747ac7509f72bb7690560b19b927a82e84e43e960caefa4",
+        "historical_source_uri": "historical://workspace/query_secant_training/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "2c1aa52d8a62cc23085306e359eac3a8c07edf1e2adb826c85087455359a7d79",
+        "historical_source_uri": "historical://workspace/readout_bottleneck/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "f764d398d335a23d725d4d1ed6685735993e4544031aebbf3b8b2ca1013b05d8",
+        "historical_source_uri": "historical://workspace/readout_consensus_probe/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "e92e739e57e14501b1e54a1e1ab48cf3fc2b9f79ec5c67bbc34e4f1d27b340d5",
+        "historical_source_uri": "historical://workspace/readout_probability_attribution/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "2acc0c99f01df7a63e82689a756d028a491a574dcba7fe1ad03a3693a2db09ed",
+        "historical_source_uri": "historical://workspace/relational_binding/data/sources/discovery.json"
+      },
+      {
+        "sha256": "bc2d663d714439e178e8a4f8911822d0e017b3485f4ae32eb4f653d384e4837d",
+        "historical_source_uri": "historical://workspace/relational_binding/data/sources/disrca_LICENSE.txt"
+      },
+      {
+        "sha256": "9a9befe20cfc00bccb53aed220afdf7eb38bb77c7966b039c260a800e1d48fd3",
+        "historical_source_uri": "historical://workspace/relational_binding/data/sources/disrca_model_utils.py.txt"
+      },
+      {
+        "sha256": "dec7a64a5ed9967462c06fc04c02e5f1201686ba53f0ce64ac52936461425b3e",
+        "historical_source_uri": "historical://workspace/relational_binding/data/sources/disrca_relational_attention.py.txt"
+      },
+      {
+        "sha256": "fdf4d26cefd9d86cc9ae3620e62b917034958776cd0c7592df61014deba3da71",
+        "historical_source_uri": "historical://workspace/relational_binding/data/sources/source_manifest.json"
+      },
+      {
+        "sha256": "39e8ede1aa7284464cef2701bef50f196f63c2e92faa7bf75ad904fe09569903",
+        "historical_source_uri": "historical://workspace/residual_increment/data/budget_accounting.json"
+      },
+      {
+        "sha256": "0b2f5f652639a60ed290e1ab0d9c55b97a41f5094b3ef6f1a61701c9af6994c4",
+        "historical_source_uri": "historical://workspace/residual_increment/data/partition.json"
+      },
+      {
+        "sha256": "be215cac99605179a25aaeae6255e72b58c4751f81fb29954b39b5d85733f37d",
+        "historical_source_uri": "historical://workspace/residual_increment/data/previous_seals.json"
+      },
+      {
+        "sha256": "e084be6c91abe49acf456f137dbc00fca7aebeef5a407943c71e4c38ea82811b",
+        "historical_source_uri": "historical://workspace/residual_increment/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "1505618de3a3cbe82d63fd64fa39adbc2b0c424faa2e9ca45c8e3faf760961e4",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/audit.json"
+      },
+      {
+        "sha256": "6a99e41e3f916cd79a5c267d431a167a8a8c6133fa7ef94f1dccbce81c0c6a0b",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/manifest.json"
+      },
+      {
+        "sha256": "f541886ff67b30f9e038f409ca92efcee4362caa93e557641d9102f1fa4ff0f5",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/public/public_test.jsonl"
+      },
+      {
+        "sha256": "cc96586fc1222049cdb1537fd19f5b5f4d3ad2fd0ea9a8436e8e05e6856b51c7",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/public/public_train.jsonl"
+      },
+      {
+        "sha256": "2f978e193e5e4ed340bddc8ddd8275288ace1ec7804ab76e75a5e17c01d74ef2",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/public/public_validation.jsonl"
+      },
+      {
+        "sha256": "9875dfad271cbfa5c49adb5809dd67be3826394a5d4d66dc74cab0c81483e2f8",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/raw/babi_test.parquet"
+      },
+      {
+        "sha256": "f1d67aa230d7aba0ed310df0d696a3ba9a07270e1670fe64c6901c24e5016f3f",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/raw/babi_train.parquet"
+      },
+      {
+        "sha256": "aca7360a0853345907917121438578aff1957bd81a83f9c970bb95228a65aa5d",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/raw/hf_metadata.json"
+      },
+      {
+        "sha256": "549aaa2f4b62ce309de4c168421d2990f8e6cc0bef15b35ea9578843b54ed9ca",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/raw/parquet_index.json"
+      },
+      {
+        "sha256": "41928d3b14b9528cd0635660df6de3e11243feb6bc4b80e91214e6af06d9c6b3",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/raw/parquet_revision.json"
+      },
+      {
+        "sha256": "8066198187c6726dbd70a0690a758272a5e1e4bde76b6e5a03e973d14f340785",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/depth.jsonl"
+      },
+      {
+        "sha256": "ad0127790fd714c7dc73aed62acd104c9aeb6642697a2315163d9d85c364ec9f",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/depth_gap.jsonl"
+      },
+      {
+        "sha256": "e4e783da11b595a54ea04a5a4e678dd726a2592de725db4c707c60a5dd7c13e0",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/gap.jsonl"
+      },
+      {
+        "sha256": "7c7260e35b89775b651d802701708f0f9e4adab09e9e4e62f805900a313a1b50",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/iid.jsonl"
+      },
+      {
+        "sha256": "cf12da9cbfc57103630dc31d89cc866bd47d5a29a9c56504f4e08e365358332a",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/train.jsonl"
+      },
+      {
+        "sha256": "2671da9bff46cc2318d977d936ed610b52dd2d5581a76ab702244e1f667a1e71",
+        "historical_source_uri": "historical://workspace/retractable_memory/data/synthetic/validation.jsonl"
+      },
+      {
+        "sha256": "881dc6fc7300403d0ab8ad9e0375650e5a54321ee988fd4b35702291531cd088",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/wikitext_reuse.json"
+      },
+      {
+        "sha256": "452c2389e71050d11a53cad326de30e299fced7bc2cce1db9095f9b24491693e",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/mqar/manifest.json"
+      },
+      {
+        "sha256": "725cb6f6829dd08f6b085ad608f2a420b3914232ddc0ebfeba7c86f77848f562",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/raw/author_config_review.json"
+      },
+      {
+        "sha256": "0beda5c3494e97d41de1da9b9cfe21062c6e5eabf375a979135789dbe8cb6675",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/raw/zoology_commit.json"
+      },
+      {
+        "sha256": "f5a393af1864fa3da45b586176bd84f9ef5086bb483d02ccd5179b5a36e8ba67",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/raw/zoology_source_manifest.json"
+      },
+      {
+        "sha256": "40d4ddf80cf35add53897ccc250716a3226ee545130aa12b2778d0691bb92378",
+        "historical_source_uri": "historical://workspace/routing_gradient/data/raw/zoology_tree.json"
+      },
+      {
+        "sha256": "376dadda8c3dfa292afd97d9e14978b9ce8bf91e69cb966cb6b88d2adac0690f",
+        "historical_source_uri": "historical://workspace/routing_gradient/expanded/data/mqar/manifest.json"
+      },
+      {
+        "sha256": "0beda5c3494e97d41de1da9b9cfe21062c6e5eabf375a979135789dbe8cb6675",
+        "historical_source_uri": "historical://workspace/routing_gradient/expanded/data/raw/zoology_commit.json"
+      },
+      {
+        "sha256": "f5a393af1864fa3da45b586176bd84f9ef5086bb483d02ccd5179b5a36e8ba67",
+        "historical_source_uri": "historical://workspace/routing_gradient/expanded/data/raw/zoology_source_manifest.json"
+      },
+      {
+        "sha256": "40d4ddf80cf35add53897ccc250716a3226ee545130aa12b2778d0691bb92378",
+        "historical_source_uri": "historical://workspace/routing_gradient/expanded/data/raw/zoology_tree.json"
+      },
+      {
+        "sha256": "14dce6116f457a1febe213f18892c4639dcfb0720a74e1d0380f1c60f641eb96",
+        "historical_source_uri": "historical://workspace/sparse_gate_reuse/data/previous_route_seals.json"
+      },
+      {
+        "sha256": "bd0eafd9287ccd21369a6c2e4e9a0727d7abb0f301f7ddd446288478cddd57c7",
+        "historical_source_uri": "historical://workspace/sparse_gate_reuse/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "01983ecacbcf8b2df524a9b4f93310492c27db917aa2110a6cc5ca2e4edd8a2e",
+        "historical_source_uri": "historical://workspace/tied_embedding_moments/data/reuse_manifest.json"
+      },
+      {
+        "sha256": "cfb75846c1d7cc2fc2337ed49da23b210ecafbc22c57dd5e8853f0f27223078e",
+        "historical_source_uri": "historical://workspace/tied_embedding_moments/quality/data/source_manifest.json"
+      },
+      {
+        "sha256": "572ac26bb7cf02d4ce079efbea4dc7d94593a44f8f8bdb79027d0f2e2a8842b7",
+        "historical_source_uri": "historical://workspace/value_geometry/data/literature/attempt1.json"
+      },
+      {
+        "sha256": "e986869c6e2c6714fae7ce59e4b4016466504b9d839ff5e50426d6ba30f91889",
+        "historical_source_uri": "historical://workspace/value_geometry/data/literature/manifest.json"
+      },
+      {
+        "sha256": "f641c2acdb6c5bbe6eee581ad857b02e1be7f376bc77a21e25848334716515eb",
+        "historical_source_uri": "historical://workspace/value_geometry/data/probe/manifest.json"
+      },
+      {
+        "sha256": "96498f98283581628906b826271772d61b177bab38d88b9d6ffb0a0d4f27cab2",
+        "historical_source_uri": "historical://workspace/value_geometry/data/probe/schedule_s11.json"
+      },
+      {
+        "sha256": "8966fb1721e2697e66ffd46ab58eda2cc865c2994018e37addb7d1e045806d7d",
+        "historical_source_uri": "historical://workspace/value_geometry/data/probe/schedule_s22.json"
+      },
+      {
+        "sha256": "1e4dcfcd77b9ca655770a38f9c9b9bc1e18f65c86ebc7c83be7a205a69e9d8ee",
+        "historical_source_uri": "historical://workspace/value_geometry/data/probe/schedule_s33.json"
+      },
+      {
+        "sha256": "98f8e681abcd46118fe65bdee9cd329e19a31ce1ec603f4941a0f911b905ed9f",
+        "historical_source_uri": "historical://workspace/value_geometry/data/probe/status.json"
+      }
+    ],
+    "historical_counts": {
+      "historical_records": 1738888,
+      "unique_historical_texts": 456776
+    },
+    "elapsed_seconds": 404.88750952299597,
+    "peak_process_rss_bytes": 561487872,
+    "validation": [
+      "Every accepted source row and URL/ID",
+      "All2048 retokenizations, EOS and exact first-window arrays",
+      "No overlap in historical source IDs, source tuples, canonical URLs, coarse domains or exact normalized text",
+      "Independent streaming historical64-word blocks versus every accepted64-word window",
+      "Independent inverted LSH/minhash plus exact candidate shingle Jaccard .85",
+      "Pairwise accepted candidate LSH near-duplicate checks",
+      "All frozen history and payload SHA before/after"
+    ],
+    "limitations": [
+      "Minhash32/8bands approximate candidate retrieval is not exhaustive semantic or near-duplicate exclusion.",
+      "Historical64-word blocks stride64 do not guarantee detection of every64-word overlap; >=127 normalized contiguous words contain a block.",
+      "Source-order first-valid selection is enforced by frozen reviewed producer and verified ledger; rejection reasons are not all recomputed for unused source rows.",
+      "Coarse domain grouping is last-two labels, e.g. unrelated co.uk sites may share a group.",
+      "Same FineWebEdu family, one new domain per document, source-order and first-window bias remain."
+    ]
+  },
+  "path_representation": "Historical inventory locations are provenance-only historical:// identifiers, not required repository files. Original source and inventory payload SHA-256 values are retained; this portable extract is not byte-identical to the original audit."
+}

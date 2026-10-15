@@ -1,0 +1,454 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/reports/confirmation_plan.json",
+  "source_sha256": "4be7891be7f1c97d1c54fcbff3b371c016095697f69946ab3bc307be6987ced7",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "schema_version": 1,
+    "status": "frozen",
+    "stage": "medium_confirmation",
+    "plan_id": "v_only_medium_confirmation_v1",
+    "study_kind": "scientific_experiment",
+    "technical_smoke_not_scientific_result": false,
+    "device": "cuda:0",
+    "holdout_access": false,
+    "holdout": {
+      "relative": "data/fresh_holdout",
+      "seal_relative": "reports/fresh_holdout_seal.json",
+      "seal_sha256": "f4e9adee767f95e66ef0ce7bed8a770a317dfb8480549ba88d50ed0892d3d87e",
+      "manifest_sha256": "4ac2d036dfb5da2d5e3360f8a7d6793deb29bfb4334f0e9faf9fd8597eb4fa8d",
+      "files_sha256": {
+        "tokens_holdout.npy": "5a3ccd49ca055e2860d7b35aa17bc79173029fe585285f1baf200602696f8a7a",
+        "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+        "eval_offsets.npy": "733ad76fa344ad5e38853594ace694feef1facc45bd018cbc8304db771281c79",
+        "documents_holdout.jsonl": "0017aea9c4baa8d355a5ea6c45c785fb56b131fc948ec05719a0d0036ff206e1",
+        "docs_holdout.npy": "8bc9ee6f57f9a8e1e703e940a192032fe73042eb2f157e6ceab9be0c81908cf2"
+      },
+      "eval_tokens": 524288,
+      "documents": 2048,
+      "context": 256
+    },
+    "resource_policy": {
+      "start_available_gib": 16.0,
+      "running_available_gib": 8.0,
+      "swap_gib": 4.0,
+      "disk_gib": 25.0,
+      "check_seconds": 15.0,
+      "cuda_allocator_limit_gib": 12.0,
+      "policy_name": "shared_capacity",
+      "dedicated_training_host": false,
+      "keyboard_idle_required": false,
+      "other_python_and_gpu_work_allowed": true,
+      "cpu_load_is_informational": true,
+      "timing_scope": "Shared-host timings may include interference; not isolated performance measurements."
+    },
+    "data_relative": "nonlinear_qkv_20260925/v_only_medium_20260929/data/medium_corpus",
+    "protocol_relative": "PROTOCOL.md",
+    "control_freeze_relative": "reports/research_control_freeze.json",
+    "control_freeze_sha256": "ec0406ce0c2abd05040e6c4ae9c4f1cb4cfc8336ea7f0dbd68ff4ec63a2f7bb8",
+    "research_spec_relative": "reports/research_spec.json",
+    "research_spec_sha256": "6afa7d35b6ece67630a86c5e2ac77cd44b664143146cad971e448f6ea4a8c2e8",
+    "expected_budget": {
+      "runs": 6,
+      "optimizer_updates": 1966080,
+      "target_exposures": 4026531840
+    },
+    "common": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "warmup": 5120,
+      "eval_tokens": 524288,
+      "eval_every": 20480,
+      "save_every": 1024,
+      "log_every": 1,
+      "threads": 2,
+      "arm": "baseline",
+      "batch": 8,
+      "steps": 327680,
+      "seed": 20270211,
+      "lr": 0.0006,
+      "lr_schedule": "cosine"
+    },
+    "jobs": [
+      {
+        "id": "baseline_s20270211_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270211,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270211_lr600_schedule.npy",
+        "schedule_sha256": "dbc7e1d3f49a1936b1c0335d99c2a0ea22aaf21de5f90a06529458ee5a492f93",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270211_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270211_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "d4980951a0dbe1464d3f13b27ea00f8e13045aac51d128de4643e82c8646e126"
+      },
+      {
+        "id": "v_silu_s20270211_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270211,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270211_lr600_schedule.npy",
+        "schedule_sha256": "dbc7e1d3f49a1936b1c0335d99c2a0ea22aaf21de5f90a06529458ee5a492f93",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270211_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270211_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "d4980951a0dbe1464d3f13b27ea00f8e13045aac51d128de4643e82c8646e126"
+      },
+      {
+        "id": "v_silu_s20270212_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270212,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270212_lr600_schedule.npy",
+        "schedule_sha256": "f4395749860c19df1e095ad0eaf87f2a6d88abf132cd214c20dd5efa5f68f3b0",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270212_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270212_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "4ade2d83afddad4c1a4bc5d8051561bf7bf109337464f83535b9561e6938a426"
+      },
+      {
+        "id": "baseline_s20270212_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270212,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270212_lr600_schedule.npy",
+        "schedule_sha256": "f4395749860c19df1e095ad0eaf87f2a6d88abf132cd214c20dd5efa5f68f3b0",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270212_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270212_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "4ade2d83afddad4c1a4bc5d8051561bf7bf109337464f83535b9561e6938a426"
+      },
+      {
+        "id": "baseline_s20270213_lr600",
+        "config": {
+          "arm": "baseline",
+          "seed": 20270213,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270213_lr600_schedule.npy",
+        "schedule_sha256": "c9044dbc7656d495fb0936140ac35c06c9dcc41de6085d791247944e10f3229f",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270213_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_baseline_s20270213_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "b1145c9832a961471a3e918ce5401eae19ede3d2bfbcd05e4f65586b548a0de9"
+      },
+      {
+        "id": "v_silu_s20270213_lr600",
+        "config": {
+          "arm": "v_silu",
+          "seed": 20270213,
+          "lr": 0.0006
+        },
+        "schedule_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270213_lr600_schedule.npy",
+        "schedule_sha256": "c9044dbc7656d495fb0936140ac35c06c9dcc41de6085d791247944e10f3229f",
+        "eval_offsets_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270213_lr600_eval_offsets.npy",
+        "eval_offsets_sha256": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+        "eval_doc_ids_relative": "reports/v_only_medium_confirmation_v1_v_silu_s20270213_lr600_eval_doc_ids.npy",
+        "eval_doc_ids_sha256": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9",
+        "initial_parameter_sha256": "b1145c9832a961471a3e918ce5401eae19ede3d2bfbcd05e4f65586b548a0de9"
+      }
+    ],
+    "selection_relative": "reports/candidate_selection.json",
+    "selection_sha256": "c66696debecbee1108399a3ae467aa809d97307572a743fc5388690e0fb9fc9e",
+    "selected_lr_by_arm": {
+      "baseline": 0.0006,
+      "v_silu": 0.0006
+    },
+    "data_sha256": {
+      "manifest.json": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f",
+      "tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+      "docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+      "tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+      "docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e",
+      "tokenizer.json": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217"
+    },
+    "source_sha256": {
+      "build_plan.py": "797295b1db2518b6c5954055a911ab36b11f0c408001c7b2278f131462d4144c",
+      "helpers.py": "fb440a7af545c6014c241d9a6a28645b693bb0059f3a3765d1793a70d225b4cc",
+      "launcher.py": "f7807004ff96b888d359a7ba41593e0660e2fc72dff75a0875d5acedba9f784e",
+      "model.py": "114923fbd5ca4dea247548095f13c78be041602521b617fface3100075b1a56f",
+      "runtime.py": "c01aec99d87d507d56b7b6829858fbd7dc732b5ebbc5e25f56f233f1a15625da",
+      "supervisor.py": "0a36ac8cfec7f3852885bfabb6d5eb1c351b463092caeb82fb08b96c162e1a31",
+      "train.py": "a37215dcd11b9ea340c9c1dc5e838f0ab429127bbabe518d3fd7ebdbeb89f6ec"
+    },
+    "environment": {
+      "python": "3.12.3",
+      "torch": "2.14.0+cu130",
+      "numpy": "2.5.2",
+      "machine": "aarch64",
+      "system": "Linux",
+      "cuda_runtime": "13.0",
+      "cudnn": 92400,
+      "device": "cuda:0",
+      "visible_cuda_devices": 1,
+      "cuda_visible_devices_env": "0",
+      "gpu_name": "NVIDIA GB10",
+      "gpu_uuid": "[REDACTED_MACHINE_IDENTIFIER]",
+      "compute_capability": [
+        12,
+        1
+      ],
+      "total_device_memory": 130660909056,
+      "nvidia_gpu_inventory": [
+        {
+          "index": "0",
+          "uuid": "[REDACTED_MACHINE_IDENTIFIER]",
+          "name": "NVIDIA GB10",
+          "driver_version": "580.178.04"
+        }
+      ],
+      "numerical_policy": {
+        "dtype": "float32",
+        "autocast": false,
+        "tf32_matmul": false,
+        "tf32_cudnn": false,
+        "matmul_precision": "highest",
+        "cudnn_benchmark": false,
+        "deterministic_algorithms": true,
+        "sdpa": "math",
+        "compile": false,
+        "adamw_foreach": false,
+        "cublas_workspace_config": ":4096:8",
+        "allocator_max_gib": 12.0
+      }
+    },
+    "models": {
+      "baseline_s20270211_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "v_silu_s20270211_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "v_silu",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "v_silu_s20270212_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "v_silu",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "baseline_s20270212_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "baseline_s20270213_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "baseline",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      },
+      "v_silu_s20270213_lr600": {
+        "config": {
+          "vocab": 8192,
+          "width": 384,
+          "layers": 12,
+          "heads": 6,
+          "hidden": 1152,
+          "context": 256,
+          "arm": "v_silu",
+          "qk_norm": false,
+          "projection_hidden": 0
+        },
+        "parameters": 26158464,
+        "embedding_parameters": 3145728,
+        "nonembedding_parameters": 23012736,
+        "resolved_projection_hidden": 768,
+        "tied_embedding": true,
+        "mechanism_parameters": {},
+        "backbone_matrix_macs_per_token": 23003136,
+        "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+        "initialization": {
+          "version": "name_seeded_fan_in_v1",
+          "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+          "residual_output_multiplier": 0.20412414523193154,
+          "residual_output_matrices": [
+            "attn.out",
+            "ffn.down"
+          ],
+          "shared_down_multiplier": 0.001,
+          "output_gate": "Zero weights: initial 2*sigmoid(0)=1",
+          "fused_qkv_seeds": "Separate virtual parameter names attn.q/k/v.weight; Q-only KV uses identical K/V seeds",
+          "projection_scale_caveat": "v_affine_match and v_silu_standardized use frozen train-only baseline-initialization scalar moments; other arms are unchanged. No adaptive/output RMS calibration is applied.",
+          "historical_compatibility": "New baselines are trained with this fan-in initialization; historical fixed-0.02 results are not paired controls."
+        }
+      }
+    },
+    "protocol_sha256": "d8d07315059729eba3ca1d2f9513fa77d8a2746028f23fab40c90b480afc91a4",
+    "budget": {
+      "runs": 6,
+      "optimizer_updates": 1966080,
+      "target_exposures": 4026531840
+    },
+    "frozen_unix": 1790781436.3930097
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "source": "results/learning_curves.csv",
+  "source_sha256": "645b4c6d218c438c012d70b2c047c59dcba9281f5a1a457f6c9afbbc0faed21a",
+  "script": "paper/make_paper_figures.py",
+  "script_sha256": "c7c4484440121321d9a03bb007efdeaef0b69e5949ef5d27035bad65b0b31f83",
+  "matplotlib_version": "3.11.1",
+  "numpy_version": "2.5.2",
+  "scope": "Saved development evaluations from confirmation runs only; no held-out trajectories.",
+  "formulas": {
+    "run_ppl": "exp(dev_nll)",
+    "mean_ppl": "arithmetic mean of per-seed PPL",
+    "paired_delta": "PPL_GatedV(seed, step) - PPL_baseline(seed, step)",
+    "mean_delta": "arithmetic mean of paired PPL differences",
+    "update_fraction": "step / total_steps"
+  },
+  "validation": {
+    "source_digest_matches": true,
+    "saved_ppl_matches_exp_nll": true,
+    "identities_seeds_learning_rates_budgets_checked": true,
+    "complete_identical_step_grids": true,
+    "observations": 272,
+    "saved_points_per_run": 17,
+    "selection_runs_included": false,
+    "heldout_values_included": false,
+    "original_source_summary_array_audit_hashes": "Retained from CSV provenance; not rehashed by this plotting script."
+  },
+  "display": {
+    "development_ppl": "Linear main panels show 16 post-update points; insets show all 17 including initialization with logarithmic y axes.",
+    "development_delta_ppl": "16 post-update points; initialization omitted from display to resolve training differences; retained in numeric exports.",
+    "thin_lines": "Individual seeds / paired differences, never confidence bounds.",
+    "black_lines": "Arithmetic means across seeds; no smoothing or fitted curves."
+  },
+  "initialization": {
+    "small_confirmation": {
+      "baseline_mean_ppl": 13302.547436483372,
+      "gatedv_mean_ppl": 13395.708750736383,
+      "mean_paired_delta_ppl": 93.16131425301174,
+      "paired_delta_range": [
+        -397.77996112961773,
+        596.2220513909488
+      ]
+    },
+    "medium_confirmation": {
+      "baseline_mean_ppl": 13420.47796946514,
+      "gatedv_mean_ppl": 13563.932434899853,
+      "mean_paired_delta_ppl": 143.4544654347119,
+      "paired_delta_range": [
+        -196.62671274874083,
+        348.5302863009074
+      ]
+    }
+  },
+  "outputs_sha256": {
+    "architecture_gatedv.pdf": "91d6ad183863b7455754d602ca799c6518339582935b53ffe2af7f8b5f98fbe9",
+    "architecture_gatedv.png": "bb6677bd9f61bfec635645511491e08606bb8f62e58a67cdf5d29888ee440282",
+    "development_ppl.pdf": "0ffb0e93ed080bdf11de33cd2f0e626160dccad5666b1328cb989981a762a1ef",
+    "development_ppl.png": "298bb96650c90270255254c34eb0d35a7f029210e5610afe478547788ddbff34",
+    "development_delta_ppl.pdf": "8f9d06b23f406faab0c94fb9d572ba6c81ef6cb2b94e38e60caf71778e0fe92d",
+    "development_delta_ppl.png": "b7c38b0858f83e100452fabc8514fdfc102e0943cb80675701fda6c03cb9bafc",
+    "paper_ppl_points.csv": "3880b09b2afd41ed0cbeceffb21e93797742d88f53ee647a2fa904bbf12d4275",
+    "paper_ppl_summary.csv": "d3ed085eff2d14cc84a1bd4a83e81ce511761c2b0771094bf0384af1e52d3d31",
+    "paper_ppl_data.json": "7f33a74c250e56a61cc94c1d7396435c42933c3b477923815df53c4beacd2dfa"
+  }
+}

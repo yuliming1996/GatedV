@@ -1,0 +1,14 @@
+{
+  "context": 256,
+  "documents": 2048,
+  "eval_tokens": 524288,
+  "files_sha256": {
+    "tokens_holdout.npy": "d094ec5fab2e832426c856ec80211dcc33c17d545d2edccec548c8cbb66b5a93",
+    "docs_holdout.npy": "efe802e790b877dcd7e3984af291f3fb0376ee0e6b9c2e13a988c091ee0da947",
+    "documents_holdout.jsonl": "f9115280d1edad91c3dab9ce905aeb2c61e935fb15d668aae8c9e0350411e081",
+    "eval_offsets.npy": "3b9d2b803fee6b3b194de1b70a06464f72c83fba70cc31f8fc28b0b0f0c0fc78",
+    "eval_document_ids.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7"
+  },
+  "eos": 3,
+  "note": "Hashes from historical plan; portable evaluator does not substitute for historical independent data audit."
+}

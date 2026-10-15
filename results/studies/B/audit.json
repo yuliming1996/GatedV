@@ -1,0 +1,39 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/delivery_audit.json",
+  "source_sha256": "617cb7167b57e094fa16f5c5a919ecedd9f17af94b029e693a654703345c333a",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [
+    "checks",
+    "input_sha256"
+  ],
+  "data": {
+    "status": "PASS",
+    "auditor": "independent_subagent_audit_prior_completion_gate",
+    "created_unix": 1790451943.0597508,
+    "audit_script_sha256": "978e7f3d641b5c5ac266a6621953a6716cab9cd1f33ae2e7a44caad9b92df65e",
+    "completion_manifest_sha256": "bfc7b203e1955fff47de123d60731bb581a645bf79d0ec335b13f1745ba7728d",
+    "final_report_sha256": "d6295757c584e326a2d7ad2f6bc45f14be549fb1b1a6ef26fce9d4c98a52fec2",
+    "final_key_results_sha256": "25c614c6f901e6aada3348b8f69851dd1aae3b9c17b99b56ff027c804b3d8f12",
+    "final_statistics_audit_sha256": "01b855fe63063da3192d1e50e1ccdba6ac57d17ea494ef0378fd08c4c935dfed",
+    "analysis_json_sha256": "6c1f58d479a8802828f78f60d3533998ed7257302c5c1e6633d96698659d32dc",
+    "analysis_done_sha256": "b71d2fc83deb56824e27b3b85e42e9b172c4b235b2e1f50ce9162715c986e2ab",
+    "checks_passed": 2348,
+    "counts": {
+      "screen_runs": 33,
+      "confirmation_runs": 18,
+      "heldout_evaluations": 18,
+      "interleaved_cost_slots": 126,
+      "bootstrap_replicates_per_clustering": 2000
+    },
+    "model_evaluations": 0,
+    "optimizer_updates": 0,
+    "mps_actions": 0,
+    "checkpoint_writes": 0,
+    "elapsed_seconds": 0.8361168338451535,
+    "scope": "Current full delivery identities, negative primary conclusion, all six aggregate quality/cost/memory table rows, candidate percentages/domain intervals, all eighteen detailed seed rows, all domain/document interval rows, machine-result equality to independently recomputed statistics and complete current raw-evidence bindings.",
+    "limits": [
+      "Uses prior independent 5448-check reconstruction of all bootstrap draws/losses and timing/memory samples, with its entire current SHA input inventory reverified.",
+      "Does not repeat model forwards or training; quality, cost and novelty interpretation remain subject to the final report limitations."
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "scope": "Portable file integrity and saved-number reanalysis only; not a training rerun, new evaluation, or independent replication. Domain uniqueness relies on the retained data audit; raw text/domain ledgers are intentionally omitted. Small-study bootstrap is retained from audited originals, not recomputed here.",
+  "checked_source_records": 113,
+  "byte_identical_numeric_array_files": 6,
+  "endpoint_rows": 133,
+  "summary_cells": 77,
+  "scientific_budget": {
+    "scope": "All newly executed scientific trajectories; not independent statistical replicates. No technical preflight, migration, calibration, evaluation, cost, or audit added to run count. E/F shared three seeds.",
+    "stages": [
+      {
+        "stage": "A",
+        "runs": 33,
+        "updates": 33792,
+        "target_exposures": 69206016
+      },
+      {
+        "stage": "B",
+        "runs": 18,
+        "updates": 147456,
+        "target_exposures": 301989888
+      },
+      {
+        "stage": "C",
+        "runs": 24,
+        "updates": 442368,
+        "target_exposures": 905969664
+      },
+      {
+        "stage": "D",
+        "runs": 10,
+        "updates": 327680,
+        "target_exposures": 671088640
+      },
+      {
+        "stage": "E",
+        "runs": 24,
+        "updates": 786432,
+        "target_exposures": 1610612736
+      },
+      {
+        "stage": "F",
+        "runs": 12,
+        "updates": 393216,
+        "target_exposures": 805306368
+      },
+      {
+        "stage": "M",
+        "runs": 12,
+        "updates": 3932160,
+        "target_exposures": 8053063680
+      }
+    ],
+    "total_runs": 133,
+    "total_updates": 6063104,
+    "total_target_exposures": 12417236992
+  },
+  "confirmations": {
+    "small": {
+      "seeds": [
+        20261201,
+        20261202,
+        20261203,
+        20261204,
+        20261205
+      ],
+      "summaries": {
+        "baseline": {
+          "mean_nll": 4.079506492754445,
+          "sd_nll": 0.0089614250632667,
+          "mean_ppl": 59.11818738202223,
+          "sd_ppl": 0.5297977606892986
+        },
+        "v_silu": {
+          "mean_nll": 4.058915194752626,
+          "sd_nll": 0.013480822846440303,
+          "mean_ppl": 57.9156674719939,
+          "sd_ppl": 0.7816467653592453
+        }
+      },
+      "paired_nll_mean": -0.02059129800181836,
+      "paired_nll_sample_sd": 0.012736901382112985,
+      "paired_nll_t_ci95": [
+        -0.036406249896659845,
+        -0.004776346106976869
+      ],
+      "mean_ppl_change_pct": -2.0340946894356504
+    },
+    "medium": {
+      "seeds": [
+        20270211,
+        20270212,
+        20270213
+      ],
+      "summaries": {
+        "baseline": {
+          "mean_nll": 3.0626038042634414,
+          "sd_nll": 0.007767588016953896,
+          "mean_ppl": 21.383591886795728,
+          "sd_ppl": 0.16582125481368043
+        },
+        "v_silu": {
+          "mean_nll": 3.0252870068264506,
+          "sd_nll": 0.0008954641763773841,
+          "mean_ppl": 20.59992168457721,
+          "sd_ppl": 0.018442033926638814
+        }
+      },
+      "paired_nll_mean": -0.03731679743699109,
+      "paired_nll_sample_sd": 0.006939026580898086,
+      "paired_nll_t_ci95": [
+        -0.054554295050086236,
+        -0.02007929982389594
+      ],
+      "mean_ppl_change_pct": -3.6648202339777614,
+      "conditional_document_domain_nll_ci95": [
+        -0.03858312934607966,
+        -0.03601062788705652
+      ]
+    }
+  },
+  "medium_selection": {
+    "baseline": 0.0006,
+    "v_silu": 0.0006
+  },
+  "medium_raw_cost": {
+    "forward": {
+      "ratio": 1.007003240929054,
+      "overhead_percent": 0.7003240929053911,
+      "seed_median_ratios": [
+        1.0059776960366618,
+        1.007199140864159,
+        1.007832885886341
+      ]
+    },
+    "train_step": {
+      "ratio": 1.0114332681530969,
+      "overhead_percent": 1.1433268153096865,
+      "seed_median_ratios": [
+        1.008844760858101,
+        1.0131740414801544,
+        1.0122810021210351
+      ]
+    }
+  },
+  "original_source_hashes_checked": false,
+  "learning_curves": {
+    "rows": 374,
+    "runs": 22,
+    "scope": "Saved summary arithmetic and provenance bindings; omitted intermediate source arrays were not re-read."
+  },
+  "partial_glu_lr_snapshot": {
+    "status": "PARTIAL_DEV_ONLY_5_OF_16",
+    "endpoint_rows": 5,
+    "development_summary_rows": 85,
+    "comparisons": {
+      "six_e4_ppl_reduction_vs_baseline_percent": {
+        "baseline": 0.0,
+        "v_silu": 2.5678943329975334,
+        "v_glu_full": 1.6749530357206166,
+        "v_glu_reduced": 0.1681903639919935
+      },
+      "six_e4_gatedv_ppl_reduction_vs_glu_percent": {
+        "v_glu_full": 0.9081524238694905,
+        "v_glu_reduced": 2.403746839564447
+      },
+      "baseline_ppl_reduction_3e4_vs_6e4_percent": 4.638563660753037
+    },
+    "scope": "Arithmetic of extracted audit summaries only; original GLU checkpoint, logs, and per-document arrays are not bundled or re-audited."
+  },
+  "packaged_files_checked": 124
+}

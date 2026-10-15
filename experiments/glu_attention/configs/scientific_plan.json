@@ -1,0 +1,184 @@
+{
+  "schema": "gatedv_glu_scientific_plan_v1",
+  "status": "IN_PROGRESS_SELECTION_DEV_ONLY",
+  "status_as_of": "2026-10-15",
+  "scope": "Four attention arms by four peak learning rates; one paired selection seed. This release contains recipes and a partial results snapshot, not a completed LR selection or held-out confirmation.",
+  "source_plan_sha256": "5bd701badfe1f0143e1cbebd4c07fb29ce8c9f9d73afa3b537eb70bfebc37a44",
+  "source_execution_manifest_sha256": "02beb32b58deecd9abffb03d55fb3ab48618f089851f9166f590ffa8b73e597b",
+  "arms": [
+    "baseline",
+    "v_silu",
+    "v_glu_full",
+    "v_glu_reduced"
+  ],
+  "peak_lrs": [
+    0.0006,
+    0.0003,
+    0.0001,
+    1e-05
+  ],
+  "selection_seed": 20270201,
+  "common_budget": {
+    "updates_per_run": 327680,
+    "batch": 8,
+    "context": 256,
+    "target_exposures_per_run": 671088640,
+    "warmup_updates": 5120,
+    "schedule": "cosine to 0.1 times peak LR",
+    "runtime_code_unchanged": true
+  },
+  "planned_total_budget": {
+    "runs": 16,
+    "updates": 5242880,
+    "target_exposures": 10737418240
+  },
+  "selection_rule": "Finish all four LR runs for each arm; select minimum final full-dev NLL independently per arm, exact ties choose lower peak LR. Do not choose LR using holdout.",
+  "pairing": "Same selection seed, sampling schedule and exposure across LR/arms. Shared-shape parameters use paired initialization; reduced GLU has different V/output shapes.",
+  "holdout_policy": "No holdout or multi-seed confirmation is included in this selection study. The 16-run LR grid is not an evaluation cohort.",
+  "boundary_policy": "Report any boundary winner explicitly. Do not expand the grid or change budget automatically.",
+  "historical_comparison": "Preserve the old 6e-4/1.2e-3/2.4e-3 results as the original study. This lower-LR study is a follow-up motivated by observed dev boundary optima.",
+  "data_sha256": {
+    "tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+    "docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+    "tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+    "docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e",
+    "tokenizer.json": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+    "manifest.json": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f"
+  },
+  "initial_parameter_sha256": {
+    "baseline": "70c7c10bced768c46b7712d7d24af66315c9f56bae48d4119329942acdb669d5",
+    "v_silu": "70c7c10bced768c46b7712d7d24af66315c9f56bae48d4119329942acdb669d5",
+    "v_glu_full": "b402e1d2c335d37fd7d4e6ab7230620a0c7971923b558a5d601e607c2ef2869b",
+    "v_glu_reduced": "4660d58a6ebadcf2d489f1cd25562899b3a895a31d40f42f81fa1d2151e044e8"
+  },
+  "runs": [
+    {
+      "run_id": "baseline_s20270201_lr6e-4",
+      "arm": "baseline",
+      "peak_lr": 0.0006,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_baseline_lr6e-4.json",
+      "config_sha256": "a7de5b7eeb628715595daa6cf6e2c05fd4b7d8e0b6811e3aa6f053a977b02954"
+    },
+    {
+      "run_id": "v_silu_s20270201_lr6e-4",
+      "arm": "v_silu",
+      "peak_lr": 0.0006,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_silu_lr6e-4.json",
+      "config_sha256": "be657f6e8366a9a634dc74ebd68a7f580eb56ba783321c8702f211886873f5df"
+    },
+    {
+      "run_id": "v_glu_full_s20270201_lr6e-4",
+      "arm": "v_glu_full",
+      "peak_lr": 0.0006,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_full_lr6e-4.json",
+      "config_sha256": "cd52a336b93104fddffb0a3ea8b4cf102127f1de49485948a1d3af9162a1169b"
+    },
+    {
+      "run_id": "v_glu_reduced_s20270201_lr6e-4",
+      "arm": "v_glu_reduced",
+      "peak_lr": 0.0006,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_reduced_lr6e-4.json",
+      "config_sha256": "4cb0f3820c90f47597f6888e777d1a011e6a8cc961a1b93953fe1a0fca747d30"
+    },
+    {
+      "run_id": "baseline_s20270201_lr3e-4",
+      "arm": "baseline",
+      "peak_lr": 0.0003,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_baseline_lr3e-4.json",
+      "config_sha256": "dc07567a4da69dd0fe7a1ce569ca2cea321000a17d2a817abb9c9e781590b351"
+    },
+    {
+      "run_id": "v_silu_s20270201_lr3e-4",
+      "arm": "v_silu",
+      "peak_lr": 0.0003,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_silu_lr3e-4.json",
+      "config_sha256": "37e404c4f1f337ab142128606bddf29d52e74a0231fe02a4b01d8450bd2c8486"
+    },
+    {
+      "run_id": "v_glu_full_s20270201_lr3e-4",
+      "arm": "v_glu_full",
+      "peak_lr": 0.0003,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_full_lr3e-4.json",
+      "config_sha256": "3f6bdc7d16093c6ac35e304d4cdcff5f9016f2488c0b5840d0357b0bdf02d0d1"
+    },
+    {
+      "run_id": "v_glu_reduced_s20270201_lr3e-4",
+      "arm": "v_glu_reduced",
+      "peak_lr": 0.0003,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_reduced_lr3e-4.json",
+      "config_sha256": "67c6f9db6015a534e4e26d8dbd9105753ebe72fb7bbe68a682e0d7e0f974973a"
+    },
+    {
+      "run_id": "baseline_s20270201_lr1e-4",
+      "arm": "baseline",
+      "peak_lr": 0.0001,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_baseline_lr1e-4.json",
+      "config_sha256": "44c973aee98a524c7584c0c40ff13d91bfdd86100cefe01a8af5d2ae7b874420"
+    },
+    {
+      "run_id": "v_silu_s20270201_lr1e-4",
+      "arm": "v_silu",
+      "peak_lr": 0.0001,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_silu_lr1e-4.json",
+      "config_sha256": "a5ee049ff34b4e1f1fe0b63ffe60160cb8ed6d5a40726449d51e58a56db06bd9"
+    },
+    {
+      "run_id": "v_glu_full_s20270201_lr1e-4",
+      "arm": "v_glu_full",
+      "peak_lr": 0.0001,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_full_lr1e-4.json",
+      "config_sha256": "cf9b0a7c6c1a9419694ffd8ef06400348b87a70ad0fbd50528fe977e4038a5b8"
+    },
+    {
+      "run_id": "v_glu_reduced_s20270201_lr1e-4",
+      "arm": "v_glu_reduced",
+      "peak_lr": 0.0001,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-4.json",
+      "config_sha256": "dfdae6e31a149c6c72248a548b1728e08d65cdb44529749d462312b4fc535e81"
+    },
+    {
+      "run_id": "baseline_s20270201_lr1e-5",
+      "arm": "baseline",
+      "peak_lr": 1e-05,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_baseline_lr1e-5.json",
+      "config_sha256": "9d49ff6d67677f24d1cd6d1afd2a21c102363dd5c120aed0d6a51387b156d40f"
+    },
+    {
+      "run_id": "v_silu_s20270201_lr1e-5",
+      "arm": "v_silu",
+      "peak_lr": 1e-05,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_silu_lr1e-5.json",
+      "config_sha256": "2436f2566fb2bcec8259ecfe3520d1e83614906125c3a8b3fb4166a899ac03ce"
+    },
+    {
+      "run_id": "v_glu_full_s20270201_lr1e-5",
+      "arm": "v_glu_full",
+      "peak_lr": 1e-05,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_full_lr1e-5.json",
+      "config_sha256": "e5d567dd3b10124e3dc9c749bd5c894ce92a66ff4ed7a10ba9276b0955fa63c6"
+    },
+    {
+      "run_id": "v_glu_reduced_s20270201_lr1e-5",
+      "arm": "v_glu_reduced",
+      "peak_lr": 1e-05,
+      "seed": 20270201,
+      "config": "configs/lr_controls_20261013/medium_v_glu_reduced_lr1e-5.json",
+      "config_sha256": "fd3e0533ae44151ae80b44a7f8707df3167860b5dce4709789013b40356806a4"
+    }
+  ]
+}

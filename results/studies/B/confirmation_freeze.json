@@ -1,0 +1,61 @@
+{
+  "source_relative": "nonlinear_qkv_20260925/confirmation_20260927/reports/confirmation_freeze.json",
+  "source_sha256": "d04c35fd5012683b500c1a4e1eb2f2ace279808d17e64f283f60026e6a3f4d7d",
+  "representation": "sanitized_structured_extract",
+  "omitted_top_level_fields": [],
+  "data": {
+    "status": "frozen",
+    "created_unix": 1790445136.1255739,
+    "plan_sha256": "3bb5c1b93322a4d3c1c8d3255680ac5e1c53e77f66957418ac619fd46719a601",
+    "artifacts": {
+      "README.md": "01fc21246467b950dfb436cbe23d32856a3b881d47d745cfadeebebc95f21216",
+      "src/build_plan.py": "11ced9d1407c6d4d02e25f10411d3802ddcdc7e47a0303c8a7d5b9308a80e6ec",
+      "src/helpers.py": "cc249cb2e764890fd07711d1a95805c9c9a4a9c777d880db3de21b17fef36726",
+      "src/launcher.py": "8580268e9b8a13e7796ad3af2ca247b9f0bb5e71af79d9cdd4d91f0a6c3844f0",
+      "src/model.py": "d9fe7bd94df2b5fe394912b9240dcd695e2cada9f5e548bccbc3b995d58e5077",
+      "src/runtime.py": "9cbe480be496fee2257da5c656af6ad588e2bad760798e981f84216f81e4ea10",
+      "src/train.py": "e0d9b1d3367d65eac71e17bedbf9187549ea7f5faaff1be57bc4929661157579",
+      "reports/benchmark_confirmation.py": "0851f8fa0d0c3710428f8db8be4444bcc9c4a950ba2c42593238318050b991ce",
+      "reports/build_confirmation_plan.py": "4c19c31a4b1b09c82ad3f8652c6e1973916c66392232d6fae5a1a1274eba7334",
+      "reports/confirmation_common.py": "bcb97167911f65f217a60ba21de68ff4398c21977f213dd3f15797d4fbfa8ff9",
+      "reports/evaluate_confirmation.py": "b28dc3d89d3e96d32077d185aafbb39b4a5bc34e76ef423138d68c5560f5eb04",
+      "reports/freeze_confirmation.py": "edbedc8384a617e6825d69d5dd8989a299622823e6a782a01cccd0ea9716e50f",
+      "reports/fresh_holdout_audit.py": "2cb8f5fc2cf45bec2b31e1f05c89e45df95db81ac399cdf3d237fbb2c8898ed2",
+      "reports/prepare_fresh_holdout.py": "0fdbd49786ba0b2ce9cc802750c5049a0e6aed728d77c0dae571c9920d7d8821",
+      "reports/test_confirmation_plan.py": "03ef31c8bbc378c4bfadba34f8bd73c610b7ca7f8da0dc4e960a8b2b97f780ed",
+      "reports/test_evaluate_confirmation.py": "f97a6d7c85bf3ed2199dbb09c4ceda692ce94e9b45b1e8eae83d78bf17848251",
+      "reports/confirmation_plan.json": "3bb5c1b93322a4d3c1c8d3255680ac5e1c53e77f66957418ac619fd46719a601",
+      "reports/benchmark_plan.json": "f540a6876f81e2e92858eb7914351f739161b66960320ebb56d6d9340f05a963",
+      "reports/fresh_holdout_seal.json": "5c7937646e410995623448d52c76c02a81de22a2cdeb74aafb66c3f5ce1321ef",
+      "reports/fresh_holdout_audit.json": "6b5b932c4cb59395bce81b4b1a4f1103fcb7745799c9804a54bc4e84eda8fd8b",
+      "reports/fresh_holdout_audit.md": "7b438e74ee13f99d7d293cf349e33f91c068c8deae74e6965bc29e2bbf0e6ee4",
+      "reports/fresh_holdout_operational_deviation.json": "404c2909307bdbcf563c11672ed3bada4238ccff482a5ed7b1b65bd83141634d",
+      "reports/confirmation_tools_review.json": "604ed9bda3912776b285044efd536720fa84db17af16481ed7246568caebceed",
+      "reports/confirmation_tools_review.md": "174cf2feac504880ffc72b387538eef685cca5fa8a9a9bc7885f62e690a18001",
+      "reports/confirmation_plan_cpu_tests.txt": "414d93a10d9ce33b0e90e5b473019f07ed9b187193af8980067d7780051ffb23",
+      "reports/evaluation_cpu_tests.log": "090101fddc9e3b6e22a8d565bda82246574450fe007c7d8a45f45d2ceff3b008",
+      "reports/train_schedule_s20261001.npy": "bb0de484c26bfc94d20de94ae24a1a42e35fd3610655669630eb236154e36b22",
+      "reports/train_schedule_s20261002.npy": "9f61c5fbebedcb67ee2baaf565422b3cd462df7d67ba6744e463330f7a581c26",
+      "reports/train_schedule_s20261003.npy": "bf3b22fa496cff5695883ce4bc40b298b18a27e2a7b5e519aad8c6f7b268b24d",
+      "reports/holdout_evaluation_cohort.npz": "935869bcd0a38bec4cef298f747b65e0d32de440ad56cb78bef93a13e4a5e340"
+    },
+    "scientific_budget": {
+      "runs": 18,
+      "steps_per_run": 8192,
+      "optimizer_updates": 147456,
+      "target_exposures": 301989888
+    },
+    "selection_sha256": "9b1552d6becb13062be8486bffa7a0780c028dcf284bdbb151b4962282f78dc3",
+    "fresh_holdout_manifest_sha256": "515a9ccf4a00ae755232ffd9ef5db457489e1507cbfb508b48696f71d223159f",
+    "fresh_holdout_audit_sha256": "6b5b932c4cb59395bce81b4b1a4f1103fcb7745799c9804a54bc4e84eda8fd8b",
+    "mps_preflight_reused_certificate_sha256": "031668f58150f3a616f1a3155183cb25ca7880cb60420d1f324dd976774bfcec",
+    "numerical_sources_byte_identical": [
+      "model.py",
+      "helpers.py",
+      "train.py",
+      "runtime.py"
+    ],
+    "model_evaluation_on_fresh_holdout_performed": false,
+    "note": "Finite 18-run confirmation, endpoints from scratch; this freeze precedes training and held-out model evaluation. Only guarded launcher is supported."
+  }
+}
