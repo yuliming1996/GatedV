@@ -1,0 +1,174 @@
+{
+  "status": "PASS_INDEPENDENT_CROSS_EVALUATION_REDUCTION",
+  "cohort": "26.16M, peak LR 0.0003, original reused medium held-out",
+  "seeds": [
+    20270211,
+    20270212,
+    20270213
+  ],
+  "cells": {
+    "BB": [
+      "baseline",
+      "linear"
+    ],
+    "BS": [
+      "baseline",
+      "silu"
+    ],
+    "GB": [
+      "v_silu",
+      "linear"
+    ],
+    "GS": [
+      "v_silu",
+      "silu"
+    ]
+  },
+  "cell_statistics": {
+    "BB": {
+      "mean_ppl": 20.23339927033736,
+      "sample_sd_ppl": 0.06765326577419445,
+      "mean_nll": 3.007330940939331
+    },
+    "BS": {
+      "mean_ppl": 102.5646168940161,
+      "sample_sd_ppl": 31.05340724929245,
+      "mean_nll": 4.600304826356781
+    },
+    "GB": {
+      "mean_ppl": 4300.2318735827075,
+      "sample_sd_ppl": 899.0369265899999,
+      "mean_nll": 8.350302842678502
+    },
+    "GS": {
+      "mean_ppl": 19.74786263081141,
+      "sample_sd_ppl": 0.04741207598379532,
+      "mean_nll": 2.98304334176161
+    }
+  },
+  "per_seed": {
+    "BB": {
+      "20270211": {
+        "nll": 3.010587567812763,
+        "ppl": 20.299323651097374
+      },
+      "20270212": {
+        "nll": 3.0039058008696884,
+        "ppl": 20.16414043567761
+      },
+      "20270213": {
+        "nll": 3.007499454135541,
+        "ppl": 20.236733724237105
+      }
+    },
+    "BS": {
+      "20270211": {
+        "nll": 4.315964457113296,
+        "ppl": 74.88581278140916
+      },
+      "20270212": {
+        "nll": 4.5712256914703175,
+        "ppl": 96.66251561439402
+      },
+      "20270213": {
+        "nll": 4.91372433048673,
+        "ppl": 136.1455222862451
+      }
+    },
+    "GB": {
+      "20270211": {
+        "nll": 8.485687360633165,
+        "ppl": 4844.926532470725
+      },
+      "20270212": {
+        "nll": 8.474959038430825,
+        "ppl": 4793.226423174821
+      },
+      "20270213": {
+        "nll": 8.090262128971517,
+        "ppl": 3262.5426651025764
+      }
+    },
+    "GS": {
+      "20270211": {
+        "nll": 2.983660396770574,
+        "ppl": 19.760013919953746
+      },
+      "20270212": {
+        "nll": 2.980393103149254,
+        "ppl": 19.695557508866735
+      },
+      "20270213": {
+        "nll": 2.9850765253650025,
+        "ppl": 19.78801646361375
+      }
+    }
+  },
+  "contrasts": {
+    "add_silu_to_baseline": {
+      "comparison": "BS minus BB",
+      "mean_paired_nll": 1.5929738854174502,
+      "per_seed_nll": [
+        1.3053768893005326,
+        1.5673198906006292,
+        1.9062248763511889
+      ],
+      "relative_mean_ppl_pct": 406.9074925258764
+    },
+    "remove_silu_from_gatedv": {
+      "comparison": "GB minus GS",
+      "mean_paired_nll": 5.367259500916892,
+      "per_seed_nll": [
+        5.5020269638625905,
+        5.494565935281571,
+        5.105185603606515
+      ],
+      "relative_mean_ppl_pct": 21675.68253322419
+    },
+    "training_change_at_linear_inference": {
+      "comparison": "GB minus BB",
+      "mean_paired_nll": 5.342971901739172,
+      "per_seed_nll": [
+        5.4750997928204015,
+        5.4710532375611365,
+        5.082762674835976
+      ],
+      "relative_mean_ppl_pct": 21153.136045641862
+    },
+    "training_change_at_silu_inference": {
+      "comparison": "GS minus BS",
+      "mean_paired_nll": -1.617261484595171,
+      "per_seed_nll": [
+        -1.3323040603427216,
+        -1.5908325883210637,
+        -1.9286478051217273
+      ],
+      "relative_mean_ppl_pct": -80.74593048866197
+    },
+    "native_comparison": {
+      "comparison": "GS minus BB",
+      "mean_paired_nll": -0.024287599177720647,
+      "per_seed_nll": [
+        -0.026927171042189002,
+        -0.023512697720434517,
+        -0.02242292877053842
+      ],
+      "relative_mean_ppl_pct": -2.399679030887103
+    }
+  },
+  "nll_interaction": {
+    "definition": "(GS-GB)-(BS-BB)",
+    "per_seed": [
+      -6.807403853163123,
+      -7.0618858258822,
+      -7.0114104799577035
+    ],
+    "mean": -6.960233386334342
+  },
+  "valid_diagonals": 6,
+  "valid_evaluations": 12,
+  "windows_per_evaluation": 2048,
+  "targets_per_evaluation": 524288,
+  "complete_sha256": "4b7ac9d158a99897585dd0a86cf628c800666cb2d25ab5d21bd40e2513875bf4",
+  "analysis_sha256": "543dda5928f7ed7cb44c55529cad383c3bf2e08fc6840f48107ae9b42f6c4714"
+}

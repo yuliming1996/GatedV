@@ -1,0 +1,71 @@
+{
+  "peak_lr": 0.0003,
+  "seeds": [
+    20270211,
+    20270212,
+    20270213
+  ],
+  "documents": 2048,
+  "targets_per_window": 256,
+  "evaluation_done_sha256": "f5866240ca2d379b2ad2a1a26f0092dc9459be820d88d0455af6908e7278c2c0",
+  "statistics_sha256": "18826dcd62e753d595c2b7f47991485b5eec693187149573b1f30346b89ac84d",
+  "runs": [
+    {
+      "arm": "baseline",
+      "seed": 20270211,
+      "nll": 3.010587567812763,
+      "ppl": 20.299323651097374,
+      "arrays_sha256": "e9263c42c1127f8f98e89b841d804ad9383307fa2d49adf776f9d222348ad6ef",
+      "checkpoint_sha256": "d90418ab3690cff796750ae47bdb37fa8ea0aae2231619d251b945abe8484832"
+    },
+    {
+      "arm": "v_silu",
+      "seed": 20270211,
+      "nll": 2.983660396770574,
+      "ppl": 19.760013919953746,
+      "arrays_sha256": "b9d1f27fb13bdac39fbfe58063988ed0d88cafc62fde92efc8f1f1f4d258c59b",
+      "checkpoint_sha256": "33c0a11d476eb3e3f912743b5372d35707711646e45263107ae0a8b7cf0a9d1e"
+    },
+    {
+      "arm": "baseline",
+      "seed": 20270212,
+      "nll": 3.0039058008696884,
+      "ppl": 20.16414043567761,
+      "arrays_sha256": "5be60b2720e67b568fdce6b05ed59ea081c2a4cfba06fa55a8c20df13b008cd1",
+      "checkpoint_sha256": "549e96a9c1a3cf8c4a63eb3c52421c4281a4e4afe4125ad948025594f5c85f68"
+    },
+    {
+      "arm": "v_silu",
+      "seed": 20270212,
+      "nll": 2.980393103149254,
+      "ppl": 19.695557508866735,
+      "arrays_sha256": "72792c7ee1f67065b79d12e024fd50324f59630f214ec346367f030173ba91fe",
+      "checkpoint_sha256": "09f762dbf83db0d81080539d87aeffc72bfd7667164836544cb6ec79fb440b85"
+    },
+    {
+      "arm": "baseline",
+      "seed": 20270213,
+      "nll": 3.007499454135541,
+      "ppl": 20.236733724237105,
+      "arrays_sha256": "7ee145605828671e3730d06bc620ae67668b95389239479c4d0561ecd60cdaa3",
+      "checkpoint_sha256": "bbb3fc259b397f90ff119765b039bc77063894e55921a48e971371554abe49ae"
+    },
+    {
+      "arm": "v_silu",
+      "seed": 20270213,
+      "nll": 2.9850765253650025,
+      "ppl": 19.78801646361375,
+      "arrays_sha256": "6a7e526bfdda7f0ff2182c137bb67621fa9c3ca8eb3549702d5e294b3a03bfb0",
+      "checkpoint_sha256": "e5e9d346d23295d837159b971f373a31a75d8e52303c10110083468869b50956"
+    }
+  ],
+  "published": {
+    "ppl_change_pct": -2.399679030887103,
+    "mean_paired_nll": -0.024287599177720647,
+    "document_bootstrap_ci95": [
+      -0.02550700603411921,
+      -0.023152849974091318
+    ],
+    "windows_with_lower_seed_mean_nll": 1672
+  }
+}

@@ -56,7 +56,8 @@ class ReproductionTests(unittest.TestCase):
         return directory, args, cohort, seal, results
 
     def test_formal_cohorts_preserve_every_scientific_field_and_order(self):
-        for study, count, steps in [('small', 10, 32768), ('medium', 6, 327680)]:
+        for study, count, steps in [('small', 10, 32768), ('medium', 6, 327680),
+                                    ('medium-lr3e4', 6, 327680)]:
             original = reproduce.read_json(ROOT / 'configs' / (study + '_cohort.json'))
             actual = reproduce.make_cohort(study, 'cpu')
             self.assertEqual(len(actual['runs']), count)
@@ -65,6 +66,22 @@ class ReproductionTests(unittest.TestCase):
                 self.assertEqual(row['config']['steps'], steps)
                 self.assertFalse(Path(row['path']).is_absolute())
                 self.assertNotIn('..', Path(row['path']).parts)
+
+    def test_medium_followup_reuses_data_and_keeps_its_own_runs(self):
+        def plan(study):
+            args = reproduce.normalize(reproduce.parser().parse_args(['--study', study]))
+            return reproduce.dry_plan(args, reproduce.make_cohort(study, args.device))
+
+        original = plan('medium')
+        followup = plan('medium-lr3e4')
+        self.assertEqual(original['data_preparation'], followup['data_preparation'])
+        self.assertEqual(original['data_root'], followup['data_root'])
+        self.assertNotEqual(original['output'], followup['output'])
+        for run in followup['runs']:
+            self.assertEqual(run['peak_lr'], 0.0003)
+        for command in followup['training_commands']:
+            self.assertEqual(command[command.index('--data') + 1],
+                             str(Path(original['data_root']) / 'medium_corpus'))
 
     def test_formal_cohort_rejects_missing_or_wrong_paired_seed(self):
         original = reproduce.read_json(ROOT / 'configs/small_cohort.json')

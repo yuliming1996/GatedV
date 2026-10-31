@@ -52,11 +52,20 @@ python -m pip install -r requirements-reproduce.txt
 python -B tools/reproduce.py --study small --download
 ```
 
-This downloads the data, trains the paired models, and evaluates them. Replace
-`small` with `medium` for the larger model; add `--resume` to continue an
-interrupted run. The current `medium` recipe reproduces the original peak-LR
-0.0006 confirmation; the revised paper's main medium-model result uses 0.0003.
-Verification commands are in [verification/README.md](verification/README.md).
+This downloads the data, trains the paired models, and evaluates them. For the
+26.16M comparison in Table 3, use `--study medium-lr3e4`. The original
+`--study medium` runs the 0.0006 comparison in Appendix A. Both use the same
+medium-model data and write to separate output directories. Add `--resume` to
+continue an interrupted run.
+
+To recompute the medium-model row of Table 3, its document-bootstrap interval
+and the fraction of improved held-out windows, use the [six saved evaluations](results/medium_lr3e4/).
+
+```sh
+python -B results/verify_medium_lr3e4.py
+```
+
+See [verification/README.md](verification/README.md) for the other checks.
 
 ## Repository structure
 
@@ -66,17 +75,17 @@ configs/                      Experiment settings
 tools/                        Data preparation and reproduction
 reproduction/, tokenizer/     Data recipes and tokenizer
 results/                      Results and learning curves
-experiments/                  GLU controls
+experiments/                  GLU, tanh and inference-time comparisons
 paper/                        Manuscript and figures
 verification/                 Verification instructions
 ```
 
 ## Additional comparisons
 
-| Experiment | Status |
+| Comparison | Published data |
 |---|---|
-| GLU comparison and lower learning rates | Completed; reported in the paper |
-| Tanh self-gating ablation | Completed; reported in the paper |
+| GLU and tanh value gates (Table 7) | [19 single-seed development endpoints and training recipes](results/value_gate_grid/) |
+| Linear and SiLU values at inference (Appendix B) | [2×2 matrix and per-window losses for all three seed pairs](results/cross_eval/) |
 
 We encourage researchers and engineers to try GatedV in their own projects:
 it is inexpensive and easy to implement. If you use GatedV in your work, please

@@ -1,0 +1,17 @@
+{
+  "experiment": "medium_lr3e4_final_checkpoint_cross_evaluation",
+  "arms": ["baseline", "v_silu"],
+  "seeds": [20270211, 20270212, 20270213],
+  "lr": 0.0003,
+  "training_updates_per_checkpoint": 327680,
+  "inference_modes": ["linear", "silu"],
+  "intervention": "Load identical trained weights strictly into each frozen model arm. Only the value operator in all attention layers changes. Evaluate both inference modes for all six checkpoints.",
+  "holdout": "Reuse original medium held-out 2048 first eligible windows of 256 targets, original ordering, FP32/math SDPA, batch 8.",
+  "summary": "Arithmetic mean of per-seed PPL, mean token-averaged NLL and per-seed NLL. Contrast inference modes within each training arm and training arms at fixed inference. Report the paired NLL interaction descriptively.",
+  "validation": "Require exact array equality of all six rerun diagonals to the archived matching evaluations. Verify all checkpoint digests, state transfer, source, environment, holdout seal, row count and window pairing. No training or selection.",
+  "interpretation": "Test-time operator sensitivity of the trained weights. Crossed configurations are interventions on already trained models, not independent trained models or a unique causal decomposition.",
+  "archive_done_sha256": "f5866240ca2d379b2ad2a1a26f0092dc9459be820d88d0455af6908e7278c2c0",
+  "cohort_sha256": "860f5e434f0bbca2fd27247b88bcb9c75e62aa161878cb68eb9b69945f96bfa3",
+  "audit_sha256": "b8bc12a208e1ae03cd5e0448219dc89b40a328ffbd557ec9b8da0371b55ce7da",
+  "seal_sha256": "f6d1f726632e86ec563880dbf7e06a8d95691db125f6afb11709b05725176d5b"
+}

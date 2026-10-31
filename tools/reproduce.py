@@ -1,7 +1,7 @@
 """Prepare data, train a complete paired cohort, then evaluate and summarize it.
 
-small/medium repeat the published confirmation recipes at their selected learning
-rates. smoke is a tiny synthetic CPU integration check, not a scientific result.
+small and medium-lr3e4 run the main paper comparisons. medium runs the
+original 0.0006 comparison in the appendix. smoke is a tiny synthetic CPU integration check, not a scientific result.
 Only the Python standard library is imported for --help and --dry-run.
 """
 import argparse
@@ -60,9 +60,10 @@ def formal_contract(study):
         return dict(shared, width=128, layers=6, heads=4, hidden=384, steps=32768,
                     lr=0.0048, warmup=512, eval_tokens=131072, eval_every=2048,
                     save_every=256), set(range(20261201, 20261206))
-    if study == 'medium':
+    if study in ('medium', 'medium-lr3e4'):
+        peak_lr = 0.0003 if study == 'medium-lr3e4' else 0.0006
         return dict(shared, width=384, layers=12, heads=6, hidden=1152, steps=327680,
-                    lr=0.0006, warmup=5120, eval_tokens=524288, eval_every=20480,
+                    lr=peak_lr, warmup=5120, eval_tokens=524288, eval_every=20480,
                     save_every=1024), {20270211, 20270212, 20270213}
     raise ValueError('Unknown formal study')
 
@@ -101,9 +102,9 @@ def make_cohort(study, device):
 
 def parser():
     result = argparse.ArgumentParser(description=__doc__)
-    result.add_argument('--study', choices=('small', 'medium', 'smoke'), required=True)
+    result.add_argument('--study', choices=('small', 'medium', 'medium-lr3e4', 'smoke'), required=True)
     result.add_argument('--download', action='store_true', help='Download missing pinned public data shards')
-    result.add_argument('--data-root', type=Path, help='Prepared data root; default data/paper_STUDY')
+    result.add_argument('--data-root', type=Path, help='Prepared data root (both medium recipes use data/paper_medium)')
     result.add_argument('--raw', type=Path, help='Public parquet cache; default data/raw')
     result.add_argument('--output', type=Path, help='New cohort output; default outputs/reproduction_STUDY')
     result.add_argument('--device', help='Default cuda:0 for full recipes; cpu for smoke')
@@ -118,7 +119,8 @@ def normalize(args):
         args.device = 'cuda:0'
     require(args.device == 'cpu' or args.device == 'cuda' or
             (args.device.startswith('cuda:') and args.device[5:].isdigit()), 'Use a CPU or CUDA device')
-    args.data_root = (args.data_root or ROOT / 'data' / ('paper_' + args.study)).resolve()
+    args.dataset = 'medium' if args.study == 'medium-lr3e4' else args.study
+    args.data_root = (args.data_root or ROOT / 'data' / ('paper_' + args.dataset)).resolve()
     args.raw = (args.raw or ROOT / 'data/raw').resolve()
     args.output = (args.output or ROOT / 'outputs' / ('reproduction_' + args.study)).resolve()
     require(args.output != args.data_root and args.output not in args.data_root.parents
@@ -132,7 +134,7 @@ def python_command(script, *arguments):
 
 
 def preparation_command(args):
-    command = python_command('tools/prepare_data.py', '--study', args.study,
+    command = python_command('tools/prepare_data.py', '--study', args.dataset,
                              '--output', args.data_root, '--raw', args.raw)
     if args.data_root.exists():
         command.append('--verify-only')
@@ -153,7 +155,7 @@ def training_command(args, item):
     name = Path(item['path']).name
     run = args.output / item['path']
     command = python_command('code/train.py', '--config', args.output / 'recipes' / (name + '.json'),
-                             '--data', args.data_root / (args.study + '_corpus'), '--output', run)
+                             '--data', args.data_root / (args.dataset + '_corpus'), '--output', run)
     if (run / 'manifest.json').exists():
         require(args.resume, 'Existing endpoint requires --resume')
         command.append('--resume')
@@ -226,7 +228,7 @@ def identity(args, cohort):
     if args.study != 'smoke':
         files += [Path('tools/prepare_data.py'), Path('reproduction/data_plan.json'),
                   Path('configs') / (args.study + '_cohort.json'),
-                  Path('configs') / (args.study + '_holdout.json')]
+                  Path('configs') / (args.dataset + '_holdout.json')]
     return {'schema': 'reproduction_v1', 'study': args.study, 'synthetic': args.study == 'smoke',
             'cohort': cohort, 'source_sha256': source_hashes(),
             'input_sha256': {path.as_posix(): digest(ROOT / path) for path in files}}
@@ -346,7 +348,7 @@ def evaluate_cohort(args, cohort, seal, results, runner):
     attempt = root / f'attempt_{len(attempts) + 1:03d}'
     require(not attempt.exists(), 'Evaluation attempt naming conflict')
     command = python_command('code/evaluate.py', '--cohort', args.output / 'cohort.json',
-                             '--holdout', args.data_root / (args.study + '_holdout'), '--seal', seal,
+                             '--holdout', args.data_root / (args.dataset + '_holdout'), '--seal', seal,
                              '--output', attempt, '--device', args.device)
     if runner.run(command) == PAUSED:
         return None
@@ -395,7 +397,7 @@ def execute(args, cohort, runner):
         smoke_data(args)
     elif runner.run(preparation_command(args)) == PAUSED:
         return PAUSED
-    seal = args.data_root / 'holdout_seal.json' if args.study == 'smoke' else ROOT / 'configs' / (args.study + '_holdout.json')
+    seal = args.data_root / 'holdout_seal.json' if args.study == 'smoke' else ROOT / 'configs' / (args.dataset + '_holdout.json')
     for number, item in enumerate(cohort['runs'], start=1):
         if runner.stopping:
             return PAUSED
@@ -422,8 +424,8 @@ def execute(args, cohort, runner):
     if args.study == 'smoke':
         write_json(comparison, smoke_summary(evaluation))
     else:
-        command = python_command('code/analyze.py', '--evaluation', evaluation, '--study', args.study,
-                                 '--domains', args.data_root / (args.study + '_holdout') / 'documents_holdout.jsonl',
+        command = python_command('code/analyze.py', '--evaluation', evaluation, '--study', args.dataset,
+                                 '--domains', args.data_root / (args.dataset + '_holdout') / 'documents_holdout.jsonl',
                                  '--output', comparison)
         if runner.run(command) == PAUSED:
             return PAUSED
