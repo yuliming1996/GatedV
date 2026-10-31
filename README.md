@@ -17,10 +17,12 @@ at both model sizes:
 | Parameters | Paired seeds | Baseline PPL | GatedV PPL | PPL reduction |
 |---|---:|---:|---:|---:|
 | 2.33M | 5 | 59.12 | 57.92 | 2.03% |
-| 26.16M | 3 | 21.38 | 20.60 | 3.66% |
+| 26.16M | 3 | 20.23 | 19.75 | 2.40% |
 
-Every seed pair improved. For the 26.16M model, a short DGX Spark benchmark
-measured about 0.7% higher full-context forward latency.
+Every seed pair improved. The medium-model results use the development-selected
+peak learning rate of 0.0003. The original 0.0006 results are retained in the
+paper appendix. A short DGX Spark benchmark using the original medium-model
+checkpoints measured about 0.7% higher full-context forward latency.
 The details are presented in our [paper](paper/main.tex).
 
 ## Usage
@@ -46,7 +48,9 @@ python -B tools/reproduce.py --study small --download
 
 This downloads the data, trains the paired models, and evaluates them. Replace
 `small` with `medium` for the larger model; add `--resume` to continue an
-interrupted run. Verification commands are in [verification/README.md](verification/README.md).
+interrupted run. The current `medium` recipe reproduces the original peak-LR
+0.0006 confirmation; the revised paper's main medium-model result uses 0.0003.
+Verification commands are in [verification/README.md](verification/README.md).
 
 ## Repository structure
 
@@ -61,12 +65,12 @@ paper/                        Manuscript and figures
 verification/                 Verification instructions
 ```
 
-## Ongoing work
+## Additional comparisons
 
 | Experiment | Status |
 |---|---|
-| GLU comparison and lower learning rates | In progress |
-| Tanh self-gating ablation | Prepared; awaiting GLU completion |
+| GLU comparison and lower learning rates | Completed; reported in the paper |
+| Tanh self-gating ablation | Completed; reported in the paper |
 
 We encourage researchers and engineers to try GatedV in their own projects:
 it is inexpensive and easy to implement. If you use GatedV in your work, please

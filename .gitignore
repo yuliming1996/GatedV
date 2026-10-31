@@ -45,3 +45,7 @@ monitoring/
 /paper/main.pdf
 /build/
 /dist/
+
+# Local manuscript revisions and backup previews
+/paper/main_old*
+/paper/main[0-9]*.tex

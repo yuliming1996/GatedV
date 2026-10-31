@@ -1,12 +1,12 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-10-15T00:50:39.199399+00:00",
-  "scope": "Publication snapshot; excludes this manifest itself and .git. Hashes do not certify omitted data or unfinished experiments.",
+  "created_at_utc": "2026-10-31T04:08:41.684762+00:00",
+  "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 549,
-      "sha256": "a37420c694c5a1dfa4e7d2bf35df4647fe4e8e3c533f144494179766771ac508"
+      "bytes": 638,
+      "sha256": "22c4819f9aa92b195a66b2140f6958e1f11804b1561de5be30e5b21fd4cde57f"
     },
     {
       "path": "CITATION.cff",
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2655,
-      "sha256": "9899fd4f378c8e4a65d5a10b796f049a4c0e6e73adef0991f6846d8fa187fbd2"
+      "bytes": 2994,
+      "sha256": "4fd804567f02e5cdc54a7d4222e1e5462dc47ba4c823bf98038cae390a4c7433"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -269,34 +269,44 @@
       "sha256": "bb6677bd9f61bfec635645511491e08606bb8f62e58a67cdf5d29888ee440282"
     },
     {
-      "path": "paper/figures/development_delta_ppl.pdf",
-      "bytes": 17351,
-      "sha256": "8f9d06b23f406faab0c94fb9d572ba6c81ef6cb2b94e38e60caf71778e0fe92d"
+      "path": "paper/figures/development_ppl_late_training.pdf",
+      "bytes": 60404,
+      "sha256": "9d5d40565d010d2bd1f3895f9428a6ae8599bbff70a65a63dfabd837637dca8f"
     },
     {
-      "path": "paper/figures/development_delta_ppl.png",
-      "bytes": 126885,
-      "sha256": "b7c38b0858f83e100452fabc8514fdfc102e0943cb80675701fda6c03cb9bafc"
+      "path": "paper/figures/development_ppl_late_training.png",
+      "bytes": 106631,
+      "sha256": "0269ad12c9a6e7bdf43e22d3f67997b6c805b1fb3ea3fc42ba3876af039011be"
     },
     {
-      "path": "paper/figures/development_ppl.pdf",
-      "bytes": 23378,
-      "sha256": "0ffb0e93ed080bdf11de33cd2f0e626160dccad5666b1328cb989981a762a1ef"
+      "path": "paper/figures/development_ppl_late_training.tex",
+      "bytes": 5151,
+      "sha256": "ef75f5d0fc8f259595fe779b1e3482d48c515343a3a7456f91f161d13b5b5463"
     },
     {
-      "path": "paper/figures/development_ppl.png",
-      "bytes": 135363,
-      "sha256": "298bb96650c90270255254c34eb0d35a7f029210e5610afe478547788ddbff34"
+      "path": "paper/figures/development_relative_ppl.pdf",
+      "bytes": 89868,
+      "sha256": "831c64547bc0f291f45e0aff6e0470fc077f92b1db12d0938e98ea7248a54801"
+    },
+    {
+      "path": "paper/figures/development_relative_ppl.png",
+      "bytes": 101588,
+      "sha256": "60c4bbc5757a6a7a24ae2b59b1580d9052ecd0d90b7778c8d3ada6b3838b5617"
+    },
+    {
+      "path": "paper/figures/development_relative_ppl.tex",
+      "bytes": 6749,
+      "sha256": "3f56210b6086a60b5a1abb25e2538ff34c9c597c9a63305836cdee5c14a39c34"
     },
     {
       "path": "paper/figures/paper_figure_manifest.json",
-      "bytes": 3114,
-      "sha256": "133ad3ad4cf39020a77a4260eb596c7161da60fdc6a8bc9e9a4113ad548765d7"
+      "bytes": 1984,
+      "sha256": "e082df9412a8e4356831bcea51dc18236d426b3e81cd60d76aee797bdfa151ee"
     },
     {
       "path": "paper/figures/paper_ppl_data.json",
-      "bytes": 17246,
-      "sha256": "7f33a74c250e56a61cc94c1d7396435c42933c3b477923815df53c4beacd2dfa"
+      "bytes": 17479,
+      "sha256": "520b5d50e7be7a4929f1f0407d70394b68d914a07d8066ffe88cf181c40e77cd"
     },
     {
       "path": "paper/figures/paper_ppl_points.csv",
@@ -310,13 +320,13 @@
     },
     {
       "path": "paper/main.tex",
-      "bytes": 35390,
-      "sha256": "2228fd8a57958e6a95995c4b21f7b2816519dae92e950414f91a538ef2f03d65"
+      "bytes": 31424,
+      "sha256": "38457ca32a21d06346a71070ba801290b6b084034eda3f16a5acfb72bf2de7a0"
     },
     {
       "path": "paper/make_paper_figures.py",
-      "bytes": 18005,
-      "sha256": "c7c4484440121321d9a03bb007efdeaef0b69e5949ef5d27035bad65b0b31f83"
+      "bytes": 13255,
+      "sha256": "0f719f6b3114ac270a2e317704ac36ac1b1282331b0153932251768c1c9c327b"
     },
     {
       "path": "paper/references.bib",
@@ -427,6 +437,11 @@
       "path": "results/learning_curves.csv",
       "bytes": 248515,
       "sha256": "645b4c6d218c438c012d70b2c047c59dcba9281f5a1a457f6c9afbbc0faed21a"
+    },
+    {
+      "path": "results/learning_curves_lr3e4.csv",
+      "bytes": 193270,
+      "sha256": "e7a887e80e91d15846a6a3045b4bae94b722dbe2cefa3975ea7ae949e492200b"
     },
     {
       "path": "results/learning_curves_provenance.json",
@@ -998,33 +1013,5 @@
       "bytes": 761,
       "sha256": "921d91c4e00a8724be0a5a57b05d0be4157c1d36df52644f7135b46997785c6d"
     }
-  ],
-  "tokenizer_addition": {
-    "date": "2026-10-15",
-    "historical_sha256_verified": true,
-    "path": "tokenizer/tokenizer.json"
-  },
-  "data_reconstruction_addition": {
-    "date": "2026-10-15",
-    "scope": "Frozen accepted-row replay for main small and medium confirmations; no historical exclusion re-audit",
-    "plan": "reproduction/data_plan.json"
-  },
-  "updated_at_utc": "2026-10-15T12:41:18.957739+00:00",
-  "portable_reproduction_addition": {
-    "status": "PASS_PORTABLE_PUBLIC_ENTRYPOINT",
-    "validation": "docs/portability_validation.json",
-    "workflow": "tools/reproduce.py",
-    "scope": "New public coordinator, robust data preparation and provenance labels; scientific runtimes, recipes and recorded numeric results unchanged."
-  },
-  "public_repository_addition": {
-    "date": "2026-10-15",
-    "repository": "https://github.com/yuliming1996/GatedV",
-    "scope": "Repository links in manuscript, citation metadata and documentation; scientific code, recipes and results unchanged.",
-    "manuscript_compilation": {
-      "status": "PASS",
-      "pages": 13,
-      "missing_citations_or_cross_references": false,
-      "remaining_warning": "One underfull bibliography line"
-    }
-  }
+  ]
 }

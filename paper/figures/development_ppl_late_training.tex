@@ -1,0 +1,50 @@
+\documentclass[border=3pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\definecolor{GatedBlue}{HTML}{245D80}
+\definecolor{BaseCopper}{HTML}{BE7947}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[
+group style={group size=2 by 1,horizontal sep=13mm},
+scale only axis,width=63mm,height=45mm,
+axis lines*=left,axis line style={black!55,line width=.45pt},
+tick style={black!55,line width=.45pt},tick align=outside,
+ticklabel style={font=\fontsize{8}{10}\selectfont},
+label style={font=\fontsize{9}{11}\selectfont},
+title style={font=\fontsize{9}{11}\selectfont,anchor=south west,at={(0,1.025)}},
+xmin=74.5,xmax=100.8,xtick={75,80,85,90,95,100},
+ymajorgrids=true,grid style={black!9,line width=.35pt},
+scaled ticks=false,xlabel={Training progress (\%)},
+legend style={draw=none,fill=none,font=\fontsize{8}{10}\selectfont,
+at={(1.1,1.23)},anchor=south,legend columns=2,column sep=6mm},
+legend cell align=left,clip=true]
+\nextgroupplot[title={(a) Small (2.33M), five paired seeds},ymin=55.8,ymax=68.6,ytick={56,58,60,62,64,66,68},ylabel={Development PPL}]
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.2585756946) (81.25,63.7903064672) (87.5,60.9781407744) (93.75,59.1769891305) (100,58.6882921618)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.7576045688) (81.25,64.236473248) (87.5,61.4006310455) (93.75,59.1498897276) (100,58.8183106117)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.3779729221) (81.25,63.5237808333) (87.5,61.5269884475) (93.75,59.1729615366) (100,58.3420627293)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,68.019150962) (81.25,64.9087074496) (87.5,61.926727074) (93.75,60.3310016588) (100,59.5476359532)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.6296454073) (81.25,63.2733460992) (87.5,60.7162924037) (93.75,58.9110210503) (100,58.1840467381)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,66.4794258997) (81.25,63.212680617) (87.5,59.8662932066) (93.75,57.9094873031) (100,57.3308745157)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.1023215485) (81.25,63.1338740186) (87.5,60.5853231621) (93.75,58.49375442) (100,58.012565005)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,67.0312845123) (81.25,63.829689643) (87.5,60.854878108) (93.75,58.6757808651) (100,58.0642047471)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,65.4892793703) (81.25,62.5084685846) (87.5,59.5088312618) (93.75,57.9388594921) (100,57.2342486977)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,65.9349980928) (81.25,62.1739986466) (87.5,58.9649780089) (93.75,57.2667894198) (100,56.4705272379)};
+\addplot[BaseCopper,line width=1.5pt,mark=square*,mark size=1.5pt,mark options={solid}] coordinates {(75,67.608589911) (81.25,63.9465228195) (87.5,61.309755949) (93.75,59.3483726207) (100,58.7160696388)};
+\addlegendentry{Baseline}
+\addplot[GatedBlue,line width=1.5pt,mark=*,mark size=1.5pt,mark options={solid}] coordinates {(75,66.4074618847) (81.25,62.971742302) (87.5,59.9560607495) (93.75,58.0569343) (100,57.4224840407)};
+\addlegendentry{GatedV}
+\nextgroupplot[title={(b) Medium (26.16M), three paired seeds},ymin=19.8,ymax=23.2,ytick={20,21,22,23}]
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.8631968481) (81.25,22.0282518964) (87.5,21.4070390546) (93.75,20.861571171) (100,20.715399727)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.6999713521) (81.25,21.894947325) (87.5,21.1437251439) (93.75,20.7495245064) (100,20.5519508278)};
+\addplot[BaseCopper!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.7836444612) (81.25,21.8826607874) (87.5,21.2642244887) (93.75,20.8226191111) (100,20.6525476788)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.1576548078) (81.25,21.3767381662) (87.5,20.7269227147) (93.75,20.3462238685) (100,20.1588220805)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.1615927873) (81.25,21.3791630702) (87.5,20.7093836139) (93.75,20.2638567289) (100,20.0851436614)};
+\addplot[GatedBlue!35!white,line width=.55pt,no marks,forget plot] coordinates {(75,22.2317924938) (81.25,21.433622611) (87.5,20.7746260507) (93.75,20.3473792926) (100,20.1738775249)};
+\addplot[BaseCopper,line width=1.5pt,mark=square*,mark size=1.5pt,mark options={solid},forget plot] coordinates {(75,22.7822708871) (81.25,21.9352866696) (87.5,21.2716628957) (93.75,20.8112382628) (100,20.6399660779)};
+\addplot[GatedBlue,line width=1.5pt,mark=*,mark size=1.5pt,mark options={solid},forget plot] coordinates {(75,22.1836800296) (81.25,21.3965079492) (87.5,20.7369774598) (93.75,20.3191532967) (100,20.1392810889)};
+\end{groupplot}
+\end{tikzpicture}
+\end{document}
