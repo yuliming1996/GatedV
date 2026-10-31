@@ -49,3 +49,7 @@ monitoring/
 # Local manuscript revisions and backup previews
 /paper/main_old*
 /paper/main[0-9]*.tex
+
+# Publish only the manuscript PDFs from the figure output directory
+/paper/figures/*
+!/paper/figures/*.pdf

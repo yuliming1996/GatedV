@@ -1,5 +1,4 @@
-# Versions used for the repository packaging regeneration check.
-# The preserved figures were originally generated with Matplotlib 3.11.1
-# and NumPy 2.5.2; see figures/paper_figure_manifest.json.
+# Versions used for the original Matplotlib packaging check.
+# make_paper_figures.py uses the Python standard library, TeX/PGFPlots and Poppler.
 matplotlib==3.11.2
 numpy==2.5.3

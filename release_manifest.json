@@ -1,12 +1,12 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-10-31T04:59:51.689047+00:00",
+  "created_at_utc": "2026-10-31T05:02:40.302190+00:00",
   "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 638,
-      "sha256": "22c4819f9aa92b195a66b2140f6958e1f11804b1561de5be30e5b21fd4cde57f"
+      "bytes": 746,
+      "sha256": "0e405765c200341f6e1c86864d131d05a47280af62e66c74e232286930c515de"
     },
     {
       "path": "CITATION.cff",
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3396,
-      "sha256": "603eef946ccd99240d1b5d945edf17d5d1b8e20b43f27d9debaecc2952c02e79"
+      "bytes": 3367,
+      "sha256": "6cdbac5dec9848f4798a4e817480ca78f8d82844ab9addda6235fd6334b43c41"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -107,6 +107,11 @@
       "path": "configs/small_holdout.json",
       "bytes": 697,
       "sha256": "68809bbf68dc5ef77e2afeab7f4ccba614c808719926d793c5ea9dc7f6e1be44"
+    },
+    {
+      "path": "docs/assets/figure-3b.png",
+      "bytes": 72902,
+      "sha256": "a6e31a5b6cc7198ccdfcefc9f0648c4319fc5eabb066f2d35470975eae803fc5"
     },
     {
       "path": "docs/path_portability.json",
@@ -264,64 +269,14 @@
       "sha256": "91d6ad183863b7455754d602ca799c6518339582935b53ffe2af7f8b5f98fbe9"
     },
     {
-      "path": "paper/figures/architecture_gatedv.png",
-      "bytes": 131492,
-      "sha256": "bb6677bd9f61bfec635645511491e08606bb8f62e58a67cdf5d29888ee440282"
-    },
-    {
       "path": "paper/figures/development_ppl_late_training.pdf",
       "bytes": 60404,
       "sha256": "9d5d40565d010d2bd1f3895f9428a6ae8599bbff70a65a63dfabd837637dca8f"
     },
     {
-      "path": "paper/figures/development_ppl_late_training.png",
-      "bytes": 106631,
-      "sha256": "0269ad12c9a6e7bdf43e22d3f67997b6c805b1fb3ea3fc42ba3876af039011be"
-    },
-    {
-      "path": "paper/figures/development_ppl_late_training.tex",
-      "bytes": 5151,
-      "sha256": "ef75f5d0fc8f259595fe779b1e3482d48c515343a3a7456f91f161d13b5b5463"
-    },
-    {
-      "path": "paper/figures/development_ppl_late_training_medium.png",
-      "bytes": 72902,
-      "sha256": "a6e31a5b6cc7198ccdfcefc9f0648c4319fc5eabb066f2d35470975eae803fc5"
-    },
-    {
       "path": "paper/figures/development_relative_ppl.pdf",
       "bytes": 89868,
       "sha256": "831c64547bc0f291f45e0aff6e0470fc077f92b1db12d0938e98ea7248a54801"
-    },
-    {
-      "path": "paper/figures/development_relative_ppl.png",
-      "bytes": 101588,
-      "sha256": "60c4bbc5757a6a7a24ae2b59b1580d9052ecd0d90b7778c8d3ada6b3838b5617"
-    },
-    {
-      "path": "paper/figures/development_relative_ppl.tex",
-      "bytes": 6749,
-      "sha256": "3f56210b6086a60b5a1abb25e2538ff34c9c597c9a63305836cdee5c14a39c34"
-    },
-    {
-      "path": "paper/figures/paper_figure_manifest.json",
-      "bytes": 1984,
-      "sha256": "e082df9412a8e4356831bcea51dc18236d426b3e81cd60d76aee797bdfa151ee"
-    },
-    {
-      "path": "paper/figures/paper_ppl_data.json",
-      "bytes": 17479,
-      "sha256": "520b5d50e7be7a4929f1f0407d70394b68d914a07d8066ffe88cf181c40e77cd"
-    },
-    {
-      "path": "paper/figures/paper_ppl_points.csv",
-      "bytes": 176154,
-      "sha256": "3880b09b2afd41ed0cbeceffb21e93797742d88f53ee647a2fa904bbf12d4275"
-    },
-    {
-      "path": "paper/figures/paper_ppl_summary.csv",
-      "bytes": 3190,
-      "sha256": "d3ed085eff2d14cc84a1bd4a83e81ce511761c2b0771094bf0384af1e52d3d31"
     },
     {
       "path": "paper/main.tex",
@@ -340,8 +295,8 @@
     },
     {
       "path": "paper/requirements.txt",
-      "bytes": 229,
-      "sha256": "ed78039514e8432071d82ed2bb8895592f754fb5be0eb4488c6407875b964407"
+      "bytes": 177,
+      "sha256": "5aa28124eb536bee4842a409362be93220478c663b638dd8c4358645de222334"
     },
     {
       "path": "reproduction/data_plan.json",
