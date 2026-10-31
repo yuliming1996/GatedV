@@ -25,6 +25,12 @@ paper appendix. A short DGX Spark benchmark using the original medium-model
 checkpoints measured about 0.7% higher full-context forward latency.
 The details are presented in our [paper](paper/main.tex).
 
+<p align="center">
+  <img src="paper/figures/development_ppl_late_training_medium.png" width="480" alt="The 26.16M-parameter GatedV model has lower development perplexity than baseline at each of the five checkpoints shown.">
+</p>
+
+*Figure 3b. Development perplexity over the final quarter of training. Thin lines show individual runs and thick lines show the mean across three seeds for each model.*
+
 ## Usage
 
 To try GatedV in an existing attention layer, apply SiLU after the value projection
