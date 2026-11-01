@@ -27,10 +27,10 @@
     },
     {
       "packaged_relative": "claim_evidence.json",
-      "packaged_sha256": "f92dbcfb98b2c407027c6d50c9ec39a7a65532d726e8da5246347028fc3682fb",
+      "packaged_sha256": "345c21580fe43b506d9eac9dfb5af637759e3dac1431b27e2570085998de8fa8",
       "source_bundle_relative": "claim_evidence.json",
       "source_bundle_sha256": "f92dbcfb98b2c407027c6d50c9ec39a7a65532d726e8da5246347028fc3682fb",
-      "representation": "byte_identical_copy_of_existing_portable_bundle"
+      "representation": "updated_claim_index_for_current_paper; original source_bundle_sha256 retained"
     },
     {
       "packaged_relative": "datasets.json",

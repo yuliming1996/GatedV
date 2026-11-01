@@ -104,7 +104,7 @@ GLU Attention retains softmax aggregation and uses two independently projected b
 
 Other formulations make the nonlinear transformation depend on how values are combined. HYLA applies ReLU to an attention-weighted combination of value features across heads for each query--key pair. It introduces no additional parameters and uses RMS normalization across heads instead of key-wise softmax~\citep{hypernetwork}. LASER retains softmax weights but combines an exponential value transform with a logarithm after aggregation, giving $\log\!\big(A_h\exp(V_h)\big)$~\citep{laser}. These operations are not generally equivalent to applying an activation independently to each projected value and then taking the usual weighted sum.
 
-Gate placement has also been studied while retaining softmax attention. Gated Attention compares learned gates on Q/K/V and at the attention output, with its main configuration using a head-specific sigmoid gate after scaled dot-product attention~\citep{gatedattention}. \textbf{Its G2 gate uses a separate input projection to compute a sigmoid gate on the values before aggregation.} It also evaluates SiLU applied directly to the attention output without additional parameters \textbf{(their Table~3, row~6)}. Two distinctions are relevant here: whether the gate uses a separate learned projection, and whether it acts before or after aggregation. We examine self-gating of the projected values before aggregation, retaining the original projections and the softmax weighting rule.
+Gate placement has also been studied while retaining softmax attention. Gated Attention compares learned gates on Q/K/V and at the attention output, with its main configuration using a head-specific sigmoid gate after scaled dot-product attention~\citep{gatedattention}. Its G2 gate uses a separate input projection to compute a sigmoid gate on the values before aggregation. It also evaluates SiLU applied directly to the attention output without additional parameters (their Table~3, row~6). Two distinctions are relevant here: whether the gate uses a separate learned projection, and whether it acts before or after aggregation. We examine self-gating of the projected values before aggregation, retaining the original projections and the softmax weighting rule.
 
 \subsection{GatedV}
 \label{sec:model}
@@ -173,14 +173,14 @@ Paired confirmation seeds & 5 & 3\\
 \end{tabular}
 \end{table}
 
-Training uses FineWeb-Edu text~\citep{fineweb} and a fixed 8,192-entry byte-level BPE tokenizer~\citep{gpt2} trained on WikiText training data~\citep{wikitext}. Each training sequence is sampled from a single document and contains 256 input tokens with their next-token targets. The small confirmation held-out set and the medium development and held-out sets each contain 2,048 documents from distinct domain groups, with \textbf{the first eligible} 256-target window per document.
+Training uses FineWeb-Edu text~\citep{fineweb} and a fixed 8,192-entry byte-level BPE tokenizer~\citep{gpt2} trained on WikiText training data~\citep{wikitext}. Each training sequence is sampled from a single document and contains 256 input tokens with their next-token targets. The small confirmation held-out set and the medium development and held-out sets each contain 2,048 documents from distinct domain groups, with the first eligible 256-target window per document.
 
 We train with AdamW~\citep{adamw}, using $(\beta_1,\beta_2)=(0.9,0.95)$, $\epsilon=10^{-8}$, matrix weight decay 0.1, no decay on normalization gains, and gradient-norm clipping at 1. After warmup, the learning rate follows a cosine schedule to 10\% of its peak. We evaluate final fixed-budget checkpoints. Training uses FP32. We initialize projection and embedding matrices from a Gaussian distribution with fan-in scaling, with an additional factor of $1/\sqrt{2L}$ for attention output and feed-forward down-projections, where $L$ is the number of Transformer layers.
 
 \subsection{Learning-rate selection and controls}
-The small-model confirmation compares baseline and GatedV at a shared peak learning rate of 0.0048 over five paired seeds. \textbf{We fixed this rate after a 4,096-update development screen in which both models achieved their lowest NLL at the highest rate tested.}
+The small-model confirmation compares baseline and GatedV at a shared peak learning rate of 0.0048 over five paired seeds. We fixed this rate after a 4,096-update development screen in which both models achieved their lowest NLL at the highest rate tested.
 
-\textbf{After the original medium-model confirmation at 0.0006,} we select each architecture's learning rate from $\{0.00001,0.0001,0.0003,0.0006\}$ by the lowest final development NLL, using one shared selection seed (20270201) and equal training budgets; ties favor the lower rate. Both select 0.0003 (Table~\ref{tab:medium_lr}). We evaluate these configurations with \textbf{the original} three paired seeds (20270211--20270213), distinct from the selection seed, on the previously used medium held-out set. The original 0.0006 confirmation is retained in Appendix~\ref{sec:original_medium}. A separate development-set comparison evaluates value gates at $\{0.0006,0.0003,0.0001\}$ (Section~\ref{sec:gate_comparison}).
+After the original medium-model confirmation at 0.0006, we select each architecture's learning rate from $\{0.00001,0.0001,0.0003,0.0006\}$ by the lowest final development NLL, using one shared selection seed (20270201) and equal training budgets; ties favor the lower rate. Both select 0.0003 (Table~\ref{tab:medium_lr}). We evaluate these configurations with the original three paired seeds (20270211--20270213), distinct from the selection seed, on the previously used medium held-out set. The original 0.0006 confirmation is retained in Appendix~\ref{sec:original_medium}. A separate development-set comparison evaluates value gates at $\{0.0006,0.0003,0.0001\}$ (Section~\ref{sec:gate_comparison}).
 
 \begin{table}[htbp]
 \centering\small
@@ -236,7 +236,7 @@ Model size & Baseline & GatedV & $\Delta_P$ & Improved pairs\\
 \end{tabular}
 \end{table}
 
-The mean GatedV-minus-baseline NLL differences are $-0.020591$ and $-0.024288$ for the small and medium models, respectively. The corresponding 95\% document-bootstrap intervals, \textbf{with the trained models held fixed}, are $[-0.021869,-0.019356]$ and $[-0.025507,-0.023153]$. \textbf{After averaging NLL across the three seeds for each model, we find that GatedV has lower NLL on 1,672 of the 2,048 medium-model held-out windows (81.6\%).}
+The mean GatedV-minus-baseline NLL differences are $-0.020591$ and $-0.024288$ for the small and medium models, respectively. The corresponding 95\% document-bootstrap intervals, with the trained models held fixed, are $[-0.021869,-0.019356]$ and $[-0.025507,-0.023153]$. After averaging NLL across the three seeds for each model, we find that GatedV has lower NLL on 1,672 of the 2,048 medium-model held-out windows (81.6\%).
 
 Figure~\ref{fig:development_delta_ppl} shows the relative change in development PPL throughout training, including initialization. At each recorded update, we exponentiate each run's development NLL and then average PPL across seeds; the mean curve uses the ratio of these arithmetic means, as in Equation~\ref{eq:pplchange}. The positive initial $\Delta_P$ in both panels may reflect the different activation statistics produced by SiLU under the shared Gaussian fan-in initialization. Figure~\ref{fig:development_ppl} shows absolute PPL over the final quarter of training. Final development means are 58.716 versus 57.422 for the small model and 20.640 versus 20.139 for the medium model, corresponding to reductions of 2.20\% and 2.43\%. 
 
@@ -260,7 +260,7 @@ Table~\ref{tab:ablations} summarizes the small-model activation-placement and le
 
 \begin{table}[t]
 \centering\small
-\caption{Development-set comparisons. \textbf{The two groups of rows use different sets of three paired seeds.} $\Delta_P$ compares the variant with the baseline.}
+\caption{Development-set comparisons. The two groups of rows use different sets of three paired seeds. $\Delta_P$ compares the variant with the baseline.}
 \label{tab:ablations}
 \begin{tabular}{lrrrr}
 \toprule
@@ -280,7 +280,7 @@ All Q/K/V & $58.580\pm0.557$ & $58.458\pm0.485$ & $-0.21\%$ & 2/3\\
 \end{tabular}
 \end{table}
 
-In the \textbf{separate 32,768-update exploratory} small-model learning-rate grid, both architectures select the interior rate 0.0024 by mean final development NLL. GatedV improves mean PPL by 3.08\% there and improves every pair. Its mean is favorable at all four rates, but one pair worsens at each of 0.0012 and 0.0096. The medium-model comparison at lower learning rates is reported in Table~\ref{tab:value_gates}.
+In the separate 32,768-update exploratory small-model learning-rate grid, both architectures select the interior rate 0.0024 by mean final development NLL. GatedV improves mean PPL by 3.08\% there and improves every pair. Its mean is favorable at all four rates, but one pair worsens at each of 0.0012 and 0.0096. The medium-model comparison at lower learning rates is reported in Table~\ref{tab:value_gates}.
 
 Relative to baseline, Affine match changes mean development PPL by $-1.12\%$ at LR 0.0024 and $+0.26\%$ at 0.0048 (Table~\ref{tab:moment}). Moment-matched SiLU uses a fixed shift and rescaling to match SiLU outputs to the initial baseline value mean and variance; its PPL reductions are 0.35\% and 0.63\%, respectively. Both controls have higher PPL than GatedV in every pair.
 
@@ -303,11 +303,11 @@ Moment-matched SiLU & 0.0048 & $58.399\pm0.540$ & $-0.63\%$ & $+1.77\%$\\
 \subsection{Computational cost}
 We benchmark the six medium-model checkpoints from the 0.0006 confirmation on NVIDIA DGX Spark with fixed synthetic inputs, batch size 8, and context length 256. The test takes about 97 seconds on a shared host, alternating models over seven rounds with three warmups and ten timed calls per mode. Wall-clock timings use CUDA synchronization. We compute paired time ratios from median call times, take the median across rounds for each seed, and average across seeds.
 
-Measured latency increases by 0.70\% for full-context forward passes and 1.14\% for training steps with GatedV (Table~\ref{tab:cost}). Across the 21 paired comparisons, the relative change in forward latency for GatedV versus baseline ranges from $-1.15\%$ to $+2.57\%$. Median peak CUDA allocated memory rises from 1.7525 to 1.8569 GiB \textbf{(5.96\%)}.
+Measured latency increases by 0.70\% for full-context forward passes and 1.14\% for training steps with GatedV (Table~\ref{tab:cost}). Across the 21 paired comparisons, the relative change in forward latency for GatedV versus baseline ranges from $-1.15\%$ to $+2.57\%$. Median peak CUDA allocated memory rises from 1.7525 to 1.8569 GiB (5.96\%).
 
 \begin{table}[t]
 \centering\small
-\caption{Medium-model time ratios relative to baseline and median peak CUDA allocated memory \textbf{over the forward and training-step measurements combined}.}
+\caption{Medium-model time ratios relative to baseline and median peak CUDA allocated memory over the forward and training-step measurements combined.}
 \label{tab:cost}
 \begin{tabular}{lrr}
 \toprule
@@ -346,7 +346,7 @@ $V\odot\tanh(V)$ & 26.158 & 21.337 & 20.325 & 20.986\\
 \end{tabular}
 \end{table}
 
-All five variants achieve their lowest final development PPL at the interior rate 0.0003. The separate GLU gate does not improve on GatedV in this grid, either at full width with more parameters or at reduced width with a similar parameter count. At the selected rate, the tanh control also improves on the baseline, but GatedV remains 1.29\% lower in PPL (2.42\% below the baseline). \textbf{On this shared seed, GatedV has the lowest development PPL at each of the three learning rates.}
+All five variants achieve their lowest final development PPL at the interior rate 0.0003. The separate GLU gate does not improve on GatedV in this grid, either at full width with more parameters or at reduced width with a similar parameter count. At the selected rate, the tanh control also improves on the baseline, but GatedV remains 1.29\% lower in PPL (2.42\% below the baseline). On this shared seed, GatedV has the lowest development PPL at each of the three learning rates.
 
 \subsection{Limitations}
 \label{sec:limitations}
@@ -383,18 +383,18 @@ Reducing the peak learning rate from 0.0006 to 0.0003 lowers mean held-out PPL b
 \FloatBarrier
 \section{Value activation during training and inference}
 \label{sec:cross_eval}
-\textbf{We held the weights of each final medium-model checkpoint (peak LR 0.0003) fixed and evaluated it on the same 2,048 held-out windows with either linear values or SiLU applied to the values in every attention layer. Switching the value transformation at inference raised PPL for all six checkpoints, most sharply when we removed SiLU from GatedV (Table~\ref{tab:cross_eval}).}
+We held the weights of each final medium-model checkpoint (peak LR 0.0003) fixed and evaluated it on the same 2,048 held-out windows with either linear values or SiLU applied to the values in every attention layer. Switching the value transformation at inference raised PPL for all six checkpoints, most sharply when we removed SiLU from GatedV (Table~\ref{tab:cross_eval}).
 
 \begin{table}[htbp]
 \centering\small
-\caption{\textbf{Held-out PPL (mean and sample standard deviation across three paired seeds).}}
+\caption{Held-out PPL (mean and sample standard deviation across three paired seeds).}
 \label{tab:cross_eval}
 \begin{tabular}{lrr}
 \toprule
-\textbf{Training} & \textbf{Linear at inference} & \textbf{SiLU at inference}\\
+Training & Linear at inference & SiLU at inference\\
 \midrule
-\textbf{Linear (baseline)} & $\boldsymbol{20.233\pm0.068}$ & $\boldsymbol{102.565\pm31.053}$\\
-\textbf{SiLU (GatedV)} & $\boldsymbol{4{,}300.232\pm899.037}$ & $\boldsymbol{19.748\pm0.047}$\\
+Linear (baseline) & $20.233\pm0.068$ & $102.565\pm31.053$\\
+SiLU (GatedV) & $4{,}300.232\pm899.037$ & $19.748\pm0.047$\\
 \bottomrule
 \end{tabular}
 \end{table}

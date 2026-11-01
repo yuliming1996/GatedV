@@ -380,9 +380,11 @@
     },
     {
       "path": "tools/reproduce.py",
-      "packaged_sha256": "9f8547cdf77de56f3ec1bc814e3aa1b0e96e019169d51a6045081b9cb02e9070",
+      "packaged_sha256": "fd4fd75e250727aa3236a95459b652f92b7889897940ba5e6497ef8e76dc05a8",
       "mode": "new-public-coordinator",
-      "changes": "Complete published confirmation cohorts; portable data/training/evaluation/statistics entrypoint with synthetic smoke, explicit resume, endpoint gating and owned-process interruption."
+      "changes": "Published small and medium-lr3e4 main confirmations plus original medium 0.0006; the medium recipes share prepared data and keep separate run directories.",
+      "previous_packaged_sha256": "9f8547cdf77de56f3ec1bc814e3aa1b0e96e019169d51a6045081b9cb02e9070",
+      "update_commit": "449eced7c5fef23fbe1a23e56c179a81a896010b"
     },
     {
       "path": "tools/prepare_data.py",
@@ -393,9 +395,11 @@
     },
     {
       "path": "tests/test_reproduce.py",
-      "packaged_sha256": "4d2a820220a4e86986016d597f08149953d3d535d42f6af039342957060c252a",
+      "packaged_sha256": "4c1d45b6a918511c2addb9565067b39d6f6c3b2438277cd27bb273b742fd689f",
       "mode": "new-public-regression-checks",
-      "changes": "18 bounded orchestration checks, including real owned-process-group termination."
+      "changes": "19 bounded orchestration checks, including the shared-data/separate-output contract for the 0.0003 medium confirmation and owned-process-group termination.",
+      "previous_packaged_sha256": "4d2a820220a4e86986016d597f08149953d3d535d42f6af039342957060c252a",
+      "update_commit": "449eced7c5fef23fbe1a23e56c179a81a896010b"
     },
     {
       "path": "tests/test_prepare_data.py",

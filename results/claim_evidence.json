@@ -1,14 +1,14 @@
 [
   {
     "id": "C1",
-    "claim": "At the 26.16M fixed endpoint V-only reduces fresh-holdout arithmetic mean PPL by 3.66482023398%, three of three seed pairs.",
+    "claim": "At peak LR 0.0006, the original 26.16M confirmation reduces arithmetic mean held-out PPL by 3.66482023398%, with all three seed pairs improving (Appendix A).",
     "evidence": [
       "studies/M/results.json",
       "medium_holdout/",
       "verification.json"
     ],
-    "kind": "primary fresh-holdout confirmation",
-    "limits": "Three seeds; same FineWeb-Edu family; finite single-seed LR selection at lower boundary; no general capability or isolated scaling claim."
+    "kind": "original medium confirmation retained in Appendix A",
+    "limits": "The holdout was fresh for this original confirmation and was subsequently reused for the 0.0003 comparison; report the two rates separately."
   },
   {
     "id": "C2",
@@ -17,7 +17,7 @@
       "studies/D/results.json",
       "studies/D/audit.json"
     ],
-    "kind": "supporting fresh-holdout confirmation",
+    "kind": "main small-model held-out confirmation (Table 3)",
     "limits": "A fixed recipe selected using prior dev work; not an optimally tuned comparison; no cross-study pooling."
   },
   {
@@ -72,17 +72,17 @@
   },
   {
     "id": "C8",
-    "claim": "The complete series contains 133 scientific trajectories, 6063104 optimizer updates and 12417236992 sampled target exposures.",
+    "claim": "The historical A–F/M bundle contains 133 scientific trajectories, 6063104 optimizer updates and 12417236992 sampled target exposures.",
     "evidence": [
       "all_endpoints.csv",
       "budget.json"
     ],
     "kind": "administrative accounting",
-    "limits": "Not 133 independent seed replicates; adaptive phases cannot be pooled into one inferential analysis."
+    "limits": "Historical bundle only; excludes the later value-gate grid and 0.0003 medium confirmation. These trajectories are not independent seed replicates."
   },
   {
     "id": "C9",
-    "claim": "Raw medium NLLs, seed intervals, conditional bootstrap, and cost aggregates are portable and recheckable without a GPU.",
+    "claim": "The original 0.0006 medium NLLs, seed intervals, conditional bootstrap and cost aggregates can be recomputed without a GPU; newer cohorts have separate verifiers.",
     "evidence": [
       "verify_results.py",
       "source_ledger.json",
@@ -90,5 +90,39 @@
     ],
     "kind": "arithmetic and file-integrity verification",
     "limits": "Does not reproduce original model training, verify the full private execution archive, or independently establish contamination absence."
+  },
+  {
+    "id": "C10",
+    "claim": "At peak LR 0.0003, mean held-out PPL is 20.23339927033736 for baseline and 19.74786263081141 for GatedV, a 2.399679030887103% reduction across three improving seed pairs (Table 3).",
+    "evidence": [
+      "medium_lr3e4/manifest.json",
+      "medium_lr3e4/",
+      "verify_medium_lr3e4.py"
+    ],
+    "kind": "main medium-model comparison after development learning-rate selection",
+    "limits": "Same three seeds and held-out windows as the original 0.0006 confirmation; not a newly sealed independent test."
+  },
+  {
+    "id": "C11",
+    "claim": "The complete value-gate archive contains 19 development endpoints. At LR 0.0003, GatedV has PPL 20.061850777667633; Table 7 compares five variants at three shared rates.",
+    "evidence": [
+      "value_gate_grid/endpoints.csv",
+      "value_gate_grid/",
+      "verify_value_gate_grid.py"
+    ],
+    "kind": "single-seed development comparison",
+    "limits": "Seed 20270201; the additional four 0.00001 endpoints are excluded from the shared three-rate comparison."
+  },
+  {
+    "id": "C12",
+    "claim": "Switching linear and SiLU value transformations at inference increases held-out PPL for each of the six fixed medium-model checkpoints (Appendix B).",
+    "evidence": [
+      "cross_eval/complete.json",
+      "cross_eval/summary.json",
+      "cross_eval/",
+      "verify_cross_eval.py"
+    ],
+    "kind": "fixed-checkpoint inference intervention",
+    "limits": "Reuses the 0.0003 checkpoints and held-out set; does not uniquely separate training dynamics from inference-function effects."
   }
 ]

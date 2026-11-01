@@ -12,7 +12,8 @@ license: MIT
 abstract: >-
   Reference code and numerical evidence for applying SiLU to projected values
   before softmax-attention aggregation, with paired Transformer language-model
-  experiments and a separate ongoing GLU and learning-rate comparison.
+  experiments, completed GLU and tanh development comparisons, and fixed-checkpoint
+  inference-time activation comparisons.
 keywords:
   - Transformer
   - attention

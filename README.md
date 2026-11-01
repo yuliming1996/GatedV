@@ -14,16 +14,21 @@ We compared GatedV with standard decoder-only Transformers using matched
 parameter counts and training-token budgets. Mean held-out perplexity improved
 at both model sizes:
 
-| Parameters | Paired seeds | Baseline PPL | GatedV PPL | PPL reduction |
-|---|---:|---:|---:|---:|
-| 2.33M | 5 | 59.12 | 57.92 | 2.03% |
-| 26.16M | 3 | 20.23 | 19.75 | 2.40% |
+| Parameters | Peak LR | Paired seeds | Baseline PPL | GatedV PPL | PPL change |
+|---|---:|---:|---:|---:|---:|
+| 2.33M | 0.0048 | 5 | 59.118 ± 0.530 | 57.916 ± 0.782 | −2.03% |
+| 26.16M | 0.0003 | 3 | 20.233 ± 0.068 | 19.748 ± 0.047 | −2.40% |
+
+As in Table 3, PPL values are arithmetic means ± sample SD across seeds.
+PPL change is `100 × (GatedV / baseline − 1)`, calculated from the unrounded
+means; negative values indicate improvement.
 
 Every seed pair improved. The medium-model results use the development-selected
 peak learning rate of 0.0003. The original 0.0006 results are retained in the
-paper appendix. A short DGX Spark benchmark using the original medium-model
-checkpoints measured about 0.7% higher full-context forward latency.
-The details are presented in our [paper](paper/main.tex).
+paper appendix; both rates use the same medium-model held-out set. A short DGX
+Spark benchmark using the original medium-model checkpoints measured about
+0.7% higher full-context forward latency.
+Read the [paper PDF](paper/GatedV-v1.pdf) or [LaTeX source](paper/main.tex).
 
 <p align="center">
   <img src="docs/assets/figure-3b.png" width="480" alt="The 26.16M-parameter GatedV model has lower development perplexity than baseline at each of the five checkpoints shown.">
@@ -65,7 +70,8 @@ and the fraction of improved held-out windows, use the [six saved evaluations](r
 python -B results/verify_medium_lr3e4.py
 ```
 
-See [verification/README.md](verification/README.md) for the other checks.
+See the [result index](results/README.md) for the data behind each paper table
+and [verification/README.md](verification/README.md) for the checks.
 
 ## Repository structure
 

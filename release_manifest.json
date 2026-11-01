@@ -1,6 +1,6 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-11-01T08:03:06.291738+00:00",
+  "created_at_utc": "2026-11-01T08:13:43.751710+00:00",
   "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 739,
-      "sha256": "2b2ad736e4b1f1529aabe58f73c73f99b9131d82e5929c8f7e0fcd6d69122b3b"
+      "bytes": 793,
+      "sha256": "b28cf6625336408835ad077ea84d63966c7690032f02ac99d3c8fe1c73d61024"
     },
     {
       "path": "LICENSE",
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3779,
-      "sha256": "0b9657e49d1676143279df3a529de0708ddfd14984e7a06fff653d7b658e55ca"
+      "bytes": 4198,
+      "sha256": "8be7ae465f64717c40d7d5c28d2a968317e3c5ce069062dc4c9348ce5cbbe219"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -60,8 +60,8 @@
     },
     {
       "path": "code/source_manifest.json",
-      "bytes": 22660,
-      "sha256": "7cb9c6310e9af19b407a19539b58c1e1ec0cb98fb090b5500464039b663cbfca"
+      "bytes": 23044,
+      "sha256": "162843d92f58097131a0e2ef2fbd0e8ba08a3ebffe460ba3f8ec5fae9b89a8bf"
     },
     {
       "path": "code/statistics_core.py",
@@ -117,6 +117,11 @@
       "path": "docs/assets/figure-3b.png",
       "bytes": 72902,
       "sha256": "a6e31a5b6cc7198ccdfcefc9f0648c4319fc5eabb066f2d35470975eae803fc5"
+    },
+    {
+      "path": "docs/paper_consistency.json",
+      "bytes": 8714,
+      "sha256": "0a74350558ac94dc62a82e76e3503d4dd71311e3929cb5924f5b20f816d9d6d9"
     },
     {
       "path": "docs/path_portability.json",
@@ -355,8 +360,8 @@
     },
     {
       "path": "paper/main.tex",
-      "bytes": 33115,
-      "sha256": "8918e9a5cebf5e0b6577c4e0faa24b7ddb864f0578548c64840e68b345c4c629"
+      "bytes": 32883,
+      "sha256": "45d737414b3d82333ffbee1c48c514539645cb1784d088cd7d798f6adae8ff5f"
     },
     {
       "path": "paper/make_paper_figures.py",
@@ -434,6 +439,11 @@
       "sha256": "8890eec514a956c7d65daed133a579fd250156a64d2c5af33fecbd5af0ef53ef"
     },
     {
+      "path": "results/README.md",
+      "bytes": 2414,
+      "sha256": "81c3bd4330de6d6087474927f8826597eaf20d475fd7a749ed033e1d719ff331"
+    },
+    {
       "path": "results/all_endpoints.csv",
       "bytes": 19367,
       "sha256": "6a6ff415e84ac4d06d00d4c5d327a234bd0b9af88bd09109af6e82d88fbe0540"
@@ -450,8 +460,8 @@
     },
     {
       "path": "results/claim_evidence.json",
-      "bytes": 3981,
-      "sha256": "f92dbcfb98b2c407027c6d50c9ec39a7a65532d726e8da5246347028fc3682fb"
+      "bytes": 5734,
+      "sha256": "345c21580fe43b506d9eac9dfb5af637759e3dac1431b27e2570085998de8fa8"
     },
     {
       "path": "results/cross_eval/README.md",
@@ -840,8 +850,8 @@
     },
     {
       "path": "results/packaging_provenance.json",
-      "bytes": 45531,
-      "sha256": "1f1c77c2ae80e89685e36666ca31707fcff34894ee65568099d0013687f34fe4"
+      "bytes": 45561,
+      "sha256": "02985e24c36a5e94232dae626e1299e419b92edcc2b69513fd339c79a0266cc2"
     },
     {
       "path": "results/source_ledger.json",
@@ -1229,6 +1239,11 @@
       "sha256": "c6afbff8f4f14d3c71e72b80ceff00327f054df38fd5d9551dfba68e6096bf50"
     },
     {
+      "path": "results/verify_paper_consistency.py",
+      "bytes": 9962,
+      "sha256": "2cee749e445344a5f705ce1ae57fbc1187180dea8db2a91081cdcd09a5edaefd"
+    },
+    {
       "path": "results/verify_results.py",
       "bytes": 13255,
       "sha256": "a7f5c01de7761d28876ad7a75a1802a85b8ea95a66faf66911ff1df6d491d9de"
@@ -1280,8 +1295,8 @@
     },
     {
       "path": "verification/README.md",
-      "bytes": 1583,
-      "sha256": "dd268dd6aa2c01fead486c00ab8519dca404170d9a057cbdd50b24930d27a94f"
+      "bytes": 1946,
+      "sha256": "c1ea4791359d2ce21552fb5d36c31159b2285ec1ecbee0b8c4c9e64d63622a58"
     }
   ]
 }
