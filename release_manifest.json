@@ -1,6 +1,6 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-11-01T18:01:25.491840+00:00",
+  "created_at_utc": "2026-11-01T19:11:43.402882+00:00",
   "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, dist, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
@@ -420,8 +420,8 @@
     },
     {
       "path": "paper/references.bib",
-      "bytes": 18968,
-      "sha256": "a4936209791b6142d06d89a926a2dd08e1122c3360f768f89b17f5a3f60de7ff"
+      "bytes": 14655,
+      "sha256": "585656908009ef98f77c3a0bc7bffd9207631907a27e2a1480ae85e93f64feab"
     },
     {
       "path": "paper/requirements.txt",
