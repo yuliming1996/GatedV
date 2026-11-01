@@ -7,6 +7,7 @@ python -B tools/verify_release.py
 python -B results/verify_paper_consistency.py
 python -B results/verify_medium_lr3e4.py
 python -B results/verify_value_gate_grid.py
+python -B results/verify_g2_headwise.py
 python -B results/verify_cross_eval.py
 python -B results/verify_results.py
 python -B tools/reproduce.py --study smoke
@@ -33,10 +34,14 @@ python -B results/verify_value_gate_grid.py
 python -B results/verify_cross_eval.py
 ```
 
-The first checks all 19 single-seed development endpoints and prints the three
-shared learning rates in Table 7. The second recomputes the four cells in
+The first checks the 19 original single-seed development endpoints and prints
+the five original variants at the three shared learning rates in Table 7.
+The second recomputes the four cells in
 Appendix B and checks that each checkpoint's native inference mode matches
 its original per-window losses exactly. [Checkpoint evaluation instructions](../results/cross_eval/README.md)
+
+`verify_g2_headwise.py` checks the three additional G2 endpoints against the
+same development windows, frozen training code, and recipes.
 
 To recheck prepared data:
 

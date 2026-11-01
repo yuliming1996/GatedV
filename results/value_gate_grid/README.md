@@ -7,8 +7,8 @@ and the same 2,048 development windows.
 
 The baseline, GatedV and two GLU variants each completed four peak learning rates
 (0.0006, 0.0003, 0.0001 and 0.00001). The tanh control completed the first three.
-Its 0.00001 run was stopped before the full budget. Table 7 compares the five
-variants at the three shared rates.
+Its 0.00001 run was stopped before the full budget. Table 7 compares these five
+variants and [headwise G2](../g2_headwise/) at the three shared rates.
 
 Run `python -B results/verify_value_gate_grid.py` from the repository root to
 recompute all 19 endpoints and print the table. The archived GLU and combined

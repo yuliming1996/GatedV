@@ -13,6 +13,7 @@ the arithmetic mean PPL across seeds, computed before rounding: −2.03% and
 | Small activation and moment controls, Tables 4–5 | [Per-run endpoints](all_endpoints.csv) | `verify_results.py` |
 | Medium timing and memory, Table 6 | [42 timing slots](medium_cost/) | `verify_results.py` |
 | Medium learning-rate and value-gate grids, Tables 2 and 7 | [19 development endpoints](value_gate_grid/) | `verify_value_gate_grid.py` |
+| Headwise G2 addition, Table 7 | [Three development endpoints](g2_headwise/) | `verify_g2_headwise.py` |
 | Original medium confirmation at 0.0006, Appendix A | [Original results](studies/M/results.json) and [six evaluations](medium_holdout/) | `verify_results.py` |
 | Train/inference activation comparison, Appendix B | [Twelve evaluations](cross_eval/) | `verify_cross_eval.py` |
 

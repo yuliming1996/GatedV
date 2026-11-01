@@ -325,9 +325,9 @@ CUDA peak allocated (GiB) & 1.7525 & 1.8569\\
 \label{sec:discussion}
 GatedV improves held-out language modeling in both tested configurations without adding parameters. In the medium model, its advantage narrows from 3.66\% at peak LR 0.0006 to 2.40\% at the development-selected rate of 0.0003: lowering the rate improves the baseline more, while GatedV remains better in all three pairs (Appendix~\ref{sec:original_medium}). The branch comparisons show that this benefit is not shared by every activation placement.
 
-\subsection{Comparison with GLU and tanh}
+\subsection{Comparison with GLU, tanh, and G2}
 \label{sec:gate_comparison}
-GatedV uses a single value projection with sigmoid self-gating. We compare it with two-projection GLU value gates and a parameter-free tanh alternative in the medium model (Table~\ref{tab:value_gates}). The GLU controls use $(UW_C)\odot\silu(UW_G)$ before aggregation, following GLU Attention~\citep{gluattention}. The full-width control retains 384 value dimensions, adding a separate projection; the reduced-width control uses 258 dimensions, the nearest six-head-compatible total width to $2d/3$, to approximate the baseline parameter count. The tanh control applies $V\odot\tanh(V)$ at the original width. All runs process the same sampled training windows and share identical initial weights for corresponding matrices with matching shapes.
+GatedV uses a single value projection with sigmoid self-gating. We compare it with two-projection GLU value gates, a parameter-free tanh alternative, and a learned headwise G2 gate in the medium model (Table~\ref{tab:value_gates}). The GLU controls use $(UW_C)\odot\silu(UW_G)$ before aggregation, following GLU Attention~\citep{gluattention}. The full-width control retains 384 value dimensions, adding a separate projection; the reduced-width control uses 258 dimensions, the nearest six-head-compatible total width to $2d/3$, to approximate the baseline parameter count. The tanh control applies $V\odot\tanh(V)$ at the original width. Headwise G2 applies $V_h\,\sigma((UW_G)_h)$ before aggregation, using one scalar sigmoid gate per token and head~\citep{gatedattention}. Its bias-free $384\times6$ gate projection in each of the 12 layers adds 27,648 parameters. All runs process the same sampled training windows and share identical initial weights for corresponding matrices with matching shapes.
 
 \begin{table}[htbp]
 \centering\small
@@ -339,6 +339,7 @@ Variant & Parameters (M) & LR 0.0006 & LR 0.0003 & LR 0.0001\\
 \midrule
 Baseline & 26.158 & 21.558 & 20.558 & 20.938\\
 GatedV & 26.158 & 21.005 & 20.062 & 20.632\\
+Headwise G2 & 26.186 & 21.568 & 20.630 & 21.189\\
 Full-width GLU & 27.928 & 21.197 & 20.309 & 20.930\\
 Reduced-width GLU & 26.186 & 21.522 & 20.657 & 21.382\\
 $V\odot\tanh(V)$ & 26.158 & 21.337 & 20.325 & 20.986\\
@@ -346,11 +347,11 @@ $V\odot\tanh(V)$ & 26.158 & 21.337 & 20.325 & 20.986\\
 \end{tabular}
 \end{table}
 
-All five variants achieve their lowest final development PPL at the interior rate 0.0003. The separate GLU gate does not improve on GatedV in this grid, either at full width with more parameters or at reduced width with a similar parameter count. At the selected rate, the tanh control also improves on the baseline, but GatedV remains 1.29\% lower in PPL (2.42\% below the baseline). On this shared seed, GatedV has the lowest development PPL at each of the three learning rates.
+All six variants achieve their lowest final development PPL at the interior rate 0.0003. The separate GLU gate does not improve on GatedV in this grid, either at full width with more parameters or at reduced width with a similar parameter count. At the selected rate, the tanh control also improves on the baseline, but GatedV remains 1.29\% lower in PPL (2.42\% below the baseline). Headwise G2 has slightly higher PPL than baseline at all three rates; at 0.0003, GatedV is 2.76\% lower than G2. On this shared seed, GatedV has the lowest development PPL at each of the three learning rates.
 
 \subsection{Limitations}
 \label{sec:limitations}
-Our experiments are limited to models below 28M parameters on FineWeb-Edu, using 256-token contexts and next-token prediction. Larger models, longer contexts, other corpora, and downstream tasks remain untested. The GLU and tanh comparisons use a single seed, and cost measurements cover only our FP32 implementation.
+Our experiments are limited to models below 28M parameters on FineWeb-Edu, using 256-token contexts and next-token prediction. Larger models, longer contexts, other corpora, and downstream tasks remain untested. The GLU, tanh, and G2 comparisons use a single seed, and cost measurements cover only our FP32 implementation.
 
 \section{Conclusion}
 \label{sec:conclusion}

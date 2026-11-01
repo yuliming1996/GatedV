@@ -125,6 +125,15 @@ def main():
             check_row('tab:medium_lr', [label, *[f'{math.exp(float(lookup[arm, lr]["dev_nll"])):.3f}'
                                                 for lr in (0.00001, 0.0001, 0.0003, 0.0006)]])
 
+    from verify_g2_headwise import verify as verify_g2
+    g2_rows = verify_g2()
+    load('results/g2_headwise/manifest.json')
+    g2 = {r['peak_lr']: r for r in g2_rows}
+    check_row('tab:value_gates', ['Headwise G2', '26.186',
+              *[f"{g2[lr]['dev_ppl']:.3f}" for lr in (0.0006, 0.0003, 0.0001)]])
+    require('All six variants' in paper and '27,648 parameters' in paper,
+            'G2 description missing from paper')
+
     endpoints = csv_rows('results/all_endpoints.csv')
 
     def values(stages, phase, arm, lr):
@@ -190,6 +199,7 @@ def main():
     report = {'status': 'PASS_PAPER_REPOSITORY_CONSISTENCY',
               'scope': 'Displayed current results, confirmation recipes and source hashes; no training rerun.',
               'main_results': main_results, 'development_final_mean_ppl': development,
+              'g2_development_comparison': g2_rows,
               'sources_sha256': dict(sorted(SOURCES.items()))}
     text = json.dumps(report, indent=2) + '\n'
     if args.output:

@@ -1,0 +1,130 @@
+{
+  "status": "complete",
+  "identity": {
+    "schema": "headwise_g2_v1",
+    "config": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "warmup": 5120,
+      "eval_tokens": 524288,
+      "eval_every": 20480,
+      "save_every": 1024,
+      "log_every": 1,
+      "threads": 2,
+      "arm": "v_g2_headwise",
+      "batch": 8,
+      "steps": 327680,
+      "seed": 20270201,
+      "lr": 0.0003,
+      "lr_schedule": "cosine",
+      "device": "cuda:0",
+      "glu_width_policy": "nearest"
+    },
+    "data_sha256": {
+      "tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+      "docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+      "tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+      "docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e",
+      "manifest.json": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f",
+      "tokenizer.json": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217"
+    },
+    "initial_parameter_sha256": "9633b15c63945a59647925f6589b91a5b891d3eaece59148c921535bcfc0fd03",
+    "calibration": null,
+    "environment": {
+      "python": "3.12.3",
+      "torch": "2.14.0+cu130",
+      "numpy": "2.5.2",
+      "machine": "aarch64",
+      "system": "Linux",
+      "device": "cuda:0",
+      "cuda_runtime": "13.0",
+      "gpu_name": "NVIDIA GB10",
+      "numerical_policy": {
+        "dtype": "float32",
+        "autocast": false,
+        "tf32_matmul": false,
+        "tf32_cudnn": false,
+        "matmul_precision": "highest",
+        "cudnn_benchmark": false,
+        "deterministic_algorithms": true,
+        "sdpa": "math",
+        "compile": false,
+        "adamw_foreach": false,
+        "cublas_workspace_config": ":4096:8"
+      }
+    },
+    "source_sha256": {
+      "common.py": "9e5fb7ceb8796cddfd2e202ea9646ef1e4e033afaa3a0712a3736b7b01595532",
+      "data.py": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "model.py": "1eb7dadf391f07203fae828b49ddf3db2070dd13aba0dcb7d80aa001267fd7d8",
+      "resources.py": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+      "train.py": "b04bec17b19bc0bd9671fc608bcccd52f194fa45a14238d2fb571f7864f6f29e"
+    }
+  },
+  "steps": 327680,
+  "tokens": 671088640,
+  "model": {
+    "config": {
+      "vocab": 8192,
+      "width": 384,
+      "layers": 12,
+      "heads": 6,
+      "hidden": 1152,
+      "context": 256,
+      "arm": "v_g2_headwise",
+      "qk_norm": false,
+      "projection_hidden": 0,
+      "glu_width_policy": "nearest"
+    },
+    "parameters": 26186112,
+    "embedding_parameters": 3145728,
+    "nonembedding_parameters": 23040384,
+    "resolved_projection_hidden": 768,
+    "tied_embedding": true,
+    "value_projection": {
+      "operator": "V_h * sigmoid(U W_G)_h",
+      "qk_head_width": 64,
+      "value_head_width": 64,
+      "value_width": 384,
+      "width_policy": "full",
+      "bias": false,
+      "parameter_delta_vs_baseline": 27648,
+      "exact_parameter_match": false,
+      "pairing_scope": "All identical-shape shared matrices use canonical name seeds. Full GLU content shares V initialization. Reduced V/output shapes differ; full-model initialization is not identical across GLU and GatedV."
+    },
+    "backbone_matrix_macs_per_token": 23030784,
+    "mac_count_scope": "Linear matrices only; excludes tied vocabulary readout, attention products, activations, and norms.",
+    "initialization": {
+      "version": "name_seeded_fan_in_v1",
+      "matrix_distribution": "Gaussian std=1/sqrt(fan_in), including embedding with fan_in=width",
+      "residual_output_multiplier": 0.20412414523193154,
+      "residual_output_matrices": [
+        "attn.out",
+        "ffn.down"
+      ],
+      "fused_qkv_seeds": "Canonical virtual attn.q/k/v.weight names plus independent attn.v_gate.weight for GLU",
+      "projection_scale_caveat": "Fan-in Gaussian initialization, output scaling based on actual value width. No extra normalization or calibration of GLU.",
+      "historical_compatibility": "Baseline and GatedV retain original equations and parameter initialization; new runtime and checkpoint identities are separate."
+    }
+  },
+  "dev": {
+    "nll": 3.026761183515191,
+    "tokens": 524288,
+    "blocks": 2048,
+    "documents": 2048,
+    "arrays_sha256": "98bfb77a09be9e29875d4692c1d67c698255ca3030d061f3b283362facd8b371"
+  },
+  "training_seconds": 23404.077065228485,
+  "median_step_ms": 71.50009740144014,
+  "artifacts": {
+    "final.pt": "52312719ca6fa3236dbf155553d7cb62ac6a57f7f5a8cb5d442a7ef0f06dd453",
+    "dev_final.json": "79bccd82eec891fcd9bb68da6a95f7c4924d5c60866245ee5494683f27a4c2d3",
+    "dev_final.npz": "98bfb77a09be9e29875d4692c1d67c698255ca3030d061f3b283362facd8b371"
+  }
+}

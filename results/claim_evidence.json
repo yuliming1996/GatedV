@@ -78,7 +78,7 @@
       "budget.json"
     ],
     "kind": "administrative accounting",
-    "limits": "Historical bundle only; excludes the later value-gate grid and 0.0003 medium confirmation. These trajectories are not independent seed replicates."
+    "limits": "Historical bundle only; excludes the later value-gate grid, 0.0003 medium confirmation, and G2 comparison. These trajectories are not independent seed replicates."
   },
   {
     "id": "C9",
@@ -104,7 +104,7 @@
   },
   {
     "id": "C11",
-    "claim": "The complete value-gate archive contains 19 development endpoints. At LR 0.0003, GatedV has PPL 20.061850777667633; Table 7 compares five variants at three shared rates.",
+    "claim": "The original value-gate archive contains 19 development endpoints across five variants. At LR 0.0003, GatedV has PPL 20.061850777667633. Table 7 additionally includes three headwise G2 endpoints in their own evidence bundle.",
     "evidence": [
       "value_gate_grid/endpoints.csv",
       "value_gate_grid/",
@@ -124,5 +124,17 @@
     ],
     "kind": "fixed-checkpoint inference intervention",
     "limits": "Reuses the 0.0003 checkpoints and held-out set; does not uniquely separate training dynamics from inference-function effects."
+  },
+  {
+    "id": "C13",
+    "claim": "Headwise G2 has development PPL 21.568209346343224, 20.630306490469465, and 21.188993835008787 at peak learning rates 0.0006, 0.0003, and 0.0001. At 0.0003, GatedV PPL is 2.755439978870111% lower than G2 (Table 7).",
+    "evidence": [
+      "g2_headwise/manifest.json",
+      "g2_headwise/",
+      "verify_g2_headwise.py",
+      "value_gate_grid/"
+    ],
+    "kind": "single-seed development comparison",
+    "limits": "One shared seed (20270201), matching training and development windows, 327680 updates per run. No held-out evaluation or seed-level uncertainty estimate for G2."
   }
 ]

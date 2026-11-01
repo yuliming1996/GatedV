@@ -28,7 +28,9 @@ peak learning rate of 0.0003. The original 0.0006 results are retained in the
 paper appendix; both rates use the same medium-model held-out set. A short DGX
 Spark benchmark using the original medium-model checkpoints measured about
 0.7% higher full-context forward latency.
-Read the [paper PDF](paper/GatedV-v1.pdf) or [LaTeX source](paper/main.tex).
+Read the [paper PDF](paper/GatedV-v2.pdf) or [LaTeX source](paper/main.tex).
+The [v1 PDF](paper/GatedV-v1.pdf) is also retained. Version 2 adds the
+[headwise G2 development comparison](results/g2_headwise/).
 
 <p align="center">
   <img src="docs/assets/figure-3b.png" width="480" alt="The 26.16M-parameter GatedV model has lower development perplexity than baseline at each of the five checkpoints shown.">
@@ -81,7 +83,7 @@ configs/                      Experiment settings
 tools/                        Data preparation and reproduction
 reproduction/, tokenizer/     Data recipes and tokenizer
 results/                      Results and learning curves
-experiments/                  GLU, tanh and inference-time comparisons
+experiments/                  GLU, tanh, G2 and inference-time comparisons
 paper/                        Manuscript and figures
 verification/                 Verification instructions
 ```
@@ -91,6 +93,7 @@ verification/                 Verification instructions
 | Comparison | Published data |
 |---|---|
 | GLU and tanh value gates (Table 7) | [19 single-seed development endpoints and training recipes](results/value_gate_grid/) |
+| Headwise G2 value gate (Table 7) | [Three single-seed development endpoints and training recipes](results/g2_headwise/) |
 | Linear and SiLU values at inference (Appendix B) | [2×2 matrix and per-window losses for all three seed pairs](results/cross_eval/) |
 
 We encourage researchers and engineers to try GatedV in their own projects:

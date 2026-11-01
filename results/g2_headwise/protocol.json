@@ -1,0 +1,70 @@
+{
+  "arm": "v_g2_headwise",
+  "seed": 20270201,
+  "jobs": [
+    {
+      "id": "g2_s20270201_lr6e-4",
+      "config": "configs/g2_lr6e-4.json",
+      "peak_lr": 0.0006,
+      "sha256": "3634675d10b80dfdb71b743ecd823caedfdd21fb29c403882f1ee107277afda2"
+    },
+    {
+      "id": "g2_s20270201_lr3e-4",
+      "config": "configs/g2_lr3e-4.json",
+      "peak_lr": 0.0003,
+      "sha256": "896ff07a8abaaa08f849467b7153013f0959f10d61e9bd2b440874b92c4a5c42"
+    },
+    {
+      "id": "g2_s20270201_lr1e-4",
+      "config": "configs/g2_lr1e-4.json",
+      "peak_lr": 0.0001,
+      "sha256": "eb96858185c9e766e2c0c24a274c5ce9d36497cd5cd1f91ffa541c66583a7c1c"
+    }
+  ],
+  "operator": "One bias-free 384-to-6 projection of the pre-attention RMS-normalized token per layer. Multiply each value head by its scalar sigmoid before softmax-weighted aggregation.",
+  "reference_url": "https://papers.neurips.cc/paper_files/paper/2025/file/904e89bb4e632e75fb47f093b620b257-Paper-Conference.pdf",
+  "reference_location": "Table 1 row 11, headwise G2",
+  "shared_parameters": 26158464,
+  "gate_parameters": 27648,
+  "total_parameters": 26186112,
+  "updates_per_run": 327680,
+  "targets_per_run": 671088640,
+  "scope": "Single-seed development comparison. Report every rate against Table 7 at the same budget. Select minimum final development NLL; exact ties favor lower LR. No new holdout, seeds or other arms.",
+  "data": {
+    "path": "/home/liming/projects/modify_transformer/nonlinear_qkv_20260925/v_only_medium_20260929/data/medium_corpus",
+    "sha256": {
+      "tokens_train.npy": "85bc108fbc8e7624aeb99e6f13f365acecffc05a375928c383ed1f2fc84d2932",
+      "docs_train.npy": "02fca4304399dfbefb0e6fff9a7e69c9f23ba28829ebe4d521b5fad0f74c9682",
+      "tokens_dev.npy": "7fe930abdf5e8697a089c6dfe71617824129d5210f357b2ffb74d78335125ca8",
+      "docs_dev.npy": "9fdc31ab2b5073f162bccc8a170209e4f39d4e1fb4662705bc6c59043fdd2c7e",
+      "tokenizer.json": "2857e9c9880f86b2c87475db3431344398c7caaa3ee018b25b81e352869aa217",
+      "manifest.json": "9f381435a747c1962b35185631dcd0c24bde6c9ad905ab5a9406385febae3d7f"
+    }
+  },
+  "deadline_unix": 1793716439,
+  "baseline_parameter_sha256": "70c7c10bced768c46b7712d7d24af66315c9f56bae48d4119329942acdb669d5",
+  "baseline_run": "glu_attention/executions/lr_controls_20261013/runs/baseline_s20270201_lr3e-4",
+  "comparison_source_sha256": "a846defd3113cf3c4792d736905c016312db6bbedff5eb1b474ab0f9b081194f",
+  "guard_sha256": "7c24bbacbb2cadf05ea24ea7f8af706348a91dcc9bdd677800156093e1aa1d7c",
+  "source_sha256": {
+    "common.py": "9e5fb7ceb8796cddfd2e202ea9646ef1e4e033afaa3a0712a3736b7b01595532",
+    "data.py": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+    "model.py": "1eb7dadf391f07203fae828b49ddf3db2070dd13aba0dcb7d80aa001267fd7d8",
+    "resources.py": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+    "train.py": "b04bec17b19bc0bd9671fc608bcccd52f194fa45a14238d2fb571f7864f6f29e"
+  },
+  "resource_policy": {
+    "start_available_bytes": 17179869184,
+    "run_available_bytes": 8589934592,
+    "max_swap_used_bytes": 4294967296,
+    "min_disk_free_bytes": 26843545600,
+    "max_cuda_allocator_bytes": 12884901888,
+    "guard_seconds": 15,
+    "resource_startup_grace_seconds": 600,
+    "resource_stale_seconds": 120,
+    "checkpoint_stop_grace_seconds": 600
+  },
+  "v1_tex_sha256": "45d737414b3d82333ffbee1c48c514539645cb1784d088cd7d798f6adae8ff5f",
+  "v1_zip_sha256": "5eb7cd191be9c3287724c5970c3b1347c3d9c51053cc667505e9db955b87381d",
+  "baseline_result_sha256": "e0e51918cd6f2621f025f6e18653ff857014fe082e1b493ce3b0169610ee49ba"
+}

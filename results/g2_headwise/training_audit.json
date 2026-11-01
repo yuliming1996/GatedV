@@ -1,0 +1,40 @@
+{
+  "status": "PASS_THREE_G2_DEVELOPMENT_ENDPOINTS",
+  "protocol_sha256": "10686d00f59df978d832e0504c7ad1344cdafd92157a677e7b7ddb4a9041313a",
+  "rows": [
+    {
+      "run_id": "g2_s20270201_lr6e-4",
+      "peak_lr": 0.0006,
+      "dev_nll": 3.071220441022888,
+      "dev_ppl": 21.568209346343224,
+      "arrays_sha256": "bf1c7cd5333dba603f8762c741d9076f8e2ee176d92943560701f381a3ad9a05",
+      "result_sha256": "9b509c7973d98b50579ff336284289ef4a058b5ba6c711bf2025dcdbe457199a"
+    },
+    {
+      "run_id": "g2_s20270201_lr3e-4",
+      "peak_lr": 0.0003,
+      "dev_nll": 3.026761183515191,
+      "dev_ppl": 20.630306490469465,
+      "arrays_sha256": "98bfb77a09be9e29875d4692c1d67c698255ca3030d061f3b283362facd8b371",
+      "result_sha256": "5ac47be0b4db4e9de557f292ca3a0ca50a98f1bce3e8d3d38374ec7d236efd80"
+    },
+    {
+      "run_id": "g2_s20270201_lr1e-4",
+      "peak_lr": 0.0001,
+      "dev_nll": 3.0534818881424144,
+      "dev_ppl": 21.188993835008787,
+      "arrays_sha256": "7964122355a403f0341f84ac4822f2dbc5a1cc522bfc1b0cf6deca976816587b",
+      "result_sha256": "66411566fd38b2f879ab747f7bad1f3703117616198c3e4840862eee58546853"
+    }
+  ],
+  "selected": {
+    "run_id": "g2_s20270201_lr3e-4",
+    "peak_lr": 0.0003,
+    "dev_nll": 3.026761183515191,
+    "dev_ppl": 20.630306490469465,
+    "arrays_sha256": "98bfb77a09be9e29875d4692c1d67c698255ca3030d061f3b283362facd8b371",
+    "result_sha256": "5ac47be0b4db4e9de557f292ca3a0ca50a98f1bce3e8d3d38374ec7d236efd80"
+  },
+  "updates": 983040,
+  "training_targets": 2013265920
+}

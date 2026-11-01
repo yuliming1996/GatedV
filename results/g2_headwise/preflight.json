@@ -1,0 +1,37 @@
+{
+  "status": "PASS_CUDA_PREFLIGHT",
+  "initial_sha256": "9633b15c63945a59647925f6589b91a5b891d3eaece59148c921535bcfc0fd03",
+  "protocol_sha256": "10686d00f59df978d832e0504c7ad1344cdafd92157a677e7b7ddb4a9041313a",
+  "backbone_sha256": "70c7c10bced768c46b7712d7d24af66315c9f56bae48d4119329942acdb669d5",
+  "schedule_sha256": {
+    "train_offsets.npy": "9d250359e6aebd68b192e6e6d9a9d30fabac79c4f0af612f6211e870327711fa",
+    "dev_offsets.npy": "10805cc73e6fa21ecd0072334638c37dc7f445ff9dc44a19c6b5b1d21907e074",
+    "dev_doc_ids.npy": "572734a566ba5280b38847846b23d3209ef5a5b1e626f681100d62758d74b6f9"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.14.0+cu130",
+    "numpy": "2.5.2",
+    "machine": "aarch64",
+    "system": "Linux",
+    "device": "cuda:0",
+    "cuda_runtime": "13.0",
+    "gpu_name": "NVIDIA GB10",
+    "numerical_policy": {
+      "dtype": "float32",
+      "autocast": false,
+      "tf32_matmul": false,
+      "tf32_cudnn": false,
+      "matmul_precision": "highest",
+      "cudnn_benchmark": false,
+      "deterministic_algorithms": true,
+      "sdpa": "math",
+      "compile": false,
+      "adamw_foreach": false,
+      "cublas_workspace_config": ":4096:8"
+    }
+  },
+  "parameters": 26186112,
+  "gate_parameters": 27648,
+  "finite_loss": 9.527862548828125
+}

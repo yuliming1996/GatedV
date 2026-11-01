@@ -412,6 +412,62 @@
       "packaged_sha256": "b0a78ae4431ce9d4fccb0619217bf3549690b93eb91f1a79292c8e3bf323f1e3",
       "mode": "new-public-environment-file",
       "changes": "Includes training and data reconstruction requirements for one installation command."
+    },
+    {
+      "path": "experiments/g2_headwise/code/common.py",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/code/common.py",
+      "source_sha256": "9e5fb7ceb8796cddfd2e202ea9646ef1e4e033afaa3a0712a3736b7b01595532",
+      "packaged_sha256": "9e5fb7ceb8796cddfd2e202ea9646ef1e4e033afaa3a0712a3736b7b01595532",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/code/data.py",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/code/data.py",
+      "source_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "packaged_sha256": "eee8ca7d6ad1693d1c4e9391426398c60d59d4ff06450a6c5d836388adce0545",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/code/model.py",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/code/model.py",
+      "source_sha256": "1eb7dadf391f07203fae828b49ddf3db2070dd13aba0dcb7d80aa001267fd7d8",
+      "packaged_sha256": "1eb7dadf391f07203fae828b49ddf3db2070dd13aba0dcb7d80aa001267fd7d8",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/code/resources.py",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/code/resources.py",
+      "source_sha256": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+      "packaged_sha256": "22d858816dd76dd31efd0fe9e9be9dc8ca245ca866c893bf0fb8725e65bc2090",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/code/train.py",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/code/train.py",
+      "source_sha256": "b04bec17b19bc0bd9671fc608bcccd52f194fa45a14238d2fb571f7864f6f29e",
+      "packaged_sha256": "b04bec17b19bc0bd9671fc608bcccd52f194fa45a14238d2fb571f7864f6f29e",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/configs/g2_lr1e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/configs/g2_lr1e-4.json",
+      "source_sha256": "eb96858185c9e766e2c0c24a274c5ce9d36497cd5cd1f91ffa541c66583a7c1c",
+      "packaged_sha256": "eb96858185c9e766e2c0c24a274c5ce9d36497cd5cd1f91ffa541c66583a7c1c",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/configs/g2_lr3e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/configs/g2_lr3e-4.json",
+      "source_sha256": "896ff07a8abaaa08f849467b7153013f0959f10d61e9bd2b440874b92c4a5c42",
+      "packaged_sha256": "896ff07a8abaaa08f849467b7153013f0959f10d61e9bd2b440874b92c4a5c42",
+      "mode": "byte-for-byte"
+    },
+    {
+      "path": "experiments/g2_headwise/configs/g2_lr6e-4.json",
+      "source": "v_only_attention_paper_20261003/experiments/g2_headwise_20261101/configs/g2_lr6e-4.json",
+      "source_sha256": "3634675d10b80dfdb71b743ecd823caedfdd21fb29c403882f1ee107277afda2",
+      "packaged_sha256": "3634675d10b80dfdb71b743ecd823caedfdd21fb29c403882f1ee107277afda2",
+      "mode": "byte-for-byte"
     }
   ]
 }
