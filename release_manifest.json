@@ -1,6 +1,6 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-11-03T04:12:02.762932+00:00",
+  "created_at_utc": "2026-11-03T16:42:12.471799+00:00",
   "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, dist, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4457,
-      "sha256": "0fe43e7964e572a7aa70ef6cb02dc8336cd62f14786ae099460dac9fa3e76243"
+      "bytes": 4222,
+      "sha256": "52f26e09d2944e3f950f481ca0305c310b0ce5e35ce66d2ffa7c546dc77cd5cc"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -121,7 +121,7 @@
     {
       "path": "docs/paper_consistency.json",
       "bytes": 11659,
-      "sha256": "7d69d039e0c9017c0cb7c838175aa70f819ec914665d950d9ffcea4d43086670"
+      "sha256": "f33d68ddaacd25928ee23f9993d9e4ea215dcfe5a5a7283f01aa01ce584f3bb0"
     },
     {
       "path": "docs/path_portability.json",
@@ -382,11 +382,6 @@
       "path": "experiments/tanh_self_gate/configs/medium_v_tanh_gate_lr6e-4.json",
       "bytes": 654,
       "sha256": "f913c336cd89a0067ce5f025ba6519cc4dc203e39c50df93725827a05c2cbd96"
-    },
-    {
-      "path": "paper/GatedV-v1.pdf",
-      "bytes": 431630,
-      "sha256": "0bf257f0a21aee5ff552b970297ce78e0d32a04ba5b35bb1b55b8b26d10bdbdb"
     },
     {
       "path": "paper/GatedV-v2.pdf",

@@ -20,17 +20,13 @@ at both model sizes:
 | 26.16M | 0.0003 | 3 | 20.233 ± 0.068 | 19.748 ± 0.047 | −2.40% |
 
 As in Table 3, PPL values are arithmetic means ± sample SD across seeds.
-PPL change is `100 × (GatedV / baseline − 1)`, calculated from the unrounded
-means; negative values indicate improvement.
+Negative PPL changes indicate improvement over the baseline.
 
-Every seed pair improved. The medium-model results use the development-selected
-peak learning rate of 0.0003. The original 0.0006 results are retained in the
-paper appendix; both rates use the same medium-model held-out set. A short DGX
-Spark benchmark using the original medium-model checkpoints measured about
-0.7% higher full-context forward latency.
-Read the [paper PDF](paper/GatedV-v2.pdf) or [LaTeX source](paper/main.tex).
-The [v1 PDF](paper/GatedV-v1.pdf) is also retained. Version 2 adds the
-[headwise G2 development comparison](results/g2_headwise/).
+GatedV lowered held-out PPL in all five small-model pairs (peak LR 0.0048)
+and all three medium-model pairs (0.0003). Appendix A reports the original
+medium-model results at 0.0006 on the same held-out set. In a short DGX Spark
+benchmark, full-context forward passes took about 0.7% longer for the medium
+GatedV model than for the baseline. See the [paper](paper/GatedV-v2.pdf) for details.
 
 <p align="center">
   <img src="docs/assets/figure-3b.png" width="480" alt="The 26.16M-parameter GatedV model has lower development perplexity than baseline at each of the five checkpoints shown.">

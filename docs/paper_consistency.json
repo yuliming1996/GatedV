@@ -92,7 +92,7 @@
     }
   ],
   "sources_sha256": {
-    "README.md": "0fe43e7964e572a7aa70ef6cb02dc8336cd62f14786ae099460dac9fa3e76243",
+    "README.md": "52f26e09d2944e3f950f481ca0305c310b0ce5e35ce66d2ffa7c546dc77cd5cc",
     "code/analyze.py": "f4ee295223a11ed35e0e32dd5e3fab9d58b627c83fbc99ea9eb2c6684da5ebca",
     "code/benchmark.py": "1f57fcea0228004f2676b8f63247664cac60532f19a1d137e3a4bde4c73275f5",
     "code/common.py": "51bc2fe5837948d462fdb44f417895d8bbf8ef0e36987b6d4be42d194c6d8c49",
@@ -144,7 +144,7 @@
     "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr3e-4.json": "37e404c4f1f337ab142128606bddf29d52e74a0231fe02a4b01d8450bd2c8486",
     "experiments/glu_attention/configs/lr_controls_20261013/medium_v_silu_lr6e-4.json": "be657f6e8366a9a634dc74ebd68a7f580eb56ba783321c8702f211886873f5df",
     "experiments/glu_attention/inspect_controls.py": "431628641c2c9c4f0d00f465fae3ebfc01aaef66ac70cc6c26b8f4e2aa8c2194",
-    "paper/main.tex": "348a1d6b6ee9dcf5f8ff428375f3545ff72f4a705220ee452a64dad221ee6232",
+    "paper/main.tex": "860ad8f42c8ffd9e2bf9bad1f9e70a842623832aafc59cda9b5ebdbc42573484",
     "requirements-reproduce.txt": "b0a78ae4431ce9d4fccb0619217bf3549690b93eb91f1a79292c8e3bf323f1e3",
     "results/all_endpoints.csv": "6a6ff415e84ac4d06d00d4c5d327a234bd0b9af88bd09109af6e82d88fbe0540",
     "results/cross_eval/summary.json": "1c8ba7770c360920f8a45c3f1983b90dcda85b6f905c9353076fec0c342e076a",
