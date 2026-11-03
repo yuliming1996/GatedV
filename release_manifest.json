@@ -1,6 +1,6 @@
 {
   "schema": "gatedv_release_inventory_v1",
-  "created_at_utc": "2026-11-01T19:11:43.402882+00:00",
+  "created_at_utc": "2026-11-03T04:12:02.762932+00:00",
   "scope": "Publication snapshot of tracked files; excludes this manifest itself, .git, dist, and local manuscript backups. Hashes certify file integrity, not training execution. Historical result bundles retain their original scope.",
   "files": [
     {
@@ -390,8 +390,8 @@
     },
     {
       "path": "paper/GatedV-v2.pdf",
-      "bytes": 432080,
-      "sha256": "19d5b8da3d3a4383549ddd445b5be0e0f84325dc80a3fd3a9a4af622ec04a65a"
+      "bytes": 416234,
+      "sha256": "40cefabe3e5fd4362114bff5fac3f8fee26650456f79f2d202e4d456c99ce748"
     },
     {
       "path": "paper/figures/architecture_gatedv.pdf",
@@ -410,8 +410,8 @@
     },
     {
       "path": "paper/main.tex",
-      "bytes": 33313,
-      "sha256": "348a1d6b6ee9dcf5f8ff428375f3545ff72f4a705220ee452a64dad221ee6232"
+      "bytes": 33486,
+      "sha256": "860ad8f42c8ffd9e2bf9bad1f9e70a842623832aafc59cda9b5ebdbc42573484"
     },
     {
       "path": "paper/make_paper_figures.py",
